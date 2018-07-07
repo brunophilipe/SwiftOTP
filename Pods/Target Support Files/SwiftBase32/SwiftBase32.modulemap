@@ -1,0 +1,6 @@
+framework module SwiftBase32 {
+  umbrella header "SwiftBase32-umbrella.h"
+
+  export *
+  module * { export * }
+}

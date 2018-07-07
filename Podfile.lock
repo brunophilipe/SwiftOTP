@@ -1,0 +1,16 @@
+PODS:
+  - SwiftBase32 (0.6.0)
+
+DEPENDENCIES:
+  - SwiftBase32
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SwiftBase32
+
+SPEC CHECKSUMS:
+  SwiftBase32: 5bbadb7b929b3e187f0fbfa7d6f3ad4665a688e5
+
+PODFILE CHECKSUM: b79c6ee9671bd9abe0bbfbc3f355a2f69d6b36b0
+
+COCOAPODS: 1.5.3

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -78,7 +78,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.048975409836065575" green="0.048975409836065575" blue="0.050000000000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </stackView>
-                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oaF-Tp-Zn5">
+                    <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oaF-Tp-Zn5">
                         <rect key="frame" x="0.0" y="50.5" width="200" height="2.5"/>
                     </progressView>
                 </subviews>
@@ -114,6 +114,7 @@
                 <outlet property="codeLabel" destination="UEv-e7-iV9" id="afE-c4-Cv4"/>
                 <outlet property="copySecretButton" destination="sdn-RB-G0D" id="DtL-BV-Es4"/>
                 <outlet property="editTokenButton" destination="Mra-AB-HJE" id="n1L-oC-mUk"/>
+                <outlet property="progressView" destination="oaF-Tp-Zn5" id="8tj-Ia-RNE"/>
                 <outlet property="showSecretButton" destination="1gk-lI-tDl" id="Ecr-xj-MjB"/>
                 <outlet property="titleLabel" destination="jvC-ES-2B7" id="vAH-oN-4LG"/>
             </connections>

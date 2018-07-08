@@ -185,9 +185,13 @@ open class TokenStore : NSObject
 
 	open func index(of token: Token) -> Int?
 	{
+		return index(of: token.account)
+	}
+
+	open func index(of tokenAccount: String) -> Int?
+	{
 		if let ord = TokenOrder.store.load(accountUUID.uuidString)
 		{
-			let tokenAccount = token.account
 			let index = ord.array.indexOfObject(passingTest: { (object, _, _) -> Bool in
 				return (object as? String) == tokenAccount
 			})

@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		152EEEC320F10A99006925D8 /* TokensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEC220F10A99006925D8 /* TokensViewController.swift */; };
+		152EEECA20F13EA4006925D8 /* TokenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEC820F13EA4006925D8 /* TokenCollectionViewCell.swift */; };
+		152EEECB20F13EA4006925D8 /* TokenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 152EEEC920F13EA4006925D8 /* TokenCollectionViewCell.xib */; };
 		1574E7BF20F03A970070B124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574E7BE20F03A970070B124 /* AppDelegate.swift */; };
-		1574E7C120F03A970070B124 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574E7C020F03A970070B124 /* ViewController.swift */; };
 		1574E7C420F03A970070B124 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1574E7C220F03A970070B124 /* Main.storyboard */; };
 		1574E7C620F03A980070B124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1574E7C520F03A980070B124 /* Assets.xcassets */; };
 		1574E7C920F03A980070B124 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1574E7C720F03A980070B124 /* LaunchScreen.storyboard */; };
@@ -66,9 +68,11 @@
 
 /* Begin PBXFileReference section */
 		0B5FBBB7CBFC9E097A981C00 /* Pods-SwiftOTP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP.debug.xcconfig"; sourceTree = "<group>"; };
+		152EEEC220F10A99006925D8 /* TokensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensViewController.swift; sourceTree = "<group>"; };
+		152EEEC820F13EA4006925D8 /* TokenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenCollectionViewCell.swift; sourceTree = "<group>"; };
+		152EEEC920F13EA4006925D8 /* TokenCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TokenCollectionViewCell.xib; sourceTree = "<group>"; };
 		1574E7BB20F03A970070B124 /* SwiftOTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftOTP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1574E7BE20F03A970070B124 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1574E7C020F03A970070B124 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1574E7C320F03A970070B124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1574E7C520F03A980070B124 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1574E7C820F03A980070B124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -123,6 +127,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		152EEEC120F10A5E006925D8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				152EEEC220F10A99006925D8 /* TokensViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		152EEEC520F12A95006925D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				152EEEC820F13EA4006925D8 /* TokenCollectionViewCell.swift */,
+				152EEEC920F13EA4006925D8 /* TokenCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		1574E7B220F03A970070B124 = {
 			isa = PBXGroup;
 			children = (
@@ -149,11 +170,12 @@
 			isa = PBXGroup;
 			children = (
 				1574E7BE20F03A970070B124 /* AppDelegate.swift */,
-				1574E7C020F03A970070B124 /* ViewController.swift */,
 				1574E7C220F03A970070B124 /* Main.storyboard */,
 				1574E7C520F03A980070B124 /* Assets.xcassets */,
 				1574E7C720F03A980070B124 /* LaunchScreen.storyboard */,
 				1574E7CA20F03A980070B124 /* Info.plist */,
+				152EEEC520F12A95006925D8 /* Views */,
+				152EEEC120F10A5E006925D8 /* ViewControllers */,
 			);
 			path = SwiftOTP;
 			sourceTree = "<group>";
@@ -326,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				152EEECB20F13EA4006925D8 /* TokenCollectionViewCell.xib in Resources */,
 				1574E7C920F03A980070B124 /* LaunchScreen.storyboard in Resources */,
 				1574E7C620F03A980070B124 /* Assets.xcassets in Resources */,
 				1574E7C420F03A970070B124 /* Main.storyboard in Resources */,
@@ -356,10 +379,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftBase32/SwiftBase32.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftBase32.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,8 +471,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1574E7C120F03A970070B124 /* ViewController.swift in Sources */,
+				152EEEC320F10A99006925D8 /* TokensViewController.swift in Sources */,
 				1574E7BF20F03A970070B124 /* AppDelegate.swift in Sources */,
+				152EEECA20F13EA4006925D8 /* TokenCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,7 +662,10 @@
 				DEVELOPMENT_TEAM = R85D3K8ATT;
 				INFOPLIST_FILE = SwiftOTP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.brunophilipe.SwiftOTP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -654,7 +683,10 @@
 				DEVELOPMENT_TEAM = R85D3K8ATT;
 				INFOPLIST_FILE = SwiftOTP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.brunophilipe.SwiftOTP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -677,7 +709,12 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = OTPKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.brunophilipe.OTPKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -704,7 +741,12 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = OTPKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.brunophilipe.OTPKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -723,7 +765,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R85D3K8ATT;
 				INFOPLIST_FILE = OTPKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.brunophilipe.OTPKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -740,7 +787,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R85D3K8ATT;
 				INFOPLIST_FILE = OTPKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.brunophilipe.OTPKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

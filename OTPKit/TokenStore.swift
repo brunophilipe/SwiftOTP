@@ -23,33 +23,38 @@ import Security
 
 open class TokenStore : NSObject
 {
+	private let accountUUID: UUID
+
 	@objc(_TokenOrder) fileprivate final class TokenOrder : NSObject, KeychainStorable
 	{
-		static let ACCOUNT = "09E969FC-53C3-4BE2-B653-4802949A26A7"
 		static let store = KeychainStore<TokenOrder>()
-		let account = ACCOUNT
 		let array: NSMutableArray
+		let account: String
 
-		override init()
+		init(storeUUID: UUID)
 		{
 			array = NSMutableArray()
+			account = storeUUID.uuidString
+
 			super.init()
 		}
 
 		@objc init?(coder aDecoder: NSCoder)
 		{
+			account = aDecoder.decodeObject(forKey: "account") as! String
 			array = aDecoder.decodeObject(forKey: "array") as! NSMutableArray
 		}
 
 		@objc fileprivate func encode(with aCoder: NSCoder)
 		{
 			aCoder.encode(array, forKey: "array")
+			aCoder.encode(account, forKey: "account")
 		}
 	}
 
 	open var count: Int
 	{
-		if let ord = TokenOrder.store.load(TokenOrder.ACCOUNT)
+		if let ord = TokenOrder.store.load(accountUUID.uuidString)
 		{
 			return ord.array.count
 		}
@@ -57,8 +62,10 @@ open class TokenStore : NSObject
 		return 0
 	}
 
-	public override init()
+	public init(accountUUID: UUID)
 	{
+		self.accountUUID = accountUUID
+
 		super.init()
 
 		// Migrate UserDefaults tokens to Keyring tokens
@@ -91,13 +98,13 @@ open class TokenStore : NSObject
 	@discardableResult open func add(_ urlc: URLComponents) -> Token?
 	{
 		var ord: TokenOrder
-		if let a = TokenOrder.store.load(TokenOrder.ACCOUNT)
+		if let a = TokenOrder.store.load(accountUUID.uuidString)
 		{
 			ord = a
 		}
 		else
 		{
-			ord = TokenOrder()
+			ord = TokenOrder(storeUUID: accountUUID)
 			if !TokenOrder.store.add(ord)
 			{
 				return nil
@@ -136,7 +143,7 @@ open class TokenStore : NSObject
 
 	@discardableResult open func erase(index: Int) -> Bool
 	{
-		if let ord = TokenOrder.store.load(TokenOrder.ACCOUNT), let account = ord.array.object(at: index) as? String
+		if let ord = TokenOrder.store.load(accountUUID.uuidString), let account = ord.array.object(at: index) as? String
 		{
 			ord.array.removeObject(at: index)
 
@@ -153,7 +160,7 @@ open class TokenStore : NSObject
 
 	@discardableResult open func erase(token: Token) -> Bool
 	{
-		if let ord = TokenOrder.store.load(TokenOrder.ACCOUNT)
+		if let ord = TokenOrder.store.load(accountUUID.uuidString)
 		{
 			return erase(index: ord.array.index(of: token.account))
 		}
@@ -163,7 +170,7 @@ open class TokenStore : NSObject
 
 	open func load(_ index: Int) -> Token?
 	{
-		if let ord = TokenOrder.store.load(TokenOrder.ACCOUNT), let account = ord.array.object(at: index) as? String
+		if let ord = TokenOrder.store.load(accountUUID.uuidString), let account = ord.array.object(at: index) as? String
 		{
 			return Token.store.load(account)
 		}
@@ -173,7 +180,7 @@ open class TokenStore : NSObject
 
 	@discardableResult open func move(_ from: Int, to: Int) -> Bool
 	{
-		if let ord = TokenOrder.store.load(TokenOrder.ACCOUNT), let id = ord.array.object(at: from) as? String
+		if let ord = TokenOrder.store.load(accountUUID.uuidString), let id = ord.array.object(at: from) as? String
 		{
 			ord.array.removeObject(at: from)
 			ord.array.insert(id, at: to)

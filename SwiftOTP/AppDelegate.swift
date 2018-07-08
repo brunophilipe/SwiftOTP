@@ -9,7 +9,9 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate
+{
+	static let storeUUID = UUID(uuidString: "362AC457-297F-4F6C-8B13-34F6721E9D41")!
 
 	var window: UIWindow?
 

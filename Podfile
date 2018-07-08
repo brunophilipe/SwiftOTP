@@ -20,5 +20,5 @@ target 'SwiftOTP' do
   use_frameworks!
 
   # Pods for SwiftOTP
-
+  pod 'QRCodeReader.swift', '~> 8.2.0'
 end

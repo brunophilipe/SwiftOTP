@@ -43,6 +43,26 @@ class TokensViewController: UICollectionViewController
 
 	@IBAction func showQRReader(_ sender: Any)
 	{
+		#if targetEnvironment(simulator)
+
+		let alertController = UIAlertController(title: "OTP URL", message: "Insert OTP url:", preferredStyle: .alert)
+		alertController.addTextField()
+		alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+		alertController.addAction(UIAlertAction(title: "OK", style: .default, handler:
+			{
+				_ in
+
+				if let text = alertController.textFields?.first?.text,
+					let urlComponents = URLComponents(string: text)
+				{
+					self.importToken(with: urlComponents)
+				}
+			}))
+
+		present(alertController, animated: true)
+
+		#else
+
 		readerVC.delegate = self
 
 		// Presents the readerVC as modal form sheet
@@ -51,6 +71,8 @@ class TokensViewController: UICollectionViewController
 		{
 			self.readerVC.startScanning()
 		}
+
+		#endif
 	}
 
 	private func showAlertBadScan()

@@ -288,7 +288,7 @@ private extension UICollectionView
 {
 	var effectiveContentSize: CGSize
 	{
-		return bounds.inset(by: layoutMargins).size
+		return frame.inset(by: layoutMargins).size
 	}
 }
 

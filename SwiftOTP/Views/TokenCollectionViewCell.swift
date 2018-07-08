@@ -48,6 +48,12 @@ class TokenCollectionViewCell: UICollectionViewCell
 			return
 		}
 
+		if codeIsVisible
+		{
+			// Hide code if it is visible.
+			changeCodeVisibility(to: false)
+		}
+
 		let currentCode = codes.first!
 		let nextCode = codes.last!
 		let bestCode = (currentCode.to.timeIntervalSinceNow > 5 ? currentCode : nextCode).value

@@ -42,6 +42,32 @@ class TokenCollectionViewCell: UICollectionViewCell
 
 	@IBAction func copySecret(_ sender: Any)
 	{
+		guard let codes = codesFetcher?(), codes.count >= 2 else
+		{
+			// There's nothing to show if the codes fetcher failed.
+			return
+		}
+
+		let currentCode = codes.first!
+		let nextCode = codes.last!
+		let bestCode = (currentCode.to.timeIntervalSinceNow > 5 ? currentCode : nextCode).value
+
+		UIPasteboard.general.setItems([["public.plain-text": bestCode]], options: [
+			.expirationDate: Date(timeIntervalSinceNow: 30.0),
+			.localOnly: false
+		])
+
+		guard let copyButton = copySecretButton else
+		{
+			return
+		}
+
+		copyButton.setNormalAppearance(image: #imageLiteral(resourceName: "button_copy_success.pdf"), tint: #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1), duration: 0.3)
+
+		DispatchQueue.main.asyncAfter(wallDeadline: .now() + 2.3)
+		{
+			copyButton.setNormalAppearance(image: #imageLiteral(resourceName: "button_copy.pdf"), tint: self.tintColor, duration: 0.3)
+		}
 	}
 
 	func setToken(issuer: String?, account: String?)
@@ -161,5 +187,17 @@ private extension UIProgressView
 		UIView.animate(withDuration: animationDuration, delay: 0.0, options: .curveLinear, animations: {
 			self.setProgress(progress, animated: true)
 		})
+	}
+}
+
+private extension UIButton
+{
+	func setNormalAppearance(image: UIImage, tint: UIColor, duration: TimeInterval)
+	{
+		UIView.transition(with: self, duration: duration, options: .transitionCrossDissolve, animations:
+			{
+				self.tintColor = tint
+				self.setImage(image, for: .normal)
+			})
 	}
 }

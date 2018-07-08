@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cMP-fT-1cp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cMP-fT-1cp">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -44,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="664.79999999999995" y="169.56521739130437"/>
         </scene>
-        <!--Edit Token View Controller-->
+        <!--Editing Token-->
         <scene sceneID="vgN-FC-CAv">
             <objects>
                 <tableViewController id="GN1-EN-rW1" customClass="EditTokenViewController" customModule="SwiftOTP" customModuleProvider="target" sceneMemberID="viewController">
@@ -139,7 +139,7 @@
                             <outlet property="delegate" destination="GN1-EN-rW1" id="oTJ-P1-Gsc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="58y-xL-gHS">
+                    <navigationItem key="navigationItem" title="Editing Token" id="58y-xL-gHS">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="fqK-fM-qoa">
                             <connections>
                                 <action selector="saveToken:" destination="GN1-EN-rW1" id="rko-vA-c7e"/>

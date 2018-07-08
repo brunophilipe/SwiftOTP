@@ -8,7 +8,10 @@
 
 import UIKit
 import OTPKit
+
+#if !targetEnvironment(simulator)
 import QRCodeReader
+#endif
 
 class TokensViewController: UICollectionViewController
 {
@@ -20,6 +23,7 @@ class TokensViewController: UICollectionViewController
 		case editToken
 	}
 
+	#if !targetEnvironment(simulator)
 	// Good practice: create the reader lazily to avoid cpu overload during the
 	// initialization and each time we need to scan a QRCode
 	lazy var readerVC: QRCodeReaderViewController = {
@@ -28,6 +32,7 @@ class TokensViewController: UICollectionViewController
 		}
 		return QRCodeReaderViewController(builder: builder)
 	}()
+	#endif
 
     override func viewDidLoad()
 	{
@@ -250,6 +255,7 @@ private extension TokensViewController
 	}
 }
 
+#if !targetEnvironment(simulator)
 extension TokensViewController: QRCodeReaderViewControllerDelegate
 {
 	func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult)
@@ -276,6 +282,7 @@ extension TokensViewController: QRCodeReaderViewControllerDelegate
 		reader.dismiss(animated: true)
 	}
 }
+#endif
 
 private extension UICollectionView
 {

@@ -178,6 +178,31 @@ open class TokenStore : NSObject
 		return nil
 	}
 
+	open func load(_ account: String) -> Token?
+	{
+		return Token.store.load(account)
+	}
+
+	open func index(of token: Token) -> Int?
+	{
+		if let ord = TokenOrder.store.load(accountUUID.uuidString)
+		{
+			let tokenAccount = token.account
+			let index = ord.array.indexOfObject(passingTest: { (object, _, _) -> Bool in
+				return (object as? String) == tokenAccount
+			})
+
+			if index == NSNotFound
+			{
+				return nil
+			}
+
+			return index
+		}
+
+		return nil
+	}
+
 	@discardableResult open func move(_ from: Int, to: Int) -> Bool
 	{
 		if let ord = TokenOrder.store.load(accountUUID.uuidString), let id = ord.array.object(at: from) as? String

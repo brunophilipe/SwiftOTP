@@ -15,6 +15,11 @@ class TokensViewController: UICollectionViewController
 	private let tokenStore = TokenStore(accountUUID: AppDelegate.storeUUID)
 	private let reuseIdentifier = "CellToken"
 
+	private enum Segues: String, Segue
+	{
+		case editToken
+	}
+
 	// Good practice: create the reader lazily to avoid cpu overload during the
 	// initialization and each time we need to scan a QRCode
 	lazy var readerVC: QRCodeReaderViewController = {
@@ -48,18 +53,6 @@ class TokensViewController: UICollectionViewController
 		}
 	}
 
-	private func importToken(with urlComponents: URLComponents)
-	{
-		guard let _ = tokenStore.add(urlComponents) else
-		{
-			showAlertBadScan()
-			return
-		}
-
-		// TODO: Insert new token (need to find out how tokens are indexed first)
-		collectionView.insertItems(at: [IndexPath(item: 0, section: 0)])
-	}
-
 	private func showAlertBadScan()
 	{
 		let alertController = UIAlertController(title: "Error",
@@ -69,16 +62,6 @@ class TokensViewController: UICollectionViewController
 		alertController.addAction(UIAlertAction(title: "OK", style: .cancel))
 		present(alertController, animated: true)
 	}
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 	override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?)
 	{
@@ -106,6 +89,59 @@ class TokensViewController: UICollectionViewController
 		}
 	}
 
+	// MARK: - Navigation
+
+	// In a storyboard-based application, you will often want to do a little preparation before navigation
+	override func prepare(for storyboardSegue: UIStoryboardSegue, sender: Any?)
+	{
+		guard let identifier = storyboardSegue.identifier, let segue = Segues(rawValue: identifier) else
+		{
+			return
+		}
+
+		switch segue
+		{
+		case .editToken:
+			if let tokenAccount = sender as? String, let token = tokenStore.load(tokenAccount)
+			{
+				let deleteAction: (String) -> Void =
+					{
+						tokenAccount in
+
+						if let token = self.tokenStore.load(tokenAccount)
+						{
+							self.deleteToken(token)
+						}
+					}
+
+				let saveAction: ((account: String, issuer: String, label: String)) -> Void =
+					{
+						tokenInfo in
+
+						if let token = self.tokenStore.load(tokenInfo.account)
+						{
+							token.issuer = tokenInfo.issuer
+							token.label = tokenInfo.label
+							Token.store.save(token)
+
+							if let index = self.tokenStore.index(of: token)
+							{
+								self.collectionView.reloadItems(at: [IndexPath(item: index, section: 0)])
+							}
+						}
+					}
+
+				let context = EditTokenViewController.TokenEditorContext(tokenAccount: token.account,
+																		 tokenIssuer: token.issuer,
+																		 tokenLabel: token.label,
+																		 deleteAction: deleteAction,
+																		 saveAction: saveAction)
+
+				storyboardSegue.destination.broadcast(context)
+			}
+		}
+	}
+
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int
@@ -127,7 +163,10 @@ class TokensViewController: UICollectionViewController
 		if let token = tokenStore.load(indexPath.row), let tokenCell = cell as? TokenCollectionViewCell
 		{
 			tokenCell.setToken(issuer: token.issuer, account: token.label)
-			tokenCell.codesFetcher = { token.codes }
+
+			let tokenAccount = token.account
+			tokenCell.codesFetcher = { [weak self] in self?.tokenStore.load(tokenAccount)?.codes }
+			tokenCell.editAction = { [weak self] in self?.performSegue(Segues.editToken, sender: tokenAccount) }
 		}
     
         return cell
@@ -164,6 +203,29 @@ class TokensViewController: UICollectionViewController
     }
     */
 
+}
+
+private extension TokensViewController
+{
+	func importToken(with urlComponents: URLComponents)
+	{
+		guard let _ = tokenStore.add(urlComponents) else
+		{
+			showAlertBadScan()
+			return
+		}
+
+		// TODO: Insert new token (need to find out how tokens are indexed first)
+		collectionView.insertItems(at: [IndexPath(item: 0, section: 0)])
+	}
+
+	func deleteToken(_ token: Token)
+	{
+		if let index = tokenStore.index(of: token), tokenStore.erase(token: token)
+		{
+			collectionView.deleteItems(at: [IndexPath(item: index, section: 0)])
+		}
+	}
 }
 
 extension TokensViewController: QRCodeReaderViewControllerDelegate

@@ -19,10 +19,13 @@ class TokenCollectionViewCell: UICollectionViewCell
 	@IBOutlet private var showSecretButton: UIButton!
 	@IBOutlet private var copySecretButton: UIButton!
 
-	var codesFetcher: (() -> [Token.Code])? = nil
+	var codesFetcher: (() -> [Token.Code]?)? = nil
+
+	var editAction: (() -> Void)? = nil
 
 	@IBAction func editToken(_ sender: Any)
 	{
+		editAction?()
 	}
 
 	@IBAction func showSecret(_ sender: Any)

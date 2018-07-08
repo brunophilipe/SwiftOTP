@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -78,11 +78,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.048975409836065575" green="0.048975409836065575" blue="0.050000000000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </stackView>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oaF-Tp-Zn5">
+                        <rect key="frame" x="0.0" y="50.5" width="200" height="2.5"/>
+                    </progressView>
                 </subviews>
             </view>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="oaF-Tp-Zn5" secondAttribute="trailing" id="3N5-uq-hxJ"/>
                 <constraint firstItem="UEv-e7-iV9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ene-dM-gmc"/>
+                <constraint firstItem="oaF-Tp-Zn5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ErH-Rk-Pv9"/>
                 <constraint firstItem="IL1-ZC-vE6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="OC4-lw-TA4"/>
                 <constraint firstItem="RAm-yY-sQj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="Oae-zX-6Eu"/>
                 <constraint firstItem="UEv-e7-iV9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="RDZ-1L-Fab"/>
@@ -91,6 +96,7 @@
                 <constraint firstItem="1gk-lI-tDl" firstAttribute="top" secondItem="UEv-e7-iV9" secondAttribute="bottom" id="YQs-fX-kGX"/>
                 <constraint firstAttribute="trailingMargin" secondItem="RAm-yY-sQj" secondAttribute="trailing" id="ZWo-xe-EhG"/>
                 <constraint firstItem="IL1-ZC-vE6" firstAttribute="top" secondItem="RAm-yY-sQj" secondAttribute="bottom" constant="8" id="fjQ-iJ-acZ"/>
+                <constraint firstItem="IL1-ZC-vE6" firstAttribute="top" secondItem="oaF-Tp-Zn5" secondAttribute="bottom" constant="1" id="oJ2-IB-Y60"/>
                 <constraint firstAttribute="bottom" secondItem="IL1-ZC-vE6" secondAttribute="bottom" id="t1I-Ar-JaA"/>
                 <constraint firstAttribute="trailingMargin" secondItem="jvC-ES-2B7" secondAttribute="trailing" id="tLN-Ft-Jtk"/>
                 <constraint firstItem="jvC-ES-2B7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="tiV-Gc-1Yv"/>

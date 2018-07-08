@@ -20,12 +20,24 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Issuer Name" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jvC-ES-2B7">
                         <rect key="frame" x="20" y="10" width="160" height="20.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20.5" id="bVg-Si-yEH"/>
+                        </constraints>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="012 345" textAlignment="center" lineBreakMode="middleTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UEv-e7-iV9">
+                        <rect key="frame" x="20" y="0.0" width="160" height="53"/>
+                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="32"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Name" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RAm-yY-sQj">
                         <rect key="frame" x="20" y="30.5" width="160" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14.5" id="VVP-QE-QdZ"/>
+                        </constraints>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -70,16 +82,20 @@
             </view>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
+                <constraint firstItem="UEv-e7-iV9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ene-dM-gmc"/>
                 <constraint firstItem="IL1-ZC-vE6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="OC4-lw-TA4"/>
                 <constraint firstItem="RAm-yY-sQj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="Oae-zX-6Eu"/>
+                <constraint firstItem="UEv-e7-iV9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="RDZ-1L-Fab"/>
                 <constraint firstItem="jvC-ES-2B7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="topMargin" id="Tga-TF-ZAF"/>
                 <constraint firstItem="RAm-yY-sQj" firstAttribute="top" secondItem="jvC-ES-2B7" secondAttribute="bottom" id="Xfb-xf-76Q"/>
+                <constraint firstItem="1gk-lI-tDl" firstAttribute="top" secondItem="UEv-e7-iV9" secondAttribute="bottom" id="YQs-fX-kGX"/>
                 <constraint firstAttribute="trailingMargin" secondItem="RAm-yY-sQj" secondAttribute="trailing" id="ZWo-xe-EhG"/>
                 <constraint firstItem="IL1-ZC-vE6" firstAttribute="top" secondItem="RAm-yY-sQj" secondAttribute="bottom" constant="8" id="fjQ-iJ-acZ"/>
                 <constraint firstAttribute="bottom" secondItem="IL1-ZC-vE6" secondAttribute="bottom" id="t1I-Ar-JaA"/>
                 <constraint firstAttribute="trailingMargin" secondItem="jvC-ES-2B7" secondAttribute="trailing" id="tLN-Ft-Jtk"/>
                 <constraint firstItem="jvC-ES-2B7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="tiV-Gc-1Yv"/>
                 <constraint firstAttribute="trailing" secondItem="IL1-ZC-vE6" secondAttribute="trailing" id="wZC-ak-FU1"/>
+                <constraint firstItem="UEv-e7-iV9" firstAttribute="trailing" secondItem="gTV-IL-0wX" secondAttribute="trailingMargin" id="xNB-Yn-YUq"/>
             </constraints>
             <edgeInsets key="layoutMargins" top="10" left="20" bottom="10" right="20"/>
             <userDefinedRuntimeAttributes>
@@ -89,6 +105,7 @@
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="accountLabel" destination="RAm-yY-sQj" id="Ku1-6K-aYU"/>
+                <outlet property="codeLabel" destination="UEv-e7-iV9" id="afE-c4-Cv4"/>
                 <outlet property="copySecretButton" destination="sdn-RB-G0D" id="DtL-BV-Es4"/>
                 <outlet property="editTokenButton" destination="Mra-AB-HJE" id="n1L-oC-mUk"/>
                 <outlet property="showSecretButton" destination="1gk-lI-tDl" id="Ecr-xj-MjB"/>

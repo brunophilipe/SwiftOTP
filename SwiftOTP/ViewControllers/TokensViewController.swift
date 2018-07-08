@@ -126,7 +126,8 @@ class TokensViewController: UICollectionViewController
         // Configure the cell
 		if let token = tokenStore.load(indexPath.row), let tokenCell = cell as? TokenCollectionViewCell
 		{
-			tokenCell.setToken(token)
+			tokenCell.setToken(issuer: token.issuer, account: token.label)
+			tokenCell.codesFetcher = { token.codes }
 		}
     
         return cell

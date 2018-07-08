@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import OTPKit
+import Intents
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
@@ -42,7 +44,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 	func applicationWillTerminate(_ application: UIApplication) {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
+}
 
+extension AppDelegate: NSUserActivityDelegate
+{
+	func application(_ application: UIApplication,
+					 continue userActivity: NSUserActivity,
+					 restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool
+	{
+		guard #available(iOS 12.0, *) else
+		{
+			return false
+		}
 
+		if userActivity.activityType == "ViewCodeIntent",
+			let intent = userActivity.interaction?.intent as? ViewCodeIntent,
+			let rootViewController = UIApplication.shared.keyWindow?.rootViewController,
+			let account = intent.account
+		{
+			let context = TokensViewController.ShowCodeFromIntentContext(tokenAccount: account)
+			rootViewController.broadcast(context)
+		}
+
+		return false
+	}
 }
 

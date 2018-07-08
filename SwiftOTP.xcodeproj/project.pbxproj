@@ -13,6 +13,8 @@
 		152EEECD20F2662F006925D8 /* EditTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEECC20F2662F006925D8 /* EditTokenViewController.swift */; };
 		152EEED020F2669B006925D8 /* UIViewController+ContextBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEECF20F2669B006925D8 /* UIViewController+ContextBus.swift */; };
 		152EEED220F267B9006925D8 /* UIViewController+Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEED120F267B9006925D8 /* UIViewController+Segues.swift */; };
+		152EEED520F2BDA2006925D8 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 152EEED320F2BDA2006925D8 /* Intents.intentdefinition */; };
+		152EEED620F2C48B006925D8 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 152EEED320F2BDA2006925D8 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		1574E7BF20F03A970070B124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574E7BE20F03A970070B124 /* AppDelegate.swift */; };
 		1574E7C420F03A970070B124 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1574E7C220F03A970070B124 /* Main.storyboard */; };
 		1574E7C620F03A980070B124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1574E7C520F03A980070B124 /* Assets.xcassets */; };
@@ -77,6 +79,7 @@
 		152EEECC20F2662F006925D8 /* EditTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTokenViewController.swift; sourceTree = "<group>"; };
 		152EEECF20F2669B006925D8 /* UIViewController+ContextBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ContextBus.swift"; sourceTree = "<group>"; };
 		152EEED120F267B9006925D8 /* UIViewController+Segues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Segues.swift"; sourceTree = "<group>"; };
+		152EEED320F2BDA2006925D8 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		1574E7BB20F03A970070B124 /* SwiftOTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftOTP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1574E7BE20F03A970070B124 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1574E7C320F03A970070B124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -190,6 +193,7 @@
 				1574E7C520F03A980070B124 /* Assets.xcassets */,
 				1574E7C720F03A980070B124 /* LaunchScreen.storyboard */,
 				1574E7CA20F03A980070B124 /* Info.plist */,
+				152EEED320F2BDA2006925D8 /* Intents.intentdefinition */,
 				152EEEC520F12A95006925D8 /* Views */,
 				152EEEC120F10A5E006925D8 /* ViewControllers */,
 				152EEECE20F26678006925D8 /* Extensions */,
@@ -488,6 +492,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				152EEED620F2C48B006925D8 /* Intents.intentdefinition in Sources */,
 				152EEEC320F10A99006925D8 /* TokensViewController.swift in Sources */,
 				1574E7BF20F03A970070B124 /* AppDelegate.swift in Sources */,
 				152EEED220F267B9006925D8 /* UIViewController+Segues.swift in Sources */,
@@ -504,6 +509,7 @@
 				1574E7F920F0494F0070B124 /* KeychainStore.swift in Sources */,
 				1574E7F720F0494F0070B124 /* TokenStore.swift in Sources */,
 				1574E7F820F0494F0070B124 /* OTP.swift in Sources */,
+				152EEED520F2BDA2006925D8 /* Intents.intentdefinition in Sources */,
 				1574E7FA20F0494F0070B124 /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

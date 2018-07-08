@@ -8,6 +8,7 @@
 
 import UIKit
 import OTPKit
+import Intents
 
 #if !targetEnvironment(simulator)
 import QRCodeReader
@@ -194,6 +195,7 @@ class TokensViewController: UICollectionViewController
 			let tokenAccount = token.account
 			tokenCell.codesFetcher = { [weak self] in self?.tokenStore.load(tokenAccount)?.codes }
 			tokenCell.editAction = { [weak self] in self?.performSegue(Segues.editToken, sender: tokenAccount) }
+			tokenCell.showHookAction = { [weak self] in self?.donateIntent(for: tokenAccount) }
 		}
     
         return cell
@@ -252,6 +254,55 @@ private extension TokensViewController
 		{
 			collectionView.deleteItems(at: [IndexPath(item: index, section: 0)])
 		}
+	}
+}
+
+extension TokensViewController // Intents
+{
+	private func donateIntent(for tokenAccount: String)
+	{
+		guard #available(iOS 12.0, *), let token = tokenStore.load(tokenAccount) else
+		{
+			return
+		}
+
+		let intent = ViewCodeIntent()
+		intent.account = token.account
+		intent.issuer = token.issuer
+		intent.label = token.label
+
+		let interaction = INInteraction(intent: intent, response: nil)
+		interaction.donate
+		{
+			error in
+
+			if let error = error
+			{
+				print("\(error.localizedDescription)")
+			}
+		}
+	}
+}
+
+extension TokensViewController // Context Bus
+{
+	override func broadcast(_ context: Any)
+	{
+		super.broadcast(context)
+
+		if let intentContext = context as? ShowCodeFromIntentContext
+		{
+			if let index = tokenStore.index(of: intentContext.tokenAccount),
+				let tokenCell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as? TokenCollectionViewCell
+			{
+				tokenCell.showSecret(intentContext)
+			}
+		}
+	}
+
+	struct ShowCodeFromIntentContext
+	{
+		let tokenAccount: String
 	}
 }
 

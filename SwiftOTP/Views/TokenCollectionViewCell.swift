@@ -23,6 +23,7 @@ class TokenCollectionViewCell: UICollectionViewCell
 	var codesFetcher: (() -> [Token.Code]?)? = nil
 
 	var editAction: (() -> Void)? = nil
+	var showHookAction: (() -> Void)? = nil
 
 	private var codeIsVisible: Bool
 	{
@@ -37,6 +38,7 @@ class TokenCollectionViewCell: UICollectionViewCell
 	@IBAction func showSecret(_ sender: Any)
 	{
 		// Effectively toggles the visibility
+		showHookAction?()
 		changeCodeVisibility(to: !codeIsVisible)
 	}
 

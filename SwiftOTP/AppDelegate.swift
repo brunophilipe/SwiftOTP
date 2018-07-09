@@ -139,4 +139,3 @@ extension AppDelegate: NSUserActivityDelegate
 		return false
 	}
 }
-

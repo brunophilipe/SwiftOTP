@@ -23,6 +23,7 @@
 		152EEEEC20F2CCB8006925D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEEA20F2CCB8006925D8 /* Constants.swift */; };
 		152EEEED20F2CCE6006925D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEEA20F2CCB8006925D8 /* Constants.swift */; };
 		152EEEEE20F2CE57006925D8 /* OTPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1574E7D520F0490D0070B124 /* OTPKit.framework */; };
+		1554F61F20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1554F61E20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift */; };
 		1574E7BF20F03A970070B124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574E7BE20F03A970070B124 /* AppDelegate.swift */; };
 		1574E7C420F03A970070B124 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1574E7C220F03A970070B124 /* Main.storyboard */; };
 		1574E7C620F03A980070B124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1574E7C520F03A980070B124 /* Assets.xcassets */; };
@@ -112,6 +113,7 @@
 		152EEEE020F2CBA2006925D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		152EEEE920F2CC0A006925D8 /* SwiftOTPIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftOTPIntents.entitlements; sourceTree = "<group>"; };
 		152EEEEA20F2CCB8006925D8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1554F61E20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColoredPlaceholderTextField.swift; sourceTree = "<group>"; };
 		1574E7BB20F03A970070B124 /* SwiftOTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftOTP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1574E7BE20F03A970070B124 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1574E7C320F03A970070B124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 		152EEEC520F12A95006925D8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1554F61E20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift */,
 				152EEEC820F13EA4006925D8 /* TokenCollectionViewCell.swift */,
 				152EEEC920F13EA4006925D8 /* TokenCollectionViewCell.xib */,
 			);
@@ -632,6 +635,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				152EEED620F2C48B006925D8 /* Intents.intentdefinition in Sources */,
+				1554F61F20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift in Sources */,
 				152EEEC320F10A99006925D8 /* TokensViewController.swift in Sources */,
 				1574E7BF20F03A970070B124 /* AppDelegate.swift in Sources */,
 				152EEED220F267B9006925D8 /* UIViewController+Segues.swift in Sources */,

@@ -80,7 +80,7 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Issuer Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bwj-t9-Sdc" customClass="ColoredPlaceholderTextField" customModule="SwiftOTP" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="0.0" width="343" height="44.5"/>
-                                                    <accessibility key="accessibilityConfiguration" hint="The entity that issued this token. For example: Apple." label="Issuer Name"/>
+                                                    <accessibility key="accessibilityConfiguration" hint="The entity that issued this token." label="Issuer Name"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="bPn-e4-zSx"/>
                                                     </constraints>
@@ -116,7 +116,7 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Drf-oz-BH6" customClass="ColoredPlaceholderTextField" customModule="SwiftOTP" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="0.0" width="343" height="44.5"/>
-                                                    <accessibility key="accessibilityConfiguration" hint="The account associated with this token. For example: your email address." label="Account Name"/>
+                                                    <accessibility key="accessibilityConfiguration" hint="The account associated with this token." label="Account Name"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="sIg-Ke-9rC"/>
                                                     </constraints>

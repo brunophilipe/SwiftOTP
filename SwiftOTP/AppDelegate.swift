@@ -15,8 +15,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 {
 	var window: UIWindow?
 
+	private var userInterfaceState: UserInterfaceState = .loading(pendingContextBroadcasts: [])
+	{
+		didSet
+		{
+			switch (oldValue, userInterfaceState)
+			{
+			case (.loading(let pendingContexts), .ready):
+				if let rootViewController = UIApplication.shared.keyWindow?.rootViewController
+				{
+					pendingContexts.forEach({ rootViewController.broadcast($0) })
+				}
 
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+			default:
+				break
+			}
+		}
+	}
+
+	static var shared: AppDelegate
+	{
+		return UIApplication.shared.delegate! as! AppDelegate
+	}
+
+	func mainViewControllerDidAppear()
+	{
+		if !userInterfaceState.isReady
+		{
+			userInterfaceState = .ready
+		}
+	}
+
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
+	{
 		// Override point for customization after application launch.
 
 		// For debugging purposes:
@@ -49,14 +80,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 	func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool
 	{
 		if url.scheme == "otpauth",
-			let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
-			let rootViewController = UIApplication.shared.keyWindow?.rootViewController
+			let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
 		{
 			let context = TokensViewController.LoadTokenUrlContext(urlComponents: components)
-			rootViewController.broadcast(context)
+			broadcastContext(context)
 		}
 
 		return false
+	}
+
+	private func broadcastContext(_ context: Any)
+	{
+		switch userInterfaceState
+		{
+		case .ready:
+			(UIApplication.shared.keyWindow?.rootViewController)?.broadcast(context)
+
+		case .loading(pendingContextBroadcasts: var pendingBroadcasts):
+			pendingBroadcasts.append(context)
+			userInterfaceState = .loading(pendingContextBroadcasts: pendingBroadcasts)
+		}
+	}
+
+	private enum UserInterfaceState
+	{
+		case loading(pendingContextBroadcasts: [Any]), ready
+
+		var isReady: Bool
+		{
+			switch self
+			{
+			case .ready:	return true
+			default:		return false
+			}
+		}
 	}
 }
 
@@ -73,11 +130,10 @@ extension AppDelegate: NSUserActivityDelegate
 
 		if userActivity.activityType == "ViewCodeIntent",
 			let intent = userActivity.interaction?.intent as? ViewCodeIntent,
-			let rootViewController = UIApplication.shared.keyWindow?.rootViewController,
 			let account = intent.account
 		{
 			let context = TokensViewController.ShowCodeFromIntentContext(tokenAccount: account)
-			rootViewController.broadcast(context)
+			broadcastContext(context)
 		}
 
 		return false

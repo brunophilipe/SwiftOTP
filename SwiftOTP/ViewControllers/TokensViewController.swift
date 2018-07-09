@@ -49,6 +49,13 @@ class TokensViewController: UICollectionViewController
 								forCellWithReuseIdentifier: reuseIdentifier)
     }
 
+	override func viewDidAppear(_ animated: Bool)
+	{
+		super.viewDidAppear(animated)
+
+		AppDelegate.shared.mainViewControllerDidAppear()
+	}
+
 	@IBAction func showQRReader(_ sender: Any)
 	{
 		#if targetEnvironment(simulator)

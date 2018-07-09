@@ -49,9 +49,11 @@ class IntentHandler: INExtension, ViewCodeIntentHandling
 		let nextCode = codes.last!
 		let bestCode = (currentCode.to.timeIntervalSinceNow > 5 ? currentCode : nextCode).value
 
-		completion(ViewCodeIntentResponse.success(otpCode: bestCode))
+		completion(ViewCodeIntentResponse.success(otpCode: bestCode.intelacingCharactersWithSpaces))
 
-		debugLog("Intent handling done with code first digit: \(bestCode.prefix(1))")
+		UIPasteboard.general.setObjects([bestCode], localOnly: true, expirationDate: Date(timeIntervalSinceNow: 2))
+
+		debugLog("Intent handling done with code first digit: \(bestCode.prefix(1)) - Code added to clipboard for 2 seconds.")
 	}
     
     override func handler(for intent: INIntent) -> Any {
@@ -60,6 +62,16 @@ class IntentHandler: INExtension, ViewCodeIntentHandling
         
         return self
     }
+}
+
+private extension String
+{
+	var intelacingCharactersWithSpaces: String
+	{
+		var intelacedString = ""
+		forEach({ intelacedString.append("\($0) ") })
+		return intelacedString.trimmingCharacters(in: .whitespaces)
+	}
 }
 
 func debugLog(_ string: String)

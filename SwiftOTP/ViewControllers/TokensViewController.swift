@@ -330,7 +330,14 @@ extension TokensViewController // Intents
 			return
 		}
 
-		INInteraction.delete(with: [tokenAcount], completion: nil)
+		INInteraction.delete(with: [tokenAcount], completion: {
+			error in
+
+			if let error = error
+			{
+				NSLog("Failed deleting interaction: \(error)")
+			}
+		})
 	}
 }
 

@@ -49,11 +49,19 @@ class IntentHandler: INExtension, ViewCodeIntentHandling
 		let nextCode = codes.last!
 		let bestCode = (currentCode.to.timeIntervalSinceNow > 5 ? currentCode : nextCode).value
 
+		if Preferences.instance.intentsPutCodeInClipboard
+		{
+			UIPasteboard.general.setObjects([bestCode], localOnly: true, expirationDate: Date(timeIntervalSinceNow: 3))
+			debugLog("Code first digit: \(bestCode.prefix(1)) - Code added to clipboard for 3 seconds.")
+		}
+		else
+		{
+			debugLog("Code first digit: \(bestCode.prefix(1)) - Did NOT put code in clipboard.")
+		}
+
 		completion(ViewCodeIntentResponse.success(otpCode: bestCode.intelacingCharactersWithSpaces))
 
-		UIPasteboard.general.setObjects([bestCode], localOnly: true, expirationDate: Date(timeIntervalSinceNow: 2))
-
-		debugLog("Intent handling done with code first digit: \(bestCode.prefix(1)) - Code added to clipboard for 2 seconds.")
+		debugLog("Did call intent completion handler.")
 	}
     
     override func handler(for intent: INIntent) -> Any {

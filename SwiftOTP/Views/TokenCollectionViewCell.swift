@@ -49,7 +49,7 @@ class TokenCollectionViewCell: UICollectionViewCell
 
 	@IBAction func copySecret(_ sender: Any)
 	{
-		guard let codes = codesFetcher?(), codes.count >= 2 else
+		guard let codes = codesFetcher?(), codes.count >= 2, let copyButton = copySecretButton else
 		{
 			// There's nothing to show if the codes fetcher failed.
 			return
@@ -61,19 +61,16 @@ class TokenCollectionViewCell: UICollectionViewCell
 			changeCodeVisibility(to: false)
 		}
 
+		let preferences = Preferences.instance
+
 		let currentCode = codes.first!
 		let nextCode = codes.last!
 		let bestCode = (currentCode.to.timeIntervalSinceNow > 5 ? currentCode : nextCode).value
 
 		UIPasteboard.general.setItems([["public.plain-text": bestCode]], options: [
-			.expirationDate: Date(timeIntervalSinceNow: 30.0),
-			.localOnly: false
+			.expirationDate: Date(timeIntervalSinceNow: preferences.clipboardExpirationLength.timeIntervalValue),
+			.localOnly: !preferences.allowClipboardHandoff
 		])
-
-		guard let copyButton = copySecretButton else
-		{
-			return
-		}
 
 		copyButton.setNormalAppearance(image: #imageLiteral(resourceName: "button_copy_success.pdf"), tint: #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1), duration: 0.3)
 

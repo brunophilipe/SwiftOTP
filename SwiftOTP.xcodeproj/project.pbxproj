@@ -24,6 +24,9 @@
 		152EEEED20F2CCE6006925D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEEA20F2CCB8006925D8 /* Constants.swift */; };
 		152EEEEE20F2CE57006925D8 /* OTPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1574E7D520F0490D0070B124 /* OTPKit.framework */; };
 		1554F61F20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1554F61E20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift */; };
+		1554F62120F3DE2700C693E8 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1554F62020F3DE2700C693E8 /* PreferencesViewController.swift */; };
+		1554F62320F3DE7500C693E8 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1554F62220F3DE7500C693E8 /* Preferences.swift */; };
+		1554F62720F3F91900C693E8 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1554F62220F3DE7500C693E8 /* Preferences.swift */; };
 		1574E7BF20F03A970070B124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574E7BE20F03A970070B124 /* AppDelegate.swift */; };
 		1574E7C420F03A970070B124 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1574E7C220F03A970070B124 /* Main.storyboard */; };
 		1574E7C620F03A980070B124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1574E7C520F03A980070B124 /* Assets.xcassets */; };
@@ -114,6 +117,8 @@
 		152EEEE920F2CC0A006925D8 /* SwiftOTPIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftOTPIntents.entitlements; sourceTree = "<group>"; };
 		152EEEEA20F2CCB8006925D8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1554F61E20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColoredPlaceholderTextField.swift; sourceTree = "<group>"; };
+		1554F62020F3DE2700C693E8 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		1554F62220F3DE7500C693E8 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		1574E7BB20F03A970070B124 /* SwiftOTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftOTP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1574E7BE20F03A970070B124 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1574E7C320F03A970070B124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -187,6 +192,7 @@
 			children = (
 				152EEEC220F10A99006925D8 /* TokensViewController.swift */,
 				152EEECC20F2662F006925D8 /* EditTokenViewController.swift */,
+				1554F62020F3DE2700C693E8 /* PreferencesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -220,6 +226,36 @@
 			path = SwiftOTPIntents;
 			sourceTree = "<group>";
 		};
+		1554F62420F3DE8900C693E8 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				1574E7BE20F03A970070B124 /* AppDelegate.swift */,
+				152EEEEA20F2CCB8006925D8 /* Constants.swift */,
+				1554F62220F3DE7500C693E8 /* Preferences.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		1554F62520F3DED100C693E8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1574E7CA20F03A980070B124 /* Info.plist */,
+				152EEED720F2C8DE006925D8 /* SwiftOTP.entitlements */,
+				152EEED320F2BDA2006925D8 /* Intents.intentdefinition */,
+				1574E7C520F03A980070B124 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1554F62620F3DEE100C693E8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1574E7C220F03A970070B124 /* Main.storyboard */,
+				1574E7C720F03A980070B124 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		1574E7B220F03A970070B124 = {
 			isa = PBXGroup;
 			children = (
@@ -247,14 +283,9 @@
 		1574E7BD20F03A970070B124 /* SwiftOTP */ = {
 			isa = PBXGroup;
 			children = (
-				152EEED720F2C8DE006925D8 /* SwiftOTP.entitlements */,
-				1574E7BE20F03A970070B124 /* AppDelegate.swift */,
-				152EEEEA20F2CCB8006925D8 /* Constants.swift */,
-				1574E7C220F03A970070B124 /* Main.storyboard */,
-				1574E7C520F03A980070B124 /* Assets.xcassets */,
-				1574E7C720F03A980070B124 /* LaunchScreen.storyboard */,
-				1574E7CA20F03A980070B124 /* Info.plist */,
-				152EEED320F2BDA2006925D8 /* Intents.intentdefinition */,
+				1554F62420F3DE8900C693E8 /* Application */,
+				1554F62520F3DED100C693E8 /* Supporting Files */,
+				1554F62620F3DEE100C693E8 /* Storyboards */,
 				152EEEC520F12A95006925D8 /* Views */,
 				152EEEC120F10A5E006925D8 /* ViewControllers */,
 				152EEECE20F26678006925D8 /* Extensions */,
@@ -626,6 +657,7 @@
 			files = (
 				152EEEE820F2CBB6006925D8 /* Intents.intentdefinition in Sources */,
 				152EEEDF20F2CBA2006925D8 /* IntentHandler.swift in Sources */,
+				1554F62720F3F91900C693E8 /* Preferences.swift in Sources */,
 				152EEEED20F2CCE6006925D8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -639,7 +671,9 @@
 				152EEEC320F10A99006925D8 /* TokensViewController.swift in Sources */,
 				1574E7BF20F03A970070B124 /* AppDelegate.swift in Sources */,
 				152EEED220F267B9006925D8 /* UIViewController+Segues.swift in Sources */,
+				1554F62120F3DE2700C693E8 /* PreferencesViewController.swift in Sources */,
 				152EEECD20F2662F006925D8 /* EditTokenViewController.swift in Sources */,
+				1554F62320F3DE7500C693E8 /* Preferences.swift in Sources */,
 				152EEED020F2669B006925D8 /* UIViewController+ContextBus.swift in Sources */,
 				152EEECA20F13EA4006925D8 /* TokenCollectionViewCell.swift in Sources */,
 				152EEEEB20F2CCB8006925D8 /* Constants.swift in Sources */,
@@ -876,10 +910,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SwiftOTP/SwiftOTP.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "SwiftOTP/Supporting Files/SwiftOTP.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R85D3K8ATT;
-				INFOPLIST_FILE = SwiftOTP/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SwiftOTP/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -898,10 +932,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SwiftOTP/SwiftOTP.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "SwiftOTP/Supporting Files/SwiftOTP.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R85D3K8ATT;
-				INFOPLIST_FILE = SwiftOTP/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SwiftOTP/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

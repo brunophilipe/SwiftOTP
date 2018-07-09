@@ -20,6 +20,10 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Issuer Name" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jvC-ES-2B7">
                         <rect key="frame" x="20" y="10" width="160" height="20.5"/>
+                        <accessibility key="accessibilityConfiguration" hint="Issuer Name">
+                            <accessibilityTraits key="traits" none="YES"/>
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstAttribute="height" constant="20.5" id="bVg-Si-yEH"/>
                         </constraints>
@@ -27,14 +31,21 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="012 345" textAlignment="center" lineBreakMode="middleTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UEv-e7-iV9">
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="middleTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UEv-e7-iV9">
                         <rect key="frame" x="20" y="0.0" width="160" height="53"/>
+                        <accessibility key="accessibilityConfiguration" hint="OTP Code">
+                            <accessibilityTraits key="traits" none="YES"/>
+                        </accessibility>
                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="32"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Name" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RAm-yY-sQj">
                         <rect key="frame" x="20" y="30.5" width="160" height="14.5"/>
+                        <accessibility key="accessibilityConfiguration" hint="Account Name">
+                            <accessibilityTraits key="traits" none="YES"/>
+                            <bool key="isElement" value="NO"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstAttribute="height" constant="14.5" id="VVP-QE-QdZ"/>
                         </constraints>
@@ -48,6 +59,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mra-AB-HJE">
                                 <rect key="frame" x="0.0" y="0.0" width="66" height="67"/>
                                 <color key="backgroundColor" red="0.84313725490196079" green="0.84313725490196079" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="Edit Token"/>
                                 <state key="normal" image="button_more"/>
                                 <state key="selected" backgroundImage="button_highlighted"/>
                                 <state key="highlighted" backgroundImage="button_highlighted"/>
@@ -58,6 +70,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gk-lI-tDl">
                                 <rect key="frame" x="67" y="0.0" width="66" height="67"/>
                                 <color key="backgroundColor" red="0.84313725490196079" green="0.84313725490196079" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="Show Code"/>
                                 <state key="normal" image="button_eye"/>
                                 <state key="selected" backgroundImage="button_highlighted"/>
                                 <state key="highlighted" backgroundImage="button_highlighted"/>
@@ -68,6 +81,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdn-RB-G0D">
                                 <rect key="frame" x="134" y="0.0" width="66" height="67"/>
                                 <color key="backgroundColor" red="0.84313725490196079" green="0.84313725490196079" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="Copy OTP Code to Clipboard"/>
                                 <state key="normal" image="button_copy"/>
                                 <state key="selected" backgroundImage="button_highlighted"/>
                                 <state key="highlighted" backgroundImage="button_highlighted"/>
@@ -109,8 +123,8 @@
                 <outlet property="codeLabel" destination="UEv-e7-iV9" id="afE-c4-Cv4"/>
                 <outlet property="copySecretButton" destination="sdn-RB-G0D" id="DtL-BV-Es4"/>
                 <outlet property="editTokenButton" destination="Mra-AB-HJE" id="n1L-oC-mUk"/>
+                <outlet property="issuerLabel" destination="jvC-ES-2B7" id="vAH-oN-4LG"/>
                 <outlet property="showSecretButton" destination="1gk-lI-tDl" id="Ecr-xj-MjB"/>
-                <outlet property="titleLabel" destination="jvC-ES-2B7" id="vAH-oN-4LG"/>
             </connections>
         </collectionViewCell>
     </objects>

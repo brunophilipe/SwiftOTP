@@ -31,11 +31,19 @@
                     </collectionView>
                     <navigationItem key="navigationItem" title="Tokens" largeTitleDisplayMode="always" id="oEW-YX-BA3">
                         <barButtonItem key="leftBarButtonItem" image="preferences" id="IRe-qX-x8k">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityLabel" value="Show Preferences" localized="YES"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isAccessibilityElement" value="YES"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <segue destination="UqC-sl-dxx" kind="presentation" id="bGO-sM-qRa"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="QR" id="0JT-im-voj">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityLabel" value="Show QR Code Reader" localized="YES"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isAccessibilityElement" value="YES"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="showQRReader:" destination="x21-WJ-NYw" id="8gx-Ra-Npc"/>
                             </connections>
@@ -72,12 +80,13 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Issuer Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bwj-t9-Sdc" customClass="ColoredPlaceholderTextField" customModule="SwiftOTP" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="0.0" width="343" height="44.5"/>
+                                                    <accessibility key="accessibilityConfiguration" hint="The entity that issued this token. For example: Apple." label="Issuer Name"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="bPn-e4-zSx"/>
                                                     </constraints>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                             <color key="value" white="0.25181749131944442" alpha="1" colorSpace="calibratedWhite"/>
@@ -107,12 +116,13 @@
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Drf-oz-BH6" customClass="ColoredPlaceholderTextField" customModule="SwiftOTP" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="0.0" width="343" height="44.5"/>
+                                                    <accessibility key="accessibilityConfiguration" hint="The account associated with this token. For example: your email address." label="Account Name"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="sIg-Ke-9rC"/>
                                                     </constraints>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                             <color key="value" white="0.25181749131944442" alpha="1" colorSpace="calibratedWhite"/>
@@ -150,6 +160,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.74509803919999995" green="0.043137254899999998" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Tap to Delete the Token">
+                                            <accessibilityTraits key="traits" button="YES"/>
+                                        </accessibility>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -249,6 +262,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.10982844980000001" green="0.10972782220000001" blue="0.11409296839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to ten seconds.">
+                                            <accessibilityTraits key="traits" button="YES"/>
+                                        </accessibility>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="lOT-pc-6N4" style="IBUITableViewCellStyleDefault" id="cxt-BZ-zvL">
                                         <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
@@ -267,6 +283,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.10982844980000001" green="0.10972782220000001" blue="0.11409296839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to thirty seconds.">
+                                            <accessibilityTraits key="traits" button="YES"/>
+                                        </accessibility>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="OSo-P8-hhQ" style="IBUITableViewCellStyleDefault" id="aKA-DF-yOe">
                                         <rect key="frame" x="0.0" y="143.5" width="375" height="44"/>
@@ -285,6 +304,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.10982844980000001" green="0.10972782220000001" blue="0.11409296839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to one minute.">
+                                            <accessibilityTraits key="traits" button="YES"/>
+                                        </accessibility>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="aZh-v9-JKI" style="IBUITableViewCellStyleDefault" id="ZB3-4n-M1y">
                                         <rect key="frame" x="0.0" y="187.5" width="375" height="44"/>
@@ -303,6 +325,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.10982844980000001" green="0.10972782220000001" blue="0.11409296839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to five minutes.">
+                                            <accessibilityTraits key="traits" button="YES"/>
+                                        </accessibility>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -326,6 +351,7 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="C7g-Gz-bse">
                                                     <rect key="frame" x="310" y="6" width="49" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                    <accessibility key="accessibilityConfiguration" label="Toggle Allow Handoff"/>
                                                     <connections>
                                                         <action selector="valueChanged:" destination="GdQ-7w-RRP" eventType="valueChanged" id="uDG-FB-2nR"/>
                                                     </connections>
@@ -340,7 +366,7 @@
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Siri" id="ciF-xn-Asn">
-                                <mutableString key="footerTitle">If enabled, the OTP code will be placed in the clipboard with an expiration time of 4 seconds when the OTP code is generated via Siri or Shortcurs. If disabled, code will only be shown/said aloud by Siri.  Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</mutableString>
+                                <mutableString key="footerTitle">If enabled, the OTP code will be placed in the clipboard with an expiration time of 4 seconds when the OTP code is generated via Siri or Shortcuts. If disabled, code will only be shown/said aloud by Siri.  Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</mutableString>
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="J1I-Dr-wO9" style="IBUITableViewCellStyleDefault" id="HW7-XW-mmp">
                                         <rect key="frame" x="0.0" y="474.5" width="375" height="44"/>
@@ -359,6 +385,7 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q7r-Bc-K38">
                                                     <rect key="frame" x="310" y="6" width="49" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                    <accessibility key="accessibilityConfiguration" label="Toggle Allow Place in Clipboard"/>
                                                     <connections>
                                                         <action selector="valueChanged:" destination="GdQ-7w-RRP" eventType="valueChanged" id="M7V-at-va3"/>
                                                     </connections>

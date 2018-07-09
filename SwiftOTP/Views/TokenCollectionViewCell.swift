@@ -11,7 +11,7 @@ import OTPKit
 
 class TokenCollectionViewCell: UICollectionViewCell
 {
-	@IBOutlet private var titleLabel: UILabel!
+	@IBOutlet private var issuerLabel: UILabel!
 	@IBOutlet private var accountLabel: UILabel!
 	@IBOutlet private var codeLabel: UILabel!
 	@IBOutlet private var buttonsStackView: UIStackView!
@@ -74,27 +74,38 @@ class TokenCollectionViewCell: UICollectionViewCell
 
 	func setToken(issuer: String?, account: String?)
 	{
-		if let issuer = issuer, issuer.count > 0
-		{
-			titleLabel.text = issuer
-			titleLabel.textColor = .darkText
-		}
-		else
-		{
-			titleLabel.text = "No Issuer"
-			titleLabel.textColor = .gray
-		}
+		let resolvedAccount: String
+		let resolvedIssuer: String
 
 		if let account = account, account.count > 0
 		{
-			accountLabel.text = account
+			resolvedAccount = account
 			accountLabel.textColor = .darkText
 		}
 		else
 		{
-			accountLabel.text = "No Account"
+			resolvedAccount = "No Account"
 			accountLabel.textColor = .gray
 		}
+
+		if let issuer = issuer, issuer.count > 0
+		{
+			resolvedIssuer = issuer
+			issuerLabel.textColor = .darkText
+		}
+		else
+		{
+			resolvedIssuer = "No Issuer"
+			issuerLabel.textColor = .gray
+		}
+
+		issuerLabel.text = resolvedIssuer
+		accountLabel.text = resolvedAccount
+
+		let tokenHint = "\(resolvedAccount) at \(resolvedIssuer)"
+		editTokenButton.accessibilityHint = tokenHint
+		showSecretButton.accessibilityHint = tokenHint
+		copySecretButton.accessibilityHint = tokenHint
 	}
 
 	private func changeCodeVisibility(to showCode: Bool)
@@ -112,16 +123,19 @@ class TokenCollectionViewCell: UICollectionViewCell
 		// Update show code button icon
 		self.showSecretButton.setImage(showCode ? #imageLiteral(resourceName: "button_eye_crossed.pdf"): #imageLiteral(resourceName: "button_eye.pdf"), for: .normal)
 
+		// Change accessibility label of show code button
+		showSecretButton.accessibilityLabel = showCode ? "Hide Code" : "Show Code"
+
 		// Setup labels alpha transition animations
 		self.codeLabel.alpha = showCode ? 0.0 : 1.0
-		self.titleLabel.alpha = showCode ? 1.0 : 0.0
+		self.issuerLabel.alpha = showCode ? 1.0 : 0.0
 		self.accountLabel.alpha = showCode ? 1.0 : 0.0
 
 		// Run labels alpha transition animations
 		UIView.animate(withDuration: 0.3)
 		{
 			self.codeLabel.alpha = !showCode ? 0.0 : 1.0
-			self.titleLabel.alpha = !showCode ? 1.0 : 0.0
+			self.issuerLabel.alpha = !showCode ? 1.0 : 0.0
 			self.accountLabel.alpha = !showCode ? 1.0 : 0.0
 		}
 
@@ -154,17 +168,39 @@ class TokenCollectionViewCell: UICollectionViewCell
 			// This one is less important that it runs on time
 			DispatchQueue.main.asyncAfter(wallDeadline: .now() + remainingDuration)
 			{
+				guard self.codeIsVisible else
+				{
+					// If the user hid the code label, then don't do anything.
+					return
+				}
+
 				self.changeCodeVisibility(to: false)
+
+				// Make show code button active for accessibility
+				UIAccessibility.post(notification: .layoutChanged, argument: self.showSecretButton)
 			}
 
 			// Show the next code and setup the progress bar
 			self.codeLabel.text = nextCode.value
+
+			// Inform accessibilty engine why code changed
+			UIAccessibility.post(notification: .announcement, argument: "Code expired. Loading new code.")
+
+			// Make code label active for accessibility
+			UIAccessibility.post(notification: .layoutChanged, argument: self.codeLabel)
+
+			// Begin animation of progress view
 			self.animateProgress(from: Float(remainingDuration / totalDuration), to: 0.0, duration: remainingDuration)
 		}
 
 		// Show the current code and setup the progress bar
 		// Note: The following code runs *before* the block of code inside the dispatch call above.
 		codeLabel.text = currentCode.value
+
+		// Make code label active for accessibility
+		UIAccessibility.post(notification: .layoutChanged, argument: codeLabel)
+
+		// Begin animation of progress view
 		animateProgress(from: Float(remainingDuration / totalDuration), to: 0.0, duration: remainingDuration)
 	}
 
@@ -174,6 +210,9 @@ class TokenCollectionViewCell: UICollectionViewCell
 		{
 			return
 		}
+
+		// Inform accessibilty engine that code was copied
+		UIAccessibility.post(notification: .announcement, argument: "Code copied.")
 
 		copyButton.setNormalAppearance(image: #imageLiteral(resourceName: "button_copy_success.pdf"), tint: #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1), duration: 0.3)
 

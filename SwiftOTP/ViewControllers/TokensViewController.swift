@@ -315,11 +315,20 @@ extension TokensViewController // Context Bus
 				tokenCell.showSecret(intentContext)
 			}
 		}
+		else if let tokenUrlContext = context as? LoadTokenUrlContext
+		{
+			importToken(with: tokenUrlContext.urlComponents)
+		}
 	}
 
 	struct ShowCodeFromIntentContext
 	{
 		let tokenAccount: String
+	}
+
+	struct LoadTokenUrlContext
+	{
+		let urlComponents: URLComponents
 	}
 }
 

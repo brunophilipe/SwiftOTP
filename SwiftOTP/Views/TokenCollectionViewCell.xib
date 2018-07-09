@@ -78,16 +78,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.048975409836065575" green="0.048975409836065575" blue="0.050000000000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </stackView>
-                    <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oaF-Tp-Zn5">
-                        <rect key="frame" x="0.0" y="50.5" width="200" height="2.5"/>
-                    </progressView>
                 </subviews>
             </view>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="oaF-Tp-Zn5" secondAttribute="trailing" id="3N5-uq-hxJ"/>
                 <constraint firstItem="UEv-e7-iV9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ene-dM-gmc"/>
-                <constraint firstItem="oaF-Tp-Zn5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ErH-Rk-Pv9"/>
                 <constraint firstItem="IL1-ZC-vE6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="OC4-lw-TA4"/>
                 <constraint firstItem="RAm-yY-sQj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="Oae-zX-6Eu"/>
                 <constraint firstItem="UEv-e7-iV9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="RDZ-1L-Fab"/>
@@ -96,7 +91,6 @@
                 <constraint firstItem="1gk-lI-tDl" firstAttribute="top" secondItem="UEv-e7-iV9" secondAttribute="bottom" id="YQs-fX-kGX"/>
                 <constraint firstAttribute="trailingMargin" secondItem="RAm-yY-sQj" secondAttribute="trailing" id="ZWo-xe-EhG"/>
                 <constraint firstItem="IL1-ZC-vE6" firstAttribute="top" secondItem="RAm-yY-sQj" secondAttribute="bottom" constant="8" id="fjQ-iJ-acZ"/>
-                <constraint firstItem="IL1-ZC-vE6" firstAttribute="top" secondItem="oaF-Tp-Zn5" secondAttribute="bottom" constant="1" id="oJ2-IB-Y60"/>
                 <constraint firstAttribute="bottom" secondItem="IL1-ZC-vE6" secondAttribute="bottom" id="t1I-Ar-JaA"/>
                 <constraint firstAttribute="trailingMargin" secondItem="jvC-ES-2B7" secondAttribute="trailing" id="tLN-Ft-Jtk"/>
                 <constraint firstItem="jvC-ES-2B7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="tiV-Gc-1Yv"/>
@@ -111,10 +105,10 @@
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="accountLabel" destination="RAm-yY-sQj" id="Ku1-6K-aYU"/>
+                <outlet property="buttonsStackView" destination="IL1-ZC-vE6" id="lyn-j6-vgy"/>
                 <outlet property="codeLabel" destination="UEv-e7-iV9" id="afE-c4-Cv4"/>
                 <outlet property="copySecretButton" destination="sdn-RB-G0D" id="DtL-BV-Es4"/>
                 <outlet property="editTokenButton" destination="Mra-AB-HJE" id="n1L-oC-mUk"/>
-                <outlet property="progressView" destination="oaF-Tp-Zn5" id="8tj-Ia-RNE"/>
                 <outlet property="showSecretButton" destination="1gk-lI-tDl" id="Ecr-xj-MjB"/>
                 <outlet property="titleLabel" destination="jvC-ES-2B7" id="vAH-oN-4LG"/>
             </connections>

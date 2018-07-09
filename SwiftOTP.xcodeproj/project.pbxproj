@@ -27,6 +27,7 @@
 		1554F62120F3DE2700C693E8 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1554F62020F3DE2700C693E8 /* PreferencesViewController.swift */; };
 		1554F62320F3DE7500C693E8 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1554F62220F3DE7500C693E8 /* Preferences.swift */; };
 		1554F62720F3F91900C693E8 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1554F62220F3DE7500C693E8 /* Preferences.swift */; };
+		1554F62920F40B6700C693E8 /* UIView+ShowHide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1554F62820F40B6700C693E8 /* UIView+ShowHide.swift */; };
 		1574E7BF20F03A970070B124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574E7BE20F03A970070B124 /* AppDelegate.swift */; };
 		1574E7C420F03A970070B124 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1574E7C220F03A970070B124 /* Main.storyboard */; };
 		1574E7C620F03A980070B124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1574E7C520F03A980070B124 /* Assets.xcassets */; };
@@ -119,6 +120,7 @@
 		1554F61E20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColoredPlaceholderTextField.swift; sourceTree = "<group>"; };
 		1554F62020F3DE2700C693E8 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		1554F62220F3DE7500C693E8 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		1554F62820F40B6700C693E8 /* UIView+ShowHide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ShowHide.swift"; sourceTree = "<group>"; };
 		1574E7BB20F03A970070B124 /* SwiftOTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftOTP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1574E7BE20F03A970070B124 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1574E7C320F03A970070B124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 			children = (
 				152EEED120F267B9006925D8 /* UIViewController+Segues.swift */,
 				152EEECF20F2669B006925D8 /* UIViewController+ContextBus.swift */,
+				1554F62820F40B6700C693E8 /* UIView+ShowHide.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -673,6 +676,7 @@
 				152EEED220F267B9006925D8 /* UIViewController+Segues.swift in Sources */,
 				1554F62120F3DE2700C693E8 /* PreferencesViewController.swift in Sources */,
 				152EEECD20F2662F006925D8 /* EditTokenViewController.swift in Sources */,
+				1554F62920F40B6700C693E8 /* UIView+ShowHide.swift in Sources */,
 				1554F62320F3DE7500C693E8 /* Preferences.swift in Sources */,
 				152EEED020F2669B006925D8 /* UIViewController+ContextBus.swift in Sources */,
 				152EEECA20F13EA4006925D8 /* TokenCollectionViewCell.swift in Sources */,

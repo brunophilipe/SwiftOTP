@@ -14,11 +14,13 @@ class TokenCollectionViewCell: UICollectionViewCell
 	@IBOutlet private var titleLabel: UILabel!
 	@IBOutlet private var accountLabel: UILabel!
 	@IBOutlet private var codeLabel: UILabel!
-	@IBOutlet private var progressView: UIProgressView!
+	@IBOutlet private var buttonsStackView: UIStackView!
 
 	@IBOutlet private var editTokenButton: UIButton!
 	@IBOutlet private var showSecretButton: UIButton!
 	@IBOutlet private var copySecretButton: UIButton!
+
+	private weak var lastProgressView: UIProgressView? = nil
 
 	var codesFetcher: (() -> [Token.Code]?)? = nil
 
@@ -106,14 +108,12 @@ class TokenCollectionViewCell: UICollectionViewCell
 		// On the nib, the code label is set as hidden, but after the first time the animation runs, it isn't, so
 		// we use the alpha being zero, and we stop using the hidden bool.
 		self.codeLabel.isHidden = false
-		self.progressView.isHidden = false
 
 		// Update show code button icon
 		self.showSecretButton.setImage(showCode ? #imageLiteral(resourceName: "button_eye_crossed.pdf"): #imageLiteral(resourceName: "button_eye.pdf"), for: .normal)
 
 		// Setup labels alpha transition animations
 		self.codeLabel.alpha = showCode ? 0.0 : 1.0
-		self.progressView.alpha = showCode ? 0.0 : 1.0
 		self.titleLabel.alpha = showCode ? 1.0 : 0.0
 		self.accountLabel.alpha = showCode ? 1.0 : 0.0
 
@@ -121,7 +121,6 @@ class TokenCollectionViewCell: UICollectionViewCell
 		UIView.animate(withDuration: 0.3)
 		{
 			self.codeLabel.alpha = !showCode ? 0.0 : 1.0
-			self.progressView.alpha = !showCode ? 0.0 : 1.0
 			self.titleLabel.alpha = !showCode ? 1.0 : 0.0
 			self.accountLabel.alpha = !showCode ? 1.0 : 0.0
 		}
@@ -130,6 +129,7 @@ class TokenCollectionViewCell: UICollectionViewCell
 		guard showCode else
 		{
 			codeLabel.text = ""
+			lastProgressView?.animatedHideAndRemoveFromSuperview()
 			return
 		}
 
@@ -159,17 +159,13 @@ class TokenCollectionViewCell: UICollectionViewCell
 
 			// Show the next code and setup the progress bar
 			self.codeLabel.text = nextCode.value
-			self.progressView.animateProgress(from: Float(remainingDuration / totalDuration),
-											  to: 0.0,
-											  duration: remainingDuration)
+			self.animateProgress(from: Float(remainingDuration / totalDuration), to: 0.0, duration: remainingDuration)
 		}
 
 		// Show the current code and setup the progress bar
 		// Note: The following code runs *before* the block of code inside the dispatch call above.
 		codeLabel.text = currentCode.value
-		progressView.animateProgress(from: Float(remainingDuration / totalDuration),
-									 to: 0.0,
-									 duration: remainingDuration)
+		animateProgress(from: Float(remainingDuration / totalDuration), to: 0.0, duration: remainingDuration)
 	}
 
 	private func animateCopyCodeButtonSuccess()
@@ -186,6 +182,27 @@ class TokenCollectionViewCell: UICollectionViewCell
 			copyButton.setNormalAppearance(image: #imageLiteral(resourceName: "button_copy.pdf"), tint: self.tintColor, duration: 0.3)
 		}
 	}
+
+	private func animateProgress(from start: Float, to end: Float, duration: TimeInterval)
+	{
+		self.lastProgressView?.animatedHideAndRemoveFromSuperview()
+
+		let progressView = UIProgressView(progressViewStyle: .bar)
+		progressView.translatesAutoresizingMaskIntoConstraints = false
+		progressView.alpha = 0.0
+		addSubview(progressView)
+
+		NSLayoutConstraint.activate([
+			leadingAnchor.constraint(equalTo: progressView.leadingAnchor),
+			progressView.trailingAnchor.constraint(equalTo: trailingAnchor),
+			buttonsStackView.topAnchor.constraint(equalTo: progressView.bottomAnchor, constant: 1.0)
+		])
+
+		progressView.animatedShow()
+		progressView.animateProgress(from: start, to: end, duration: duration)
+
+		self.lastProgressView = progressView
+	}
 }
 
 private extension UIProgressView
@@ -199,7 +216,7 @@ private extension UIProgressView
 
 	func setProgress(_ progress: Float, animationDuration: TimeInterval)
 	{
-		UIView.animate(withDuration: animationDuration, delay: 0.0, options: .curveLinear, animations: {
+		UIView.animate(withDuration: animationDuration, delay: 0.0, options: [.curveLinear, .beginFromCurrentState], animations: {
 			self.setProgress(progress, animated: true)
 		})
 	}

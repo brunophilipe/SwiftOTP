@@ -54,6 +54,11 @@ class EditTokenViewController: UITableViewController
 		dismiss(animated: true)
 	}
 
+	@IBAction func cancelEditor(_ sender: Any)
+	{
+		dismiss(animated: true)
+	}
+
 	@IBAction func deleteToken(_ sender: Any)
 	{
 		guard let context = self.context else

@@ -157,8 +157,10 @@ class TokensViewController: UICollectionViewController
 
 						if let token = self.tokenStore.load(tokenInfo.account)
 						{
-							token.issuer = tokenInfo.issuer
-							token.label = tokenInfo.label
+							// Setting to nil will reset these values to their original value
+							token.issuer = tokenInfo.issuer.count > 0 ? tokenInfo.issuer : nil
+							token.label = tokenInfo.label.count > 0 ? tokenInfo.label : nil
+
 							Token.store.save(token)
 
 							self.deleteDonatedIntents(for: token.account)

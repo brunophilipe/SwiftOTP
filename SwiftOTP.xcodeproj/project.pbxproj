@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05747BF8CED2958349CB32C3 /* Pods_SwiftOTPIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350846FED42A69CBAF7FF5AC /* Pods_SwiftOTPIntents.framework */; };
 		152EEEC320F10A99006925D8 /* TokensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEC220F10A99006925D8 /* TokensViewController.swift */; };
 		152EEECA20F13EA4006925D8 /* TokenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEC820F13EA4006925D8 /* TokenCollectionViewCell.swift */; };
 		152EEECB20F13EA4006925D8 /* TokenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 152EEEC920F13EA4006925D8 /* TokenCollectionViewCell.xib */; };
@@ -15,6 +16,13 @@
 		152EEED220F267B9006925D8 /* UIViewController+Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEED120F267B9006925D8 /* UIViewController+Segues.swift */; };
 		152EEED520F2BDA2006925D8 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 152EEED320F2BDA2006925D8 /* Intents.intentdefinition */; };
 		152EEED620F2C48B006925D8 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 152EEED320F2BDA2006925D8 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		152EEEDF20F2CBA2006925D8 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEDE20F2CBA2006925D8 /* IntentHandler.swift */; };
+		152EEEE320F2CBA2006925D8 /* SwiftOTPIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 152EEEDC20F2CBA2006925D8 /* SwiftOTPIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		152EEEE820F2CBB6006925D8 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 152EEED320F2BDA2006925D8 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		152EEEEB20F2CCB8006925D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEEA20F2CCB8006925D8 /* Constants.swift */; };
+		152EEEEC20F2CCB8006925D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEEA20F2CCB8006925D8 /* Constants.swift */; };
+		152EEEED20F2CCE6006925D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEEA20F2CCB8006925D8 /* Constants.swift */; };
+		152EEEEE20F2CE57006925D8 /* OTPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1574E7D520F0490D0070B124 /* OTPKit.framework */; };
 		1574E7BF20F03A970070B124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574E7BE20F03A970070B124 /* AppDelegate.swift */; };
 		1574E7C420F03A970070B124 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1574E7C220F03A970070B124 /* Main.storyboard */; };
 		1574E7C620F03A980070B124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1574E7C520F03A980070B124 /* Assets.xcassets */; };
@@ -34,6 +42,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		152EEEE120F2CBA2006925D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1574E7B320F03A970070B124 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 152EEEDB20F2CBA2006925D8;
+			remoteInfo = SwiftOTPIntents;
+		};
 		1574E7DF20F0490D0070B124 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1574E7B320F03A970070B124 /* Project object */;
@@ -58,6 +73,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		152EEEE720F2CBA2006925D8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				152EEEE320F2CBA2006925D8 /* SwiftOTPIntents.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1574E7EF20F0490D0070B124 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -81,6 +107,11 @@
 		152EEED120F267B9006925D8 /* UIViewController+Segues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Segues.swift"; sourceTree = "<group>"; };
 		152EEED320F2BDA2006925D8 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		152EEED720F2C8DE006925D8 /* SwiftOTP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftOTP.entitlements; sourceTree = "<group>"; };
+		152EEEDC20F2CBA2006925D8 /* SwiftOTPIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SwiftOTPIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		152EEEDE20F2CBA2006925D8 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		152EEEE020F2CBA2006925D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		152EEEE920F2CC0A006925D8 /* SwiftOTPIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftOTPIntents.entitlements; sourceTree = "<group>"; };
+		152EEEEA20F2CCB8006925D8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1574E7BB20F03A970070B124 /* SwiftOTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftOTP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1574E7BE20F03A970070B124 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1574E7C320F03A970070B124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,16 +129,28 @@
 		1574E7F520F0494F0070B124 /* KeychainStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
 		1574E7F620F0494F0070B124 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		192488C999A10607F1BCD929 /* Pods-OTPKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OTPKitTests/Pods-OTPKitTests.release.xcconfig"; sourceTree = "<group>"; };
+		350846FED42A69CBAF7FF5AC /* Pods_SwiftOTPIntents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOTPIntents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58EBC5BE904090BC5FFE8732 /* Pods-OTPKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OTPKitTests/Pods-OTPKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BEC8F6B397214EED847A83F3 /* Pods_OTPKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTPKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C54282D5E3FBD188B47F2DE6 /* Pods-SwiftOTPIntents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTPIntents.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTPIntents/Pods-SwiftOTPIntents.debug.xcconfig"; sourceTree = "<group>"; };
 		CA2CDEC4586380293BB7ED89 /* Pods_SwiftOTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB30E23875BBA7716C889F53 /* Pods-OTPKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OTPKit/Pods-OTPKit.debug.xcconfig"; sourceTree = "<group>"; };
 		DB8D1CE8ACF0F2E0AD2152E1 /* Pods-SwiftOTP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTP.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP.release.xcconfig"; sourceTree = "<group>"; };
 		ED336A811AC2DA0B53FFC09F /* Pods_OTPKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTPKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7477C48063C255AFA22D502 /* Pods-SwiftOTPIntents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTPIntents.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTPIntents/Pods-SwiftOTPIntents.release.xcconfig"; sourceTree = "<group>"; };
 		FCCE11B6F3C1BD6449F1CD99 /* Pods-OTPKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-OTPKit/Pods-OTPKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		152EEED920F2CBA2006925D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				152EEEEE20F2CE57006925D8 /* OTPKit.framework in Frameworks */,
+				05747BF8CED2958349CB32C3 /* Pods_SwiftOTPIntents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1574E7B820F03A970070B124 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -164,12 +207,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		152EEEDD20F2CBA2006925D8 /* SwiftOTPIntents */ = {
+			isa = PBXGroup;
+			children = (
+				152EEEE920F2CC0A006925D8 /* SwiftOTPIntents.entitlements */,
+				152EEEDE20F2CBA2006925D8 /* IntentHandler.swift */,
+				152EEEE020F2CBA2006925D8 /* Info.plist */,
+			);
+			path = SwiftOTPIntents;
+			sourceTree = "<group>";
+		};
 		1574E7B220F03A970070B124 = {
 			isa = PBXGroup;
 			children = (
 				1574E7BD20F03A970070B124 /* SwiftOTP */,
 				1574E7D620F0490D0070B124 /* OTPKit */,
 				1574E7E320F0490D0070B124 /* OTPKitTests */,
+				152EEEDD20F2CBA2006925D8 /* SwiftOTPIntents */,
 				1574E7BC20F03A970070B124 /* Products */,
 				CBE616A24E63CFB0CD90411F /* Pods */,
 				7337BBAF6AF56D1CB1774AC3 /* Frameworks */,
@@ -182,6 +236,7 @@
 				1574E7BB20F03A970070B124 /* SwiftOTP.app */,
 				1574E7D520F0490D0070B124 /* OTPKit.framework */,
 				1574E7DD20F0490D0070B124 /* OTPKitTests.xctest */,
+				152EEEDC20F2CBA2006925D8 /* SwiftOTPIntents.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,6 +246,7 @@
 			children = (
 				152EEED720F2C8DE006925D8 /* SwiftOTP.entitlements */,
 				1574E7BE20F03A970070B124 /* AppDelegate.swift */,
+				152EEEEA20F2CCB8006925D8 /* Constants.swift */,
 				1574E7C220F03A970070B124 /* Main.storyboard */,
 				1574E7C520F03A980070B124 /* Assets.xcassets */,
 				1574E7C720F03A980070B124 /* LaunchScreen.storyboard */,
@@ -231,6 +287,7 @@
 				ED336A811AC2DA0B53FFC09F /* Pods_OTPKit.framework */,
 				BEC8F6B397214EED847A83F3 /* Pods_OTPKitTests.framework */,
 				CA2CDEC4586380293BB7ED89 /* Pods_SwiftOTP.framework */,
+				350846FED42A69CBAF7FF5AC /* Pods_SwiftOTPIntents.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -244,6 +301,8 @@
 				192488C999A10607F1BCD929 /* Pods-OTPKitTests.release.xcconfig */,
 				0B5FBBB7CBFC9E097A981C00 /* Pods-SwiftOTP.debug.xcconfig */,
 				DB8D1CE8ACF0F2E0AD2152E1 /* Pods-SwiftOTP.release.xcconfig */,
+				C54282D5E3FBD188B47F2DE6 /* Pods-SwiftOTPIntents.debug.xcconfig */,
+				F7477C48063C255AFA22D502 /* Pods-SwiftOTPIntents.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -262,6 +321,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		152EEEDB20F2CBA2006925D8 /* SwiftOTPIntents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 152EEEE420F2CBA2006925D8 /* Build configuration list for PBXNativeTarget "SwiftOTPIntents" */;
+			buildPhases = (
+				8FAEBF00DF0619307A2D4D6E /* [CP] Check Pods Manifest.lock */,
+				152EEED820F2CBA2006925D8 /* Sources */,
+				152EEED920F2CBA2006925D8 /* Frameworks */,
+				152EEEDA20F2CBA2006925D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftOTPIntents;
+			productName = SwiftOTPIntents;
+			productReference = 152EEEDC20F2CBA2006925D8 /* SwiftOTPIntents.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		1574E7BA20F03A970070B124 /* SwiftOTP */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1574E7CD20F03A980070B124 /* Build configuration list for PBXNativeTarget "SwiftOTP" */;
@@ -272,11 +349,13 @@
 				1574E7B920F03A970070B124 /* Resources */,
 				1574E7EF20F0490D0070B124 /* Embed Frameworks */,
 				663D8CECCD30128E19156EBE /* [CP] Embed Pods Frameworks */,
+				152EEEE720F2CBA2006925D8 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				1574E7E920F0490D0070B124 /* PBXTargetDependency */,
+				152EEEE220F2CBA2006925D8 /* PBXTargetDependency */,
 			);
 			name = SwiftOTP;
 			productName = SwiftOTP;
@@ -333,10 +412,24 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Bruno Philipe";
 				TargetAttributes = {
+					152EEEDB20F2CBA2006925D8 = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
 					1574E7BA20F03A970070B124 = {
 						CreatedOnToolsVersion = 10.0;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
 								enabled = 1;
 							};
 							com.apple.Siri = {
@@ -370,11 +463,19 @@
 				1574E7BA20F03A970070B124 /* SwiftOTP */,
 				1574E7D420F0490D0070B124 /* OTPKit */,
 				1574E7DC20F0490D0070B124 /* OTPKitTests */,
+				152EEEDB20F2CBA2006925D8 /* SwiftOTPIntents */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		152EEEDA20F2CBA2006925D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1574E7B920F03A970070B124 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -421,6 +522,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FAEBF00DF0619307A2D4D6E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftOTPIntents-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		91328E2705D2BA1AC110EB4D /* [CP] Embed Pods Frameworks */ = {
@@ -498,6 +617,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		152EEED820F2CBA2006925D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				152EEEE820F2CBB6006925D8 /* Intents.intentdefinition in Sources */,
+				152EEEDF20F2CBA2006925D8 /* IntentHandler.swift in Sources */,
+				152EEEED20F2CCE6006925D8 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1574E7B720F03A970070B124 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -509,6 +638,7 @@
 				152EEECD20F2662F006925D8 /* EditTokenViewController.swift in Sources */,
 				152EEED020F2669B006925D8 /* UIViewController+ContextBus.swift in Sources */,
 				152EEECA20F13EA4006925D8 /* TokenCollectionViewCell.swift in Sources */,
+				152EEEEB20F2CCB8006925D8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +651,7 @@
 				1574E7F820F0494F0070B124 /* OTP.swift in Sources */,
 				152EEED520F2BDA2006925D8 /* Intents.intentdefinition in Sources */,
 				1574E7FA20F0494F0070B124 /* Token.swift in Sources */,
+				152EEEEC20F2CCB8006925D8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +666,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		152EEEE220F2CBA2006925D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 152EEEDB20F2CBA2006925D8 /* SwiftOTPIntents */;
+			targetProxy = 152EEEE120F2CBA2006925D8 /* PBXContainerItemProxy */;
+		};
 		1574E7E020F0490D0070B124 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1574E7D420F0490D0070B124 /* OTPKit */;
@@ -572,6 +708,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		152EEEE520F2CBA2006925D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C54282D5E3FBD188B47F2DE6 /* Pods-SwiftOTPIntents.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SwiftOTPIntents/SwiftOTPIntents.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R85D3K8ATT;
+				INFOPLIST_FILE = SwiftOTPIntents/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brunophilipe.SwiftOTP.SwiftOTPIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		152EEEE620F2CBA2006925D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7477C48063C255AFA22D502 /* Pods-SwiftOTPIntents.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SwiftOTPIntents/SwiftOTPIntents.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R85D3K8ATT;
+				INFOPLIST_FILE = SwiftOTPIntents/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brunophilipe.SwiftOTP.SwiftOTPIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		1574E7CB20F03A980070B124 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -842,6 +1020,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		152EEEE420F2CBA2006925D8 /* Build configuration list for PBXNativeTarget "SwiftOTPIntents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				152EEEE520F2CBA2006925D8 /* Debug */,
+				152EEEE620F2CBA2006925D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1574E7B620F03A970070B124 /* Build configuration list for PBXProject "SwiftOTP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

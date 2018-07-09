@@ -16,7 +16,9 @@ import QRCodeReader
 
 class TokensViewController: UICollectionViewController
 {
-	private let tokenStore = TokenStore(accountUUID: AppDelegate.storeUUID)
+	private let tokenStore = TokenStore(accountUUID: Constants.tokenStoreUUID,
+										keychainGroupIdentifier: Constants.keychainGroupIdentifier)
+
 	private let reuseIdentifier = "CellToken"
 
 	private enum Segues: String, Segue
@@ -152,6 +154,8 @@ class TokensViewController: UICollectionViewController
 							token.label = tokenInfo.label
 							Token.store.save(token)
 
+							self.deleteDonatedIntents(for: token.account)
+
 							if let index = self.tokenStore.index(of: token)
 							{
 								self.collectionView.reloadItems(at: [IndexPath(item: index, section: 0)])
@@ -250,6 +254,8 @@ private extension TokensViewController
 
 	func deleteToken(_ token: Token)
 	{
+		deleteDonatedIntents(for: token.account)
+
 		if let index = tokenStore.index(of: token), tokenStore.erase(token: token)
 		{
 			collectionView.deleteItems(at: [IndexPath(item: index, section: 0)])
@@ -272,6 +278,7 @@ extension TokensViewController // Intents
 		intent.label = token.label
 
 		let interaction = INInteraction(intent: intent, response: nil)
+		interaction.identifier = token.account
 		interaction.donate
 		{
 			error in
@@ -281,6 +288,16 @@ extension TokensViewController // Intents
 				print("\(error.localizedDescription)")
 			}
 		}
+	}
+
+	private func deleteDonatedIntents(for tokenAcount: String)
+	{
+		guard #available(iOS 12.0, *) else
+		{
+			return
+		}
+
+		INInteraction.delete(with: [tokenAcount], completion: nil)
 	}
 }
 

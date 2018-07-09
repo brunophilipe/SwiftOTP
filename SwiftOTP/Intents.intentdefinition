@@ -98,7 +98,7 @@
 					</dict>
 					<dict>
 						<key>INIntentResponseCodeFormatString</key>
-						<string>The code is ${otpCode}</string>
+						<string>${otpCode}</string>
 						<key>INIntentResponseCodeFormatStringID</key>
 						<string>nYZL31</string>
 						<key>INIntentResponseCodeName</key>

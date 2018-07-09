@@ -37,8 +37,13 @@ class TokenCollectionViewCell: UICollectionViewCell
 
 	@IBAction func showSecret(_ sender: Any)
 	{
+		if !codeIsVisible
+		{
+			// Only invoke the hook when the code is going to be shown to the user.
+			showHookAction?()
+		}
+
 		// Effectively toggles the visibility
-		showHookAction?()
 		changeCodeVisibility(to: !codeIsVisible)
 	}
 

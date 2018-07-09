@@ -31,7 +31,7 @@ open class TokenStore : NSObject
 		let array: NSMutableArray
 		let account: String
 
-		init(storeUUID: UUID)
+		init(storeUUID: UUID, keychainGroupIdentifier: String? = nil)
 		{
 			array = NSMutableArray()
 			account = storeUUID.uuidString
@@ -62,11 +62,13 @@ open class TokenStore : NSObject
 		return 0
 	}
 
-	public init(accountUUID: UUID)
+	public init(accountUUID: UUID, keychainGroupIdentifier: String? = nil)
 	{
 		self.accountUUID = accountUUID
 
 		super.init()
+
+		TokenOrder.store.keychainGroupIdentifier = keychainGroupIdentifier
 
 		// Migrate UserDefaults tokens to Keyring tokens
 			let def = UserDefaults.standard

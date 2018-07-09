@@ -31,13 +31,24 @@ open class KeychainStore<T: KeychainStorable>
 {
 	fileprivate let service: String
 
+	/// Set this property to a keychain group identifier use a shared keychain, or set it to
+	/// `nil` to use the local keychain. The default value is nil.
+	public var keychainGroupIdentifier: String? = nil
+
 	fileprivate func query(_ account: String) -> [String: AnyObject]
 	{
-		return [
+		var query = [
 			kSecClass as String: kSecClassGenericPassword,
 			kSecAttrAccount as String: account as AnyObject,
 			kSecAttrService as String: service as AnyObject
 		]
+
+		if let accessGroup = keychainGroupIdentifier
+		{
+			query[kSecAttrAccessGroup as String] = accessGroup as AnyObject
+		}
+
+		return query
 	}
 
 	fileprivate func add(_ account: String, _ data: Data, _ locked: Bool = false) -> Bool
@@ -66,6 +77,11 @@ open class KeychainStore<T: KeychainStorable>
 		else
 		{
 			add[kSecAttrAccessible as String] = kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly
+		}
+
+		if let accessGroup = keychainGroupIdentifier
+		{
+			add[kSecAttrAccessGroup as String] = accessGroup as AnyObject
 		}
 
 		return SecItemAdd(add as CFDictionary, nil) == errSecSuccess

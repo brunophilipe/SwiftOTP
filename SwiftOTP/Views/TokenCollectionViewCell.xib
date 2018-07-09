@@ -48,7 +48,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mra-AB-HJE">
                                 <rect key="frame" x="0.0" y="0.0" width="66" height="67"/>
                                 <color key="backgroundColor" red="0.84313725490196079" green="0.84313725490196079" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="button_pencil"/>
+                                <state key="normal" image="button_more"/>
                                 <state key="selected" backgroundImage="button_highlighted"/>
                                 <state key="highlighted" backgroundImage="button_highlighted"/>
                                 <connections>
@@ -124,6 +124,6 @@
         <image name="button_copy" width="44" height="44"/>
         <image name="button_eye" width="44" height="44"/>
         <image name="button_highlighted" width="7" height="7"/>
-        <image name="button_pencil" width="44" height="44"/>
+        <image name="button_more" width="44" height="44"/>
     </resources>
 </document>

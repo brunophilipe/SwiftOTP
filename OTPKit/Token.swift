@@ -68,34 +68,38 @@ public final class Token : NSObject, KeychainStorable
 
 	public var codes: [Code]
 	{
-		if let otp = OTP.store.load(account)
+		guard let otp = OTP.store.load(account) else
 		{
-			let now = Date()
-
-			switch kind
-			{
-			case .hotp:
-				let code = Code(otp.code(counter), now, period)
-				counter += 1
-				if Token.store.save(self)
-				{
-					return [code]
-				}
-
-			case .totp:
-				func totp(_ otp: OTP, now: Date) -> Code
-				{
-					let c = Int64(now.timeIntervalSince1970) / period
-					let i = Date(timeIntervalSince1970: TimeInterval(c * period))
-					return Code(otp.code(c), i, period)
-				}
-
-				let next = now.addingTimeInterval(TimeInterval(period))
-				return [totp(otp, now: now), totp(otp, now: next)]
-			}
+			return []
 		}
 
-		return []
+		let now = Date()
+
+		switch kind
+		{
+		case .hotp:
+			let code = Code(otp.code(counter), now, period)
+			counter += 1
+			if Token.store.save(self)
+			{
+				return [code]
+			}
+			else
+			{
+				return []
+			}
+
+		case .totp:
+			func totp(_ otp: OTP, now: Date) -> Code
+			{
+				let c = Int64(now.timeIntervalSince1970) / period
+				let i = Date(timeIntervalSince1970: TimeInterval(c * period))
+				return Code(otp.code(c), i, period)
+			}
+
+			let next = now.addingTimeInterval(TimeInterval(period))
+			return [totp(otp, now: now), totp(otp, now: next)]
+		}
 	}
 
 	@objc public var issuer: String! = nil
@@ -119,6 +123,39 @@ public final class Token : NSObject, KeychainStorable
 		didSet
 		{
 			if image == nil { image = imageOrig }
+		}
+	}
+
+	/// Returns the best code for near immediate use.
+	///
+	/// This routine will calculate the current code(s), and return the most appropriate one. If this is a HOTP token,
+	/// returns the current code. If this is a TOTP code, returns the current code if it is still valid for the next
+	/// 3 seconds. Otherwise returns the next code. The idea is to provide the user with a code that will be most
+	/// likely be valid once they place the code in the clipboard and switch apps in order to paste it.
+	public var bestCode: Code?
+	{
+		let codes = self.codes
+
+		guard codes.count > 0 else
+		{
+			return nil
+		}
+
+		switch kind
+		{
+		case .hotp:
+			return codes.first
+
+		case .totp:
+			let currentCode = codes.first!
+			if currentCode.to.timeIntervalSinceNow > 3
+			{
+				return currentCode
+			}
+			else
+			{
+				return codes.last!
+			}
 		}
 	}
 

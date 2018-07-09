@@ -98,7 +98,7 @@
 					</dict>
 					<dict>
 						<key>INIntentResponseCodeFormatString</key>
-						<string>${otpCode}</string>
+						<string>The code is ${otpCode}</string>
 						<key>INIntentResponseCodeFormatStringID</key>
 						<string>nYZL31</string>
 						<key>INIntentResponseCodeName</key>
@@ -126,7 +126,7 @@
 				</array>
 			</dict>
 			<key>INIntentRestrictions</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>INIntentTitle</key>
 			<string>View OTP Code</string>
 			<key>INIntentTitleID</key>

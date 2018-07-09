@@ -277,6 +277,11 @@ extension TokensViewController // Intents
 		intent.issuer = token.issuer
 		intent.label = token.label
 
+		if let issuer = intent.issuer
+		{
+			intent.suggestedInvocationPhrase = "OTP \(issuer)"
+		}
+
 		let interaction = INInteraction(intent: intent, response: nil)
 		interaction.identifier = token.account
 		interaction.donate

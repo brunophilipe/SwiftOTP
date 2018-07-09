@@ -16,7 +16,7 @@ class IntentHandler: INExtension, ViewCodeIntentHandling
 
 	func handle(intent: ViewCodeIntent, completion: @escaping (ViewCodeIntentResponse) -> Void)
 	{
-		NSLog("Lauched intent handler.")
+		debugLog("Lauched intent handler.")
 
 		guard let tokenAccount = intent.account else
 		{
@@ -25,7 +25,7 @@ class IntentHandler: INExtension, ViewCodeIntentHandling
 			return
 		}
 
-		NSLog("Intent: \(String(describing: intent.account)) \(String(describing: intent.issuer)) \(String(describing: intent.label))")
+		debugLog("Intent: \(String(describing: intent.issuer)) \(String(describing: intent.label))")
 
 		guard let token = tokenStore.load(tokenAccount) else
 		{
@@ -34,14 +34,14 @@ class IntentHandler: INExtension, ViewCodeIntentHandling
 			return
 		}
 
-		NSLog("Good intent! Loading codes…")
+		debugLog("Good intent! Loading codes…")
 
 		let codes = token.codes
 
 		guard codes.count >= 2 else
 		{
 			completion(ViewCodeIntentResponse(code: .failure, userActivity: nil))
-			NSLog("Bad token! Not enough codes generated :(")
+			NSLog("Bad token! Not enough codes generated.")
 			return
 		}
 
@@ -51,9 +51,8 @@ class IntentHandler: INExtension, ViewCodeIntentHandling
 
 		completion(ViewCodeIntentResponse.success(otpCode: bestCode))
 
-		NSLog("Intent handling done with code: \(bestCode)")
+		debugLog("Intent handling done with code first digit: \(bestCode.prefix(1))")
 	}
-
     
     override func handler(for intent: INIntent) -> Any {
         // This is the default implementation.  If you want different objects to handle different intents,
@@ -61,5 +60,11 @@ class IntentHandler: INExtension, ViewCodeIntentHandling
         
         return self
     }
-    
+}
+
+func debugLog(_ string: String)
+{
+	#if DEBUG
+	NSLog(string)
+	#endif
 }

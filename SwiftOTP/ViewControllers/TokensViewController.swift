@@ -209,6 +209,7 @@ class TokensViewController: UICollectionViewController
 			tokenCell.codesFetcher = { [weak self] in self?.tokenStore.load(tokenAccount)?.codes }
 			tokenCell.editAction = { [weak self] in self?.performSegue(Segues.editToken, sender: tokenAccount) }
 			tokenCell.showHookAction = { [weak self] in self?.donateIntent(for: tokenAccount) }
+			tokenCell.copyCodeAction = { [weak self] in return self?.copyCode(for: tokenAccount) ?? false }
 		}
     
         return cell
@@ -269,6 +270,24 @@ private extension TokensViewController
 		{
 			collectionView.deleteItems(at: [IndexPath(item: index, section: 0)])
 		}
+	}
+
+	func copyCode(for tokenAccount: String) -> Bool
+	{
+		guard let token = tokenStore.load(tokenAccount), let bestCode = token.bestCode?.value else
+		{
+			// There's nothing to show if the codes fetcher failed.
+			return false
+		}
+
+		let preferences = Preferences.instance
+
+		UIPasteboard.general.setItems([["public.plain-text": bestCode]], options: [
+			.expirationDate: Date(timeIntervalSinceNow: preferences.clipboardExpirationLength.timeIntervalValue),
+			.localOnly: !preferences.allowClipboardHandoff
+		])
+
+		return true
 	}
 }
 

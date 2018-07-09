@@ -22,7 +22,12 @@ class TokenCollectionViewCell: UICollectionViewCell
 
 	var codesFetcher: (() -> [Token.Code]?)? = nil
 
+	/// Handler called when the user taps the "edit token" button.
 	var editAction: (() -> Void)? = nil
+
+	/// Handler invoked when the user taps the "copy code" button. Should return true on success, false on failure.
+	var copyCodeAction: (() -> Bool)? = nil
+
 	var showHookAction: (() -> Void)? = nil
 
 	private var codeIsVisible: Bool
@@ -47,36 +52,21 @@ class TokenCollectionViewCell: UICollectionViewCell
 		changeCodeVisibility(to: !codeIsVisible)
 	}
 
-	@IBAction func copySecret(_ sender: Any)
+	func hideSecret()
 	{
-		guard let codes = codesFetcher?(), codes.count >= 2, let copyButton = copySecretButton else
-		{
-			// There's nothing to show if the codes fetcher failed.
-			return
-		}
-
 		if codeIsVisible
 		{
-			// Hide code if it is visible.
 			changeCodeVisibility(to: false)
 		}
+	}
 
-		let preferences = Preferences.instance
+	@IBAction func copySecret(_ sender: Any)
+	{
+		hideSecret()
 
-		let currentCode = codes.first!
-		let nextCode = codes.last!
-		let bestCode = (currentCode.to.timeIntervalSinceNow > 5 ? currentCode : nextCode).value
-
-		UIPasteboard.general.setItems([["public.plain-text": bestCode]], options: [
-			.expirationDate: Date(timeIntervalSinceNow: preferences.clipboardExpirationLength.timeIntervalValue),
-			.localOnly: !preferences.allowClipboardHandoff
-		])
-
-		copyButton.setNormalAppearance(image: #imageLiteral(resourceName: "button_copy_success.pdf"), tint: #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1), duration: 0.3)
-
-		DispatchQueue.main.asyncAfter(wallDeadline: .now() + 2.3)
+		if copyCodeAction?() == true
 		{
-			copyButton.setNormalAppearance(image: #imageLiteral(resourceName: "button_copy.pdf"), tint: self.tintColor, duration: 0.3)
+			animateCopyCodeButtonSuccess()
 		}
 	}
 
@@ -180,6 +170,21 @@ class TokenCollectionViewCell: UICollectionViewCell
 		progressView.animateProgress(from: Float(remainingDuration / totalDuration),
 									 to: 0.0,
 									 duration: remainingDuration)
+	}
+
+	private func animateCopyCodeButtonSuccess()
+	{
+		guard let copyButton = copySecretButton else
+		{
+			return
+		}
+
+		copyButton.setNormalAppearance(image: #imageLiteral(resourceName: "button_copy_success.pdf"), tint: #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1), duration: 0.3)
+
+		DispatchQueue.main.asyncAfter(wallDeadline: .now() + 2.3)
+		{
+			copyButton.setNormalAppearance(image: #imageLiteral(resourceName: "button_copy.pdf"), tint: self.tintColor, duration: 0.3)
+		}
 	}
 }
 

@@ -113,16 +113,26 @@ class TokensViewController: UICollectionViewController
 
 		if let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout
 		{
-			let isCompact = traitCollection.horizontalSizeClass == .compact
 			let containerWidth = collectionView.effectiveContentSize.width - flowLayout.minimumHorizontalSpacing
-			let targetWidth: CGFloat = isCompact ? 145 : 200
-			let fittingItems = floor(containerWidth / targetWidth)
-			let itemWidth = floor(containerWidth / fittingItems) - (isCompact ? 0 : (fittingItems + 1))
+			let fittingItems = floor(containerWidth / targetItemWidth(for: containerWidth))
+			let itemWidth = floor(containerWidth / fittingItems) - (containerWidth < 375 ? 0 : (fittingItems + 1))
 
 			if itemWidth != flowLayout.itemSize.width
 			{
 				flowLayout.itemSize.width = itemWidth
 			}
+		}
+	}
+
+	private func targetItemWidth(for containerWidth: CGFloat) -> CGFloat
+	{
+		if containerWidth < 375
+		{
+			return 145
+		}
+		else
+		{
+			return 200
 		}
 	}
 

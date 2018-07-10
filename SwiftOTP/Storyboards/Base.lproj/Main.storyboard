@@ -173,7 +173,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Editing Token" id="58y-xL-gHS">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="eEx-Km-7OK">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="eEx-Km-7OK">
                             <connections>
                                 <action selector="cancelEditor:" destination="GN1-EN-rW1" id="0YK-OU-aV2"/>
                             </connections>

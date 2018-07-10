@@ -206,6 +206,8 @@ class TokenCollectionViewCell: UICollectionViewCell
 
 		let progressView = UIProgressView(progressViewStyle: .bar)
 		progressView.translatesAutoresizingMaskIntoConstraints = false
+		progressView.isAccessibilityElement = false
+		progressView.isUserInteractionEnabled = false
 		progressView.alpha = 0.0
 		addSubview(progressView)
 

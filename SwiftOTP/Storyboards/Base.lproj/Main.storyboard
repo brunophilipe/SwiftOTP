@@ -243,7 +243,7 @@
                         <color key="sectionIndexColor" red="0.42760539050000002" green="0.42704725269999999" blue="0.44890797139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexBackgroundColor" white="0.059999999999999998" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
-                            <tableViewSection headerTitle="Clipboard Expiration" footerTitle="How long the code should be left in the clipboard after the &quot;Copy to Clipboard&quot; icon is tapped on a token." id="TUA-sZ-PNn">
+                            <tableViewSection headerTitle="Clipboard Expiration" footerTitle="How long the code should be left in the clipboard after &quot;Copy to Clipboard&quot; is tapped on a token." id="TUA-sZ-PNn">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="lPb-Q0-CV2" style="IBUITableViewCellStyleDefault" id="JHN-lr-VYp">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>

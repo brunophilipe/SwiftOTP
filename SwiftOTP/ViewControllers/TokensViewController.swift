@@ -203,7 +203,7 @@ class TokensViewController: UICollectionViewController
         // Configure the cell
 		if let token = tokenStore.load(indexPath.row), let tokenCell = cell as? TokenCollectionViewCell
 		{
-			tokenCell.setToken(issuer: token.issuer, account: token.label)
+			tokenCell.setToken(issuer: token.resolvedIssuer, account: token.resolvedLabel)
 
 			let tokenAccount = token.account
 			tokenCell.codesFetcher = { [weak self] in self?.tokenStore.load(tokenAccount)?.codes }
@@ -258,8 +258,13 @@ private extension TokensViewController
 			return
 		}
 
-		// TODO: Insert new token (need to find out how tokens are indexed first)
-		collectionView.insertItems(at: [IndexPath(item: 0, section: 0)])
+		let newIndexPath = IndexPath(item: 0, section: 0)
+		collectionView.insertItems(at: [newIndexPath])
+
+		if let cell = collectionView.cellForItem(at: newIndexPath)
+		{
+			UIAccessibility.post(notification: .layoutChanged, argument: cell)
+		}
 	}
 
 	func deleteToken(_ token: Token)

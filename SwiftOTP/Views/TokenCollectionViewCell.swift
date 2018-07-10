@@ -72,37 +72,15 @@ class TokenCollectionViewCell: UICollectionViewCell
 		}
 	}
 
-	func setToken(issuer: String?, account: String?)
+	func setToken(issuer: String, account: String)
 	{
-		let resolvedAccount: String
-		let resolvedIssuer: String
+		issuerLabel.text = issuer
+		issuerLabel.textColor = issuer.count > 0 ? .darkText : .gray
 
-		if let account = account, account.count > 0
-		{
-			resolvedAccount = account
-			accountLabel.textColor = .darkText
-		}
-		else
-		{
-			resolvedAccount = "No Account"
-			accountLabel.textColor = .gray
-		}
+		accountLabel.text = account
+		accountLabel.textColor = account.count > 0 ? .darkText : .gray
 
-		if let issuer = issuer, issuer.count > 0
-		{
-			resolvedIssuer = issuer
-			issuerLabel.textColor = .darkText
-		}
-		else
-		{
-			resolvedIssuer = "No Issuer"
-			issuerLabel.textColor = .gray
-		}
-
-		issuerLabel.text = resolvedIssuer
-		accountLabel.text = resolvedAccount
-
-		let tokenHint = "\(resolvedAccount) at \(resolvedIssuer)"
+		let tokenHint = "\(account) at \(issuer)"
 		editTokenButton.accessibilityHint = tokenHint
 		showSecretButton.accessibilityHint = tokenHint
 		copySecretButton.accessibilityHint = tokenHint

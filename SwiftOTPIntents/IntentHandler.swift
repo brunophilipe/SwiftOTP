@@ -9,6 +9,7 @@
 import Intents
 import OTPKit
 
+@available(iOSApplicationExtension 12.0, *)
 class IntentHandler: INExtension, ViewCodeIntentHandling
 {
 	private let tokenStore = TokenStore(accountUUID: Constants.tokenStoreUUID,

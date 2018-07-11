@@ -96,6 +96,23 @@ class EditTokenViewController: UITableViewController
 	}
 }
 
+extension EditTokenViewController: UITextFieldDelegate
+{
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool
+	{
+		if textField === issuerTextField
+		{
+			labelTextField.becomeFirstResponder()
+		}
+		else
+		{
+			textField.resignFirstResponder()
+		}
+
+		return true
+	}
+}
+
 extension EditTokenViewController
 {
 	override func broadcast(_ context: Any)

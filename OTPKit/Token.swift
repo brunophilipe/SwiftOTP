@@ -80,25 +80,18 @@ public final class Token : NSObject, KeychainStorable
 		case .hotp:
 			let code = Code(otp.code(counter), now, period)
 			counter += 1
-			if Token.store.save(self)
-			{
-				return [code]
-			}
-			else
-			{
-				return []
-			}
+			return Token.store.save(self) ? [code] : []
 
 		case .totp:
-			func totp(_ otp: OTP, now: Date) -> Code
+			func totp(_ otp: OTP, when: Date) -> Code
 			{
-				let c = Int64(now.timeIntervalSince1970) / period
+				let c = Int64(when.timeIntervalSince1970) / period
 				let i = Date(timeIntervalSince1970: TimeInterval(c * period))
 				return Code(otp.code(c), i, period)
 			}
 
 			let next = now.addingTimeInterval(TimeInterval(period))
-			return [totp(otp, now: now), totp(otp, now: next)]
+			return [totp(otp, when: now), totp(otp, when: next)]
 		}
 	}
 

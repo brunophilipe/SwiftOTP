@@ -82,8 +82,8 @@ class EditTokenViewController: UITableViewController
 	@IBAction func exportToken(_ sender: Any)
 	{
 		let picker = UIAlertController(title: "Choose Method", message: nil, preferredStyle: .actionSheet)
-		picker.addAction(UIAlertAction(title: "QR Code", style: .default, handler: { _ in self.exportViaQR() }))
-		picker.addAction(UIAlertAction(title: "URL as Text", style: .default, handler: { _ in self.exportViaURL() }))
+		picker.addAction(UIAlertAction(title: "Show QR Code", style: .default, handler: { _ in self.exportViaQR() }))
+		picker.addAction(UIAlertAction(title: "Share URL", style: .default, handler: { _ in self.exportViaURL() }))
 		picker.addAction(UIAlertAction(title: "Cancel", style: .cancel))
 		picker.loadViewIfNeeded()
 		picker.view.tintColor = view.tintColor
@@ -97,7 +97,7 @@ class EditTokenViewController: UITableViewController
 
 	private func exportViaURL()
 	{
-		
+
 	}
 
 	private func handleDelete()

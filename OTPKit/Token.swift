@@ -29,6 +29,15 @@ public final class Token : NSObject, KeychainStorable
 	{
 		case hotp = 0
 		case totp = 1
+
+		fileprivate var stringValue: String
+		{
+			switch self
+			{
+			case .hotp: return "hotp"
+			case .totp: return "totp"
+			}
+		}
 	}
 
 	open class Code
@@ -150,6 +159,29 @@ public final class Token : NSObject, KeychainStorable
 				return codes.last!
 			}
 		}
+	}
+
+	/// Reconstructs a URL that can be used to import this token into another device.
+	public var asUrl: URL?
+	{
+		guard
+			let escapedIssuer = issuer.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed),
+			let escapedLabel = label.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed),
+			var urlParameters = OTP.store.load(account)?.urlParameters
+		else
+		{
+			return nil
+		}
+
+		// Create base url
+		let urlString = "otpauth://\(kind.stringValue)/\(escapedIssuer):\(escapedLabel)"
+
+		// Add non-secret parameters
+		urlParameters["period"] = "\(period)"
+		urlParameters["issuer"] = "\(escapedIssuer)"
+
+		// Build the url object
+		return URL(string: urlString + "?" + urlParameters.map({"\($0)=\($1)"}).joined(separator: "&"))
 	}
 
 	public init?(otp: OTP, urlc: URLComponents, load: Bool = false)

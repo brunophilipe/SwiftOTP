@@ -49,14 +49,11 @@ public final class OTP : NSObject, KeychainStorable
 				switch item.name.lowercased()
 				{
 				case "secret":
-					if let s = item.value!.base32DecodedData
-					{
-						secret = s
-					}
-					else
+					guard let decodedSecret = item.value?.base32DecodedData else
 					{
 						return nil
 					}
+					secret = decodedSecret
 
 				case "algorithm":
 					switch item.value!.lowercased()
@@ -123,6 +120,29 @@ public final class OTP : NSObject, KeychainStorable
 		aCoder.encode(algo, forKey: "algo")
 		aCoder.encode(size, forKey: "size")
 		aCoder.encode(digits, forKey: "digits")
+	}
+
+	/// Produces url parameters that can be used to reconstruct a URL to import this token into another device.
+	internal var urlParameters: [String: String]?
+	{
+		let algoName: String
+
+		switch algo
+		{
+		case Int(kCCHmacAlgMD5):	algoName = "md5"
+		case Int(kCCHmacAlgSHA1):	algoName = "sha1"
+		case Int(kCCHmacAlgSHA224):	algoName = "sha224"
+		case Int(kCCHmacAlgSHA256):	algoName = "sha256"
+		case Int(kCCHmacAlgSHA384):	algoName = "sha384"
+		case Int(kCCHmacAlgSHA512):	algoName = "sha512"
+		default: return nil
+		}
+
+		return [
+			"digits": "\(digits)",
+			"algorithm": algoName,
+			"secret": secret.base32EncodedString
+		]
 	}
 
 	public func code(_ counter: Int64) -> String

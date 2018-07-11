@@ -165,28 +165,36 @@ class TokensViewController: UICollectionViewController
 					{
 						tokenInfo in
 
-						if let token = self.tokenStore.load(tokenInfo.account)
+						guard let token = self.tokenStore.load(tokenInfo.account) else
 						{
-							// Setting to nil will reset these values to their original value
-							token.issuer = tokenInfo.issuer.count > 0 ? tokenInfo.issuer : nil
-							token.label = tokenInfo.label.count > 0 ? tokenInfo.label : nil
-
-							Token.store.save(token)
-
-							self.deleteDonatedIntents(for: token.account)
-
-							if let index = self.tokenStore.index(of: token)
-							{
-								self.collectionView.reloadItems(at: [IndexPath(item: index, section: 0)])
-							}
+							return
 						}
+
+						// Setting to nil will reset these values to their original value
+						token.issuer = tokenInfo.issuer.count > 0 ? tokenInfo.issuer : nil
+						token.label = tokenInfo.label.count > 0 ? tokenInfo.label : nil
+
+						Token.store.save(token)
+
+						self.deleteDonatedIntents(for: token.account)
+
+						if let index = self.tokenStore.index(of: token)
+						{
+							self.collectionView.reloadItems(at: [IndexPath(item: index, section: 0)])
+						}
+					}
+
+				let getTokenUrlAction: (String) -> URL? =
+					{
+						tokenAccount in return self.tokenStore.load(tokenAccount)?.asUrl
 					}
 
 				let context = EditTokenViewController.TokenEditorContext(tokenAccount: token.account,
 																		 tokenIssuer: token.issuer,
 																		 tokenLabel: token.label,
 																		 deleteAction: deleteAction,
-																		 saveAction: saveAction)
+																		 saveAction: saveAction,
+																		 getTokenUrlAction: getTokenUrlAction)
 
 				storyboardSegue.destination.broadcast(context)
 			}

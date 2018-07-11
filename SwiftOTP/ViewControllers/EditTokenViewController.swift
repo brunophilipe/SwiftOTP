@@ -35,10 +35,6 @@ class EditTokenViewController: UITableViewController
 	{
 		if indexPath.section == 2, indexPath.row == 0
 		{
-			exportToken(tableView.cellForRow(at: indexPath) as Any)
-		}
-		else if indexPath.section == 3, indexPath.row == 0
-		{
 			deleteToken(tableView.cellForRow(at: indexPath) as Any)
 		}
 
@@ -81,23 +77,14 @@ class EditTokenViewController: UITableViewController
 
 	@IBAction func exportToken(_ sender: Any)
 	{
-		let picker = UIAlertController(title: "Choose Method", message: nil, preferredStyle: .actionSheet)
-		picker.addAction(UIAlertAction(title: "Show QR Code", style: .default, handler: { _ in self.exportViaQR() }))
-		picker.addAction(UIAlertAction(title: "Share URL", style: .default, handler: { _ in self.exportViaURL() }))
-		picker.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-		picker.loadViewIfNeeded()
-		picker.view.tintColor = view.tintColor
-		present(picker, animated: true)
-	}
+		guard let context = self.context, let url = context.getTokenUrlAction(context.tokenAccount) else
+		{
+			return
+		}
 
-	private func exportViaQR()
-	{
-
-	}
-
-	private func exportViaURL()
-	{
-
+		let activitySheet = UIActivityViewController(activityItems: [url], applicationActivities: [ShowTokenQRActivity()])
+		present(activitySheet, animated: true)
+		activitySheet.popoverPresentationController?.barButtonItem = sender as? UIBarButtonItem
 	}
 
 	private func handleDelete()
@@ -115,11 +102,12 @@ class EditTokenViewController: UITableViewController
 
 	struct TokenEditorContext
 	{
-		var tokenAccount: String
-		var tokenIssuer: String
-		var tokenLabel: String
-		var deleteAction: (String) -> Void
-		var saveAction: ((account: String, issuer: String, label: String)) -> Void
+		let tokenAccount: String
+		let tokenIssuer: String
+		let tokenLabel: String
+		let deleteAction: (String) -> Void
+		let saveAction: ((account: String, issuer: String, label: String)) -> Void
+		let getTokenUrlAction: (String) -> URL?
 	}
 }
 
@@ -151,4 +139,70 @@ extension EditTokenViewController
 			self.context = tokenContext
 		}
 	}
+}
+
+private class ShowTokenQRActivity: UIActivity
+{
+	private var url: URL? = nil
+
+	override class var activityCategory: UIActivity.Category
+	{
+		return .action
+	}
+
+	override var activityTitle: String?
+	{
+		return "Show Token QR Code"
+	}
+
+	override var activityType: UIActivity.ActivityType?
+	{
+		return .init(rawValue: "Show")
+	}
+
+	override var activityImage: UIImage?
+	{
+		return #imageLiteral(resourceName: "QR_Large.pdf")
+	}
+
+	override func canPerform(withActivityItems activityItems: [Any]) -> Bool
+	{
+		guard activityItems.count == 1, let url = activityItems.first as? URL else
+		{
+			return false
+		}
+
+		self.url = url
+
+		return true
+	}
+
+	override var activityViewController: UIViewController?
+	{
+		let imageViewerStoryboard = UIStoryboard(name: "ImageViewer", bundle: Bundle.main)
+
+		let qrSize = CGSize(width: 300, height: 300)
+		let qrScale = UIScreen.main.scale
+
+		guard
+			let imageViewController = imageViewerStoryboard.instantiateInitialViewController(),
+			let qrString = url?.absoluteString,
+			let qrImage = UIImage(qrString: qrString, size: qrSize, scale: qrScale, errorCorrectionLevel: .low)
+		else
+		{
+			return nil
+		}
+
+		imageViewController.modalPresentationStyle = .formSheet
+		imageViewController.preferredContentSize = CGSize(width: qrSize.width + 32, height: qrSize.height + 16)
+		imageViewController.broadcast(ImageViewController.ImageContext(image: qrImage, title: "Token QR Code"))
+
+		return imageViewController
+	}
+
+//	override func perform()
+//	{
+//		// Show QR
+//		NSLog("BANANANA \(String(describing: url?.absoluteString))")
+//	}
 }

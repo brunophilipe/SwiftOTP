@@ -29,6 +29,8 @@
 		1554F62720F3F91900C693E8 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1554F62220F3DE7500C693E8 /* Preferences.swift */; };
 		1554F62920F40B6700C693E8 /* UIView+ShowHide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1554F62820F40B6700C693E8 /* UIView+ShowHide.swift */; };
 		1554F62B20F42DC700C693E8 /* Token+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1554F62A20F42DC700C693E8 /* Token+Accessibility.swift */; };
+		156EBC7920F6C07C000F240B /* ImageViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156EBC7820F6C07C000F240B /* ImageViewer.storyboard */; };
+		156EBC7B20F6C08C000F240B /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EBC7A20F6C08C000F240B /* ImageViewController.swift */; };
 		156EBC7D20F6C2A1000F240B /* UIImage+QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EBC7C20F6C2A1000F240B /* UIImage+QRCode.swift */; };
 		1574E7BF20F03A970070B124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574E7BE20F03A970070B124 /* AppDelegate.swift */; };
 		1574E7C420F03A970070B124 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1574E7C220F03A970070B124 /* Main.storyboard */; };
@@ -124,6 +126,8 @@
 		1554F62220F3DE7500C693E8 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		1554F62820F40B6700C693E8 /* UIView+ShowHide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ShowHide.swift"; sourceTree = "<group>"; };
 		1554F62A20F42DC700C693E8 /* Token+Accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Token+Accessibility.swift"; sourceTree = "<group>"; };
+		156EBC7820F6C07C000F240B /* ImageViewer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageViewer.storyboard; sourceTree = "<group>"; };
+		156EBC7A20F6C08C000F240B /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		156EBC7C20F6C2A1000F240B /* UIImage+QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+QRCode.swift"; sourceTree = "<group>"; };
 		1574E7BB20F03A970070B124 /* SwiftOTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftOTP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1574E7BE20F03A970070B124 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 				152EEEC220F10A99006925D8 /* TokensViewController.swift */,
 				152EEECC20F2662F006925D8 /* EditTokenViewController.swift */,
 				1554F62020F3DE2700C693E8 /* PreferencesViewController.swift */,
+				156EBC7A20F6C08C000F240B /* ImageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -260,6 +265,7 @@
 			children = (
 				1574E7C220F03A970070B124 /* Main.storyboard */,
 				1574E7C720F03A980070B124 /* LaunchScreen.storyboard */,
+				156EBC7820F6C07C000F240B /* ImageViewer.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -524,6 +530,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				152EEECB20F13EA4006925D8 /* TokenCollectionViewCell.xib in Resources */,
+				156EBC7920F6C07C000F240B /* ImageViewer.storyboard in Resources */,
 				1574E7C920F03A980070B124 /* LaunchScreen.storyboard in Resources */,
 				1574E7C620F03A980070B124 /* Assets.xcassets in Resources */,
 				1574E7C420F03A970070B124 /* Main.storyboard in Resources */,
@@ -685,6 +692,7 @@
 				152EEECD20F2662F006925D8 /* EditTokenViewController.swift in Sources */,
 				1554F62920F40B6700C693E8 /* UIView+ShowHide.swift in Sources */,
 				1554F62320F3DE7500C693E8 /* Preferences.swift in Sources */,
+				156EBC7B20F6C08C000F240B /* ImageViewController.swift in Sources */,
 				152EEED020F2669B006925D8 /* UIViewController+ContextBus.swift in Sources */,
 				152EEECA20F13EA4006925D8 /* TokenCollectionViewCell.swift in Sources */,
 				152EEEEB20F2CCB8006925D8 /* Constants.swift in Sources */,

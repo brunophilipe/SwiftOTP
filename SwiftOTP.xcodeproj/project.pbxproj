@@ -29,6 +29,7 @@
 		1554F62720F3F91900C693E8 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1554F62220F3DE7500C693E8 /* Preferences.swift */; };
 		1554F62920F40B6700C693E8 /* UIView+ShowHide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1554F62820F40B6700C693E8 /* UIView+ShowHide.swift */; };
 		1554F62B20F42DC700C693E8 /* Token+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1554F62A20F42DC700C693E8 /* Token+Accessibility.swift */; };
+		156EBC7D20F6C2A1000F240B /* UIImage+QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EBC7C20F6C2A1000F240B /* UIImage+QRCode.swift */; };
 		1574E7BF20F03A970070B124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574E7BE20F03A970070B124 /* AppDelegate.swift */; };
 		1574E7C420F03A970070B124 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1574E7C220F03A970070B124 /* Main.storyboard */; };
 		1574E7C620F03A980070B124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1574E7C520F03A980070B124 /* Assets.xcassets */; };
@@ -123,6 +124,7 @@
 		1554F62220F3DE7500C693E8 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		1554F62820F40B6700C693E8 /* UIView+ShowHide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ShowHide.swift"; sourceTree = "<group>"; };
 		1554F62A20F42DC700C693E8 /* Token+Accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Token+Accessibility.swift"; sourceTree = "<group>"; };
+		156EBC7C20F6C2A1000F240B /* UIImage+QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+QRCode.swift"; sourceTree = "<group>"; };
 		1574E7BB20F03A970070B124 /* SwiftOTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftOTP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1574E7BE20F03A970070B124 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1574E7C320F03A970070B124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 				1574E7F420F0494F0070B124 /* OTP.swift */,
 				1574E7F620F0494F0070B124 /* Token.swift */,
 				1574E7F320F0494F0070B124 /* TokenStore.swift */,
+				156EBC7C20F6C2A1000F240B /* UIImage+QRCode.swift */,
 			);
 			path = OTPKit;
 			sourceTree = "<group>";
@@ -692,6 +695,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				156EBC7D20F6C2A1000F240B /* UIImage+QRCode.swift in Sources */,
 				1574E7F920F0494F0070B124 /* KeychainStore.swift in Sources */,
 				1574E7F720F0494F0070B124 /* TokenStore.swift in Sources */,
 				1574E7F820F0494F0070B124 /* OTP.swift in Sources */,

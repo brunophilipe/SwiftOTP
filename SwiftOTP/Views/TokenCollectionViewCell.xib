@@ -24,9 +24,6 @@
                             <accessibilityTraits key="traits" none="YES"/>
                             <bool key="isElement" value="NO"/>
                         </accessibility>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20.5" id="bVg-Si-yEH"/>
-                        </constraints>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -46,9 +43,6 @@
                             <accessibilityTraits key="traits" none="YES"/>
                             <bool key="isElement" value="NO"/>
                         </accessibility>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="14.5" id="VVP-QE-QdZ"/>
-                        </constraints>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>

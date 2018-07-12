@@ -22,7 +22,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>org.ietf.rfc2289</string>
+			<string>com.brunophilipe.SwiftOTP.otpauth</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>otpauth</string>

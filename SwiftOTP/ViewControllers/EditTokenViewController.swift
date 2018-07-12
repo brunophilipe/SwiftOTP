@@ -199,10 +199,4 @@ private class ShowTokenQRActivity: UIActivity
 
 		return imageViewController
 	}
-
-//	override func perform()
-//	{
-//		// Show QR
-//		NSLog("BANANANA \(String(describing: url?.absoluteString))")
-//	}
 }

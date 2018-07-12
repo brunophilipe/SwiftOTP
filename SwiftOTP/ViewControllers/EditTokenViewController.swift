@@ -77,14 +77,47 @@ class EditTokenViewController: UITableViewController
 
 	@IBAction func exportToken(_ sender: Any)
 	{
-		guard let context = self.context, let url = context.getTokenUrlAction(context.tokenAccount) else
+		enterSecurityContext(reason: "Exporting tokens requires authentication.")
 		{
-			return
-		}
+			result in
 
-		let activitySheet = UIActivityViewController(activityItems: [url], applicationActivities: [ShowTokenQRActivity()])
-		present(activitySheet, animated: true)
-		activitySheet.popoverPresentationController?.barButtonItem = sender as? UIBarButtonItem
+			if case .error(let error) = result
+			{
+				let message: String
+
+				if let error = error
+				{
+					if SecurityContextResult.isCanceledError(error)
+					{
+						// No need to show error alert.
+						return
+					}
+
+					message = "Failed authenticating user with error: \(error)"
+				}
+				else
+				{
+					message = "Failed authenticating user."
+				}
+
+				self.presentError(message: message)
+			}
+			else
+			{
+				guard let context = self.context, let url = context.getTokenUrlAction(context.tokenAccount) else
+				{
+					self.presentError(message: "Could not load token secret. Please report this as a bug!")
+					return
+				}
+
+				let activitySheet = UIActivityViewController(activityItems: [url],
+															 applicationActivities: [ShowTokenQRActivity()])
+
+				self.present(activitySheet, animated: true)
+
+				activitySheet.popoverPresentationController?.barButtonItem = sender as? UIBarButtonItem
+			}
+		}
 	}
 
 	private func handleDelete()

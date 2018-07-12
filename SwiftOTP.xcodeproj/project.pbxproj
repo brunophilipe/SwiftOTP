@@ -33,6 +33,8 @@
 		156EBC7B20F6C08C000F240B /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EBC7A20F6C08C000F240B /* ImageViewController.swift */; };
 		156EBC7D20F6C2A1000F240B /* UIImage+QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EBC7C20F6C2A1000F240B /* UIImage+QRCode.swift */; };
 		156EBC7F20F6D4D0000F240B /* ShowTokenQRActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EBC7E20F6D4D0000F240B /* ShowTokenQRActivity.swift */; };
+		156EBC8120F6D568000F240B /* UIViewController+LocalAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EBC8020F6D568000F240B /* UIViewController+LocalAuthentication.swift */; };
+		156EBC8320F6E25C000F240B /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EBC8220F6E25C000F240B /* UIViewController+Alerts.swift */; };
 		1574E7BF20F03A970070B124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574E7BE20F03A970070B124 /* AppDelegate.swift */; };
 		1574E7C420F03A970070B124 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1574E7C220F03A970070B124 /* Main.storyboard */; };
 		1574E7C620F03A980070B124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1574E7C520F03A980070B124 /* Assets.xcassets */; };
@@ -131,6 +133,8 @@
 		156EBC7A20F6C08C000F240B /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		156EBC7C20F6C2A1000F240B /* UIImage+QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+QRCode.swift"; sourceTree = "<group>"; };
 		156EBC7E20F6D4D0000F240B /* ShowTokenQRActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTokenQRActivity.swift; sourceTree = "<group>"; };
+		156EBC8020F6D568000F240B /* UIViewController+LocalAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LocalAuthentication.swift"; sourceTree = "<group>"; };
+		156EBC8220F6E25C000F240B /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		1574E7BB20F03A970070B124 /* SwiftOTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftOTP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1574E7BE20F03A970070B124 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1574E7C320F03A970070B124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -225,8 +229,10 @@
 			children = (
 				152EEED120F267B9006925D8 /* UIViewController+Segues.swift */,
 				152EEECF20F2669B006925D8 /* UIViewController+ContextBus.swift */,
+				156EBC8020F6D568000F240B /* UIViewController+LocalAuthentication.swift */,
 				1554F62820F40B6700C693E8 /* UIView+ShowHide.swift */,
 				1554F62A20F42DC700C693E8 /* Token+Accessibility.swift */,
+				156EBC8220F6E25C000F240B /* UIViewController+Alerts.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -693,10 +699,12 @@
 				152EEED220F267B9006925D8 /* UIViewController+Segues.swift in Sources */,
 				1554F62120F3DE2700C693E8 /* PreferencesViewController.swift in Sources */,
 				152EEECD20F2662F006925D8 /* EditTokenViewController.swift in Sources */,
+				156EBC8120F6D568000F240B /* UIViewController+LocalAuthentication.swift in Sources */,
 				156EBC7F20F6D4D0000F240B /* ShowTokenQRActivity.swift in Sources */,
 				1554F62920F40B6700C693E8 /* UIView+ShowHide.swift in Sources */,
 				1554F62320F3DE7500C693E8 /* Preferences.swift in Sources */,
 				156EBC7B20F6C08C000F240B /* ImageViewController.swift in Sources */,
+				156EBC8320F6E25C000F240B /* UIViewController+Alerts.swift in Sources */,
 				152EEED020F2669B006925D8 /* UIViewController+ContextBus.swift in Sources */,
 				152EEECA20F13EA4006925D8 /* TokenCollectionViewCell.swift in Sources */,
 				152EEEEB20F2CCB8006925D8 /* Constants.swift in Sources */,

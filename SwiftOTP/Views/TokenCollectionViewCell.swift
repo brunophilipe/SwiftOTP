@@ -20,8 +20,11 @@ class TokenCollectionViewCell: UICollectionViewCell
 	@IBOutlet private var showSecretButton: UIButton!
 	@IBOutlet private var copySecretButton: UIButton!
 
+	/// Weak reference to the most recently used progress view, so it can be removed on demand if the user hides the
+	/// code before its display timeout runs.
 	private weak var lastProgressView: UIProgressView? = nil
 
+	/// Callback invoked to request the current codes.
 	var codesFetcher: (() -> [Token.Code]?)? = nil
 
 	/// Handler called when the user taps the "edit token" button.
@@ -30,8 +33,10 @@ class TokenCollectionViewCell: UICollectionViewCell
 	/// Handler invoked when the user taps the "copy code" button. Should return true on success, false on failure.
 	var copyCodeAction: (() -> Bool)? = nil
 
+	/// Hook action invoked when the user taps the "show code" button.
 	var showHookAction: (() -> Void)? = nil
 
+	/// Infers whether the code label is currently visible.
 	private var codeIsVisible: Bool
 	{
 		return !(codeLabel.isHidden || codeLabel.alpha == 0.0)
@@ -54,14 +59,6 @@ class TokenCollectionViewCell: UICollectionViewCell
 		changeCodeVisibility(to: !codeIsVisible)
 	}
 
-	func hideSecret()
-	{
-		if codeIsVisible
-		{
-			changeCodeVisibility(to: false)
-		}
-	}
-
 	@IBAction func copySecret(_ sender: Any)
 	{
 		hideSecret()
@@ -72,6 +69,7 @@ class TokenCollectionViewCell: UICollectionViewCell
 		}
 	}
 
+	/// Sets the token issuer and account labels.
 	func setToken(issuer: String, account: String)
 	{
 		issuerLabel.text = issuer
@@ -84,6 +82,14 @@ class TokenCollectionViewCell: UICollectionViewCell
 		editTokenButton.accessibilityHint = tokenHint
 		showSecretButton.accessibilityHint = tokenHint
 		copySecretButton.accessibilityHint = tokenHint
+	}
+
+	private func hideSecret()
+	{
+		if codeIsVisible
+		{
+			changeCodeVisibility(to: false)
+		}
 	}
 
 	private func changeCodeVisibility(to showCode: Bool)
@@ -226,17 +232,17 @@ class TokenCollectionViewCell: UICollectionViewCell
 
 private extension UIProgressView
 {
+	/// Sets up a linear animation between `start` and `end progress values, that lasts for `duration`.
 	func animateProgress(from start: Float, to end: Float, duration: TimeInterval)
 	{
 		progress = start
-		layoutIfNeeded()
-		setProgress(end, animationDuration: duration)
-	}
 
-	func setProgress(_ progress: Float, animationDuration: TimeInterval)
-	{
-		UIView.animate(withDuration: animationDuration, delay: 0.0, options: [.curveLinear, .beginFromCurrentState], animations: {
-			self.setProgress(progress, animated: true)
+		// Ensure the progress layer is sized to the correct proportions for the start value.
+		layoutIfNeeded()
+
+		// Invoke the animation code.
+		UIView.animate(withDuration: duration, delay: 0.0, options: [.curveLinear, .beginFromCurrentState], animations: {
+			self.setProgress(end, animated: true)
 		})
 	}
 }

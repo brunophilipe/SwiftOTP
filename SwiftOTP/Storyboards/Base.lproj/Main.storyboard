@@ -244,10 +244,10 @@
             </objects>
             <point key="canvasLocation" x="1656.8" y="168.4729064039409"/>
         </scene>
-        <!--Preferences-->
+        <!--Security-->
         <scene sceneID="Zeb-y0-KD2">
             <objects>
-                <tableViewController id="GdQ-7w-RRP" customClass="PreferencesViewController" customModule="SwiftOTP" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="GdQ-7w-RRP" customClass="SecurityPreferencesViewController" customModule="SwiftOTP" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="vNv-Fx-2Ww">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -258,7 +258,7 @@
                         <sections>
                             <tableViewSection headerTitle="Clipboard Expiration" footerTitle="How long the code should be left in the clipboard after &quot;Copy to Clipboard&quot; is tapped on a token." id="TUA-sZ-PNn">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="lPb-Q0-CV2" style="IBUITableViewCellStyleDefault" id="JHN-lr-VYp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="lPb-Q0-CV2" style="IBUITableViewCellStyleDefault" id="JHN-lr-VYp" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JHN-lr-VYp" id="uXa-Hm-Gq0">
@@ -279,7 +279,7 @@
                                             <accessibilityTraits key="traits" button="YES"/>
                                         </accessibility>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="lOT-pc-6N4" style="IBUITableViewCellStyleDefault" id="cxt-BZ-zvL">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="lOT-pc-6N4" style="IBUITableViewCellStyleDefault" id="cxt-BZ-zvL" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cxt-BZ-zvL" id="s8F-Vh-dq8">
@@ -300,7 +300,7 @@
                                             <accessibilityTraits key="traits" button="YES"/>
                                         </accessibility>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="OSo-P8-hhQ" style="IBUITableViewCellStyleDefault" id="aKA-DF-yOe">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="OSo-P8-hhQ" style="IBUITableViewCellStyleDefault" id="aKA-DF-yOe" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="143.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aKA-DF-yOe" id="CXF-to-Ljr">
@@ -321,7 +321,7 @@
                                             <accessibilityTraits key="traits" button="YES"/>
                                         </accessibility>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="aZh-v9-JKI" style="IBUITableViewCellStyleDefault" id="ZB3-4n-M1y">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="aZh-v9-JKI" style="IBUITableViewCellStyleDefault" id="ZB3-4n-M1y" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="187.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZB3-4n-M1y" id="prL-xN-3Sz">
@@ -347,7 +347,7 @@
                             <tableViewSection headerTitle="Handoff" id="ksF-EZ-5j9">
                                 <string key="footerTitle">Whether the code can be transfered to the clipboard of other devices connected to your iCloud account when "Copy to Clipboard" is tapped on a token.</string>
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="5wV-TO-wn5" style="IBUITableViewCellStyleDefault" id="Pgl-Tr-7jA">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="5wV-TO-wn5" style="IBUITableViewCellStyleDefault" id="Pgl-Tr-7jA" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="323" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pgl-Tr-7jA" id="mTr-p7-jre">
@@ -381,7 +381,7 @@
                             <tableViewSection headerTitle="Siri" id="ciF-xn-Asn">
                                 <string key="footerTitle">If enabled, the OTP code will be placed in the clipboard with an expiration time of 4 seconds when the OTP code is generated via Siri or Shortcuts. If disabled, code will only be shown/said aloud by Siri.  Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string>
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="J1I-Dr-wO9" style="IBUITableViewCellStyleDefault" id="HW7-XW-mmp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="J1I-Dr-wO9" style="IBUITableViewCellStyleDefault" id="HW7-XW-mmp" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="474.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HW7-XW-mmp" id="E4k-Gw-IzK">
@@ -418,13 +418,7 @@
                             <outlet property="delegate" destination="GdQ-7w-RRP" id="Y4h-Gs-Bqp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Preferences" id="gWG-vq-3A7">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="lvb-fV-63z">
-                            <connections>
-                                <action selector="done:" destination="GdQ-7w-RRP" id="eZU-e0-HCp"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Security" id="gWG-vq-3A7"/>
                     <connections>
                         <outlet property="allowClipboardHandoffSwitch" destination="C7g-Gz-bse" id="45S-U7-XyK"/>
                         <outlet property="intentsPutCodeInClipboardSwitch" destination="q7r-Bc-K38" id="f6D-xq-gfs"/>
@@ -432,30 +426,321 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="auT-Ct-ABa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1657" y="-617"/>
+            <point key="canvasLocation" x="2599" y="1008"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ImQ-MO-B3P">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="formSheet" id="UqC-sl-dxx" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="formSheet" toolbarHidden="NO" id="UqC-sl-dxx" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="joB-yz-Fab">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="rOr-fS-a5T">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
-                        <segue destination="GdQ-7w-RRP" kind="relationship" relationship="rootViewController" id="fkp-W5-PSU"/>
+                        <segue destination="Pjv-C6-lXM" kind="relationship" relationship="rootViewController" id="NNy-KG-VnS"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wfY-ec-ZdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="664.79999999999995" y="-616.64167916041981"/>
+            <point key="canvasLocation" x="665" y="1008"/>
+        </scene>
+        <!--Preferences-->
+        <scene sceneID="Xwf-7S-7xN">
+            <objects>
+                <tableViewController id="Pjv-C6-lXM" customClass="PreferencesViewController" customModule="SwiftOTP" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="NO1-Q1-XXp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.059999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.19213560220000001" green="0.19216999409999999" blue="0.19213128090000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexColor" red="0.42760539050000002" green="0.42704725269999999" blue="0.44890797139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" white="0.059999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="N5U-xb-hYc">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="RlQ-14-LJ5" imageView="w15-8g-EdP" style="IBUITableViewCellStyleDefault" id="rvn-Q1-i95" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rvn-Q1-i95" id="xcT-t4-jBy">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Security" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RlQ-14-LJ5">
+                                                    <rect key="frame" x="60" y="0.0" width="280" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="pref_security" id="w15-8g-EdP">
+                                                    <rect key="frame" x="16" y="7" width="29" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.10982844980000001" green="0.10972782220000001" blue="0.11409296839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to ten seconds.">
+                                            <accessibilityTraits key="traits" button="YES"/>
+                                        </accessibility>
+                                        <connections>
+                                            <segue destination="GdQ-7w-RRP" kind="show" id="OJA-Kb-Rsj"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Pf1-ig-nmb" imageView="HmX-aF-Tox" style="IBUITableViewCellStyleDefault" id="vuz-X4-fNa" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="79" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vuz-X4-fNa" id="H4B-4C-ZPm">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="App Integrations" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pf1-ig-nmb">
+                                                    <rect key="frame" x="60" y="0.0" width="280" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="pref_comm" id="HmX-aF-Tox">
+                                                    <rect key="frame" x="16" y="7" width="29" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.10982844980000001" green="0.10972782220000001" blue="0.11409296839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to ten seconds.">
+                                            <accessibilityTraits key="traits" button="YES"/>
+                                        </accessibility>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection footerTitle="Export several tokens to a file." id="Mzx-9Z-XhG">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="8dJ-1P-JNi" imageView="wav-Xz-V66" style="IBUITableViewCellStyleDefault" id="VVe-I2-pfq" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="159" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VVe-I2-pfq" id="Xx1-XX-H09">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Export Tokens to File" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8dJ-1P-JNi">
+                                                    <rect key="frame" x="60" y="0.0" width="280" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="pref_export" id="wav-Xz-V66">
+                                                    <rect key="frame" x="16" y="7" width="29" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.10982844980000001" green="0.10972782220000001" blue="0.11409296839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to thirty seconds.">
+                                            <accessibilityTraits key="traits" button="YES"/>
+                                        </accessibility>
+                                        <connections>
+                                            <segue destination="J1L-cR-vvc" kind="show" id="0tG-MV-SrS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="About" footerTitle="SwiftOTP by Bruno Philipe © 2018 – All Rights Reserved Released under the Apache License, Version 2.0." id="JrK-he-7O2">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="UEV-g5-Aql" detailTextLabel="aQg-Zp-8tr" style="IBUITableViewCellStyleValue1" id="uDj-y0-GFY" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="278.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uDj-y0-GFY" id="Wbl-dF-u81">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="SwiftOTP Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UEV-g5-Aql">
+                                                    <rect key="frame" x="16" y="12" width="133" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="0.0 (0)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aQg-Zp-8tr">
+                                                    <rect key="frame" x="308" y="12" width="51" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.10982844980000001" green="0.10972782220000001" blue="0.11409296839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to thirty seconds.">
+                                            <accessibilityTraits key="traits" button="YES"/>
+                                        </accessibility>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="6Sp-xK-3fc" style="IBUITableViewCellStyleDefault" id="naP-Qg-JRP" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="322.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="naP-Qg-JRP" id="bxO-FA-mBn">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="See SwiftOTP on GitHub" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Sp-xK-3fc">
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.10982844980000001" green="0.10972782220000001" blue="0.11409296839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to thirty seconds.">
+                                            <accessibilityTraits key="traits" button="YES"/>
+                                        </accessibility>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Etd-mk-7pc" style="IBUITableViewCellStyleDefault" id="X82-9l-nDk" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="366.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X82-9l-nDk" id="TmQ-R9-8aP">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Acknowledgements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Etd-mk-7pc">
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.10982844980000001" green="0.10972782220000001" blue="0.11409296839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to one minute.">
+                                            <accessibilityTraits key="traits" button="YES"/>
+                                        </accessibility>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Pjv-C6-lXM" id="7yf-nC-gIr"/>
+                            <outlet property="delegate" destination="Pjv-C6-lXM" id="Du3-Uz-A32"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Preferences" id="Vgt-Sx-Pub">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="My9-5I-gxk">
+                            <connections>
+                                <action selector="done:" destination="Pjv-C6-lXM" id="wdM-zB-DST"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yZf-2l-bys" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1657" y="1008"/>
+        </scene>
+        <!--Select Tokens to Export-->
+        <scene sceneID="dPC-Tr-5Lv">
+            <objects>
+                <tableViewController id="J1L-cR-vvc" customClass="TokensPickerViewController" customModule="SwiftOTP" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="HG3-yZ-wSo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.059999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.19213560220000001" green="0.19216999409999999" blue="0.19213128090000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexColor" red="0.42760539050000002" green="0.42704725269999999" blue="0.44890797139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" white="0.059999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellToken" textLabel="e1A-91-b7Q" detailTextLabel="OgX-Wl-FND" style="IBUITableViewCellStyleSubtitle" id="NgN-id-MHM" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NgN-id-MHM" id="NVP-rY-LI5">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Security" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e1A-91-b7Q">
+                                            <rect key="frame" x="16" y="5" width="63" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OgX-Wl-FND">
+                                            <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.10982844980000001" green="0.10972782220000001" blue="0.11409296839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to ten seconds.">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                </accessibility>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="J1L-cR-vvc" id="kce-Ce-g6d"/>
+                            <outlet property="delegate" destination="J1L-cR-vvc" id="3ag-E1-lDG"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="Select All" id="kDl-rZ-xlb">
+                            <color key="tintColor" red="0.94342577459999999" green="0.60512000320000003" blue="0.219585374" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="selectAll:" destination="J1L-cR-vvc" id="t5t-Ev-84y"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="dY9-P5-KZ7">
+                            <color key="tintColor" red="0.94342577459999999" green="0.60512000320000003" blue="0.219585374" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </barButtonItem>
+                        <barButtonItem title="Invert" id="UCE-Kx-lpd">
+                            <color key="tintColor" red="0.94342577459999999" green="0.60512000320000003" blue="0.219585374" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="invertSelection:" destination="J1L-cR-vvc" id="4ap-OD-l0J"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="hPy-K2-tDr">
+                            <color key="tintColor" red="0.94342577459999999" green="0.60512000320000003" blue="0.219585374" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </barButtonItem>
+                        <barButtonItem title="Select None" id="loi-xV-sIq">
+                            <color key="tintColor" red="0.94342577459999999" green="0.60512000320000003" blue="0.219585374" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="selectNone:" destination="J1L-cR-vvc" id="mM9-Cb-kHP"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Select Tokens to Export" id="bBl-vx-Mnv">
+                        <barButtonItem key="rightBarButtonItem" title="Export" style="done" id="5av-Im-IwB">
+                            <connections>
+                                <action selector="export:" destination="J1L-cR-vvc" id="M8W-32-B2n"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
+                    <connections>
+                        <outlet property="exportButton" destination="5av-Im-IwB" id="NMF-Nb-QJD"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Awq-f7-qxG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2599" y="1809"/>
         </scene>
     </scenes>
     <resources>
         <image name="QR" width="26" height="20"/>
+        <image name="pref_comm" width="29" height="29"/>
+        <image name="pref_export" width="29" height="29"/>
+        <image name="pref_security" width="29" height="29"/>
         <image name="preferences" width="26" height="20"/>
     </resources>
     <color key="tintColor" red="0.94342577459999999" green="0.60512000320000003" blue="0.219585374" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

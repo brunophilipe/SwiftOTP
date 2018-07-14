@@ -46,7 +46,7 @@ extension UIViewController
 		let laContext = LAContext()
 		var authError: NSError? = nil
 
-		guard laContext.canEvaluatePolicy(.deviceOwnerAuthentication, error: &authError) else
+		guard laContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &authError) else
 		{
 			DispatchQueue.main.async(execute: { completion(.disabled) })
 			laContext.invalidate()
@@ -65,5 +65,30 @@ extension UIViewController
 					NSLog("Failed authenticating device owner: \(error)")
 				}
 			}
+	}
+
+	/// Handles an authentication error, and displays an error alert if appropriate.
+	///
+	/// - Parameter authenticationError: The authentication error object, if any.
+	func handle(authenticationError: NSError?)
+	{
+		let message: String
+
+		if let error = authenticationError
+		{
+			if SecurityContextResult.isCanceledError(error)
+			{
+				// No need to show error alert.
+				return
+			}
+
+			message = "Failed authenticating user with error: \(error)"
+		}
+		else
+		{
+			message = "Failed authenticating user."
+		}
+
+		self.presentError(message: message)
 	}
 }

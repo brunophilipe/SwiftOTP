@@ -83,40 +83,22 @@ class EditTokenViewController: UITableViewController
 
 			if case .error(let error) = result
 			{
-				let message: String
-
-				if let error = error
-				{
-					if SecurityContextResult.isCanceledError(error)
-					{
-						// No need to show error alert.
-						return
-					}
-
-					message = "Failed authenticating user with error: \(error)"
-				}
-				else
-				{
-					message = "Failed authenticating user."
-				}
-
-				self.presentError(message: message)
+				self.handle(authenticationError: error)
+				return
 			}
-			else
+
+			guard let context = self.context, let url = context.getTokenUrlAction(context.tokenAccount) else
 			{
-				guard let context = self.context, let url = context.getTokenUrlAction(context.tokenAccount) else
-				{
-					self.presentError(message: "Could not load token secret. Please report this as a bug!")
-					return
-				}
-
-				let activitySheet = UIActivityViewController(activityItems: [url],
-															 applicationActivities: [ShowTokenQRActivity()])
-
-				self.present(activitySheet, animated: true)
-
-				activitySheet.popoverPresentationController?.barButtonItem = sender as? UIBarButtonItem
+				self.presentError(message: "Could not load token secret.")
+				return
 			}
+
+			let activitySheet = UIActivityViewController(activityItems: [url],
+														 applicationActivities: [ShowTokenQRActivity()])
+
+			self.present(activitySheet, animated: true)
+
+			activitySheet.popoverPresentationController?.barButtonItem = sender as? UIBarButtonItem
 		}
 	}
 

@@ -24,6 +24,8 @@ class TokenCollectionViewCell: UICollectionViewCell
 	/// code before its display timeout runs.
 	private weak var lastProgressView: UIProgressView? = nil
 
+	private var didEnterBackgroundObserver: NSObjectProtocol? = nil
+
 	/// Callback invoked to request the current codes.
 	var codesFetcher: (() -> [Token.Code]?)? = nil
 
@@ -40,6 +42,40 @@ class TokenCollectionViewCell: UICollectionViewCell
 	private var codeIsVisible: Bool
 	{
 		return !(codeLabel.isHidden || codeLabel.alpha == 0.0)
+	}
+
+	override func awakeFromNib()
+	{
+		super.awakeFromNib()
+
+		didEnterBackgroundObserver = NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification,
+																			object: UIApplication.shared,
+																			queue: OperationQueue.main)
+		{
+			[weak self] _ in self?.hideSecret(animated: false)
+		}
+	}
+
+	deinit
+	{
+		if let didEnterBackgroundObserver = self.didEnterBackgroundObserver
+		{
+			NotificationCenter.default.removeObserver(didEnterBackgroundObserver)
+		}
+	}
+
+	override func removeFromSuperview()
+	{
+		super.removeFromSuperview()
+
+		destroyTokenReferences()
+	}
+
+	override func prepareForReuse()
+	{
+		super.prepareForReuse()
+
+		destroyTokenReferences()
 	}
 
 	@IBAction func editToken(_ sender: Any)
@@ -84,15 +120,25 @@ class TokenCollectionViewCell: UICollectionViewCell
 		copySecretButton.accessibilityHint = tokenHint
 	}
 
-	private func hideSecret()
+	private func destroyTokenReferences()
+	{
+		codesFetcher = nil
+		editAction = nil
+		copyCodeAction = nil
+		showHookAction = nil
+		issuerLabel.text = nil
+		accountLabel.text = nil
+	}
+
+	private func hideSecret(animated: Bool = true)
 	{
 		if codeIsVisible
 		{
-			changeCodeVisibility(to: false)
+			changeCodeVisibility(to: false, animated: animated)
 		}
 	}
 
-	private func changeCodeVisibility(to showCode: Bool)
+	private func changeCodeVisibility(to showCode: Bool, animated: Bool = true)
 	{
 		guard let codes = codesFetcher?(), codes.count >= 2 else
 		{
@@ -116,7 +162,7 @@ class TokenCollectionViewCell: UICollectionViewCell
 		self.accountLabel.alpha = showCode ? 1.0 : 0.0
 
 		// Run labels alpha transition animations
-		UIView.animate(withDuration: 0.3)
+		UIView.animate(withDuration: animated ? 0.3 : 0.0)
 		{
 			self.codeLabel.alpha = !showCode ? 0.0 : 1.0
 			self.issuerLabel.alpha = !showCode ? 1.0 : 0.0
@@ -127,7 +173,14 @@ class TokenCollectionViewCell: UICollectionViewCell
 		guard showCode else
 		{
 			codeLabel.text = ""
-			lastProgressView?.animatedHideAndRemoveFromSuperview()
+			if animated
+			{
+				lastProgressView?.animatedHideAndRemoveFromSuperview()
+			}
+			else
+			{
+				lastProgressView?.removeFromSuperview()
+			}
 			return
 		}
 

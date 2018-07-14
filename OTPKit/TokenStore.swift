@@ -52,6 +52,7 @@ open class TokenStore : NSObject
 		}
 	}
 
+	/// Returns the number of tokens registered with the receiver store.
 	open var count: Int
 	{
 		if let ord = TokenOrder.store.load(accountUUID.uuidString)
@@ -62,6 +63,8 @@ open class TokenStore : NSObject
 		return 0
 	}
 
+	/// Initializes the token storage with a global account UUID. This UUID needs to be consistent between
+	/// instantiations of the TokenStore, so that the same token objects are available between instances.
 	public init(accountUUID: UUID, keychainGroupIdentifier: String? = nil)
 	{
 		self.accountUUID = accountUUID
@@ -97,6 +100,7 @@ open class TokenStore : NSObject
 		}
 	}
 
+	/// Add a token to the receiver's storage by parsing the provided `URLComponents` object.
 	@discardableResult open func add(_ urlc: URLComponents) -> Token?
 	{
 		var ord: TokenOrder
@@ -143,6 +147,7 @@ open class TokenStore : NSObject
 		return nil
 	}
 
+	/// If a valid index is provided (`index` < `count`), removes the token at `index` from the receiver's storage.
 	@discardableResult open func erase(index: Int) -> Bool
 	{
 		if let ord = TokenOrder.store.load(accountUUID.uuidString), let account = ord.array.object(at: index) as? String
@@ -160,6 +165,7 @@ open class TokenStore : NSObject
 		return false
 	}
 
+	/// Erases the provided token from the receiver's storage, if it is present.
 	@discardableResult open func erase(token: Token) -> Bool
 	{
 		if let ord = TokenOrder.store.load(accountUUID.uuidString)
@@ -170,6 +176,7 @@ open class TokenStore : NSObject
 		return false
 	}
 
+	/// It a valid index is provided (index < `count`), loads the token at the provided index.
 	open func load(_ index: Int) -> Token?
 	{
 		if let ord = TokenOrder.store.load(accountUUID.uuidString), let account = ord.array.object(at: index) as? String
@@ -180,16 +187,19 @@ open class TokenStore : NSObject
 		return nil
 	}
 
+	/// If a token with a provided UUID account exists in the receiver, returns it.
 	open func load(_ account: String) -> Token?
 	{
 		return Token.store.load(account)
 	}
 
+	/// If the provided token is present in the receiver storage, returns its index.
 	open func index(of token: Token) -> Int?
 	{
 		return index(of: token.account)
 	}
 
+	/// If a token with the provided token UUID account is present in the receiver storage, returns its index.
 	open func index(of tokenAccount: String) -> Int?
 	{
 		if let ord = TokenOrder.store.load(accountUUID.uuidString)
@@ -209,6 +219,7 @@ open class TokenStore : NSObject
 		return nil
 	}
 
+	/// Repositions the token at index `from` into index `to`, and shifts all other tokens up/down to fill the gap.
 	@discardableResult open func move(_ from: Int, to: Int) -> Bool
 	{
 		if let ord = TokenOrder.store.load(accountUUID.uuidString), let id = ord.array.object(at: from) as? String

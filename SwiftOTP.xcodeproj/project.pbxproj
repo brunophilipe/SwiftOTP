@@ -54,6 +54,7 @@
 		15D3634D20FA482800284137 /* TokenStore+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634C20FA482800284137 /* TokenStore+Export.swift */; };
 		15D3634F20FA4B9C00284137 /* FileManager+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634E20FA4B9C00284137 /* FileManager+Helpers.swift */; };
 		15D3635120FA723000284137 /* Bundle+InfoAccessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3635020FA723000284137 /* Bundle+InfoAccessors.swift */; };
+		15D3635520FA814300284137 /* Pods-SwiftOTP-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15D3635420FA814300284137 /* Pods-SwiftOTP-acknowledgements.plist */; };
 		6E0FB1EC182917628879D22E /* Pods_SwiftOTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2CDEC4586380293BB7ED89 /* Pods_SwiftOTP.framework */; };
 		86F782CB14A25740C61B7727 /* Pods_OTPKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC8F6B397214EED847A83F3 /* Pods_OTPKitTests.framework */; };
 		D7D9D04A47A396FB46CBBBD0 /* Pods_OTPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED336A811AC2DA0B53FFC09F /* Pods_OTPKit.framework */; };
@@ -163,6 +164,7 @@
 		15D3634C20FA482800284137 /* TokenStore+Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TokenStore+Export.swift"; sourceTree = "<group>"; };
 		15D3634E20FA4B9C00284137 /* FileManager+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Helpers.swift"; sourceTree = "<group>"; };
 		15D3635020FA723000284137 /* Bundle+InfoAccessors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+InfoAccessors.swift"; sourceTree = "<group>"; };
+		15D3635420FA814300284137 /* Pods-SwiftOTP-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-SwiftOTP-acknowledgements.plist"; path = "Pods/Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
 		192488C999A10607F1BCD929 /* Pods-OTPKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OTPKitTests/Pods-OTPKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		350846FED42A69CBAF7FF5AC /* Pods_SwiftOTPIntents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOTPIntents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58EBC5BE904090BC5FFE8732 /* Pods-OTPKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OTPKitTests/Pods-OTPKitTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 		1554F62520F3DED100C693E8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				15D3635420FA814300284137 /* Pods-SwiftOTP-acknowledgements.plist */,
 				1574E7CA20F03A980070B124 /* Info.plist */,
 				152EEED720F2C8DE006925D8 /* SwiftOTP.entitlements */,
 				152EEED320F2BDA2006925D8 /* Intents.intentdefinition */,
@@ -561,6 +564,7 @@
 				1574E7C920F03A980070B124 /* LaunchScreen.storyboard in Resources */,
 				1574E7C620F03A980070B124 /* Assets.xcassets in Resources */,
 				1574E7C420F03A970070B124 /* Main.storyboard in Resources */,
+				15D3635520FA814300284137 /* Pods-SwiftOTP-acknowledgements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,11 +592,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AcknowList/AcknowList.framework",
 				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftBase32/SwiftBase32.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AcknowList.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftBase32.framework",
 			);

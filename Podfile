@@ -21,6 +21,7 @@ target 'SwiftOTP' do
 
   # Pods for SwiftOTP
   pod 'QRCodeReader.swift', '~> 8.2.0'
+  pod 'AcknowList'
 end
 
 target 'SwiftOTPIntents' do

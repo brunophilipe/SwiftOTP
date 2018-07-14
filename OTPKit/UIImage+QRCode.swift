@@ -35,9 +35,9 @@ public extension UIImage
 	///   - scale: The scale of the QR Code image. Ideally this matches the target screen's scale.
 	///   - errorCorrectionLevel: The error collection level to use when generating the QR Code image.
 	public convenience init?(qrString: String,
-							size: CGSize = CGSize(width: 128, height: 128),
-							scale: CGFloat = 1.0,
-							errorCorrectionLevel: QRCodeCorrectionLevel = .medium)
+							 size: CGSize = CGSize(width: 128, height: 128),
+							 scale: CGFloat = 1.0,
+							 errorCorrectionLevel: QRCodeCorrectionLevel = .medium)
 	{
 		let filterParameters: [String : Any] = [
 			"inputMessage": qrString.data(using: .utf8)!,

@@ -555,7 +555,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="About" footerTitle="SwiftOTP by Bruno Philipe © 2018 – All Rights Reserved Released under the Apache License, Version 2.0." id="JrK-he-7O2">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="UEV-g5-Aql" detailTextLabel="aQg-Zp-8tr" style="IBUITableViewCellStyleValue1" id="uDj-y0-GFY" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="UEV-g5-Aql" detailTextLabel="aQg-Zp-8tr" style="IBUITableViewCellStyleValue1" id="uDj-y0-GFY" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="278.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uDj-y0-GFY" id="Wbl-dF-u81">
@@ -641,6 +641,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="appVersionLabel" destination="aQg-Zp-8tr" id="ktr-LF-7H5"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZf-2l-bys" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

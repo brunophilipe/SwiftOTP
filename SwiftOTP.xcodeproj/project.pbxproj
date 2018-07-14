@@ -53,6 +53,7 @@
 		15D3634B20FA29EA00284137 /* TokensPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634A20FA29EA00284137 /* TokensPickerViewController.swift */; };
 		15D3634D20FA482800284137 /* TokenStore+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634C20FA482800284137 /* TokenStore+Export.swift */; };
 		15D3634F20FA4B9C00284137 /* FileManager+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634E20FA4B9C00284137 /* FileManager+Helpers.swift */; };
+		15D3635120FA723000284137 /* Bundle+InfoAccessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3635020FA723000284137 /* Bundle+InfoAccessors.swift */; };
 		6E0FB1EC182917628879D22E /* Pods_SwiftOTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2CDEC4586380293BB7ED89 /* Pods_SwiftOTP.framework */; };
 		86F782CB14A25740C61B7727 /* Pods_OTPKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC8F6B397214EED847A83F3 /* Pods_OTPKitTests.framework */; };
 		D7D9D04A47A396FB46CBBBD0 /* Pods_OTPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED336A811AC2DA0B53FFC09F /* Pods_OTPKit.framework */; };
@@ -161,6 +162,7 @@
 		15D3634A20FA29EA00284137 /* TokensPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensPickerViewController.swift; sourceTree = "<group>"; };
 		15D3634C20FA482800284137 /* TokenStore+Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TokenStore+Export.swift"; sourceTree = "<group>"; };
 		15D3634E20FA4B9C00284137 /* FileManager+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Helpers.swift"; sourceTree = "<group>"; };
+		15D3635020FA723000284137 /* Bundle+InfoAccessors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+InfoAccessors.swift"; sourceTree = "<group>"; };
 		192488C999A10607F1BCD929 /* Pods-OTPKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OTPKitTests/Pods-OTPKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		350846FED42A69CBAF7FF5AC /* Pods_SwiftOTPIntents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOTPIntents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58EBC5BE904090BC5FFE8732 /* Pods-OTPKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OTPKitTests/Pods-OTPKitTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 		152EEECE20F26678006925D8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				15D3635020FA723000284137 /* Bundle+InfoAccessors.swift */,
 				152EEED120F267B9006925D8 /* UIViewController+Segues.swift */,
 				152EEECF20F2669B006925D8 /* UIViewController+ContextBus.swift */,
 				156EBC8020F6D568000F240B /* UIViewController+LocalAuthentication.swift */,
@@ -728,6 +731,7 @@
 				152EEED020F2669B006925D8 /* UIViewController+ContextBus.swift in Sources */,
 				152EEECA20F13EA4006925D8 /* TokenCollectionViewCell.swift in Sources */,
 				152EEEEB20F2CCB8006925D8 /* Constants.swift in Sources */,
+				15D3635120FA723000284137 /* Bundle+InfoAccessors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

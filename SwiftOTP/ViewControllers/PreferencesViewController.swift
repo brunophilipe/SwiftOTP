@@ -10,11 +10,17 @@ import UIKit
 
 class PreferencesViewController: UITableViewController
 {
-    override func viewDidLoad()
+	@IBOutlet var appVersionLabel: UILabel!
+
+	override func viewDidLoad()
 	{
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+		if let bundleHumanVersion = Bundle.main.bundleHumanVersion, let bundleVersion = Bundle.main.bundleVersion
+		{
+			appVersionLabel.text = "\(bundleHumanVersion) (\(bundleVersion))"
+		}
     }
 
 	override func viewWillAppear(_ animated: Bool)

@@ -193,6 +193,17 @@ open class TokenStore : NSObject
 		return Token.store.load(account)
 	}
 
+	/// Returns only the account of the token at the provided index.
+	open func loadAccount(at index: Int) -> String?
+	{
+		if let ord = TokenOrder.store.load(accountUUID.uuidString)
+		{
+			return ord.array.object(at: index) as? String
+		}
+
+		return nil
+	}
+
 	/// If the provided token is present in the receiver storage, returns its index.
 	open func index(of token: Token) -> Int?
 	{

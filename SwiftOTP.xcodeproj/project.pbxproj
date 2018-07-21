@@ -50,6 +50,7 @@
 		1574E7F820F0494F0070B124 /* OTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574E7F420F0494F0070B124 /* OTP.swift */; };
 		1574E7F920F0494F0070B124 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574E7F520F0494F0070B124 /* KeychainStore.swift */; };
 		1574E7FA20F0494F0070B124 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574E7F620F0494F0070B124 /* Token.swift */; };
+		159CDA0D20FA98F200A9B976 /* OTPCallbackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159CDA0C20FA98F200A9B976 /* OTPCallbackRouter.swift */; };
 		15D3634B20FA29EA00284137 /* TokensPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634A20FA29EA00284137 /* TokensPickerViewController.swift */; };
 		15D3634D20FA482800284137 /* TokenStore+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634C20FA482800284137 /* TokenStore+Export.swift */; };
 		15D3634F20FA4B9C00284137 /* FileManager+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634E20FA4B9C00284137 /* FileManager+Helpers.swift */; };
@@ -160,6 +161,7 @@
 		1574E7F420F0494F0070B124 /* OTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTP.swift; sourceTree = "<group>"; };
 		1574E7F520F0494F0070B124 /* KeychainStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
 		1574E7F620F0494F0070B124 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		159CDA0C20FA98F200A9B976 /* OTPCallbackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCallbackRouter.swift; sourceTree = "<group>"; };
 		15D3634A20FA29EA00284137 /* TokensPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensPickerViewController.swift; sourceTree = "<group>"; };
 		15D3634C20FA482800284137 /* TokenStore+Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TokenStore+Export.swift"; sourceTree = "<group>"; };
 		15D3634E20FA4B9C00284137 /* FileManager+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Helpers.swift"; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				1554F62420F3DE8900C693E8 /* Application */,
+				159CDA0E20FA9DEB00A9B976 /* Callback URL Handling */,
 				1554F62520F3DED100C693E8 /* Supporting Files */,
 				1554F62620F3DEE100C693E8 /* Storyboards */,
 				152EEEC520F12A95006925D8 /* Views */,
@@ -358,6 +361,14 @@
 				1574E7E620F0490D0070B124 /* Info.plist */,
 			);
 			path = OTPKitTests;
+			sourceTree = "<group>";
+		};
+		159CDA0E20FA9DEB00A9B976 /* Callback URL Handling */ = {
+			isa = PBXGroup;
+			children = (
+				159CDA0C20FA98F200A9B976 /* OTPCallbackRouter.swift */,
+			);
+			path = "Callback URL Handling";
 			sourceTree = "<group>";
 		};
 		7337BBAF6AF56D1CB1774AC3 /* Frameworks */ = {
@@ -593,12 +604,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AcknowList/AcknowList.framework",
+				"${BUILT_PRODUCTS_DIR}/CallbackURLKit/CallbackURLKit.framework",
 				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftBase32/SwiftBase32.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AcknowList.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CallbackURLKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftBase32.framework",
 			);
@@ -726,6 +739,7 @@
 				1554F62120F3DE2700C693E8 /* SecurityPreferencesViewController.swift in Sources */,
 				15D3634B20FA29EA00284137 /* TokensPickerViewController.swift in Sources */,
 				152EEECD20F2662F006925D8 /* EditTokenViewController.swift in Sources */,
+				159CDA0D20FA98F200A9B976 /* OTPCallbackRouter.swift in Sources */,
 				156EBC8120F6D568000F240B /* UIViewController+LocalAuthentication.swift in Sources */,
 				156EBC7F20F6D4D0000F240B /* ShowTokenQRActivity.swift in Sources */,
 				1554F62920F40B6700C693E8 /* UIView+ShowHide.swift in Sources */,
@@ -908,6 +922,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -962,6 +977,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

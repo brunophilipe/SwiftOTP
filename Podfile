@@ -22,6 +22,7 @@ target 'SwiftOTP' do
   # Pods for SwiftOTP
   pod 'QRCodeReader.swift', '~> 8.2.0'
   pod 'AcknowList'
+  pod 'CallbackURLKit', :path => 'Dependencies/CallbackURLKit'
 end
 
 target 'SwiftOTPIntents' do

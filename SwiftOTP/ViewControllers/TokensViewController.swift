@@ -16,8 +16,10 @@ import QRCodeReader
 
 class TokensViewController: UICollectionViewController
 {
-	private let tokenStore = TokenStore(accountUUID: Constants.tokenStoreUUID,
-										keychainGroupIdentifier: Constants.keychainGroupIdentifier)
+	private var tokenStore: TokenStore
+	{
+		return AppDelegate.shared.tokenStore
+	}
 
 	private let reuseIdentifier = "CellToken"
 

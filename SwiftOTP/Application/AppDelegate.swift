@@ -13,6 +13,12 @@ import Intents
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
+	public lazy var tokenStore: TokenStore =
+		{
+			return TokenStore(accountUUID: Constants.tokenStoreUUID,
+							  keychainGroupIdentifier: Constants.keychainGroupIdentifier)
+		}()
+
 	var window: UIWindow?
 
 	private var userInterfaceState: UserInterfaceState = .loading(pendingContextBroadcasts: [])

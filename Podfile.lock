@@ -1,10 +1,14 @@
 PODS:
   - AcknowList (1.6)
+  - CallbackURLKit (2.0.0):
+    - CallbackURLKit/Core (= 2.0.0)
+  - CallbackURLKit/Core (2.0.0)
   - QRCodeReader.swift (8.2.0)
   - SwiftBase32 (0.6.0)
 
 DEPENDENCIES:
   - AcknowList
+  - CallbackURLKit (from `Dependencies/CallbackURLKit`)
   - QRCodeReader.swift (~> 8.2.0)
   - SwiftBase32
 
@@ -14,11 +18,16 @@ SPEC REPOS:
     - QRCodeReader.swift
     - SwiftBase32
 
+EXTERNAL SOURCES:
+  CallbackURLKit:
+    :path: Dependencies/CallbackURLKit
+
 SPEC CHECKSUMS:
   AcknowList: 2b27ccc75110be58be37424c4b08b07bdec628b4
+  CallbackURLKit: be8732383fc1df5051ec0e660d627bd21468b9a7
   QRCodeReader.swift: 003eb32f18a5a675b936ec82ba0ff368cddbff45
   SwiftBase32: 5bbadb7b929b3e187f0fbfa7d6f3ad4665a688e5
 
-PODFILE CHECKSUM: 7b80f893e6caf47597e4bc734ee3be754334b491
+PODFILE CHECKSUM: db8f8c4ff1b51b09b4c26a47dbcccd27972d2b3b
 
 COCOAPODS: 1.5.3

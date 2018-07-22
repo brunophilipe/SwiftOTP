@@ -22,35 +22,21 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.brunophilipe.SwiftOTP.otpauth</string>
+			<string>com.brunophilipe.SwiftOTP.swiftotp-demo-callback</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>otpauth</string>
-			</array>
-		</dict>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLName</key>
-			<string>com.brunophilipe.SwiftOTP.swiftotp-callback</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>swiftotp-callback</string>
+				<string>swiftotp-demo-callback</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>4</string>
-	<key>ITSAppUsesNonExemptEncryption</key>
-	<false/>
+	<string>1</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>swiftotp-callback</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSCameraUsageDescription</key>
-	<string>The camera is used to read QR codes.</string>
-	<key>NSUserActivityTypes</key>
-	<array>
-		<string>ViewCodeIntent</string>
-	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

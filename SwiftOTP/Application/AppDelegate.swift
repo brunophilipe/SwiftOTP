@@ -13,6 +13,8 @@ import Intents
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
+	private let callbackRouter = OTPCallbackRouter(callbackURLScheme: "swiftotp-callback")
+
 	public lazy var tokenStore: TokenStore =
 		{
 			return TokenStore(accountUUID: Constants.tokenStoreUUID,
@@ -55,6 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
 	{
 		// Override point for customization after application launch.
+		callbackRouter.registerActionsIfNeeded()
 
 		// For debugging purposes:
 //		INInteraction.deleteAll(completion: nil)
@@ -90,6 +93,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 		{
 			let context = TokensViewController.LoadTokenUrlContext(urlComponents: components)
 			broadcastContext(context)
+		}
+		else
+		{
+			callbackRouter.registerActionsIfNeeded()
+			return callbackRouter.handleOpen(url: url)
 		}
 
 		return false

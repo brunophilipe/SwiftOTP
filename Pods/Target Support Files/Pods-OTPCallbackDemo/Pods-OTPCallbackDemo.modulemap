@@ -1,0 +1,6 @@
+framework module Pods_OTPCallbackDemo {
+  umbrella header "Pods-OTPCallbackDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -50,12 +50,18 @@
 		1574E7F820F0494F0070B124 /* OTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574E7F420F0494F0070B124 /* OTP.swift */; };
 		1574E7F920F0494F0070B124 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574E7F520F0494F0070B124 /* KeychainStore.swift */; };
 		1574E7FA20F0494F0070B124 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574E7F620F0494F0070B124 /* Token.swift */; };
+		158DABDF2103EF44000EBE68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158DABDE2103EF44000EBE68 /* AppDelegate.swift */; };
+		158DABE12103EF44000EBE68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158DABE02103EF44000EBE68 /* ViewController.swift */; };
+		158DABE42103EF44000EBE68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 158DABE22103EF44000EBE68 /* Main.storyboard */; };
+		158DABE62103EF45000EBE68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 158DABE52103EF45000EBE68 /* Assets.xcassets */; };
+		158DABE92103EF45000EBE68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 158DABE72103EF45000EBE68 /* LaunchScreen.storyboard */; };
 		159CDA0D20FA98F200A9B976 /* OTPCallbackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159CDA0C20FA98F200A9B976 /* OTPCallbackRouter.swift */; };
 		15D3634B20FA29EA00284137 /* TokensPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634A20FA29EA00284137 /* TokensPickerViewController.swift */; };
 		15D3634D20FA482800284137 /* TokenStore+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634C20FA482800284137 /* TokenStore+Export.swift */; };
 		15D3634F20FA4B9C00284137 /* FileManager+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634E20FA4B9C00284137 /* FileManager+Helpers.swift */; };
 		15D3635120FA723000284137 /* Bundle+InfoAccessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3635020FA723000284137 /* Bundle+InfoAccessors.swift */; };
 		15D3635520FA814300284137 /* Pods-SwiftOTP-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15D3635420FA814300284137 /* Pods-SwiftOTP-acknowledgements.plist */; };
+		5CECF274D5DD17FC5DBA687F /* Pods_OTPCallbackDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8772F63A71F7A0E89406A0E /* Pods_OTPCallbackDemo.framework */; };
 		6E0FB1EC182917628879D22E /* Pods_SwiftOTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2CDEC4586380293BB7ED89 /* Pods_SwiftOTP.framework */; };
 		86F782CB14A25740C61B7727 /* Pods_OTPKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC8F6B397214EED847A83F3 /* Pods_OTPKitTests.framework */; };
 		D7D9D04A47A396FB46CBBBD0 /* Pods_OTPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED336A811AC2DA0B53FFC09F /* Pods_OTPKit.framework */; };
@@ -161,6 +167,13 @@
 		1574E7F420F0494F0070B124 /* OTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTP.swift; sourceTree = "<group>"; };
 		1574E7F520F0494F0070B124 /* KeychainStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
 		1574E7F620F0494F0070B124 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		158DABDC2103EF44000EBE68 /* OTPCallbackDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OTPCallbackDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		158DABDE2103EF44000EBE68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		158DABE02103EF44000EBE68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		158DABE32103EF44000EBE68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		158DABE52103EF45000EBE68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		158DABE82103EF45000EBE68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		158DABEA2103EF45000EBE68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		159CDA0C20FA98F200A9B976 /* OTPCallbackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCallbackRouter.swift; sourceTree = "<group>"; };
 		15D3634A20FA29EA00284137 /* TokensPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensPickerViewController.swift; sourceTree = "<group>"; };
 		15D3634C20FA482800284137 /* TokenStore+Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TokenStore+Export.swift"; sourceTree = "<group>"; };
@@ -170,6 +183,8 @@
 		192488C999A10607F1BCD929 /* Pods-OTPKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OTPKitTests/Pods-OTPKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		350846FED42A69CBAF7FF5AC /* Pods_SwiftOTPIntents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOTPIntents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58EBC5BE904090BC5FFE8732 /* Pods-OTPKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OTPKitTests/Pods-OTPKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6510F0EEC50AAF5BE781285D /* Pods-OTPCallbackDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPCallbackDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OTPCallbackDemo/Pods-OTPCallbackDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		9123560051A5F5BA38D068EE /* Pods-OTPCallbackDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPCallbackDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-OTPCallbackDemo/Pods-OTPCallbackDemo.release.xcconfig"; sourceTree = "<group>"; };
 		BEC8F6B397214EED847A83F3 /* Pods_OTPKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTPKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54282D5E3FBD188B47F2DE6 /* Pods-SwiftOTPIntents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTPIntents.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTPIntents/Pods-SwiftOTPIntents.debug.xcconfig"; sourceTree = "<group>"; };
 		CA2CDEC4586380293BB7ED89 /* Pods_SwiftOTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +192,7 @@
 		DB8D1CE8ACF0F2E0AD2152E1 /* Pods-SwiftOTP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTP.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP.release.xcconfig"; sourceTree = "<group>"; };
 		ED336A811AC2DA0B53FFC09F /* Pods_OTPKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTPKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7477C48063C255AFA22D502 /* Pods-SwiftOTPIntents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTPIntents.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTPIntents/Pods-SwiftOTPIntents.release.xcconfig"; sourceTree = "<group>"; };
+		F8772F63A71F7A0E89406A0E /* Pods_OTPCallbackDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTPCallbackDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCE11B6F3C1BD6449F1CD99 /* Pods-OTPKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-OTPKit/Pods-OTPKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -213,6 +229,14 @@
 			files = (
 				1574E7DE20F0490D0070B124 /* OTPKit.framework in Frameworks */,
 				86F782CB14A25740C61B7727 /* Pods_OTPKitTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		158DABD92103EF44000EBE68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CECF274D5DD17FC5DBA687F /* Pods_OTPCallbackDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +333,7 @@
 				1574E7D620F0490D0070B124 /* OTPKit */,
 				1574E7E320F0490D0070B124 /* OTPKitTests */,
 				152EEEDD20F2CBA2006925D8 /* SwiftOTPIntents */,
+				158DABDD2103EF44000EBE68 /* OTPCallbackDemo */,
 				1574E7BC20F03A970070B124 /* Products */,
 				CBE616A24E63CFB0CD90411F /* Pods */,
 				7337BBAF6AF56D1CB1774AC3 /* Frameworks */,
@@ -322,6 +347,7 @@
 				1574E7D520F0490D0070B124 /* OTPKit.framework */,
 				1574E7DD20F0490D0070B124 /* OTPKitTests.xctest */,
 				152EEEDC20F2CBA2006925D8 /* SwiftOTPIntents.appex */,
+				158DABDC2103EF44000EBE68 /* OTPCallbackDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -363,6 +389,19 @@
 			path = OTPKitTests;
 			sourceTree = "<group>";
 		};
+		158DABDD2103EF44000EBE68 /* OTPCallbackDemo */ = {
+			isa = PBXGroup;
+			children = (
+				158DABDE2103EF44000EBE68 /* AppDelegate.swift */,
+				158DABE02103EF44000EBE68 /* ViewController.swift */,
+				158DABE22103EF44000EBE68 /* Main.storyboard */,
+				158DABE52103EF45000EBE68 /* Assets.xcassets */,
+				158DABE72103EF45000EBE68 /* LaunchScreen.storyboard */,
+				158DABEA2103EF45000EBE68 /* Info.plist */,
+			);
+			path = OTPCallbackDemo;
+			sourceTree = "<group>";
+		};
 		159CDA0E20FA9DEB00A9B976 /* Callback URL Handling */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,6 +417,7 @@
 				BEC8F6B397214EED847A83F3 /* Pods_OTPKitTests.framework */,
 				CA2CDEC4586380293BB7ED89 /* Pods_SwiftOTP.framework */,
 				350846FED42A69CBAF7FF5AC /* Pods_SwiftOTPIntents.framework */,
+				F8772F63A71F7A0E89406A0E /* Pods_OTPCallbackDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -393,6 +433,8 @@
 				DB8D1CE8ACF0F2E0AD2152E1 /* Pods-SwiftOTP.release.xcconfig */,
 				C54282D5E3FBD188B47F2DE6 /* Pods-SwiftOTPIntents.debug.xcconfig */,
 				F7477C48063C255AFA22D502 /* Pods-SwiftOTPIntents.release.xcconfig */,
+				6510F0EEC50AAF5BE781285D /* Pods-OTPCallbackDemo.debug.xcconfig */,
+				9123560051A5F5BA38D068EE /* Pods-OTPCallbackDemo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -492,6 +534,25 @@
 			productReference = 1574E7DD20F0490D0070B124 /* OTPKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		158DABDB2103EF44000EBE68 /* OTPCallbackDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 158DABED2103EF45000EBE68 /* Build configuration list for PBXNativeTarget "OTPCallbackDemo" */;
+			buildPhases = (
+				52A46D93F040C742FA4BE162 /* [CP] Check Pods Manifest.lock */,
+				158DABD82103EF44000EBE68 /* Sources */,
+				158DABD92103EF44000EBE68 /* Frameworks */,
+				158DABDA2103EF44000EBE68 /* Resources */,
+				C55D5F11A35E2FB4FB32F354 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OTPCallbackDemo;
+			productName = OTPCallbackDemo;
+			productReference = 158DABDC2103EF44000EBE68 /* OTPCallbackDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -535,6 +596,9 @@
 						CreatedOnToolsVersion = 10.0;
 						TestTargetID = 1574E7BA20F03A970070B124;
 					};
+					158DABDB2103EF44000EBE68 = {
+						CreatedOnToolsVersion = 10.0;
+					};
 				};
 			};
 			buildConfigurationList = 1574E7B620F03A970070B124 /* Build configuration list for PBXProject "SwiftOTP" */;
@@ -554,6 +618,7 @@
 				1574E7D420F0490D0070B124 /* OTPKit */,
 				1574E7DC20F0490D0070B124 /* OTPKitTests */,
 				152EEEDB20F2CBA2006925D8 /* SwiftOTPIntents */,
+				158DABDB2103EF44000EBE68 /* OTPCallbackDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -593,9 +658,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		158DABDA2103EF44000EBE68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				158DABE92103EF45000EBE68 /* LaunchScreen.storyboard in Resources */,
+				158DABE62103EF45000EBE68 /* Assets.xcassets in Resources */,
+				158DABE42103EF44000EBE68 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		52A46D93F040C742FA4BE162 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OTPCallbackDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		663D8CECCD30128E19156EBE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -672,6 +765,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C55D5F11A35E2FB4FB32F354 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OTPCallbackDemo/Pods-OTPCallbackDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CallbackURLKit/CallbackURLKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CallbackURLKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OTPCallbackDemo/Pods-OTPCallbackDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CC122889190F15A9CE2913DB /* [CP] Check Pods Manifest.lock */ = {
@@ -777,6 +888,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		158DABD82103EF44000EBE68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				158DABE12103EF44000EBE68 /* ViewController.swift in Sources */,
+				158DABDF2103EF44000EBE68 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -815,6 +935,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				1574E7C820F03A980070B124 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		158DABE22103EF44000EBE68 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				158DABE32103EF44000EBE68 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		158DABE72103EF45000EBE68 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				158DABE82103EF45000EBE68 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1133,6 +1269,46 @@
 			};
 			name = Release;
 		};
+		158DABEB2103EF45000EBE68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6510F0EEC50AAF5BE781285D /* Pods-OTPCallbackDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R85D3K8ATT;
+				INFOPLIST_FILE = OTPCallbackDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brunophilipe.OTPCallbackDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		158DABEC2103EF45000EBE68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9123560051A5F5BA38D068EE /* Pods-OTPCallbackDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R85D3K8ATT;
+				INFOPLIST_FILE = OTPCallbackDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brunophilipe.OTPCallbackDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1177,6 +1353,15 @@
 			buildConfigurations = (
 				1574E7F120F0490D0070B124 /* Debug */,
 				1574E7F220F0490D0070B124 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		158DABED2103EF45000EBE68 /* Build configuration list for PBXNativeTarget "OTPCallbackDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				158DABEB2103EF45000EBE68 /* Debug */,
+				158DABEC2103EF45000EBE68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

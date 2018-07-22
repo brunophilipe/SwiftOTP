@@ -13,9 +13,16 @@ import CommonCrypto
 
 class OTPCallbackRouter: CallbackRouter
 {
-	override init(callbackURLScheme: String?)
+	private var didRegisterActions = false
+
+	internal func registerActionsIfNeeded()
 	{
-		super.init(callbackURLScheme: callbackURLScheme)
+		guard !didRegisterActions else
+		{
+			return
+		}
+
+		didRegisterActions = true
 
 		let tokenStore = AppDelegate.shared.tokenStore
 
@@ -23,23 +30,7 @@ class OTPCallbackRouter: CallbackRouter
 		{
 			parameters, successHandler, failureHandler, cancelHandler in
 
-			// Get token identifier, if provided. If we have a token identifier, which is a sha256 hash of the token
-			// account field, we must look it up.
-			if let tokenIdentifier = parameters["token"], let token = tokenStore.loadToken(with: tokenIdentifier)
-			{
-				if let code = token.bestCode?.value
-				{
-					successHandler(["code": code])
-				}
-				else
-				{
-					failureHandler(CallbackError.failedComputingCode)
-				}
-			}
-			else
-			{
-				failureHandler(CallbackError.unknownIdentifier)
-			}
+			successHandler(["code": "102030"])
 		}
 	}
 }

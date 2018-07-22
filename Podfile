@@ -32,3 +32,11 @@ target 'SwiftOTPIntents' do
 	# Pods for SwiftOTPIntents
 
 end
+
+target 'OTPCallbackDemo' do
+	# Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+	use_frameworks!
+
+	# Pods for SwiftOTPIntents
+	pod 'CallbackURLKit', :path => 'Dependencies/CallbackURLKit'
+end

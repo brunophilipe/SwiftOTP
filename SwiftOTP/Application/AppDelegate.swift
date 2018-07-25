@@ -96,8 +96,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 		}
 		else
 		{
-			callbackRouter.registerActionsIfNeeded()
-			return callbackRouter.handleOpen(url: url)
+			let callbackRouter = self.callbackRouter
+
+			DispatchQueue.main.async
+			{
+				callbackRouter.registerActionsIfNeeded()
+				if !callbackRouter.handleOpen(url: url)
+				{
+					NSLog("Error parsing open url request")
+				}
+			}
+			return true
 		}
 
 		return false

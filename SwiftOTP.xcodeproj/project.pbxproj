@@ -57,6 +57,7 @@
 		158DABE62103EF45000EBE68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 158DABE52103EF45000EBE68 /* Assets.xcassets */; };
 		158DABE92103EF45000EBE68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 158DABE72103EF45000EBE68 /* LaunchScreen.storyboard */; };
 		159CDA0D20FA98F200A9B976 /* OTPCallbackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159CDA0C20FA98F200A9B976 /* OTPCallbackRouter.swift */; };
+		15CA9508210A6AD600F76E5B /* AcknowledgementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA9507210A6AD600F76E5B /* AcknowledgementsViewController.swift */; };
 		15D3634B20FA29EA00284137 /* TokensPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634A20FA29EA00284137 /* TokensPickerViewController.swift */; };
 		15D3634D20FA482800284137 /* TokenStore+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634C20FA482800284137 /* TokenStore+Export.swift */; };
 		15D3634F20FA4B9C00284137 /* FileManager+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634E20FA4B9C00284137 /* FileManager+Helpers.swift */; };
@@ -177,6 +178,7 @@
 		158DABE82103EF45000EBE68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		158DABEA2103EF45000EBE68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		159CDA0C20FA98F200A9B976 /* OTPCallbackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCallbackRouter.swift; sourceTree = "<group>"; };
+		15CA9507210A6AD600F76E5B /* AcknowledgementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsViewController.swift; sourceTree = "<group>"; };
 		15D3634A20FA29EA00284137 /* TokensPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensPickerViewController.swift; sourceTree = "<group>"; };
 		15D3634C20FA482800284137 /* TokenStore+Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TokenStore+Export.swift"; sourceTree = "<group>"; };
 		15D3634E20FA4B9C00284137 /* FileManager+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Helpers.swift"; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				1554F62020F3DE2700C693E8 /* SecurityPreferencesViewController.swift */,
 				15D3634A20FA29EA00284137 /* TokensPickerViewController.swift */,
 				150B4E90210A68D0007D94A8 /* TokensExportViewController.swift */,
+				15CA9507210A6AD600F76E5B /* AcknowledgementsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -853,6 +856,7 @@
 				1554F62120F3DE2700C693E8 /* SecurityPreferencesViewController.swift in Sources */,
 				15D3634B20FA29EA00284137 /* TokensPickerViewController.swift in Sources */,
 				152EEECD20F2662F006925D8 /* EditTokenViewController.swift in Sources */,
+				15CA9508210A6AD600F76E5B /* AcknowledgementsViewController.swift in Sources */,
 				159CDA0D20FA98F200A9B976 /* OTPCallbackRouter.swift in Sources */,
 				156EBC8120F6D568000F240B /* UIViewController+LocalAuthentication.swift in Sources */,
 				150B4E91210A68D0007D94A8 /* TokensExportViewController.swift in Sources */,

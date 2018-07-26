@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		05747BF8CED2958349CB32C3 /* Pods_SwiftOTPIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350846FED42A69CBAF7FF5AC /* Pods_SwiftOTPIntents.framework */; };
+		150B4E91210A68D0007D94A8 /* TokensExportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150B4E90210A68D0007D94A8 /* TokensExportViewController.swift */; };
 		152EEEC320F10A99006925D8 /* TokensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEC220F10A99006925D8 /* TokensViewController.swift */; };
 		152EEECA20F13EA4006925D8 /* TokenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEC820F13EA4006925D8 /* TokenCollectionViewCell.swift */; };
 		152EEECB20F13EA4006925D8 /* TokenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 152EEEC920F13EA4006925D8 /* TokenCollectionViewCell.xib */; };
@@ -125,6 +126,7 @@
 
 /* Begin PBXFileReference section */
 		0B5FBBB7CBFC9E097A981C00 /* Pods-SwiftOTP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP.debug.xcconfig"; sourceTree = "<group>"; };
+		150B4E90210A68D0007D94A8 /* TokensExportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensExportViewController.swift; sourceTree = "<group>"; };
 		152EEEC220F10A99006925D8 /* TokensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensViewController.swift; sourceTree = "<group>"; };
 		152EEEC820F13EA4006925D8 /* TokenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenCollectionViewCell.swift; sourceTree = "<group>"; };
 		152EEEC920F13EA4006925D8 /* TokenCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TokenCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				156EBC8420F9A6E4000F240B /* PreferencesViewController.swift */,
 				1554F62020F3DE2700C693E8 /* SecurityPreferencesViewController.swift */,
 				15D3634A20FA29EA00284137 /* TokensPickerViewController.swift */,
+				150B4E90210A68D0007D94A8 /* TokensExportViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -852,6 +855,7 @@
 				152EEECD20F2662F006925D8 /* EditTokenViewController.swift in Sources */,
 				159CDA0D20FA98F200A9B976 /* OTPCallbackRouter.swift in Sources */,
 				156EBC8120F6D568000F240B /* UIViewController+LocalAuthentication.swift in Sources */,
+				150B4E91210A68D0007D94A8 /* TokensExportViewController.swift in Sources */,
 				156EBC7F20F6D4D0000F240B /* ShowTokenQRActivity.swift in Sources */,
 				1554F62920F40B6700C693E8 /* UIView+ShowHide.swift in Sources */,
 				156EBC8520F9A6E4000F240B /* PreferencesViewController.swift in Sources */,

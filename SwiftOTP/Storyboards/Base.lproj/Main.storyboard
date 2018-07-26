@@ -662,7 +662,7 @@
         <!--Select Tokens to Export-->
         <scene sceneID="dPC-Tr-5Lv">
             <objects>
-                <tableViewController id="J1L-cR-vvc" customClass="TokensPickerViewController" customModule="SwiftOTP" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="J1L-cR-vvc" customClass="TokensExportViewController" customModule="SwiftOTP" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="HG3-yZ-wSo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

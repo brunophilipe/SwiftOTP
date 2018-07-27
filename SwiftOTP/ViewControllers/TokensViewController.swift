@@ -25,7 +25,7 @@ class TokensViewController: UICollectionViewController
 
 	private enum Segues: String, Segue
 	{
-		case editToken
+		case editToken, authorizeIntegration
 	}
 
 	#if !targetEnvironment(simulator)
@@ -200,6 +200,9 @@ class TokensViewController: UICollectionViewController
 
 				storyboardSegue.destination.broadcast(context)
 			}
+
+		case .authorizeIntegration:
+			break
 		}
 	}
 
@@ -234,38 +237,6 @@ class TokensViewController: UICollectionViewController
     
         return cell
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-
 }
 
 private extension TokensViewController
@@ -394,6 +365,21 @@ extension TokensViewController // Context Bus
 	struct LoadTokenUrlContext
 	{
 		let urlComponents: URLComponents
+	}
+
+	struct AuthorizeIntegrationContext
+	{
+		/// A unique identifier of this integration client, possibly also unique by detail (account).
+		let clientId: UUID
+
+		/// A human-readable identifier of the integrated app, possiblty the app's name.
+		let clientApp: String
+
+		/// An optional detail of this integration, for example an email address of the user's account.
+		let clientDetail: String?
+
+		/// An opaque hash that identifies a previous authorization associated with this client id UUID.
+		let clientSecret: String?
 	}
 }
 

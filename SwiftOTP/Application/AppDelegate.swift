@@ -46,6 +46,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 		return UIApplication.shared.delegate! as! AppDelegate
 	}
 
+	func showTokenPicker(completion: @escaping (TokenPickerResult) -> Void)
+	{
+
+	}
+
 	func mainViewControllerDidAppear()
 	{
 		if !userInterfaceState.isReady
@@ -137,6 +142,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 			default:		return false
 			}
 		}
+	}
+
+	enum TokenPickerResult
+	{
+		case success(account: String)
+		case canceled
 	}
 }
 

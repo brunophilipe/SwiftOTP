@@ -19,6 +19,16 @@ class TokensPickerViewController: UITableViewController
 	internal let reuseIdentifier = "CellToken"
 
 	internal var selectedTokenAccounts: Set<String> = []
+	{
+		didSet
+		{
+			if selectedTokenAccounts.count > 1, !tableView.allowsMultipleSelection
+			{
+				// Trim selection to first element
+				selectedTokenAccounts = [selectedTokenAccounts.first!]
+			}
+		}
+	}
 
 	override func viewWillAppear(_ animated: Bool)
 	{
@@ -104,6 +114,22 @@ class TokensPickerViewController: UITableViewController
 
 		guard let token = tokenStore.load(indexPath.row) else
 		{
+			return
+		}
+
+		// If this is a single-selection picker, replace the selection instead of adding to it.
+		guard tableView.allowsMultipleSelection else
+		{
+			// There should be only one selection, but we make sure to un-check all selections if there are many.
+			selectedTokenAccounts.forEach
+				{
+					if let index = tokenStore.index(of: $0)
+					{
+						tableView.cellForRow(at: IndexPath(row: index, section: 0))?.accessoryType = .none
+					}
+				}
+
+			tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
 			return
 		}
 

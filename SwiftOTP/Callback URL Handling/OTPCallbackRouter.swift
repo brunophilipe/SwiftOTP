@@ -30,6 +30,14 @@ class OTPCallbackRouter: CallbackRouter
 		{
 			parameters, successHandler, failureHandler, cancelHandler in
 
+			guard
+				let authorizationContext = TokensViewController.AuthorizeIntegrationContext.init(parameters: parameters)
+			else
+			{
+				failureHandler(CallbackError.missingParameters)
+				return
+			}
+
 			successHandler(["code": "102030"])
 		}
 	}
@@ -39,6 +47,7 @@ enum CallbackError: Int, FailureCallbackError
 {
 	case unknownIdentifier = 1
 	case failedComputingCode
+	case missingParameters
 
 	var code: Int
 	{
@@ -54,6 +63,9 @@ enum CallbackError: Int, FailureCallbackError
 
 		case .failedComputingCode:
 			return "Could not calculate code."
+
+		case .missingParameters:
+			return "Missing either client_id and/or client_app parameters."
 		}
 	}
 }
@@ -84,5 +96,25 @@ private extension Data
 			_ = CC_SHA256($0, CC_LONG(count), &hash)
 		}
 		return Data(bytes: hash)
+	}
+}
+
+private extension TokensViewController.AuthorizeIntegrationContext
+{
+	init?(parameters: [String: String])
+	{
+		guard
+			let clientId = parameters["client_id"],
+			let clientUUID = UUID(uuidString: clientId),
+			let clientApp = parameters["client_app"]
+		else
+		{
+			return nil
+		}
+
+		let clientSecret = parameters["client_secret"]
+		let clientDetail = parameters["client_detail"]
+
+		self.init(clientId: clientUUID, clientApp: clientApp, clientDetail: clientDetail, clientSecret: clientSecret)
 	}
 }

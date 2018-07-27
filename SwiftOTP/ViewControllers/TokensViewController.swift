@@ -369,17 +369,12 @@ extension TokensViewController // Context Bus
 
 	struct AuthorizeIntegrationContext
 	{
-		/// A unique identifier of this integration client, possibly also unique by detail (account).
-		let clientId: UUID
+		/// An authorization request object.
+		let authorizationRequest: OTPCallbackRouter.AuthorizationRequest
 
-		/// A human-readable identifier of the integrated app, possiblty the app's name.
-		let clientApp: String
+		let successHandler: () -> Void
 
-		/// An optional detail of this integration, for example an email address of the user's account.
-		let clientDetail: String?
-
-		/// An opaque hash that identifies a previous authorization associated with this client id UUID.
-		let clientSecret: String?
+		let failureHandler: () -> Void
 	}
 }
 

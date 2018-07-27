@@ -24,21 +24,81 @@ class OTPCallbackRouter: CallbackRouter
 
 		didRegisterActions = true
 
-		let tokenStore = AppDelegate.shared.tokenStore
+		register(action: "fetch-code", actionHandler: handleFetchCode)
+	}
 
-		register(action: "fetch-code")
+	private func handleFetchCode(_ parameters: Parameters,
+								 _ successHandler: SuccessCallback,
+								 _ failureHandler: FailureCallback,
+								 _ cancelHandler: CancelCallback)
+	{
+		// First test if this is an authorized request.
+		if let authorizedFetchRequest = AuthorizedCodeFetchRequest(parameters: parameters)
 		{
-			parameters, successHandler, failureHandler, cancelHandler in
+			// Perform code fetch
+			return
+		}
 
+		// Check if all needed parameters are resent.
+		guard let authorizationRequest = AuthorizationRequest(parameters: parameters) else
+		{
+			failureHandler(CallbackError.missingParameters)
+			return
+		}
+
+		typealias Context = TokensViewController.AuthorizeIntegrationContext
+		let authorizationContext = Context(authorizationRequest: authorizationRequest,
+										   successHandler: { },
+										   failureHandler: { })
+
+		successHandler(["code": "102030"])
+	}
+
+	class AuthorizationRequest
+	{
+		/// A unique identifier of this integration client, possibly also unique by detail (account).
+		let clientId: UUID
+
+		/// A human-readable identifier of the integrated app, possiblty the app's name.
+		let clientApp: String
+
+		/// An optional detail of this integration, for example an email address of the user's account.
+		let clientDetail: String?
+
+		init?(parameters: [String: String])
+		{
 			guard
-				let authorizationContext = TokensViewController.AuthorizeIntegrationContext.init(parameters: parameters)
-			else
+				let clientId = parameters["client_id"],
+				let clientUUID = UUID(uuidString: clientId),
+				let clientApp = parameters["client_app"]
+				else
 			{
-				failureHandler(CallbackError.missingParameters)
-				return
+				return nil
 			}
 
-			successHandler(["code": "102030"])
+			let clientDetail = parameters["client_detail"]
+
+			self.clientId = clientUUID
+			self.clientApp = clientApp
+			self.clientDetail = clientDetail
+		}
+	}
+
+	class AuthorizedCodeFetchRequest: AuthorizationRequest
+	{
+		/// An opaque hash that identifies a previous authorization associated with this client id UUID.
+		let clientSecret: String?
+
+		override init?(parameters: [String : String])
+		{
+			guard let clientSecret = parameters["client_secret"] else
+			{
+				return nil
+			}
+
+			self.clientSecret = clientSecret
+			
+			super.init(parameters: parameters)
 		}
 	}
 }
@@ -96,25 +156,5 @@ private extension Data
 			_ = CC_SHA256($0, CC_LONG(count), &hash)
 		}
 		return Data(bytes: hash)
-	}
-}
-
-private extension TokensViewController.AuthorizeIntegrationContext
-{
-	init?(parameters: [String: String])
-	{
-		guard
-			let clientId = parameters["client_id"],
-			let clientUUID = UUID(uuidString: clientId),
-			let clientApp = parameters["client_app"]
-		else
-		{
-			return nil
-		}
-
-		let clientSecret = parameters["client_secret"]
-		let clientDetail = parameters["client_detail"]
-
-		self.init(clientId: clientUUID, clientApp: clientApp, clientDetail: clientDetail, clientSecret: clientSecret)
 	}
 }

@@ -58,6 +58,8 @@
 		158DABE92103EF45000EBE68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 158DABE72103EF45000EBE68 /* LaunchScreen.storyboard */; };
 		159CDA0D20FA98F200A9B976 /* OTPCallbackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159CDA0C20FA98F200A9B976 /* OTPCallbackRouter.swift */; };
 		15CA9508210A6AD600F76E5B /* AcknowledgementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA9507210A6AD600F76E5B /* AcknowledgementsViewController.swift */; };
+		15CA950B210BCDC100F76E5B /* SwiftOTP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15CA9509210BCDC100F76E5B /* SwiftOTP.xcdatamodeld */; };
+		15CA950D210BD11D00F76E5B /* Integration+FetchRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA950C210BD11D00F76E5B /* Integration+FetchRequests.swift */; };
 		15D3634B20FA29EA00284137 /* TokensPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634A20FA29EA00284137 /* TokensPickerViewController.swift */; };
 		15D3634D20FA482800284137 /* TokenStore+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634C20FA482800284137 /* TokenStore+Export.swift */; };
 		15D3634F20FA4B9C00284137 /* FileManager+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634E20FA4B9C00284137 /* FileManager+Helpers.swift */; };
@@ -179,6 +181,8 @@
 		158DABEA2103EF45000EBE68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		159CDA0C20FA98F200A9B976 /* OTPCallbackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCallbackRouter.swift; sourceTree = "<group>"; };
 		15CA9507210A6AD600F76E5B /* AcknowledgementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsViewController.swift; sourceTree = "<group>"; };
+		15CA950A210BCDC100F76E5B /* SwiftOTP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftOTP.xcdatamodel; sourceTree = "<group>"; };
+		15CA950C210BD11D00F76E5B /* Integration+FetchRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Integration+FetchRequests.swift"; sourceTree = "<group>"; };
 		15D3634A20FA29EA00284137 /* TokensPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensPickerViewController.swift; sourceTree = "<group>"; };
 		15D3634C20FA482800284137 /* TokenStore+Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TokenStore+Export.swift"; sourceTree = "<group>"; };
 		15D3634E20FA4B9C00284137 /* FileManager+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Helpers.swift"; sourceTree = "<group>"; };
@@ -285,6 +289,7 @@
 				156EBC8220F6E25C000F240B /* UIViewController+Alerts.swift */,
 				15D3634C20FA482800284137 /* TokenStore+Export.swift */,
 				15D3634E20FA4B9C00284137 /* FileManager+Helpers.swift */,
+				15CA950C210BD11D00F76E5B /* Integration+FetchRequests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 				152EEED720F2C8DE006925D8 /* SwiftOTP.entitlements */,
 				152EEED320F2BDA2006925D8 /* Intents.intentdefinition */,
 				1574E7C520F03A980070B124 /* Assets.xcassets */,
+				15CA9509210BCDC100F76E5B /* SwiftOTP.xcdatamodeld */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -846,6 +852,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15D3634D20FA482800284137 /* TokenStore+Export.swift in Sources */,
+				15CA950B210BCDC100F76E5B /* SwiftOTP.xcdatamodeld in Sources */,
 				1554F62B20F42DC700C693E8 /* Token+Accessibility.swift in Sources */,
 				152EEED620F2C48B006925D8 /* Intents.intentdefinition in Sources */,
 				1554F61F20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift in Sources */,
@@ -863,6 +870,7 @@
 				156EBC7F20F6D4D0000F240B /* ShowTokenQRActivity.swift in Sources */,
 				1554F62920F40B6700C693E8 /* UIView+ShowHide.swift in Sources */,
 				156EBC8520F9A6E4000F240B /* PreferencesViewController.swift in Sources */,
+				15CA950D210BD11D00F76E5B /* Integration+FetchRequests.swift in Sources */,
 				1554F62320F3DE7500C693E8 /* Preferences.swift in Sources */,
 				156EBC7B20F6C08C000F240B /* ImageViewController.swift in Sources */,
 				15D3634F20FA4B9C00284137 /* FileManager+Helpers.swift in Sources */,
@@ -1375,6 +1383,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		15CA9509210BCDC100F76E5B /* SwiftOTP.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				15CA950A210BCDC100F76E5B /* SwiftOTP.xcdatamodel */,
+			);
+			currentVersion = 15CA950A210BCDC100F76E5B /* SwiftOTP.xcdatamodel */;
+			path = SwiftOTP.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1574E7B320F03A970070B124 /* Project object */;
 }

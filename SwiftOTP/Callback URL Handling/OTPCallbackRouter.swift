@@ -10,6 +10,7 @@ import UIKit
 import CallbackURLKit
 import OTPKit
 import CommonCrypto
+import CoreData
 
 class OTPCallbackRouter: CallbackRouter
 {
@@ -28,14 +29,46 @@ class OTPCallbackRouter: CallbackRouter
 	}
 
 	private func handleFetchCode(_ parameters: Parameters,
-								 _ successHandler: SuccessCallback,
-								 _ failureHandler: FailureCallback,
-								 _ cancelHandler: CancelCallback)
+								 _ successHandler: @escaping SuccessCallback,
+								 _ failureHandler: @escaping FailureCallback,
+								 _ cancelHandler: @escaping CancelCallback)
 	{
+		let appDelegate = AppDelegate.shared
+
 		// First test if this is an authorized request.
 		if let authorizedFetchRequest = AuthorizedCodeFetchRequest(parameters: parameters)
 		{
-			// Perform code fetch
+			let context = appDelegate.managedObjectContext
+
+			do
+			{
+				// Fetch the integration object
+				guard
+					let integration = try context.fetch(Integration.fetchRequest(for: authorizedFetchRequest)).first
+				else
+				{
+					failureHandler(CallbackError.unknownIdentifier)
+					return
+				}
+
+				// Get the token account string, and fetch the best code
+				guard
+					let tokenAccount = integration.tokenAccount,
+					let code = appDelegate.tokenStore.load(tokenAccount)?.bestCode?.value
+				else
+				{
+					failureHandler(CallbackError.failedComputingCode)
+					return
+				}
+
+				// Return the code
+				successHandler(["code": code])
+			}
+			catch
+			{
+				failureHandler(CallbackError.internalStorageError)
+			}
+
 			return
 		}
 
@@ -48,10 +81,36 @@ class OTPCallbackRouter: CallbackRouter
 
 		typealias Context = TokensViewController.AuthorizeIntegrationContext
 		let authorizationContext = Context(authorizationRequest: authorizationRequest,
-										   successHandler: { },
-										   failureHandler: { })
+										   failureHandler: { failureHandler(CallbackError.userCanceled) },
+										   successHandler:
+			{
+				tokenAccount in
 
-		successHandler(["code": "102030"])
+				guard
+					let randomSecret = Data.random(length: 32)?.base64EncodedString(),
+					let bestCode = appDelegate.tokenStore.load(tokenAccount)?.bestCode?.value
+				else
+				{
+					failureHandler(CallbackError.internalError)
+					return
+				}
+
+				// Create the integration object
+				let integration = Integration(context: appDelegate.managedObjectContext)
+				integration.appName = authorizationRequest.clientApp
+				integration.detail = authorizationRequest.clientDetail
+				integration.uuid = authorizationRequest.clientId
+				integration.secret = randomSecret
+				integration.tokenAccount = tokenAccount
+
+				// Save the context
+				appDelegate.saveContext()
+
+				// Finalize by sending the data back to the caller app
+				successHandler(["code": bestCode, "client_secret": randomSecret])
+			})
+
+		appDelegate.showTokenPicker(context: authorizationContext)
 	}
 
 	class AuthorizationRequest
@@ -71,7 +130,7 @@ class OTPCallbackRouter: CallbackRouter
 				let clientId = parameters["client_id"],
 				let clientUUID = UUID(uuidString: clientId),
 				let clientApp = parameters["client_app"]
-				else
+			else
 			{
 				return nil
 			}
@@ -87,7 +146,7 @@ class OTPCallbackRouter: CallbackRouter
 	class AuthorizedCodeFetchRequest: AuthorizationRequest
 	{
 		/// An opaque hash that identifies a previous authorization associated with this client id UUID.
-		let clientSecret: String?
+		let clientSecret: String
 
 		override init?(parameters: [String : String])
 		{
@@ -106,8 +165,11 @@ class OTPCallbackRouter: CallbackRouter
 enum CallbackError: Int, FailureCallbackError
 {
 	case unknownIdentifier = 1
+	case userCanceled
 	case failedComputingCode
 	case missingParameters
+	case internalStorageError
+	case internalError
 
 	var code: Int
 	{
@@ -121,11 +183,20 @@ enum CallbackError: Int, FailureCallbackError
 		case .unknownIdentifier:
 			return "Could not find token with provided identifier."
 
+		case .userCanceled:
+			return "user canceled authorization."
+
 		case .failedComputingCode:
 			return "Could not calculate code."
 
 		case .missingParameters:
 			return "Missing either client_id and/or client_app parameters."
+
+		case .internalStorageError:
+			return "The integrations storage database seems corrupted."
+
+		case .internalError:
+			return "Application error: could not generate random numbers."
 		}
 	}
 }
@@ -156,5 +227,21 @@ private extension Data
 			_ = CC_SHA256($0, CC_LONG(count), &hash)
 		}
 		return Data(bytes: hash)
+	}
+
+	static func random(length: Int) -> Data?
+	{
+		var keyData = Data(count: length)
+		let result = keyData.withUnsafeMutableBytes { SecRandomCopyBytes(kSecRandomDefault, length, $0) }
+
+		if result == errSecSuccess
+		{
+			return keyData
+		}
+		else
+		{
+			print("Problem generating random bytes")
+			return nil
+		}
 	}
 }

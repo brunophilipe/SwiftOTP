@@ -65,6 +65,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 		return true
 	}
 
+	func applicationDidEnterBackground(_ application: UIApplication)
+	{
+		saveContext()
+	}
+
 	func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool
 	{
 		if url.scheme == "otpauth",

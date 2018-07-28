@@ -60,8 +60,10 @@ class OTPCallbackRouter: CallbackRouter
 
 				// Return the code
 				successHandler(["code": code])
-			}
 
+				// Exit here because we already handled the request. Continuing would ask for another authorization.
+				return
+			}
 		}
 		catch
 		{

@@ -18,8 +18,7 @@ class IntegrationsTableViewController: UITableViewController
 		let managedObjectContext = AppDelegate.shared.managedObjectContext
 		let controller: NSFetchedResultsController<Integration>
 		controller = Integration.makeFetchedResultsController(context: managedObjectContext,
-															  sortDescriptors: sortDescriptors,
-															  cacheName: "IntegrationsEditor")
+															  sortDescriptors: sortDescriptors)
 		controller.delegate = self
 		return controller
 	}()

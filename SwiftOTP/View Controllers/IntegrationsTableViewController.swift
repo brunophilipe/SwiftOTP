@@ -26,16 +26,6 @@ class IntegrationsTableViewController: UITableViewController
 
 	private weak var tokenStore: TokenStore? = AppDelegate.shared.tokenStore
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
-
 	// MARK: - Table View
 
 	override func numberOfSections(in tableView: UITableView) -> Int
@@ -82,6 +72,26 @@ class IntegrationsTableViewController: UITableViewController
 				fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
 			}
 		}
+	}
+
+	override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String?
+	{
+		return "Revoke"
+	}
+
+	override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String?
+	{
+		guard section == 0 else
+		{
+			return nil
+		}
+
+		if fetchedResultsController.sections![section].numberOfObjects == 0
+		{
+			return "Apps that were authorized to fetch codes via the callback-url API will be listed here, where you can revoke their authorizations."
+		}
+
+		return "Swipe left to revoke integration authorization. For the revoked integration App to fetch tokens again, a new authorization will have to be performed."
 	}
 
 	func configureCell(_ cell: UITableViewCell, withIntegration integration: Integration)

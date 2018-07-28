@@ -129,6 +129,7 @@ class TokensPickerViewController: UITableViewController
 					}
 				}
 
+			selectedTokenAccounts.removeAll()
 			selectedTokenAccounts.insert(token.account)
 			tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
 			return

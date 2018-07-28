@@ -202,7 +202,10 @@ class TokensViewController: UICollectionViewController
 			}
 
 		case .authorizeIntegration:
-			break
+			if let authorizationContext = sender as? AuthorizationViewController.AuthorizeIntegrationContext
+			{
+				storyboardSegue.destination.broadcast(authorizationContext)
+			}
 		}
 	}
 
@@ -355,6 +358,10 @@ extension TokensViewController // Context Bus
 		{
 			importToken(with: tokenUrlContext.urlComponents)
 		}
+		else if context is AuthorizationViewController.AuthorizeIntegrationContext
+		{
+			performSegue(Segues.authorizeIntegration, sender: context)
+		}
 	}
 
 	struct ShowCodeFromIntentContext
@@ -365,16 +372,6 @@ extension TokensViewController // Context Bus
 	struct LoadTokenUrlContext
 	{
 		let urlComponents: URLComponents
-	}
-
-	struct AuthorizeIntegrationContext
-	{
-		/// An authorization request object.
-		let authorizationRequest: OTPCallbackRouter.AuthorizationRequest
-
-		let successHandler: () -> Void
-
-		let failureHandler: () -> Void
 	}
 }
 

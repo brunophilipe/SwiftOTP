@@ -6,43 +6,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--App Integration-->
-        <scene sceneID="Lhc-O1-zwJ">
-            <objects>
-                <viewController id="TbR-8g-U1T" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Jfd-L0-2rK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="If you are unsure how you got here, do not give access to &lt;app name&gt;!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xoo-G1-eY8">
-                                <rect key="frame" x="-41" y="256" width="321.5" height="38.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pS-2z-7Xb">
-                                <rect key="frame" x="-48" y="116" width="335" height="134"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">The App &lt;app name&gt; wishes to integrate with SwiftOTP in order to fetch OTP codes for one of your accounts.  This will give &lt;app name&gt; unrestricted access to the OTP Code you select in the following step!</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.050000000000000003" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="pCv-81-9Xe"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="App Integration" id="9y5-8Q-1OZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wYM-a3-gdj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2599" y="-608"/>
-        </scene>
         <!--Tokens-->
         <scene sceneID="bgt-vJ-UPI">
             <objects>
@@ -849,12 +815,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ev-ES-i29" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="664.79999999999995" y="-606.74662668665667"/>
+            <point key="canvasLocation" x="665" y="-608"/>
         </scene>
         <!--App Integration-->
         <scene sceneID="Msw-Ld-ea9">
             <objects>
-                <tableViewController id="GTk-N1-H95" sceneMemberID="viewController">
+                <tableViewController id="GTk-N1-H95" customClass="AuthorizationViewController" customModule="SwiftOTP" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VMk-Tw-N8m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -907,7 +873,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VYF-O3-UiN">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="VYF-O3-UiN">
                                                     <rect key="frame" x="15" y="0.0" width="344" height="165"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <string key="text">The App &lt;app name&gt; wishes to integrate with SwiftOTP in order to fetch OTP codes for one of your accounts.  This will give &lt;app name&gt; unrestricted access to the OTP Code you select in the following step!</string>
@@ -926,7 +892,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="If you are unsure how you got here, do not give access to &lt;app name&gt;!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BSy-EG-NSP">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="If you are unsure how you got here, do not give access to &lt;app name&gt;!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="BSy-EG-NSP">
                                                     <rect key="frame" x="15" y="0.0" width="344" height="54"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
@@ -952,6 +918,9 @@
                                                     <state key="normal" title="Authorize and pick OTP Code">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="43a-uc-EV0" kind="show" id="FG0-Pr-naX"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -978,6 +947,9 @@
                                                     <state key="normal" title="Cancel">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="cancel:" destination="GTk-N1-H95" eventType="touchUpInside" id="BrP-E9-jcx"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -998,10 +970,82 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="App Integration" id="bDZ-wz-MZo"/>
+                    <connections>
+                        <outletCollection property="appNameLabels" destination="VYF-O3-UiN" collectionClass="NSMutableArray" id="LyD-10-ZLE"/>
+                        <outletCollection property="appNameLabels" destination="BSy-EG-NSP" collectionClass="NSMutableArray" id="Ect-aQ-djr"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YmK-Hg-7aa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1657" y="-607"/>
+        </scene>
+        <!--Select Token-->
+        <scene sceneID="5hv-81-K9z">
+            <objects>
+                <tableViewController id="43a-uc-EV0" customClass="IntegrationTokenViewController" customModule="SwiftOTP" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="HXP-90-H4e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.059999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.19213560220000001" green="0.19216999409999999" blue="0.19213128090000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexColor" red="0.42760539050000002" green="0.42704725269999999" blue="0.44890797139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" white="0.059999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellToken" textLabel="zw6-Wy-aFf" detailTextLabel="N1H-Tr-aR2" style="IBUITableViewCellStyleSubtitle" id="IQu-B0-i6R" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IQu-B0-i6R" id="Eef-vZ-k4S">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Security" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zw6-Wy-aFf">
+                                            <rect key="frame" x="16" y="5" width="63" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="N1H-Tr-aR2">
+                                            <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.10982844980000001" green="0.10972782220000001" blue="0.11409296839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to ten seconds.">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                </accessibility>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="43a-uc-EV0" id="ipA-Vq-2WV"/>
+                            <outlet property="delegate" destination="43a-uc-EV0" id="ESf-Ev-crL"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Select Token" id="2xB-d4-rmX">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="0tK-iH-CV5">
+                            <connections>
+                                <action selector="cancel:" destination="43a-uc-EV0" id="OfZ-qq-Q2u"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Ulq-X5-XB5">
+                            <connections>
+                                <action selector="done:" destination="43a-uc-EV0" id="jXm-A4-BSq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="Ulq-X5-XB5" id="Xcg-B6-SOR"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3YN-KW-vnS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2599" y="-609"/>
         </scene>
     </scenes>
     <resources>

@@ -156,7 +156,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 
 	// Helpers
 
-	func showTokenPicker(context: TokensViewController.AuthorizeIntegrationContext)
+	func showTokenPicker(context: AuthorizationViewController.AuthorizeIntegrationContext)
 	{
 		broadcastContext(context)
 	}
@@ -168,7 +168,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 		switch userInterfaceState
 		{
 		case .ready:
-			(UIApplication.shared.keyWindow?.rootViewController)?.broadcast(context)
+			window?.rootViewController?.broadcast(context)
 
 		case .loading(pendingContextBroadcasts: var pendingBroadcasts):
 			pendingBroadcasts.append(context)

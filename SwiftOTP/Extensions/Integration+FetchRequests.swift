@@ -16,10 +16,10 @@ extension Integration
 		let clientDetail = authorizedRequest.clientDetail
 
 		let predicates: [String] = [
-			"uuid like \"\(authorizedRequest.clientId.uuidString)\"",
-			"appName like \"\(authorizedRequest.clientApp)\"",
-			"secret like \"\(authorizedRequest.clientSecret)\"",
-			clientDetail != nil ? "appDetail like \"\(clientDetail!)\"" : "appDetail == nil",
+			"uuid == \"\(authorizedRequest.clientId.uuidString)\"",
+			"appName == \"\(authorizedRequest.clientApp)\"",
+			"secret == \"\(authorizedRequest.clientSecret)\"",
+			clientDetail != nil ? "detail == \"\(clientDetail!)\"" : "appDetail == nil",
 		]
 
 		let integrationRequest: NSFetchRequest<Integration> = Integration.fetchRequest()

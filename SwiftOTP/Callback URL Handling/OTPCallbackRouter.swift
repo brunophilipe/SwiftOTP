@@ -79,7 +79,7 @@ class OTPCallbackRouter: CallbackRouter
 			return
 		}
 
-		typealias Context = TokensViewController.AuthorizeIntegrationContext
+		typealias Context = AuthorizationViewController.AuthorizeIntegrationContext
 		let authorizationContext = Context(authorizationRequest: authorizationRequest,
 										   failureHandler: { failureHandler(CallbackError.userCanceled) },
 										   successHandler:

@@ -60,6 +60,8 @@
 		15CA9508210A6AD600F76E5B /* AcknowledgementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA9507210A6AD600F76E5B /* AcknowledgementsViewController.swift */; };
 		15CA950B210BCDC100F76E5B /* SwiftOTP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15CA9509210BCDC100F76E5B /* SwiftOTP.xcdatamodeld */; };
 		15CA950D210BD11D00F76E5B /* Integration+FetchRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA950C210BD11D00F76E5B /* Integration+FetchRequests.swift */; };
+		15CA950F210BF4BD00F76E5B /* IntegrationTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA950E210BF4BD00F76E5B /* IntegrationTokenViewController.swift */; };
+		15CA9511210BF61E00F76E5B /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA9510210BF61E00F76E5B /* AuthorizationViewController.swift */; };
 		15D3634B20FA29EA00284137 /* TokensPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634A20FA29EA00284137 /* TokensPickerViewController.swift */; };
 		15D3634D20FA482800284137 /* TokenStore+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634C20FA482800284137 /* TokenStore+Export.swift */; };
 		15D3634F20FA4B9C00284137 /* FileManager+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634E20FA4B9C00284137 /* FileManager+Helpers.swift */; };
@@ -183,6 +185,8 @@
 		15CA9507210A6AD600F76E5B /* AcknowledgementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsViewController.swift; sourceTree = "<group>"; };
 		15CA950A210BCDC100F76E5B /* SwiftOTP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftOTP.xcdatamodel; sourceTree = "<group>"; };
 		15CA950C210BD11D00F76E5B /* Integration+FetchRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Integration+FetchRequests.swift"; sourceTree = "<group>"; };
+		15CA950E210BF4BD00F76E5B /* IntegrationTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationTokenViewController.swift; sourceTree = "<group>"; };
+		15CA9510210BF61E00F76E5B /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		15D3634A20FA29EA00284137 /* TokensPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensPickerViewController.swift; sourceTree = "<group>"; };
 		15D3634C20FA482800284137 /* TokenStore+Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TokenStore+Export.swift"; sourceTree = "<group>"; };
 		15D3634E20FA4B9C00284137 /* FileManager+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Helpers.swift"; sourceTree = "<group>"; };
@@ -262,6 +266,8 @@
 				15D3634A20FA29EA00284137 /* TokensPickerViewController.swift */,
 				150B4E90210A68D0007D94A8 /* TokensExportViewController.swift */,
 				15CA9507210A6AD600F76E5B /* AcknowledgementsViewController.swift */,
+				15CA9510210BF61E00F76E5B /* AuthorizationViewController.swift */,
+				15CA950E210BF4BD00F76E5B /* IntegrationTokenViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -869,10 +875,12 @@
 				150B4E91210A68D0007D94A8 /* TokensExportViewController.swift in Sources */,
 				156EBC7F20F6D4D0000F240B /* ShowTokenQRActivity.swift in Sources */,
 				1554F62920F40B6700C693E8 /* UIView+ShowHide.swift in Sources */,
+				15CA9511210BF61E00F76E5B /* AuthorizationViewController.swift in Sources */,
 				156EBC8520F9A6E4000F240B /* PreferencesViewController.swift in Sources */,
 				15CA950D210BD11D00F76E5B /* Integration+FetchRequests.swift in Sources */,
 				1554F62320F3DE7500C693E8 /* Preferences.swift in Sources */,
 				156EBC7B20F6C08C000F240B /* ImageViewController.swift in Sources */,
+				15CA950F210BF4BD00F76E5B /* IntegrationTokenViewController.swift in Sources */,
 				15D3634F20FA4B9C00284137 /* FileManager+Helpers.swift in Sources */,
 				156EBC8320F6E25C000F240B /* UIViewController+Alerts.swift in Sources */,
 				152EEED020F2669B006925D8 /* UIViewController+ContextBus.swift in Sources */,

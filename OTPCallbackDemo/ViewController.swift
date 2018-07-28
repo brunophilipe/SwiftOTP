@@ -32,7 +32,7 @@ class ViewController: UIViewController
 		let demoUUID = UUID(uuidString: "ABB86AD9-0437-4523-A86E-BBEC3F557BF7")!
 
 		var parameters: [String: String] = [
-			"client_id": demoUUID,
+			"client_id": demoUUID.uuidString,
 			"client_app": "SwiftOTP Demo App",
 			"client_detail": "demoaccount@example.com"
 		]
@@ -44,7 +44,7 @@ class ViewController: UIViewController
 
 		do
 		{
-			try callbackClient.perform(action: "fetch-code", parameters: [:], onSuccess: { [weak self] (result) in
+			try callbackClient.perform(action: "fetch-code", parameters: parameters, onSuccess: { [weak self] (result) in
 				if let code = result?["code"]
 				{
 					self?.codeLabel.text = code

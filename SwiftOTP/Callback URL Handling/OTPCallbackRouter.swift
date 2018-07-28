@@ -61,6 +61,12 @@ class OTPCallbackRouter: CallbackRouter
 					return
 				}
 
+				// Update the last used date of this integration
+				integration.lastUsed = Date()
+
+				// Save the context
+				appDelegate.saveContext()
+
 				// Return the code
 				successHandler(["code": code])
 			}
@@ -102,6 +108,8 @@ class OTPCallbackRouter: CallbackRouter
 				integration.uuid = authorizationRequest.clientId
 				integration.secret = randomSecret
 				integration.tokenAccount = tokenAccount
+				integration.authorized = Date()
+				integration.lastUsed = Date()
 
 				// Save the context
 				appDelegate.saveContext()

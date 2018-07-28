@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import OTPKit
 import CoreData
 
 class IntegrationsTableViewController: UITableViewController
@@ -22,6 +23,8 @@ class IntegrationsTableViewController: UITableViewController
 		controller.delegate = self
 		return controller
 	}()
+
+	private weak var tokenStore: TokenStore? = AppDelegate.shared.tokenStore
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,7 +86,12 @@ class IntegrationsTableViewController: UITableViewController
 
 	func configureCell(_ cell: UITableViewCell, withIntegration integration: Integration)
 	{
-		(cell as? IntegrationTableViewCell)?.setLabels(with: integration)
+		guard let tokenAccount = integration.tokenAccount, let token = tokenStore?.load(tokenAccount) else
+		{
+			return
+		}
+
+		(cell as? IntegrationTableViewCell)?.setLabels(with: integration, token: token)
 	}
 }
 
@@ -143,9 +151,28 @@ class IntegrationTableViewCell: UITableViewCell
 	@IBOutlet weak var authorizedDateLabel: UILabel!
 	@IBOutlet weak var lastUsedDateLabel: UILabel!
 
-	func setLabels(with integration: Integration)
+	static var dateFormatter: DateFormatter =
+	{
+		let dateFormatter = DateFormatter()
+		dateFormatter.timeStyle = .medium
+		dateFormatter.dateStyle = .medium
+		return dateFormatter
+	}()
+
+	func setLabels(with integration: Integration, token: Token)
 	{
 		appNameLabel.text = integration.appName
 		detailLabel.text = integration.detail
+		authorizedDateLabel.text = IntegrationTableViewCell.dateFormatter.string(from: integration.authorized!)
+		tokenLabel.text = "\(token.resolvedIssuer) (\(token.resolvedLabel))"
+
+		if let lastUsed = integration.lastUsed
+		{
+			lastUsedDateLabel.text = IntegrationTableViewCell.dateFormatter.string(from: lastUsed)
+		}
+		else
+		{
+			lastUsedDateLabel.text = "Never"
+		}
 	}
 }

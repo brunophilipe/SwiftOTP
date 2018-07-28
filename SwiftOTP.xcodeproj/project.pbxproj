@@ -255,7 +255,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		152EEEC120F10A5E006925D8 /* ViewControllers */ = {
+		152EEEC120F10A5E006925D8 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				152EEEC220F10A99006925D8 /* TokensViewController.swift */,
@@ -269,7 +269,7 @@
 				15CA9510210BF61E00F76E5B /* AuthorizationViewController.swift */,
 				15CA950E210BF4BD00F76E5B /* IntegrationTokenViewController.swift */,
 			);
-			path = ViewControllers;
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		152EEEC520F12A95006925D8 /* Views */ = {
@@ -378,7 +378,7 @@
 				1554F62520F3DED100C693E8 /* Supporting Files */,
 				1554F62620F3DEE100C693E8 /* Storyboards */,
 				152EEEC520F12A95006925D8 /* Views */,
-				152EEEC120F10A5E006925D8 /* ViewControllers */,
+				152EEEC120F10A5E006925D8 /* View Controllers */,
 				152EEECE20F26678006925D8 /* Extensions */,
 			);
 			path = SwiftOTP;

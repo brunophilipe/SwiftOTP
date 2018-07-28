@@ -12,6 +12,13 @@ class TokensExportViewController: TokensPickerViewController
 {
 	@IBOutlet private var exportButton: UIBarButtonItem!
 
+	override func viewDidLoad()
+	{
+		super.viewDidLoad()
+
+		tableView.allowsMultipleSelection = true
+	}
+
 	@IBAction func export(_ sender: Any?)
 	{
 		exportSelectedTokens()

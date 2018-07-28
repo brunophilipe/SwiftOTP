@@ -34,7 +34,7 @@ class TokensPickerViewController: UITableViewController
 	{
 		super.viewWillAppear(animated)
 
-		if navigationController?.isToolbarHidden == true
+		if navigationController?.isToolbarHidden == true, toolbarItems?.count ?? 0 > 0
 		{
 			navigationController?.setToolbarHidden(false, animated: animated)
 		}

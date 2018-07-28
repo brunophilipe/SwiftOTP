@@ -19,6 +19,7 @@ extension Integration
 			"uuid == \"\(authorizedRequest.clientId.uuidString)\"",
 			"appName == \"\(authorizedRequest.clientApp)\"",
 			"secret == \"\(authorizedRequest.clientSecret)\"",
+			"successScheme == \"\(authorizedRequest.successScheme)\"",
 			clientDetail != nil ? "detail == \"\(clientDetail!)\"" : "appDetail == nil",
 		]
 

@@ -98,6 +98,7 @@ class OTPCallbackRouter: CallbackRouter
 				integration.appName = authorizationRequest.clientApp
 				integration.detail = authorizationRequest.clientDetail
 				integration.uuid = authorizationRequest.clientId
+				integration.successScheme = authorizationRequest.successScheme
 				integration.secret = randomSecret
 				integration.tokenAccount = tokenAccount
 				integration.authorized = Date()
@@ -124,12 +125,17 @@ class OTPCallbackRouter: CallbackRouter
 		/// An optional detail of this integration, for example an email address of the user's account.
 		let clientDetail: String?
 
+		/// The URL scheme of the callback URL. If this value changes between invokations, the fetching shall fail for
+		/// security reasons.
+		let successScheme: String
+
 		init?(parameters: [String: String])
 		{
 			guard
 				let clientId = parameters["client_id"],
 				let clientUUID = UUID(uuidString: clientId),
-				let clientApp = parameters["client_app"]
+				let clientApp = parameters["client_app"],
+				let successScheme = parameters["x-success-scheme"]
 			else
 			{
 				return nil
@@ -140,6 +146,7 @@ class OTPCallbackRouter: CallbackRouter
 			self.clientId = clientUUID
 			self.clientApp = clientApp
 			self.clientDetail = clientDetail
+			self.successScheme = successScheme
 		}
 	}
 

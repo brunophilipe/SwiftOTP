@@ -6,10 +6,11 @@
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastUsed" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="secret" attributeType="String" syncable="YES"/>
+        <attribute name="successScheme" attributeType="String" syncable="YES"/>
         <attribute name="tokenAccount" attributeType="String" syncable="YES"/>
         <attribute name="uuid" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Integration" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="Integration" positionX="-63" positionY="-18" width="128" height="165"/>
     </elements>
 </model>

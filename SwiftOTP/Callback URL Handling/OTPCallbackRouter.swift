@@ -34,23 +34,14 @@ class OTPCallbackRouter: CallbackRouter
 								 _ cancelHandler: @escaping CancelCallback)
 	{
 		let appDelegate = AppDelegate.shared
+		let context = appDelegate.managedObjectContext
 
-		// First test if this is an authorized request.
-		if let authorizedFetchRequest = AuthorizedCodeFetchRequest(parameters: parameters)
+		do
 		{
-			let context = appDelegate.managedObjectContext
-
-			do
+			// First test if this is an authorized request.
+			if let authorizedFetchRequest = AuthorizedCodeFetchRequest(parameters: parameters),
+				let integration = try context.fetch(Integration.fetchRequest(for: authorizedFetchRequest)).first
 			{
-				// Fetch the integration object
-				guard
-					let integration = try context.fetch(Integration.fetchRequest(for: authorizedFetchRequest)).first
-				else
-				{
-					failureHandler(CallbackError.unknownIdentifier)
-					return
-				}
-
 				// Get the token account string, and fetch the best code
 				guard
 					let tokenAccount = integration.tokenAccount,
@@ -70,12 +61,11 @@ class OTPCallbackRouter: CallbackRouter
 				// Return the code
 				successHandler(["code": code])
 			}
-			catch
-			{
-				failureHandler(CallbackError.internalStorageError)
-			}
 
-			return
+		}
+		catch
+		{
+			failureHandler(CallbackError.internalStorageError)
 		}
 
 		// Check if all needed parameters are resent.
@@ -102,7 +92,7 @@ class OTPCallbackRouter: CallbackRouter
 				}
 
 				// Create the integration object
-				let integration = Integration(context: appDelegate.managedObjectContext)
+				let integration = Integration(context: context)
 				integration.appName = authorizationRequest.clientApp
 				integration.detail = authorizationRequest.clientDetail
 				integration.uuid = authorizationRequest.clientId

@@ -862,7 +862,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Integrations" id="3YL-Uk-PZh">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="bookmarks" id="rMy-fB-BN3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="rMy-fB-BN3">
                             <connections>
                                 <action selector="showDocs:" destination="oHq-Ro-aXB" id="ZRF-92-Fmc"/>
                             </connections>

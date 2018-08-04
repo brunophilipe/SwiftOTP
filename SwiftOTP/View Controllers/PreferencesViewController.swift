@@ -32,6 +32,16 @@ class PreferencesViewController: UITableViewController
 			navigationController?.setToolbarHidden(true, animated: animated)
 		}
 	}
+
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+	{
+		if indexPath.section == 2, indexPath.row == 1
+		{
+			let githubURL = URL(string: "https://github.com/brunophilipe/SwiftOTP")!
+			UIApplication.shared.open(githubURL, options: [:], completionHandler: nil)
+			tableView.deselectRow(at: indexPath, animated: true)
+		}
+	}
     
 	@IBAction func done(_ sender: Any?)
 	{

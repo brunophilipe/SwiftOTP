@@ -1,0 +1,43 @@
+<!-- This is an auto-generated file. Please edit SwiftOTP.md instead. -->
+
+<h1>SwiftOTP</h1>
+
+<p>This document lists the implemented x-callback-url actions in SwiftOTP, which can be used by other apps to integrate with SwiftOTP and fetch OTP codes.</p>
+
+<p>For more information, please build and run the demo app target <code>OTPCallbackDemo</code>.</p>
+
+<h2><code>/fetch-code</code></h2>
+
+<p>Fetches an OTP code from SwiftOTP. This method is also used request user authorization for the fetch operation.</p>
+
+<h3>Discussion:</h3>
+
+<p>When asked for authorization, the user is also asked which token should be associated to this request. Thereafter, all subsequent <code>fetch-code</code> requests will complete without user interaction.</p>
+
+<p>The first time <code>fetch-code</code> is invoked, it is done with the required parameters <code>client_id</code> and <code>client_app</code>, with the optional <code>client_detail</code> parameter, but <em>without</em> a <code>client_secret</code> parameter. This will cause SwiftOTP to request user authorization and for a token. If the user authorizes and picks a token correctly, the response callback will include the <code>code</code> and <code>client_secret</code> response parameters.</p>
+
+<p>Subsequent <code>fetch-code</code> invocations should use the exact same values of <code>client_id</code>, <code>client_app</code>, and <code>client_detail</code> (if <code>client_detail</code> was not issued in the first call, it should <strong>not</strong> be included in subsequent calls), along with the <code>client_secret</code> parameter returned by the first successful invocation. If successful, the callback will only include the <code>code</code> response parameter.</p>
+
+<h3>Request Parameters:</h3>
+
+<ul>
+<li><code>client_id</code>: String, required – A valid UUID string.</li>
+<li><code>client_app</code>: String, required – The human-readable name of the App.</li>
+<li><code>client_secret</code>: String, optional for first invocation – A secret to identify an authorization.</li>
+<li><code>client_detail</code>: String, optional – A detail for the request, such as the account's email address (this is shown to the user).</li>
+</ul>
+
+<h3>Response Parameters:</h3>
+
+<ul>
+<li><code>code</code>: String – The OTP code.</li>
+<li><code>client_secret</code>: String – Included only in the first invocation if the authorization succeeds.</li>
+</ul>
+
+<h2>Observations:</h2>
+
+<p>The following method can be used to generate a valid UUID string:</p>
+
+<p><code>swift
+UUID().uuidString
+</code></p>

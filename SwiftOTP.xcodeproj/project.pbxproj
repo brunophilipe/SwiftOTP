@@ -70,6 +70,8 @@
 		15D3634F20FA4B9C00284137 /* FileManager+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634E20FA4B9C00284137 /* FileManager+Helpers.swift */; };
 		15D3635120FA723000284137 /* Bundle+InfoAccessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3635020FA723000284137 /* Bundle+InfoAccessors.swift */; };
 		15D3635520FA814300284137 /* Pods-SwiftOTP-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15D3635420FA814300284137 /* Pods-SwiftOTP-acknowledgements.plist */; };
+		15FC70972115E925001C4C1A /* SwiftOTP.html in Resources */ = {isa = PBXBuildFile; fileRef = 15FC70962115E925001C4C1A /* SwiftOTP.html */; };
+		15FC70992115EAF1001C4C1A /* DocsWrapper.html in Resources */ = {isa = PBXBuildFile; fileRef = 15FC70982115EAF0001C4C1A /* DocsWrapper.html */; };
 		5CECF274D5DD17FC5DBA687F /* Pods_OTPCallbackDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8772F63A71F7A0E89406A0E /* Pods_OTPCallbackDemo.framework */; };
 		6E0FB1EC182917628879D22E /* Pods_SwiftOTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2CDEC4586380293BB7ED89 /* Pods_SwiftOTP.framework */; };
 		86F782CB14A25740C61B7727 /* Pods_OTPKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC8F6B397214EED847A83F3 /* Pods_OTPKitTests.framework */; };
@@ -198,6 +200,9 @@
 		15D3634E20FA4B9C00284137 /* FileManager+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Helpers.swift"; sourceTree = "<group>"; };
 		15D3635020FA723000284137 /* Bundle+InfoAccessors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+InfoAccessors.swift"; sourceTree = "<group>"; };
 		15D3635420FA814300284137 /* Pods-SwiftOTP-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-SwiftOTP-acknowledgements.plist"; path = "Pods/Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
+		15FC70942115E616001C4C1A /* SwiftOTP.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SwiftOTP.md; sourceTree = "<group>"; };
+		15FC70962115E925001C4C1A /* SwiftOTP.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = SwiftOTP.html; sourceTree = "<group>"; };
+		15FC70982115EAF0001C4C1A /* DocsWrapper.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = DocsWrapper.html; sourceTree = "<group>"; };
 		192488C999A10607F1BCD929 /* Pods-OTPKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OTPKitTests/Pods-OTPKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		350846FED42A69CBAF7FF5AC /* Pods_SwiftOTPIntents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOTPIntents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58EBC5BE904090BC5FFE8732 /* Pods-OTPKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OTPKitTests/Pods-OTPKitTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -339,6 +344,9 @@
 				1574E7C520F03A980070B124 /* Assets.xcassets */,
 				15445ED9210CA185001A0961 /* Colors.xcassets */,
 				15CA9509210BCDC100F76E5B /* SwiftOTP.xcdatamodeld */,
+				15FC70942115E616001C4C1A /* SwiftOTP.md */,
+				15FC70962115E925001C4C1A /* SwiftOTP.html */,
+				15FC70982115EAF0001C4C1A /* DocsWrapper.html */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -505,6 +513,7 @@
 				CC122889190F15A9CE2913DB /* [CP] Check Pods Manifest.lock */,
 				1574E7B720F03A970070B124 /* Sources */,
 				1574E7B820F03A970070B124 /* Frameworks */,
+				15FC70952115E708001C4C1A /* Compile Markdown Docs */,
 				1574E7B920F03A970070B124 /* Resources */,
 				1574E7EF20F0490D0070B124 /* Embed Frameworks */,
 				663D8CECCD30128E19156EBE /* [CP] Embed Pods Frameworks */,
@@ -662,6 +671,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15FC70992115EAF1001C4C1A /* DocsWrapper.html in Resources */,
+				15FC70972115E925001C4C1A /* SwiftOTP.html in Resources */,
 				152EEECB20F13EA4006925D8 /* TokenCollectionViewCell.xib in Resources */,
 				156EBC7920F6C07C000F240B /* ImageViewer.storyboard in Resources */,
 				1574E7C920F03A980070B124 /* LaunchScreen.storyboard in Resources */,
@@ -699,6 +710,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		15FC70952115E708001C4C1A /* Compile Markdown Docs */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Compile Markdown Docs";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/SwiftOTP/Supporting Files/SwiftOTP.html",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if ! [ -x \"$(command -v markdown)\" ]; then\n    echo 'Error: markdown is not installed. If you made changes to the SwiftOTP.md file, please compile it to SwiftOTP.html manually, or install markdown.' >&2\n    exit 0\nfi\n\necho \"<!-- This is an auto-generated file. Please edit SwiftOTP.md instead. -->\\n\" > \"SwiftOTP/Supporting Files/SwiftOTP.html\"\n\nmarkdown \"SwiftOTP/Supporting Files/SwiftOTP.md\" >> \"SwiftOTP/Supporting Files/SwiftOTP.html\"\n";
+		};
 		52A46D93F040C742FA4BE162 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

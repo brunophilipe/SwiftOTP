@@ -9,6 +9,7 @@
 import UIKit
 import OTPKit
 import CoreData
+import WebKit
 
 class IntegrationsTableViewController: UITableViewController
 {
@@ -24,6 +25,27 @@ class IntegrationsTableViewController: UITableViewController
 	}()
 
 	private weak var tokenStore: TokenStore? = AppDelegate.shared.tokenStore
+
+	@IBAction private func showDocs(_ sender: Any?)
+	{
+		guard
+			let docsWrapperUrl = Bundle.main.url(forResource: "DocsWrapper", withExtension: "html"),
+			let docsContentUrl = Bundle.main.url(forResource: "SwiftOTP", withExtension: "html"),
+			let docsContent = try? String(contentsOf: docsContentUrl),
+			let docsWrapper = try? String(contentsOf: docsWrapperUrl).replacingOccurrences(of: "##CONTENT##", with: docsContent)
+		else
+		{
+			return
+		}
+
+		let webView = WKWebView()
+		let viewController = UIViewController()
+		viewController.view = webView
+
+		show(viewController, sender: sender)
+
+		webView.loadHTMLString(docsWrapper, baseURL: nil)
+	}
 
 	// MARK: - Table View
 

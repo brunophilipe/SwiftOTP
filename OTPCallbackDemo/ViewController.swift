@@ -62,7 +62,9 @@ class ViewController: UIViewController
 		}
 		catch
 		{
+			#if DEBUG
 			NSLog("Failed fetching code: \(error)")
+			#endif
 		}
 	}
 }

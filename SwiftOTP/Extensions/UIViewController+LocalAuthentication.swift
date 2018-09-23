@@ -60,10 +60,12 @@ extension UIViewController
 				DispatchQueue.main.async(execute: { completion(success ? .success : .error(error as NSError?))})
 				laContext.invalidate()
 
+				#if DEBUG
 				if let error = error
 				{
 					NSLog("Failed authenticating device owner: \(error)")
 				}
+				#endif
 			}
 	}
 

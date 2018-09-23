@@ -338,10 +338,12 @@ extension TokensViewController // Intents
 		INInteraction.delete(with: [tokenAcount], completion: {
 			error in
 
+			#if DEBUG
 			if let error = error
 			{
 				NSLog("Failed deleting interaction: \(error)")
 			}
+			#endif
 		})
 	}
 }

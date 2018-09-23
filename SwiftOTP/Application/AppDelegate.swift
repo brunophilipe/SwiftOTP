@@ -87,10 +87,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 			DispatchQueue.main.async
 			{
 				callbackRouter.registerActionsIfNeeded()
+				#if DEBUG
 				if !callbackRouter.handleOpen(url: url)
 				{
 					NSLog("Error parsing open url request")
 				}
+				#endif
 			}
 			return true
 		}

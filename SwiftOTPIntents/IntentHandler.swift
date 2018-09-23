@@ -22,7 +22,7 @@ class IntentHandler: INExtension, ViewCodeIntentHandling
 		guard let tokenAccount = intent.account else
 		{
 			completion(ViewCodeIntentResponse(code: .failure, userActivity: nil))
-			NSLog("Bad intent mising account!")
+			debugLog("Bad intent mising account!")
 			return
 		}
 
@@ -31,7 +31,7 @@ class IntentHandler: INExtension, ViewCodeIntentHandling
 		guard let token = tokenStore.load(tokenAccount) else
 		{
 			completion(ViewCodeIntentResponse(code: .failure, userActivity: nil))
-			NSLog("Bad intent: No token with given account found!")
+			debugLog("Bad intent: No token with given account found!")
 			return
 		}
 
@@ -42,7 +42,7 @@ class IntentHandler: INExtension, ViewCodeIntentHandling
 		guard codes.count >= 2 else
 		{
 			completion(ViewCodeIntentResponse(code: .failure, userActivity: nil))
-			NSLog("Bad token! Not enough codes generated.")
+			debugLog("Bad token! Not enough codes generated.")
 			return
 		}
 

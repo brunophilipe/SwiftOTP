@@ -41,7 +41,7 @@ class TokensExportViewController: TokensPickerViewController
 			return
 		}
 
-		enterSecurityContext(reason: "Exporting tokens requires device owner authentication.")
+		enterSecurityContext(reason: "Exporting tokens requires authentication.")
 		{
 			result in
 

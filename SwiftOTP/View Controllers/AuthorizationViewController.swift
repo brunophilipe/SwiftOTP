@@ -49,7 +49,20 @@ class AuthorizationViewController: UITableViewController
 	private func completeAuthorization(tokenAccount: String)
 	{
 		dismiss(animated: true)
-		authorizationContext?.successHandler(tokenAccount)
+		enterSecurityContext(reason: "Register app integration requires authentication.")
+		{
+			[weak self] result in
+
+			switch result
+			{
+			case .success, .disabled:
+				self?.authorizationContext?.successHandler(tokenAccount)
+
+			case .error(let error):
+				self?.presentAlert(message: "Failed authenticating: \(error?.localizedDescription ?? "Unknown error")")
+				self?.authorizationContext?.failureHandler()
+			}
+		}
 	}
 
 	struct AuthorizeIntegrationContext

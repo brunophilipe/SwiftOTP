@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import OTPKit
 
 class PreferencesViewController: UITableViewController
 {
@@ -35,16 +36,79 @@ class PreferencesViewController: UITableViewController
 
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
 	{
-		if indexPath.section == 2, indexPath.row == 1
+		switch indexPath.tableRowTupleValue
 		{
+		case (1, 0):
+			showFileImportPicker(sender: tableView.cellForRow(at: indexPath))
+
+		case (2, 1):
 			let githubURL = URL(string: "https://github.com/brunophilipe/SwiftOTP")!
 			UIApplication.shared.open(githubURL, options: [:], completionHandler: nil)
 			tableView.deselectRow(at: indexPath, animated: true)
+
+		default:
+			break
 		}
+	}
+
+	private func showFileImportPicker(sender: Any?)
+	{
+		let filePicker = UIDocumentPickerViewController(documentTypes: AppDelegate.tokenImportUTIs, in: .open)
+		filePicker.delegate = self
+
+		present(filePicker, animated: true)
 	}
     
 	@IBAction func done(_ sender: Any?)
 	{
 		dismiss(animated: true)
+	}
+}
+
+extension PreferencesViewController: UIDocumentPickerDelegate
+{
+	private var tokenStore: TokenStore
+	{
+		return AppDelegate.shared.tokenStore
+	}
+
+	public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL])
+	{
+		guard let fileUrl = urls.first else
+		{
+			return
+		}
+
+		do
+		{
+			_ = fileUrl.startAccessingSecurityScopedResource()
+			try tokenStore.importData(try Data(contentsOf: fileUrl))
+			fileUrl.stopAccessingSecurityScopedResource()
+		}
+		catch
+		{
+			if let importError = error as? TokenStore.ImportErrors
+			{
+				switch importError
+				{
+				case .unknownFileFormat:
+					presentAlert(message: "Could not import tokens from file: File format was unreadable.")
+
+				case .malformedToken(let line):
+					presentAlert(message: "Could not import tokens from file: Malformed token URL on line \(line).")
+
+				case .keychainWriteError(let line):
+					presentAlert(message: "Could not import tokens from file: Bad token configurations for token on line \(line).")
+				}
+			}
+			else
+			{
+				presentAlert(message: "Could not import tokens from file. Unknown error: \(error.localizedDescription)")
+			}
+		}
+
+		presentAlert(title: "Success", message: "Imported tokens file successfully!", dismissButtonTitle: "Dismiss")
+
+		NotificationCenter.default.post(name: TokensViewController.didImportTokensNotificationName, object: self)
 	}
 }

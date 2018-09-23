@@ -16,10 +16,14 @@ import QRCodeReader
 
 class TokensViewController: UICollectionViewController
 {
+	public static let didImportTokensNotificationName = Notification.Name("didImportTokensNotification")
+
 	private var tokenStore: TokenStore
 	{
 		return AppDelegate.shared.tokenStore
 	}
+
+	private var observations: [AnyObject] = []
 
 	private let reuseIdentifier = "CellToken"
 
@@ -49,6 +53,13 @@ class TokensViewController: UICollectionViewController
         // Do any additional setup after loading the view.
 		collectionView.register(UINib(nibName: "TokenCollectionViewCell", bundle: .main),
 								forCellWithReuseIdentifier: reuseIdentifier)
+
+		let importObservation = NotificationCenter.default.addObserver(forName: TokensViewController.didImportTokensNotificationName, object: nil, queue: nil)
+			{
+				[weak collectionView] _ in collectionView?.reloadData()
+			}
+
+		observations.append(importObservation)
     }
 
 	override func viewDidAppear(_ animated: Bool)

@@ -94,12 +94,7 @@ class TokensViewController: UICollectionViewController
 
 	private func showAlertBadScan()
 	{
-		let alertController = UIAlertController(title: "Error",
-												message: "This does not seem to be a valid TOTP/HOTP QR Code. Please try again.",
-												preferredStyle: .alert)
-
-		alertController.addAction(UIAlertAction(title: "OK", style: .cancel))
-		present(alertController, animated: true)
+		presentAlert(message: "This does not seem to be a valid TOTP/HOTP QR Code. Please try again.")
 	}
 
 	override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?)

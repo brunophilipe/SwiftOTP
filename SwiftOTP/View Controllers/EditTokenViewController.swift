@@ -89,7 +89,7 @@ class EditTokenViewController: UITableViewController
 
 			guard let context = self.context, let url = context.getTokenUrlAction(context.tokenAccount) else
 			{
-				self.presentError(message: "Could not load token secret.")
+				self.presentAlert(message: "Could not load token secret.")
 				return
 			}
 

@@ -89,6 +89,6 @@ extension UIViewController
 			message = "Failed authenticating user."
 		}
 
-		self.presentError(message: message)
+		self.presentAlert(message: message)
 	}
 }

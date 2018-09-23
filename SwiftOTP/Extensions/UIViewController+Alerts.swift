@@ -16,7 +16,7 @@ extension UIViewController
 	///   - title: The title of the error alert. Defaults to "Error".
 	///   - message: The message of the error message.
 	///   - dismissButtonTitle: The title of the dismiss button. Defaults to "OK".
-	func presentError(title: String = "Error", message: String, dismissButtonTitle: String = "OK")
+	func presentAlert(title: String = "Error", message: String, dismissButtonTitle: String = "OK")
 	{
 		let errorAlert = UIAlertController(title: title, message: message, preferredStyle: .alert)
 		errorAlert.addAction(UIAlertAction(title: dismissButtonTitle, style: .cancel))

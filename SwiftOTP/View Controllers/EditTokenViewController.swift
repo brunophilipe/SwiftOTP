@@ -24,13 +24,6 @@ class EditTokenViewController: UITableViewController
 		}
 	}
 
-    override func viewDidLoad()
-	{
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
 	{
 		if indexPath.section == 2, indexPath.row == 0

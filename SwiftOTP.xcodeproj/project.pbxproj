@@ -1236,6 +1236,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CB30E23875BBA7716C889F53 /* Pods-OTPKit.debug.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -1268,6 +1269,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FCCE11B6F3C1BD6449F1CD99 /* Pods-OTPKit.release.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;

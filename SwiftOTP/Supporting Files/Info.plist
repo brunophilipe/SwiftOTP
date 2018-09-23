@@ -47,6 +47,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>The camera is used to read QR codes.</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Authorize token export and sharing using Face ID.</string>
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>ViewCodeIntent</string>

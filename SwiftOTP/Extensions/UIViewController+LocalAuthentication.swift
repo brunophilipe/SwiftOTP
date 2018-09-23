@@ -46,7 +46,7 @@ extension UIViewController
 		let laContext = LAContext()
 		var authError: NSError? = nil
 
-		guard laContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &authError) else
+		guard laContext.canEvaluatePolicy(.deviceOwnerAuthentication, error: &authError) else
 		{
 			DispatchQueue.main.async(execute: { completion(.disabled) })
 			laContext.invalidate()

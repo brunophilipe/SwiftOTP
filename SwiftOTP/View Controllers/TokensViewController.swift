@@ -20,6 +20,8 @@ class TokensViewController: UICollectionViewController
 	{
 		return AppDelegate.shared.tokenStore
 	}
+    
+    private var tutorialViewController: UIViewController? = nil
 
 	private let reuseIdentifier = "CellToken"
 
@@ -38,6 +40,29 @@ class TokensViewController: UICollectionViewController
 		return QRCodeReaderViewController(builder: builder)
 	}()
 	#endif
+    
+    private var tokenTutorialViewVisible: Bool = false
+    {
+        didSet
+        {
+            guard tokenTutorialViewVisible != oldValue else { return }
+            
+            if tokenTutorialViewVisible
+            {
+                tutorialViewController = TokensTutorialViewController()
+                
+                guard let tutorialView = tutorialViewController?.view else { return }
+                
+                tutorialView.frame = CGRect(origin: .zero, size: view.frame.size)
+                view.addSubview(tutorialView)
+            }
+            else if let tutorialView = tutorialViewController?.view
+            {
+                tutorialView.removeFromSuperview()
+                tutorialViewController = nil
+            }
+        }
+    }
 
     override func viewDidLoad()
 	{
@@ -49,6 +74,13 @@ class TokensViewController: UICollectionViewController
         // Do any additional setup after loading the view.
 		collectionView.register(UINib(nibName: "TokenCollectionViewCell", bundle: .main),
 								forCellWithReuseIdentifier: reuseIdentifier)
+    }
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        
+        updateTutorialViewVisibility()
     }
 
 	override func viewDidAppear(_ animated: Bool)
@@ -137,6 +169,11 @@ class TokensViewController: UICollectionViewController
 			return 200
 		}
 	}
+    
+    private func updateTutorialViewVisibility()
+    {
+        tokenTutorialViewVisible = tokenStore.count == 0
+    }
 
 	// MARK: - Navigation
 
@@ -216,7 +253,6 @@ class TokensViewController: UICollectionViewController
         return 1
     }
 
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
 	{
         return tokenStore.count
@@ -252,6 +288,8 @@ private extension TokensViewController
 			return
 		}
 
+        updateTutorialViewVisibility()
+        
 		let newIndexPath = IndexPath(item: 0, section: 0)
 		collectionView.insertItems(at: [newIndexPath])
 
@@ -269,6 +307,8 @@ private extension TokensViewController
 		{
 			collectionView.deleteItems(at: [IndexPath(item: index, section: 0)])
 		}
+        
+        updateTutorialViewVisibility()
 	}
 
 	func copyCode(for tokenAccount: String) -> Bool

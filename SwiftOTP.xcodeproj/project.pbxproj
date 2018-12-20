@@ -33,6 +33,8 @@
 		1554F62720F3F91900C693E8 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1554F62220F3DE7500C693E8 /* Preferences.swift */; };
 		1554F62920F40B6700C693E8 /* UIView+ShowHide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1554F62820F40B6700C693E8 /* UIView+ShowHide.swift */; };
 		1554F62B20F42DC700C693E8 /* Token+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1554F62A20F42DC700C693E8 /* Token+Accessibility.swift */; };
+		156C530D21CB09D200ADE424 /* TokensTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156C530B21CB09D200ADE424 /* TokensTutorialViewController.swift */; };
+		156C530E21CB09D200ADE424 /* TokensTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 156C530C21CB09D200ADE424 /* TokensTutorialViewController.xib */; };
 		156EBC7920F6C07C000F240B /* ImageViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156EBC7820F6C07C000F240B /* ImageViewer.storyboard */; };
 		156EBC7B20F6C08C000F240B /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EBC7A20F6C08C000F240B /* ImageViewController.swift */; };
 		156EBC7D20F6C2A1000F240B /* UIImage+QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EBC7C20F6C2A1000F240B /* UIImage+QRCode.swift */; };
@@ -158,6 +160,8 @@
 		1554F62220F3DE7500C693E8 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		1554F62820F40B6700C693E8 /* UIView+ShowHide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ShowHide.swift"; sourceTree = "<group>"; };
 		1554F62A20F42DC700C693E8 /* Token+Accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Token+Accessibility.swift"; sourceTree = "<group>"; };
+		156C530B21CB09D200ADE424 /* TokensTutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensTutorialViewController.swift; sourceTree = "<group>"; };
+		156C530C21CB09D200ADE424 /* TokensTutorialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TokensTutorialViewController.xib; sourceTree = "<group>"; };
 		156EBC7820F6C07C000F240B /* ImageViewer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageViewer.storyboard; sourceTree = "<group>"; };
 		156EBC7A20F6C08C000F240B /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		156EBC7C20F6C2A1000F240B /* UIImage+QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+QRCode.swift"; sourceTree = "<group>"; };
@@ -280,6 +284,7 @@
 				15CA9510210BF61E00F76E5B /* AuthorizationViewController.swift */,
 				15CA950E210BF4BD00F76E5B /* IntegrationTokenViewController.swift */,
 				15445ED5210C9DA7001A0961 /* IntegrationsTableViewController.swift */,
+				156C530F21CB09D500ADE424 /* Tutorials */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -359,6 +364,15 @@
 				156EBC7820F6C07C000F240B /* ImageViewer.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		156C530F21CB09D500ADE424 /* Tutorials */ = {
+			isa = PBXGroup;
+			children = (
+				156C530B21CB09D200ADE424 /* TokensTutorialViewController.swift */,
+				156C530C21CB09D200ADE424 /* TokensTutorialViewController.xib */,
+			);
+			path = Tutorials;
 			sourceTree = "<group>";
 		};
 		1574E7B220F03A970070B124 = {
@@ -675,6 +689,7 @@
 				15FC70972115E925001C4C1A /* SwiftOTP.html in Resources */,
 				152EEECB20F13EA4006925D8 /* TokenCollectionViewCell.xib in Resources */,
 				156EBC7920F6C07C000F240B /* ImageViewer.storyboard in Resources */,
+				156C530E21CB09D200ADE424 /* TokensTutorialViewController.xib in Resources */,
 				1574E7C920F03A980070B124 /* LaunchScreen.storyboard in Resources */,
 				1574E7C620F03A980070B124 /* Assets.xcassets in Resources */,
 				1574E7C420F03A970070B124 /* Main.storyboard in Resources */,
@@ -928,6 +943,7 @@
 				152EEED020F2669B006925D8 /* UIViewController+ContextBus.swift in Sources */,
 				152EEECA20F13EA4006925D8 /* TokenCollectionViewCell.swift in Sources */,
 				152EEEEB20F2CCB8006925D8 /* Constants.swift in Sources */,
+				156C530D21CB09D200ADE424 /* TokensTutorialViewController.swift in Sources */,
 				15D3635120FA723000284137 /* Bundle+InfoAccessors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

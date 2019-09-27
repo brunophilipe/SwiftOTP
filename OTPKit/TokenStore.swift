@@ -90,7 +90,7 @@ open class TokenStore : NSObject
 
 			for key in remove
 			{
-				keys.remove(at: keys.index(of: key)!)
+				keys.remove(at: keys.firstIndex(of: key)!)
 			}
 
 			if keys.count == 0

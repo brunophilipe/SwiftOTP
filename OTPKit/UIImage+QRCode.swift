@@ -19,7 +19,7 @@ public extension UIImage
 	/// - medium: 15% of codewords can be restored.
 	/// - quartile: 25% of codewords can be restored.
 	/// - high: 30% of codewords can be restored.
-	public enum QRCodeCorrectionLevel: String
+	enum QRCodeCorrectionLevel: String
 	{
 		case low = "L"
 		case medium = "M"
@@ -34,10 +34,10 @@ public extension UIImage
 	///   - size: The final size of the QR Code image.
 	///   - scale: The scale of the QR Code image. Ideally this matches the target screen's scale.
 	///   - errorCorrectionLevel: The error collection level to use when generating the QR Code image.
-	public convenience init?(qrString: String,
-							 size: CGSize = CGSize(width: 128, height: 128),
-							 scale: CGFloat = 1.0,
-							 errorCorrectionLevel: QRCodeCorrectionLevel = .medium)
+	convenience init?(qrString: String,
+					  size: CGSize = CGSize(width: 128, height: 128),
+					  scale: CGFloat = 1.0,
+					  errorCorrectionLevel: QRCodeCorrectionLevel = .medium)
 	{
 		let filterParameters: [String : Any] = [
 			"inputMessage": qrString.data(using: .utf8)!,

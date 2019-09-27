@@ -3,706 +3,691 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0204620BD5C51070B9FAACB37A43F9D9 /* QRCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAFA4A2153F93904E2CA534E75341CD /* QRCodeReaderViewController.swift */; };
-		090CFE730CDA28481EAADBF27A55FEC1 /* Pods-OTPKitTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 85A7CC181AF4D33D6A02056839D1D643 /* Pods-OTPKitTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A68C5D6A4EDBEB93DC10ACAED8260E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2BF5E9D68EAC528D8EBCD934CA1A933 /* Foundation.framework */; };
-		12E4589D6442703995DAD7177C1E6576 /* CallbackURLKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F06AB5DE91E57BFBC3627E2FF77038 /* CallbackURLKit-dummy.m */; };
-		13E854C1957252DA415E6B308ECE6976 /* AcknowList.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ADB08A2061D423777FE78723174873AE /* AcknowList.bundle */; };
-		14FE80247A62E8D9283B0B1D6C526957 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2BF5E9D68EAC528D8EBCD934CA1A933 /* Foundation.framework */; };
-		163423A1DF3A92D9F30E1B666C98465C /* QRCodeReader.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DF35704035F314F226EDBFF72F140A /* QRCodeReader.swift-dummy.m */; };
-		1A297E80941AC529EEF4833F9CAB5BF2 /* CallbackURLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3867E92D8E68BB76B3108B33940C54 /* CallbackURLKit.swift */; };
-		1C8EDCC1D266C99D8BACE75B6C73E93B /* ToggleTorchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924E33D6DF84F16396A3491FBBA90BC8 /* ToggleTorchButton.swift */; };
-		2AC7119008B685013BA9875358D3D3F3 /* AcknowParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB84201D44C695CF16EE7CBCD3CA9FE /* AcknowParser.swift */; };
-		2B03315D4D6179D2E6BF8BB8C5AA3A87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2BF5E9D68EAC528D8EBCD934CA1A933 /* Foundation.framework */; };
-		2E8F26084EACF6371CB5817F919661A0 /* AcknowList-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B40C26EA3CA60DA2B3C12D42752BD391 /* AcknowList-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2F1A745D251F6D074F4B5ED7E0E2267D /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95561E2EC998FF0E3F8B1DFB0F80F4C /* QRCodeReader.swift */; };
-		2F2BDE9543939929645DAAB55A515144 /* CallbackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE25DE196AF5D4C10F187A215131285 /* CallbackRouter.swift */; };
-		318C8BC903411605945582CBC187128C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2BF5E9D68EAC528D8EBCD934CA1A933 /* Foundation.framework */; };
-		40307884C9E14144FB376DCE7AB0C0CA /* QRCodeReaderViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DEDF945E5C0FE3507081E036131135 /* QRCodeReaderViewContainer.swift */; };
-		41A36336A307F50F5EBB88EF9129C433 /* QRCodeReader.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 41F70601F0ECEA79A8491A1E3756EB2F /* QRCodeReader.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4D1D92945994D3FEC061EB57F84B3949 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2BF5E9D68EAC528D8EBCD934CA1A933 /* Foundation.framework */; };
-		4E1A7719C66CB84A2B4694B951BB9B06 /* Pods-SwiftOTP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A09DE6C67DA3F88179B269B5260CF733 /* Pods-SwiftOTP-dummy.m */; };
-		500B171A6E6BB1868B58B08111668D98 /* CallbackURLKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73C397AACEE0258CF65C0C9084662410 /* CallbackURLKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		567D762D004F16392518F37E9B2CFD87 /* Pods-OTPKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D17ADBB0B473B09D6B07338C13204D9 /* Pods-OTPKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6240D89C6833F520BCCC7D9B6DD5CB4D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FEE77C30CADE29D0363F1A36F5E98E4 /* AVFoundation.framework */; };
-		66821A739CEEFA96D65957EE2AE20360 /* Pods-SwiftOTPIntents-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D3D91F0A42BC2F8A0C82485F5E54A46D /* Pods-SwiftOTPIntents-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6BB6930376224E8EB3AC75D4A98F5486 /* SwiftBase32-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7757D0DC9655CC91145EE52FDCA44C0 /* SwiftBase32-dummy.m */; };
-		6D9D0D928FE062B527D222722D6B0DFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2BF5E9D68EAC528D8EBCD934CA1A933 /* Foundation.framework */; };
-		75957667828EA89180858396A55763F4 /* Acknow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C689EE23486C9253A4EE551CDF5CB1 /* Acknow.swift */; };
-		75979D730852E4276BE2C43A6DB1FA48 /* Base32.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A3115817656DAA66038F4D0B144376 /* Base32.swift */; };
-		75CA3B8C02462ABFEF8DA8AD28133FE5 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE5FB3320621D2FD85D73482676F9C /* StringExtension.swift */; };
-		767523DF3B524B899C09230DE021299C /* Base16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D3C415A3A55AA30570EC3BBCF608E6 /* Base16.swift */; };
-		7705AFD783550234AEDA9004393EC723 /* Pods-OTPCallbackDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0213A6155816591844B317994A3CEC58 /* Pods-OTPCallbackDemo-dummy.m */; };
-		8413F2800E880888E677DB9ACF74154A /* QRCodeReaderViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43752A212FA0DB686477DC35CE76FDC6 /* QRCodeReaderViewControllerDelegate.swift */; };
-		8BCD9FD1E1CD2A6EC28E1CD7D45F9A78 /* CallbackClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0CF90C47BCA437176C8C9D33AF5873 /* CallbackClient.swift */; };
-		9434B4E481550A9DC2C2A4DC95C5FD32 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2BF5E9D68EAC528D8EBCD934CA1A933 /* Foundation.framework */; };
-		95D5866A63C1671C95CB4CEE66796F18 /* Pods-OTPKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE66A923030E92EC4E2D9391504A838E /* Pods-OTPKit-dummy.m */; };
-		95D9AA17C85AEBCD08F472C67D3D3562 /* CallbackRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547320110F877349B88A3CEFCE2CAD1 /* CallbackRequest.swift */; };
-		A53C3A5FC20CF86F7FB2CD2E247781FB /* QRCodeReaderResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70297F30A95DDFEC31ED8BDF8BEDEB81 /* QRCodeReaderResult.swift */; };
-		A88EDECB4BA5F48E21E2DC7F3D760382 /* AcknowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE78D1413ED670EBB23935F738A7FEF /* AcknowViewController.swift */; };
-		B0CFE114A6B4568B39556F84139F65B5 /* Pods-SwiftOTPIntents-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F63E94A7AF4C05A3940F2CEC74D52A11 /* Pods-SwiftOTPIntents-dummy.m */; };
-		BA8F608CEC970C1F417DE0AE26B68185 /* SwiftBase32-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7592FEF0083A92CA786F1A6FEABE977B /* SwiftBase32-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD439F6B0C1D797A0BCE33FA55A5530B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2BF5E9D68EAC528D8EBCD934CA1A933 /* Foundation.framework */; };
-		C8D214DB566A9C330FD793E2ED4D6B35 /* AcknowList-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A75732AEF56BC6468D6A537BBD4ECD9 /* AcknowList-dummy.m */; };
-		D05BB269264E32196AA94978ED156317 /* Pods-OTPKitTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF11BFBD2FAB8ECE62C19F908B1D824 /* Pods-OTPKitTests-dummy.m */; };
-		D716D0C9ADE5E7A0A62AB4EF0FA56675 /* AcknowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4218500FC007D65158508A31B1C15F82 /* AcknowListViewController.swift */; };
-		DA582C417B15BA98A9EED3EFD47F7E86 /* QRCodeReaderViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198EE0F15BCA0FE366BAC0F6E4386F8 /* QRCodeReaderViewControllerBuilder.swift */; };
-		E05B70ACE72CBD82351724DF36C1DA09 /* Pods-SwiftOTP-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E19C36D31C76F63B4CFE4BB4A48CF0D /* Pods-SwiftOTP-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E320CB56392BCDB8D11F99B839EF08FB /* AcknowLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D27AB836D28B061F04DA69FB364BD5 /* AcknowLocalization.swift */; };
-		E439E4A6C893AC7FA763F1B2D2F33C3E /* ReaderOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CCBE600485E64A4DAD2625DCB11DD4 /* ReaderOverlayView.swift */; };
-		EA6A909646A01F9111BCB4EAB60E5D98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2BF5E9D68EAC528D8EBCD934CA1A933 /* Foundation.framework */; };
-		ECF60CF24BBC427B1A6E05EA12075A11 /* SwitchCameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FCD05FE79CCB78DF07D0D2AD13027D /* SwitchCameraButton.swift */; };
-		F9693CE5F20461E5D1CA5E458CA8D444 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA12E98CA9F3F0E6B3E8B17E0B954C58 /* UIKit.framework */; };
-		FE94098EA9FC4ECFCB87FBF60CDA8BF5 /* QRCodeReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFE0690EDA4A4985D55ADAC0B0C1DB8 /* QRCodeReaderView.swift */; };
-		FF76EA268E43E88F678B004AB7BAAAC6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7592E8DADF9A257C71D6948EEF15A8E8 /* Extensions.swift */; };
-		FFB995A967F1508D187A1721A51EC459 /* Pods-OTPCallbackDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 89F1978A0D4AA36AA8B7BC9AAC02201F /* Pods-OTPCallbackDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04860BC5B192868D5C4D002433B64DBF /* CallbackRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C256CD0444808EFB28535660DFD0796D /* CallbackRequest.swift */; };
+		06A824EF1070F5551D5CE1EA42384EC6 /* CallbackClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758CDFFCC42AFFE80E7736A3C838FF63 /* CallbackClient.swift */; };
+		0A1ABF5BA068A0246BE893EB79A5B5C5 /* AcknowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C3E62C46A265FAEB99C9547330767 /* AcknowListViewController.swift */; };
+		0AA0EEA485A522FE504663CB6E9ED494 /* CallbackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABF466975360B519EBF37DC2184BC65 /* CallbackRouter.swift */; };
+		0D46B224B2189D2285A43B6FE3C4BFCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0DC440C4222F19B4AC6A39E66CFCFA /* Foundation.framework */; };
+		1946D09EDE4DE349FA7EDD1FB3D94F90 /* ReaderOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2716FA778A8F7C8FF98A0C02C681F145 /* ReaderOverlayView.swift */; };
+		1F0F9DFBAE817D1B9C28F877FE899F3B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A887FFCB1CB40F7A078ACBE339351A /* StringExtension.swift */; };
+		21DF7B7F116464FEE9E3401220466A1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0DC440C4222F19B4AC6A39E66CFCFA /* Foundation.framework */; };
+		225E9FD95946F5A3FA79EDB4357B9E4A /* AcknowParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF422DE851AEF18F18F0EA8A706C8E /* AcknowParser.swift */; };
+		34CF3751CCEE78B9D7B4AD2047C4D5AF /* QRCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF607646C1F89F64BCDA6C5FDAC964B /* QRCodeReaderViewController.swift */; };
+		3B20248FD492E0CB4D1FBF1C30A0CC23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0DC440C4222F19B4AC6A39E66CFCFA /* Foundation.framework */; };
+		3C632D1DAD18E797BB450921E05FBADA /* Pods-SwiftOTPIntents-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A5CCB416F95F82CCD2C28ED5EE492 /* Pods-SwiftOTPIntents-dummy.m */; };
+		3FB50507D52BD27266304C0F85182A5C /* Pods-OTPKitTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC683F3AF04FAC7B77EC84397E3F2099 /* Pods-OTPKitTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3FEC3A8CB58569E07783A364E6B014EC /* AcknowList-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6A737D4D3D4F3ECCBD5C000D42F0DD /* AcknowList-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45E36BAA8228D491790A7FC5B886ADF0 /* AcknowLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC329C7ACB0BCA3755544346B33EE1F7 /* AcknowLocalization.swift */; };
+		540817F995B4A3A5966C21DFE34B9C0A /* QRCodeReaderViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427734B03EF90301CE98DBDA562BBE92 /* QRCodeReaderViewContainer.swift */; };
+		5891C8CEB85D9F31AC9E665D006A0285 /* Pods-OTPKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 28CF37EF6EEADBB7AD256AFCCDBD4B87 /* Pods-OTPKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E41E5521B157866003CEBA0A6498EE4 /* CallbackURLKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBBAD591B0EF5DC04C412668A8EA8EE /* CallbackURLKit.swift */; };
+		5F81A2654EBB49955481A98F39E75238 /* AcknowList.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7C7C67DCDDC1E56F24324E1AD5814407 /* AcknowList.bundle */; };
+		6772409B2ECC388FE11A845D0D9E8016 /* Base32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415EEB4263B4895F4940E7D837190230 /* Base32.swift */; };
+		6967171BF47D707A9327B3BAB924CA6C /* QRCodeReader.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C023436EE0AA06FEDAF55E64C353759 /* QRCodeReader.swift-dummy.m */; };
+		6D0DF8C852F40BD0BA5BA6AF0D517334 /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6A2D79B2636611E1F88FE0A58D0A6E /* QRCodeReader.swift */; };
+		71F3715181163C7AFE05A0C2E2F41CEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80ED7A3D19C791675B92A5B47AAE4D58 /* UIKit.framework */; };
+		7ACEA913995FD8CECB29C2BF47CD3653 /* CallbackURLKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 64B268DF14ECD9C56AE4FE2579FBCEB3 /* CallbackURLKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E58724C5D5CE4C55B15C5AF7DB6A387 /* Pods-SwiftOTP-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C0D3DEA6A590C0BC58BD18405A547B6 /* Pods-SwiftOTP-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F39A763FBA50A1F3B447683B741714F /* Pods-OTPCallbackDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 90AC7244B29ACAA49B6298D36C1F2080 /* Pods-OTPCallbackDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F74F071867B13EADBE8A2F3CF13AF06 /* QRCodeReader.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2141F1122BC6475B2817669E1FDD2912 /* QRCodeReader.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87FF6AE20511BA1283B6DD6F1F674679 /* Base16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF235E019EEC382F9ED13087D43BBF3 /* Base16.swift */; };
+		8924C45E7790A36B10372C5310B8B282 /* Pods-SwiftOTP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB9A869A6E76AAD43BC84988CA75C73 /* Pods-SwiftOTP-dummy.m */; };
+		8A539AF93B779A4A845A938E1576D48A /* Pods-OTPKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB8DEECA858250A6380281911F8770D /* Pods-OTPKit-dummy.m */; };
+		8AB9B7BECC24AC69C4A0B68B1FB09CDB /* AcknowList-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D290AB905C91E6729CF4A7983CABAFF8 /* AcknowList-dummy.m */; };
+		97205CB1427D0AF744247CE71F357591 /* QRCodeReaderViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDB5CB6BB5C63721A18A293AAC7DBD2 /* QRCodeReaderViewControllerBuilder.swift */; };
+		972087FA3866FA8E8B2C417EB3FA06F2 /* shim.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8F423C064B67EA84838DCB894344C3 /* shim.swift */; };
+		9897097E946CA5D86F98F844FAF4780F /* Pods-OTPCallbackDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C61583E33BC1465E71ADB4D573471891 /* Pods-OTPCallbackDemo-dummy.m */; };
+		9949F9F80C4545265A76A0DA6827E7BC /* ToggleTorchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CC76D19F1E3CCBC5D30B789EA7005A /* ToggleTorchButton.swift */; };
+		9C519108851167CFA5CE1542B214D53D /* QRCodeReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654EA01E952D8967CD73196ADB92528A /* QRCodeReaderView.swift */; };
+		9C68B372F8E09907385A3DD34AABA635 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0DC440C4222F19B4AC6A39E66CFCFA /* Foundation.framework */; };
+		A014F5F42CDF01FFA05FE4AAB4606948 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0DC440C4222F19B4AC6A39E66CFCFA /* Foundation.framework */; };
+		A545E12C27AF78537BE170C550D7A77A /* QRCodeReaderResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405D71736C68CDEF0B52ED6B4959947D /* QRCodeReaderResult.swift */; };
+		AE8B01BA3B1512C98719DAFADF813BAB /* Pods-OTPKitTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA83E524B1CD75E67906914347A38EB /* Pods-OTPKitTests-dummy.m */; };
+		B213C511422A596B7180CC5460D10D04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0DC440C4222F19B4AC6A39E66CFCFA /* Foundation.framework */; };
+		B2F3D2346A4D646A000699FC4A691475 /* CallbackURLKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AC957163251032A7B3A6A6F0BE1CED1E /* CallbackURLKit-dummy.m */; };
+		C1EEC03178078EF019A09E6B5277CB30 /* Pods-SwiftOTPIntents-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 525827FC3BD334D0DD297E43D30263C7 /* Pods-SwiftOTPIntents-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C228E56186A268C4728AF5BE996DED33 /* AcknowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72F434E0BC6F47C11478560EDAAD3EB /* AcknowViewController.swift */; };
+		C6D82713DA1F992B7362DD044D5824AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0DC440C4222F19B4AC6A39E66CFCFA /* Foundation.framework */; };
+		CEFF70559B83EFC4EA250736625BD2D3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665C578D6587EE82EE33E2DF813BCB1B /* Extensions.swift */; };
+		D0A17E0254C1E37B87E3968884CE0441 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53B01D02F648FC21D052A90B4A54D5A6 /* AVFoundation.framework */; };
+		DE3A134CFA8BFD7F85AD712F15C799BF /* SwiftBase32-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1B215DF65EAC4634F0C198624A0280 /* SwiftBase32-dummy.m */; };
+		E3DC4888B7BFE8197FF80954EDC52DE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0DC440C4222F19B4AC6A39E66CFCFA /* Foundation.framework */; };
+		E40CD05AFD50106B17D9A3B953F1A898 /* SwitchCameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C133F8E717C1D955A8D1BA68449C91A6 /* SwitchCameraButton.swift */; };
+		E5AF6120522B46348B42B5BF3F2C2627 /* SwiftBase32-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DCE0B0F15822DE17EDF95647C6076B8 /* SwiftBase32-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB777E38FABE2953CA5C21254A211603 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0DC440C4222F19B4AC6A39E66CFCFA /* Foundation.framework */; };
+		EC07FBEFC038A6E5AE8CB833D71739FB /* Acknow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7E04275E0A5E9D44B55F341D348E55 /* Acknow.swift */; };
+		F47FAF105D05876AE65A43C4ABE1A1EC /* QRCodeReaderViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666DEFB1F81B6A88CDA3542BC75BCA4B /* QRCodeReaderViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		317DA1D2E01570940C3672E6B78246E5 /* PBXContainerItemProxy */ = {
+		1AB8067882CFD2A7C0852266020B8194 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 242EC4A4D0E5CC1B1A3F73471CB9DB4D;
+			remoteGlobalIDString = 5792D4211EBCC0A2C2800AF96C2385BC;
 			remoteInfo = "Pods-OTPKit";
 		};
-		39D5C7B14BE87AF16B07A53A73950CE9 /* PBXContainerItemProxy */ = {
+		85FAB5691D39BA40FDC8DED34BFF43C5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 003CCC7A2C1EB3F905DCFB5C5934F42A;
+			remoteGlobalIDString = F6EDFFEF680971B509A9E3F16CC743FC;
+			remoteInfo = SwiftBase32;
+		};
+		EAAABDA2B1592F0400FFBBD54F31BE64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6EDFFEF680971B509A9E3F16CC743FC;
+			remoteInfo = SwiftBase32;
+		};
+		EBFFE4B90DAE06E53AD66740CDF970EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2978C28B3BBFD8F48B305E4057D6EC4;
+			remoteInfo = CallbackURLKit;
+		};
+		ECEF62B1B5D6E73825887AFBD6D17078 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29F475E46142FCD224E52A385AD26DB6;
 			remoteInfo = QRCodeReader.swift;
 		};
-		450387EA80A16BDA2A8D224CDFC31CFB /* PBXContainerItemProxy */ = {
+		F61E736B1DA8CDCBD25521E8CA77FB2A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F1C858452D8B87DD2F7C586C87C41554;
-			remoteInfo = CallbackURLKit;
-		};
-		87FC5DAF06176E0E18F03DEC5DD719F5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F8EE458532DD01824E6E4E7AD940BBEC;
-			remoteInfo = SwiftBase32;
-		};
-		9E9BC6F98E0E5848D7C73AEC66005426 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F8EE458532DD01824E6E4E7AD940BBEC;
-			remoteInfo = SwiftBase32;
-		};
-		B64C601E956D9A5F4944759C4A408B01 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2C4B25DA191884B406DDFDE48CCFD90A;
+			remoteGlobalIDString = 51691F4311958691BD98F5F26E2D77D4;
 			remoteInfo = AcknowList;
 		};
-		EF4C0EE6D4E7764E69B2CC846833D4E6 /* PBXContainerItemProxy */ = {
+		FA819834B40E071F4C362C5A57CE17B8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F1C858452D8B87DD2F7C586C87C41554;
+			remoteGlobalIDString = C2978C28B3BBFD8F48B305E4057D6EC4;
 			remoteInfo = CallbackURLKit;
-		};
-		F34A10838DE121E752461D5653849AC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F8EE458532DD01824E6E4E7AD940BBEC;
-			remoteInfo = SwiftBase32;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0213A6155816591844B317994A3CEC58 /* Pods-OTPCallbackDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OTPCallbackDemo-dummy.m"; sourceTree = "<group>"; };
-		090EE4D81AF7EB8A311779FFC6A06DC9 /* QRCodeReader.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCodeReader.swift-prefix.pch"; sourceTree = "<group>"; };
-		0BA6E6A65B9BA793C335CFF2AAB5DBFF /* SwiftBase32.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftBase32.xcconfig; sourceTree = "<group>"; };
-		0C0CF90C47BCA437176C8C9D33AF5873 /* CallbackClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CallbackClient.swift; path = Sources/CallbackClient.swift; sourceTree = "<group>"; };
-		0E19C36D31C76F63B4CFE4BB4A48CF0D /* Pods-SwiftOTP-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftOTP-umbrella.h"; sourceTree = "<group>"; };
-		0E905F5DE2A499E21749B0FCFFEDF495 /* Pods-SwiftOTPIntents-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftOTPIntents-acknowledgements.markdown"; sourceTree = "<group>"; };
-		11F2DC4B645CA76B46150D1C0E24E048 /* Pods-SwiftOTPIntents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftOTPIntents.release.xcconfig"; sourceTree = "<group>"; };
-		13FCB1178EDD83DF8DA81DBBEE3D7942 /* SwiftBase32.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftBase32.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		19DB3026B1327B40DDE0D5D2A2F5FE58 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1BBF8FE8040B11B2AA1356D8347718E0 /* Pods-OTPCallbackDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTPCallbackDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		1CAFA4A2153F93904E2CA534E75341CD /* QRCodeReaderViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewController.swift; path = Sources/QRCodeReaderViewController.swift; sourceTree = "<group>"; };
-		1E21D9BA392F01722EDC8470063C9088 /* Pods-SwiftOTPIntents-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftOTPIntents-resources.sh"; sourceTree = "<group>"; };
-		23C689EE23486C9253A4EE551CDF5CB1 /* Acknow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Acknow.swift; path = Source/Acknow.swift; sourceTree = "<group>"; };
-		3820947E717A3BB61564A87F0E831C3E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		388FBA3F620D705613E5ADCFC6AB7FBA /* Pods-SwiftOTP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftOTP.release.xcconfig"; sourceTree = "<group>"; };
-		3ABE5FB3320621D2FD85D73482676F9C /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Sources/Base32/StringExtension.swift; sourceTree = "<group>"; };
-		3AE78D1413ED670EBB23935F738A7FEF /* AcknowViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowViewController.swift; path = Source/AcknowViewController.swift; sourceTree = "<group>"; };
-		3CB5FAF8A70B96496AB8ABDFF4DC8DA6 /* CallbackURLKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CallbackURLKit.xcconfig; sourceTree = "<group>"; };
-		40017EBC080B478F39312E5C3A5A0815 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		41F70601F0ECEA79A8491A1E3756EB2F /* QRCodeReader.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCodeReader.swift-umbrella.h"; sourceTree = "<group>"; };
-		4218500FC007D65158508A31B1C15F82 /* AcknowListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowListViewController.swift; path = Source/AcknowListViewController.swift; sourceTree = "<group>"; };
-		43752A212FA0DB686477DC35CE76FDC6 /* QRCodeReaderViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewControllerDelegate.swift; path = Sources/QRCodeReaderViewControllerDelegate.swift; sourceTree = "<group>"; };
-		44421822158A937964B01DD83B647DD4 /* CallbackURLKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CallbackURLKit-prefix.pch"; sourceTree = "<group>"; };
-		492C377AC891EB76E8B641FAE4CA9A68 /* Pods_OTPKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTPKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B40BD7426DE3C1E2AADE1D66E6BC287 /* Pods-OTPKit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OTPKit-acknowledgements.markdown"; sourceTree = "<group>"; };
-		4CADB994DCCDC636A838FFB9ADF14F12 /* Pods-OTPKitTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTPKitTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		552FC8D52507BC31F2F5A9D5D63AB81A /* Pods-OTPKitTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OTPKitTests-resources.sh"; sourceTree = "<group>"; };
-		55F06AB5DE91E57BFBC3627E2FF77038 /* CallbackURLKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CallbackURLKit-dummy.m"; sourceTree = "<group>"; };
-		585F9A7A2A3F8C0C4576797F6979FD9D /* CallbackURLKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = CallbackURLKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		5902FD950A6E15424347A230CB7DCF02 /* Pods_SwiftOTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C4A1AA976E4C47B842B8AA56EAD2243 /* QRCodeReader.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = QRCodeReader.swift.modulemap; sourceTree = "<group>"; };
-		5DFE0690EDA4A4985D55ADAC0B0C1DB8 /* QRCodeReaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderView.swift; path = Sources/QRCodeReaderView.swift; sourceTree = "<group>"; };
-		5FBB7AEC29C7A04F44DE00034322DFAA /* Pods-OTPKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTPKitTests.release.xcconfig"; sourceTree = "<group>"; };
-		6505CB9A800272E2438DF4685E8659D3 /* SwiftBase32-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftBase32-prefix.pch"; sourceTree = "<group>"; };
-		68FCEAF83347FA9798D1039145CC58D2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		6CB4FDC8D9F440D8C7133EF63B3CFEE8 /* Pods_OTPKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTPKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6FEE77C30CADE29D0363F1A36F5E98E4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		70297F30A95DDFEC31ED8BDF8BEDEB81 /* QRCodeReaderResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderResult.swift; path = Sources/QRCodeReaderResult.swift; sourceTree = "<group>"; };
-		71D27AB836D28B061F04DA69FB364BD5 /* AcknowLocalization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowLocalization.swift; path = Source/AcknowLocalization.swift; sourceTree = "<group>"; };
-		727C1FE5D75DD3F081A4B741E2DA029C /* Pods-OTPKitTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OTPKitTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		73C397AACEE0258CF65C0C9084662410 /* CallbackURLKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CallbackURLKit-umbrella.h"; sourceTree = "<group>"; };
-		74E42FECF2A9B7259E44AB9AE0D51A5C /* Pods-OTPKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTPKit.debug.xcconfig"; sourceTree = "<group>"; };
-		753894E489367909374EA3E5F0C0A36E /* Pods-OTPKit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTPKit-acknowledgements.plist"; sourceTree = "<group>"; };
-		7592E8DADF9A257C71D6948EEF15A8E8 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Sources/Extensions.swift; sourceTree = "<group>"; };
-		7592FEF0083A92CA786F1A6FEABE977B /* SwiftBase32-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftBase32-umbrella.h"; sourceTree = "<group>"; };
-		76DCEE91C2207A3D1E980BE4D29FEAA5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7D17ADBB0B473B09D6B07338C13204D9 /* Pods-OTPKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OTPKit-umbrella.h"; sourceTree = "<group>"; };
-		7E23401CFAA70B2218509EAC2B9B3649 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		85A7CC181AF4D33D6A02056839D1D643 /* Pods-OTPKitTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OTPKitTests-umbrella.h"; sourceTree = "<group>"; };
-		87D3C415A3A55AA30570EC3BBCF608E6 /* Base16.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Base16.swift; path = Sources/Base32/Base16.swift; sourceTree = "<group>"; };
-		89F1978A0D4AA36AA8B7BC9AAC02201F /* Pods-OTPCallbackDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OTPCallbackDemo-umbrella.h"; sourceTree = "<group>"; };
-		8A75732AEF56BC6468D6A537BBD4ECD9 /* AcknowList-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AcknowList-dummy.m"; sourceTree = "<group>"; };
-		8BF0A4BEB079891879A4A5A18096AECD /* CallbackURLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CallbackURLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CE25DE196AF5D4C10F187A215131285 /* CallbackRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CallbackRouter.swift; path = Sources/CallbackRouter.swift; sourceTree = "<group>"; };
-		8E587F2DAD8F63CABA4D9237423322BC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		924E33D6DF84F16396A3491FBBA90BC8 /* ToggleTorchButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToggleTorchButton.swift; path = Sources/ToggleTorchButton.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		943ACE38CC7D8A3D7042C64E3B4DAB42 /* Pods-SwiftOTP-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftOTP-acknowledgements.plist"; sourceTree = "<group>"; };
-		947634DCD2F0C92297B3A26FE157C449 /* QRCodeReader.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QRCodeReader.swift.xcconfig; sourceTree = "<group>"; };
-		95F7AC6F14EA32DD6CBF513BA737FE9A /* Pods-OTPCallbackDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTPCallbackDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		9BF0CCEF7C9546A66C1B92A370169691 /* AcknowList.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AcknowList.xcconfig; sourceTree = "<group>"; };
-		9E3867E92D8E68BB76B3108B33940C54 /* CallbackURLKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CallbackURLKit.swift; path = Sources/CallbackURLKit.swift; sourceTree = "<group>"; };
-		9FB442960EFB9E680B8B6854D9597F26 /* Pods-OTPKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTPKitTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A09DE6C67DA3F88179B269B5260CF733 /* Pods-SwiftOTP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftOTP-dummy.m"; sourceTree = "<group>"; };
-		A0A3115817656DAA66038F4D0B144376 /* Base32.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Base32.swift; path = Sources/Base32/Base32.swift; sourceTree = "<group>"; };
-		A198EE0F15BCA0FE366BAC0F6E4386F8 /* QRCodeReaderViewControllerBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewControllerBuilder.swift; path = Sources/QRCodeReaderViewControllerBuilder.swift; sourceTree = "<group>"; };
-		A1D6C2A820F511D9731BAF6683354F21 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A3DC142BF55CF192DFF954F476E4713E /* Pods-OTPCallbackDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OTPCallbackDemo.modulemap"; sourceTree = "<group>"; };
-		A547320110F877349B88A3CEFCE2CAD1 /* CallbackRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CallbackRequest.swift; path = Sources/CallbackRequest.swift; sourceTree = "<group>"; };
-		ABB84201D44C695CF16EE7CBCD3CA9FE /* AcknowParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowParser.swift; path = Source/AcknowParser.swift; sourceTree = "<group>"; };
-		AC8AE1C8E46E583047A4566417606DEF /* AcknowList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AcknowList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADB08A2061D423777FE78723174873AE /* AcknowList.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = AcknowList.bundle; path = Resources/AcknowList.bundle; sourceTree = "<group>"; };
-		AE66A923030E92EC4E2D9391504A838E /* Pods-OTPKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OTPKit-dummy.m"; sourceTree = "<group>"; };
-		B026A2BB8CD6CD227983FE21FB2A9029 /* Pods-OTPKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OTPKit.modulemap"; sourceTree = "<group>"; };
-		B0B59A22D6562B33064F48EA9524CFCF /* AcknowList.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AcknowList.modulemap; sourceTree = "<group>"; };
-		B1B7CE88AFD8BA1FAFF43DCF255106C4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B22623A05AAF0EC8618D2F12F00F7F15 /* Pods-OTPKit-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OTPKit-resources.sh"; sourceTree = "<group>"; };
-		B2DF35704035F314F226EDBFF72F140A /* QRCodeReader.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QRCodeReader.swift-dummy.m"; sourceTree = "<group>"; };
-		B3F10059EBB9AB244A2C419B551BB45B /* SwiftBase32.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftBase32.modulemap; sourceTree = "<group>"; };
-		B40C26EA3CA60DA2B3C12D42752BD391 /* AcknowList-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AcknowList-umbrella.h"; sourceTree = "<group>"; };
-		B82B10AC03CD85D53481EB9C018CFD04 /* Pods-SwiftOTP-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftOTP-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BB4DA385828F08D36B4BB191DCD649CC /* Pods-SwiftOTP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftOTP.debug.xcconfig"; sourceTree = "<group>"; };
-		C0F21D0AC99086285174959C22EA34AA /* Pods-SwiftOTP.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftOTP.modulemap"; sourceTree = "<group>"; };
-		C53214D73E18FBCF8777A489099F048B /* CallbackURLKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CallbackURLKit.modulemap; sourceTree = "<group>"; };
-		C6F786E8EBC5DB6E967BFF7DDE7D205F /* Pods_OTPCallbackDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTPCallbackDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C727B57921CC016FA807F3798F1B7E30 /* Pods_SwiftOTPIntents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOTPIntents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8CCBE600485E64A4DAD2625DCB11DD4 /* ReaderOverlayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReaderOverlayView.swift; path = Sources/ReaderOverlayView.swift; sourceTree = "<group>"; };
-		C8DEDF945E5C0FE3507081E036131135 /* QRCodeReaderViewContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewContainer.swift; path = Sources/QRCodeReaderViewContainer.swift; sourceTree = "<group>"; };
-		C95561E2EC998FF0E3F8B1DFB0F80F4C /* QRCodeReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReader.swift; path = Sources/QRCodeReader.swift; sourceTree = "<group>"; };
-		CA6A732550E8FD107375669E8383D726 /* Pods-SwiftOTP-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftOTP-resources.sh"; sourceTree = "<group>"; };
-		CD0FC0078FEAFEEB0DCF566AEAEF2605 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3D91F0A42BC2F8A0C82485F5E54A46D /* Pods-SwiftOTPIntents-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftOTPIntents-umbrella.h"; sourceTree = "<group>"; };
-		D7D6E078623B04B4AA956EE799055232 /* QRCodeReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRCodeReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D974FE7693EB61C7EAE5699939BDD74F /* Pods-OTPKitTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OTPKitTests.modulemap"; sourceTree = "<group>"; };
-		DB27DEB3633C4D3CA4DA573DF4859449 /* Pods-SwiftOTP-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftOTP-frameworks.sh"; sourceTree = "<group>"; };
-		DBF6EB808627D93267CA002461CE556A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DCF0B6FF2763AC4641E79C999A7ED162 /* Pods-OTPCallbackDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OTPCallbackDemo-frameworks.sh"; sourceTree = "<group>"; };
-		DFF11BFBD2FAB8ECE62C19F908B1D824 /* Pods-OTPKitTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OTPKitTests-dummy.m"; sourceTree = "<group>"; };
-		E16BF2F9D8C322C5AC47D608283C282E /* Pods-SwiftOTPIntents.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftOTPIntents.modulemap"; sourceTree = "<group>"; };
-		E24EBFE18D8AD998CC2183B207E833A4 /* Pods-OTPKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTPKit.release.xcconfig"; sourceTree = "<group>"; };
-		E3693ED2E2F73848E8EDE0043871787A /* Pods-OTPCallbackDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTPCallbackDemo.release.xcconfig"; sourceTree = "<group>"; };
-		E3D054DFE259E5C2569826F51899DA1C /* AcknowList-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AcknowList-prefix.pch"; sourceTree = "<group>"; };
-		E4F9F6479084AEFC805522DF79B72FE2 /* Pods-SwiftOTPIntents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftOTPIntents.debug.xcconfig"; sourceTree = "<group>"; };
-		E7757D0DC9655CC91145EE52FDCA44C0 /* SwiftBase32-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftBase32-dummy.m"; sourceTree = "<group>"; };
-		EA12E98CA9F3F0E6B3E8B17E0B954C58 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		ED316AAD22705A419EAD02534DF1929A /* Pods-SwiftOTPIntents-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftOTPIntents-acknowledgements.plist"; sourceTree = "<group>"; };
-		ED75C59DEA13258A7BF6B2F94A019E3D /* Pods-OTPCallbackDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OTPCallbackDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		EE92795C14AA83D3257F276FC9E421D1 /* Pods-OTPCallbackDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OTPCallbackDemo-resources.sh"; sourceTree = "<group>"; };
-		EFBE7B54B092982D7A99F3228AF21F0E /* Pods-OTPKitTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OTPKitTests-frameworks.sh"; sourceTree = "<group>"; };
-		F2BF5E9D68EAC528D8EBCD934CA1A933 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		F4FCD05FE79CCB78DF07D0D2AD13027D /* SwitchCameraButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchCameraButton.swift; path = Sources/SwitchCameraButton.swift; sourceTree = "<group>"; };
-		F63E94A7AF4C05A3940F2CEC74D52A11 /* Pods-SwiftOTPIntents-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftOTPIntents-dummy.m"; sourceTree = "<group>"; };
+		042919BCDD0E97BACB7289BCC5E47BED /* QRCodeReader.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = QRCodeReader.swift.modulemap; sourceTree = "<group>"; };
+		082EDCC2BEB94C65D021FF2FA086795F /* Pods-SwiftOTPIntents-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftOTPIntents-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0C809F93C5994701A4E7F4A66D86E145 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		0F2A5CCB416F95F82CCD2C28ED5EE492 /* Pods-SwiftOTPIntents-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftOTPIntents-dummy.m"; sourceTree = "<group>"; };
+		12FCFA740C3233B3C72208C0BAA8E220 /* Pods_OTPCallbackDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTPCallbackDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		15A3F0A2E4F900BD537888D484EEE6F3 /* Pods-OTPKitTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OTPKitTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1AB292DEC0B08C071C47375988B3366E /* AcknowList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AcknowList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F32B08E4EE4F58E374E4321220B25A7 /* Pods-OTPCallbackDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OTPCallbackDemo.modulemap"; sourceTree = "<group>"; };
+		2141F1122BC6475B2817669E1FDD2912 /* QRCodeReader.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCodeReader.swift-umbrella.h"; sourceTree = "<group>"; };
+		215C1BC154DCAC360CA13D3EFEE7B512 /* Pods-OTPKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTPKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		255730EE3B9CDEC2A7700F2166641E4A /* Pods-OTPKitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTPKitTests-Info.plist"; sourceTree = "<group>"; };
+		25A887FFCB1CB40F7A078ACBE339351A /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Sources/Base32/StringExtension.swift; sourceTree = "<group>"; };
+		2716FA778A8F7C8FF98A0C02C681F145 /* ReaderOverlayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReaderOverlayView.swift; path = Sources/ReaderOverlayView.swift; sourceTree = "<group>"; };
+		27D44BCAA5EAE601651592C2C06CC4DB /* Pods_OTPKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTPKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28CF37EF6EEADBB7AD256AFCCDBD4B87 /* Pods-OTPKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OTPKit-umbrella.h"; sourceTree = "<group>"; };
+		2AEF422DE851AEF18F18F0EA8A706C8E /* AcknowParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowParser.swift; path = Source/AcknowParser.swift; sourceTree = "<group>"; };
+		2B355C576B42EBE3D22C1C6CD9F46D0D /* SwiftBase32.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftBase32.modulemap; sourceTree = "<group>"; };
+		2C023436EE0AA06FEDAF55E64C353759 /* QRCodeReader.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QRCodeReader.swift-dummy.m"; sourceTree = "<group>"; };
+		2C0DC440C4222F19B4AC6A39E66CFCFA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		2C5ABEB948D29412D269FCA1BEE2C2D5 /* Pods-OTPKitTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OTPKitTests.modulemap"; sourceTree = "<group>"; };
+		2DA83E524B1CD75E67906914347A38EB /* Pods-OTPKitTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OTPKitTests-dummy.m"; sourceTree = "<group>"; };
+		31D907CE7D9F3A368E5577CDA0A10026 /* QRCodeReader.swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "QRCodeReader.swift-Info.plist"; sourceTree = "<group>"; };
+		3355AC79C39654CFE6FE2BA321037866 /* CallbackURLKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = CallbackURLKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		341A072B4AADFAA93D0A99565A619262 /* CallbackURLKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CallbackURLKit-prefix.pch"; sourceTree = "<group>"; };
+		352732A62D93EE418DE105B996438849 /* CallbackURLKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CallbackURLKit.modulemap; sourceTree = "<group>"; };
+		3652B113DC334A3FDA0C14F6794A5F69 /* QRCodeReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRCodeReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3970AA7BABB920B850D00B754A3C5C01 /* CallbackURLKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CallbackURLKit.xcconfig; sourceTree = "<group>"; };
+		3C0D3DEA6A590C0BC58BD18405A547B6 /* Pods-SwiftOTP-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftOTP-umbrella.h"; sourceTree = "<group>"; };
+		3FD60CC35B1A259878B31D0919656163 /* Pods-OTPCallbackDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTPCallbackDemo.release.xcconfig"; sourceTree = "<group>"; };
+		405D71736C68CDEF0B52ED6B4959947D /* QRCodeReaderResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderResult.swift; path = Sources/QRCodeReaderResult.swift; sourceTree = "<group>"; };
+		415EEB4263B4895F4940E7D837190230 /* Base32.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Base32.swift; path = Sources/Base32/Base32.swift; sourceTree = "<group>"; };
+		42412AA62021FFE08D98B90B13E07B79 /* Pods-OTPCallbackDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-OTPCallbackDemo-frameworks.sh"; sourceTree = "<group>"; };
+		427734B03EF90301CE98DBDA562BBE92 /* QRCodeReaderViewContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewContainer.swift; path = Sources/QRCodeReaderViewContainer.swift; sourceTree = "<group>"; };
+		42ACC70B18299541C213CF1D5D25F125 /* Pods-SwiftOTPIntents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftOTPIntents.release.xcconfig"; sourceTree = "<group>"; };
+		4E503FA3F904BCB2E0E12C4353ECDD89 /* Pods-SwiftOTP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftOTP.debug.xcconfig"; sourceTree = "<group>"; };
+		4F05B11324982343A02FFF919B4F7BB0 /* Pods-OTPCallbackDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTPCallbackDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		4FB43F6741CC21A4AF96C814BE5862FB /* Pods-OTPCallbackDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OTPCallbackDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		525827FC3BD334D0DD297E43D30263C7 /* Pods-SwiftOTPIntents-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftOTPIntents-umbrella.h"; sourceTree = "<group>"; };
+		5386F0B89EBB4905B9C6C543D0B2830D /* Pods_OTPKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTPKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53B01D02F648FC21D052A90B4A54D5A6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		55B846C902E70980553D119AC8541FA8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		583071B153F1D160AB991DE73F350832 /* Pods-OTPKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTPKit.debug.xcconfig"; sourceTree = "<group>"; };
+		5889912C82EE2BE26774C4F4FF050420 /* Pods-SwiftOTP-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftOTP-frameworks.sh"; sourceTree = "<group>"; };
+		59D9233E072321A659F1F25843A98DB5 /* AcknowList.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AcknowList.xcconfig; sourceTree = "<group>"; };
+		5AF235E019EEC382F9ED13087D43BBF3 /* Base16.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Base16.swift; path = Sources/Base32/Base16.swift; sourceTree = "<group>"; };
+		619D3E9E7274906D66F9501923295FDB /* Pods-OTPKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTPKit-Info.plist"; sourceTree = "<group>"; };
+		64B268DF14ECD9C56AE4FE2579FBCEB3 /* CallbackURLKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CallbackURLKit-umbrella.h"; sourceTree = "<group>"; };
+		654EA01E952D8967CD73196ADB92528A /* QRCodeReaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderView.swift; path = Sources/QRCodeReaderView.swift; sourceTree = "<group>"; };
+		665C578D6587EE82EE33E2DF813BCB1B /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Sources/Extensions.swift; sourceTree = "<group>"; };
+		666DEFB1F81B6A88CDA3542BC75BCA4B /* QRCodeReaderViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewControllerDelegate.swift; path = Sources/QRCodeReaderViewControllerDelegate.swift; sourceTree = "<group>"; };
+		6708DE51ABCACB4A31226A7F577D4070 /* SwiftBase32.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftBase32.xcconfig; sourceTree = "<group>"; };
+		684B0B102F8DB2F9255E0C7A9E2820B0 /* QRCodeReader.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QRCodeReader.swift.xcconfig; sourceTree = "<group>"; };
+		6983E7040877CDDD17F2103161EBB0D7 /* CallbackURLKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CallbackURLKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69DEF6BBC5D1CFAF0DB0528D9326461C /* Pods_SwiftOTPIntents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOTPIntents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B6A2D79B2636611E1F88FE0A58D0A6E /* QRCodeReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReader.swift; path = Sources/QRCodeReader.swift; sourceTree = "<group>"; };
+		758CDFFCC42AFFE80E7736A3C838FF63 /* CallbackClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CallbackClient.swift; path = Sources/CallbackClient.swift; sourceTree = "<group>"; };
+		791DF5973CD8DF7D09F63F91A3799477 /* Pods-OTPCallbackDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTPCallbackDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		7BCDF5D3350ED54E86F05685DFD0D049 /* Pods-SwiftOTP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftOTP.release.xcconfig"; sourceTree = "<group>"; };
+		7C7C67DCDDC1E56F24324E1AD5814407 /* AcknowList.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = AcknowList.bundle; path = Resources/AcknowList.bundle; sourceTree = "<group>"; };
+		8027CB5129E177EA4EB244E183643BF5 /* Pods-OTPKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTPKitTests.release.xcconfig"; sourceTree = "<group>"; };
+		80ED7A3D19C791675B92A5B47AAE4D58 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		84FAF5206AE15E3A8A383E7D123E79D8 /* AcknowList-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AcknowList-prefix.pch"; sourceTree = "<group>"; };
+		877E6CDA401B323DD0A3DA463A1C433E /* Pods-SwiftOTP-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftOTP-acknowledgements.markdown"; sourceTree = "<group>"; };
+		89128C36EAF25CCD95746D8853904DC5 /* Pods-SwiftOTPIntents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftOTPIntents.debug.xcconfig"; sourceTree = "<group>"; };
+		8D776A0606113E1EE33F49B47F3FE030 /* Pods-SwiftOTPIntents-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftOTPIntents-Info.plist"; sourceTree = "<group>"; };
+		901FF3D5D385F931A7407547E220F9C8 /* SwiftBase32.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftBase32.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90AC7244B29ACAA49B6298D36C1F2080 /* Pods-OTPCallbackDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OTPCallbackDemo-umbrella.h"; sourceTree = "<group>"; };
+		9A4C3E62C46A265FAEB99C9547330767 /* AcknowListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowListViewController.swift; path = Source/AcknowListViewController.swift; sourceTree = "<group>"; };
+		9CB8DEECA858250A6380281911F8770D /* Pods-OTPKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OTPKit-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DCE0B0F15822DE17EDF95647C6076B8 /* SwiftBase32-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftBase32-umbrella.h"; sourceTree = "<group>"; };
+		9ED2AC5468C74808668E13755FB0F8CB /* AcknowList.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AcknowList.modulemap; sourceTree = "<group>"; };
+		A1FC3406CA71C22EBFEFCF052F5765E3 /* SwiftBase32-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftBase32-Info.plist"; sourceTree = "<group>"; };
+		A2D2752B0DED1E205861E3AC69065F55 /* Pods-OTPKit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-OTPKit-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A6D824D8FEC8D1EE66D08BEF963CEF74 /* SwiftBase32-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftBase32-prefix.pch"; sourceTree = "<group>"; };
+		AB876ACA3C64DC136EE34E4AA91025C3 /* Pods-SwiftOTPIntents.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftOTPIntents.modulemap"; sourceTree = "<group>"; };
+		AC683F3AF04FAC7B77EC84397E3F2099 /* Pods-OTPKitTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-OTPKitTests-umbrella.h"; sourceTree = "<group>"; };
+		AC957163251032A7B3A6A6F0BE1CED1E /* CallbackURLKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CallbackURLKit-dummy.m"; sourceTree = "<group>"; };
+		ADB9A869A6E76AAD43BC84988CA75C73 /* Pods-SwiftOTP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftOTP-dummy.m"; sourceTree = "<group>"; };
+		B153770389EA28202970FF29B194E733 /* Pods-SwiftOTP.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftOTP.modulemap"; sourceTree = "<group>"; };
+		BBDB5CB6BB5C63721A18A293AAC7DBD2 /* QRCodeReaderViewControllerBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewControllerBuilder.swift; path = Sources/QRCodeReaderViewControllerBuilder.swift; sourceTree = "<group>"; };
+		BD7E04275E0A5E9D44B55F341D348E55 /* Acknow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Acknow.swift; path = Source/Acknow.swift; sourceTree = "<group>"; };
+		C133F8E717C1D955A8D1BA68449C91A6 /* SwitchCameraButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchCameraButton.swift; path = Sources/SwitchCameraButton.swift; sourceTree = "<group>"; };
+		C256CD0444808EFB28535660DFD0796D /* CallbackRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CallbackRequest.swift; path = Sources/CallbackRequest.swift; sourceTree = "<group>"; };
+		C57A792D104E5C5CB47A73224280743D /* QRCodeReader.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCodeReader.swift-prefix.pch"; sourceTree = "<group>"; };
+		C61583E33BC1465E71ADB4D573471891 /* Pods-OTPCallbackDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OTPCallbackDemo-dummy.m"; sourceTree = "<group>"; };
+		CABF466975360B519EBF37DC2184BC65 /* CallbackRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CallbackRouter.swift; path = Sources/CallbackRouter.swift; sourceTree = "<group>"; };
+		CCBBAD591B0EF5DC04C412668A8EA8EE /* CallbackURLKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CallbackURLKit.swift; path = Sources/CallbackURLKit.swift; sourceTree = "<group>"; };
+		CE6A737D4D3D4F3ECCBD5C000D42F0DD /* AcknowList-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AcknowList-umbrella.h"; sourceTree = "<group>"; };
+		D290AB905C91E6729CF4A7983CABAFF8 /* AcknowList-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AcknowList-dummy.m"; sourceTree = "<group>"; };
+		D6FF3F1A784EDA89C639A8B7C2203315 /* Pods-SwiftOTP-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftOTP-Info.plist"; sourceTree = "<group>"; };
+		D72F434E0BC6F47C11478560EDAAD3EB /* AcknowViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowViewController.swift; path = Source/AcknowViewController.swift; sourceTree = "<group>"; };
+		D9B1BCFFEAE160EB007C1B0CD4019251 /* Pods-OTPKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-OTPKit.modulemap"; sourceTree = "<group>"; };
+		DB8F423C064B67EA84838DCB894344C3 /* shim.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = shim.swift; path = Sources/Base32/shim.swift; sourceTree = "<group>"; };
+		DC329C7ACB0BCA3755544346B33EE1F7 /* AcknowLocalization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowLocalization.swift; path = Source/AcknowLocalization.swift; sourceTree = "<group>"; };
+		E145409036BD0C2B6D136DE2718E4C6A /* Pods-OTPKitTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTPKitTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E5CC76D19F1E3CCBC5D30B789EA7005A /* ToggleTorchButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToggleTorchButton.swift; path = Sources/ToggleTorchButton.swift; sourceTree = "<group>"; };
+		E97849FB45304D583664913F74BE7EDC /* Pods-OTPKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-OTPKit.release.xcconfig"; sourceTree = "<group>"; };
+		EC7FE5EFA6590D0B888B8A5AE699ECCC /* AcknowList-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AcknowList-Info.plist"; sourceTree = "<group>"; };
+		EE7579B2FF55B1E91FBC84749435A733 /* Pods_SwiftOTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFF607646C1F89F64BCDA6C5FDAC964B /* QRCodeReaderViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderViewController.swift; path = Sources/QRCodeReaderViewController.swift; sourceTree = "<group>"; };
+		F200C1A5CAD3C08BAA4666866D6DA47C /* CallbackURLKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CallbackURLKit-Info.plist"; sourceTree = "<group>"; };
+		F4256C581079411A49033D2F010B9F90 /* Pods-OTPKit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTPKit-acknowledgements.plist"; sourceTree = "<group>"; };
+		F5FE8C2E9E0EB3B8E7FF92296F3F1C4B /* Pods-OTPCallbackDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OTPCallbackDemo-Info.plist"; sourceTree = "<group>"; };
+		F666BEDB93D775C24CC91DB7942E4576 /* Pods-SwiftOTPIntents-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftOTPIntents-acknowledgements.plist"; sourceTree = "<group>"; };
+		F83F18BC0B948861BA4F954700C4FBCC /* Pods-SwiftOTP-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftOTP-acknowledgements.plist"; sourceTree = "<group>"; };
+		FD1B215DF65EAC4634F0C198624A0280 /* SwiftBase32-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftBase32-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1C9370D8B34FA5665221BA8A71E1C61E /* Frameworks */ = {
+		0E472E6B58CCE989BF3A4EA11B147843 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6240D89C6833F520BCCC7D9B6DD5CB4D /* AVFoundation.framework in Frameworks */,
-				4D1D92945994D3FEC061EB57F84B3949 /* Foundation.framework in Frameworks */,
+				D0A17E0254C1E37B87E3968884CE0441 /* AVFoundation.framework in Frameworks */,
+				E3DC4888B7BFE8197FF80954EDC52DE1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		49D1F66A306D9DA8CFDCA275FA18EABB /* Frameworks */ = {
+		120150D63B95A51EBA4BA736583D9B61 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA6A909646A01F9111BCB4EAB60E5D98 /* Foundation.framework in Frameworks */,
+				3B20248FD492E0CB4D1FBF1C30A0CC23 /* Foundation.framework in Frameworks */,
+				71F3715181163C7AFE05A0C2E2F41CEC /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		51CE2052C11DC637300660E6665990A5 /* Frameworks */ = {
+		3F7DFA06161937341EA140ED0F247FFA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D9D0D928FE062B527D222722D6B0DFE /* Foundation.framework in Frameworks */,
+				EB777E38FABE2953CA5C21254A211603 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		778EDCD316D15748D24295A67F4FFE1B /* Frameworks */ = {
+		6B88D9FEC5FEE22924479285783697CB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD439F6B0C1D797A0BCE33FA55A5530B /* Foundation.framework in Frameworks */,
-				F9693CE5F20461E5D1CA5E458CA8D444 /* UIKit.framework in Frameworks */,
+				0D46B224B2189D2285A43B6FE3C4BFCB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		88FB0DBFB8E3A1E52B01683C9731DDED /* Frameworks */ = {
+		6C0FE1F07370C4FF5BB47B75779D65D8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9434B4E481550A9DC2C2A4DC95C5FD32 /* Foundation.framework in Frameworks */,
+				21DF7B7F116464FEE9E3401220466A1E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7CA41C9102B8968C7D975C905C58FC9 /* Frameworks */ = {
+		81B2EF54C7934C5B75D33528784B4DAA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B03315D4D6179D2E6BF8BB8C5AA3A87 /* Foundation.framework in Frameworks */,
+				A014F5F42CDF01FFA05FE4AAB4606948 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AD3345ED7E303F5637E98ECFB412087D /* Frameworks */ = {
+		9083A083BEDA5F6DBDC63114321E55A0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A68C5D6A4EDBEB93DC10ACAED8260E2 /* Foundation.framework in Frameworks */,
+				C6D82713DA1F992B7362DD044D5824AF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C588923C2C62C661377510CCC5D6E396 /* Frameworks */ = {
+		A1045C99352DA9EAA8FB11BC05704D98 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14FE80247A62E8D9283B0B1D6C526957 /* Foundation.framework in Frameworks */,
+				9C68B372F8E09907385A3DD34AABA635 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C8407DEE9CCDECB1539657E1117E8D43 /* Frameworks */ = {
+		FFBE7314F89446AD5AD8A28B0D8A58BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				318C8BC903411605945582CBC187128C /* Foundation.framework in Frameworks */,
+				B213C511422A596B7180CC5460D10D04 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		048E5A8CB97B8F699F6C4354797D29C8 /* Targets Support Files */ = {
+		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FD23F03C4481FE011CE5F72F56894D76 /* Pods-OTPCallbackDemo */,
-				F8ECCBA166961F92004B8D34BA6ADA52 /* Pods-OTPKit */,
-				105287F7378CC389697B12549FDC7C65 /* Pods-OTPKitTests */,
-				EAD683744E3648E0C73719012DAD97EC /* Pods-SwiftOTP */,
-				D7F084AA3F3681648033E2155DFFE07C /* Pods-SwiftOTPIntents */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		0CEF6AE21748EEF05BDF013C1F96152B /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				6FEE77C30CADE29D0363F1A36F5E98E4 /* AVFoundation.framework */,
-				F2BF5E9D68EAC528D8EBCD934CA1A933 /* Foundation.framework */,
-				EA12E98CA9F3F0E6B3E8B17E0B954C58 /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		105287F7378CC389697B12549FDC7C65 /* Pods-OTPKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				B1B7CE88AFD8BA1FAFF43DCF255106C4 /* Info.plist */,
-				D974FE7693EB61C7EAE5699939BDD74F /* Pods-OTPKitTests.modulemap */,
-				727C1FE5D75DD3F081A4B741E2DA029C /* Pods-OTPKitTests-acknowledgements.markdown */,
-				4CADB994DCCDC636A838FFB9ADF14F12 /* Pods-OTPKitTests-acknowledgements.plist */,
-				DFF11BFBD2FAB8ECE62C19F908B1D824 /* Pods-OTPKitTests-dummy.m */,
-				EFBE7B54B092982D7A99F3228AF21F0E /* Pods-OTPKitTests-frameworks.sh */,
-				552FC8D52507BC31F2F5A9D5D63AB81A /* Pods-OTPKitTests-resources.sh */,
-				85A7CC181AF4D33D6A02056839D1D643 /* Pods-OTPKitTests-umbrella.h */,
-				9FB442960EFB9E680B8B6854D9597F26 /* Pods-OTPKitTests.debug.xcconfig */,
-				5FBB7AEC29C7A04F44DE00034322DFAA /* Pods-OTPKitTests.release.xcconfig */,
-			);
-			name = "Pods-OTPKitTests";
-			path = "Target Support Files/Pods-OTPKitTests";
-			sourceTree = "<group>";
-		};
-		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0CEF6AE21748EEF05BDF013C1F96152B /* iOS */,
+				DF8010B600FC99A0DCA5086146A2B24B /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2E7ED36404CE14B95A03ECB4B4FF231C /* Support Files */ = {
+		0B9358A0741597BE1EAD22067452F7AC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7E23401CFAA70B2218509EAC2B9B3649 /* Info.plist */,
-				5C4A1AA976E4C47B842B8AA56EAD2243 /* QRCodeReader.swift.modulemap */,
-				947634DCD2F0C92297B3A26FE157C449 /* QRCodeReader.swift.xcconfig */,
-				B2DF35704035F314F226EDBFF72F140A /* QRCodeReader.swift-dummy.m */,
-				090EE4D81AF7EB8A311779FFC6A06DC9 /* QRCodeReader.swift-prefix.pch */,
-				41F70601F0ECEA79A8491A1E3756EB2F /* QRCodeReader.swift-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/QRCodeReader.swift";
-			sourceTree = "<group>";
-		};
-		3E86FA676454AC890913FCAF7774DBB6 /* QRCodeReader.swift */ = {
-			isa = PBXGroup;
-			children = (
-				C95561E2EC998FF0E3F8B1DFB0F80F4C /* QRCodeReader.swift */,
-				70297F30A95DDFEC31ED8BDF8BEDEB81 /* QRCodeReaderResult.swift */,
-				5DFE0690EDA4A4985D55ADAC0B0C1DB8 /* QRCodeReaderView.swift */,
-				C8DEDF945E5C0FE3507081E036131135 /* QRCodeReaderViewContainer.swift */,
-				1CAFA4A2153F93904E2CA534E75341CD /* QRCodeReaderViewController.swift */,
-				A198EE0F15BCA0FE366BAC0F6E4386F8 /* QRCodeReaderViewControllerBuilder.swift */,
-				43752A212FA0DB686477DC35CE76FDC6 /* QRCodeReaderViewControllerDelegate.swift */,
-				C8CCBE600485E64A4DAD2625DCB11DD4 /* ReaderOverlayView.swift */,
-				F4FCD05FE79CCB78DF07D0D2AD13027D /* SwitchCameraButton.swift */,
-				924E33D6DF84F16396A3491FBBA90BC8 /* ToggleTorchButton.swift */,
-				2E7ED36404CE14B95A03ECB4B4FF231C /* Support Files */,
-			);
-			path = QRCodeReader.swift;
-			sourceTree = "<group>";
-		};
-		638DAECC69B7F562CAB0BC6CB4DA74B6 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				585F9A7A2A3F8C0C4576797F6979FD9D /* CallbackURLKit.podspec */,
-				68FCEAF83347FA9798D1039145CC58D2 /* LICENSE */,
-				8E587F2DAD8F63CABA4D9237423322BC /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		67211F725BFB1CFF33752F5A5C574818 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				ADB08A2061D423777FE78723174873AE /* AcknowList.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				ADA6C20CFCFD14FE2B03CD636F600489 /* Development Pods */,
-				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				972FCB7830B1368F4ABB5984111ED237 /* Pods */,
-				BC7F75FCB2BAEF6E4EB0CABD7590FB8B /* Products */,
-				048E5A8CB97B8F699F6C4354797D29C8 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		86D3A28EB3728FFD2D8366A2E27E2F76 /* CallbackURLKit */ = {
-			isa = PBXGroup;
-			children = (
-				FCB2926AEDB04E8072AFFCE77CAE8317 /* Core */,
-				638DAECC69B7F562CAB0BC6CB4DA74B6 /* Pod */,
-				966B6EB0596CEE33D26F7976951B995D /* Support Files */,
-			);
-			name = CallbackURLKit;
-			path = ../Dependencies/CallbackURLKit;
-			sourceTree = "<group>";
-		};
-		966B6EB0596CEE33D26F7976951B995D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C53214D73E18FBCF8777A489099F048B /* CallbackURLKit.modulemap */,
-				3CB5FAF8A70B96496AB8ABDFF4DC8DA6 /* CallbackURLKit.xcconfig */,
-				55F06AB5DE91E57BFBC3627E2FF77038 /* CallbackURLKit-dummy.m */,
-				44421822158A937964B01DD83B647DD4 /* CallbackURLKit-prefix.pch */,
-				73C397AACEE0258CF65C0C9084662410 /* CallbackURLKit-umbrella.h */,
-				3820947E717A3BB61564A87F0E831C3E /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../../Pods/Target Support Files/CallbackURLKit";
-			sourceTree = "<group>";
-		};
-		972FCB7830B1368F4ABB5984111ED237 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				FE1D1F831972DE4F09117A22B06EA9F2 /* AcknowList */,
-				3E86FA676454AC890913FCAF7774DBB6 /* QRCodeReader.swift */,
-				F582A0FA97891E5144EFB1EBC9881A96 /* SwiftBase32 */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		ADA6C20CFCFD14FE2B03CD636F600489 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				86D3A28EB3728FFD2D8366A2E27E2F76 /* CallbackURLKit */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		BC7F75FCB2BAEF6E4EB0CABD7590FB8B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AC8AE1C8E46E583047A4566417606DEF /* AcknowList.framework */,
-				8BF0A4BEB079891879A4A5A18096AECD /* CallbackURLKit.framework */,
-				C6F786E8EBC5DB6E967BFF7DDE7D205F /* Pods_OTPCallbackDemo.framework */,
-				492C377AC891EB76E8B641FAE4CA9A68 /* Pods_OTPKit.framework */,
-				6CB4FDC8D9F440D8C7133EF63B3CFEE8 /* Pods_OTPKitTests.framework */,
-				5902FD950A6E15424347A230CB7DCF02 /* Pods_SwiftOTP.framework */,
-				C727B57921CC016FA807F3798F1B7E30 /* Pods_SwiftOTPIntents.framework */,
-				D7D6E078623B04B4AA956EE799055232 /* QRCodeReader.framework */,
-				13FCB1178EDD83DF8DA81DBBEE3D7942 /* SwiftBase32.framework */,
+				1AB292DEC0B08C071C47375988B3366E /* AcknowList.framework */,
+				6983E7040877CDDD17F2103161EBB0D7 /* CallbackURLKit.framework */,
+				12FCFA740C3233B3C72208C0BAA8E220 /* Pods_OTPCallbackDemo.framework */,
+				5386F0B89EBB4905B9C6C543D0B2830D /* Pods_OTPKit.framework */,
+				27D44BCAA5EAE601651592C2C06CC4DB /* Pods_OTPKitTests.framework */,
+				EE7579B2FF55B1E91FBC84749435A733 /* Pods_SwiftOTP.framework */,
+				69DEF6BBC5D1CFAF0DB0528D9326461C /* Pods_SwiftOTPIntents.framework */,
+				3652B113DC334A3FDA0C14F6794A5F69 /* QRCodeReader.framework */,
+				901FF3D5D385F931A7407547E220F9C8 /* SwiftBase32.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D7F084AA3F3681648033E2155DFFE07C /* Pods-SwiftOTPIntents */ = {
+		3A19EAD53215459FD3DAE778578CAD92 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				19DB3026B1327B40DDE0D5D2A2F5FE58 /* Info.plist */,
-				E16BF2F9D8C322C5AC47D608283C282E /* Pods-SwiftOTPIntents.modulemap */,
-				0E905F5DE2A499E21749B0FCFFEDF495 /* Pods-SwiftOTPIntents-acknowledgements.markdown */,
-				ED316AAD22705A419EAD02534DF1929A /* Pods-SwiftOTPIntents-acknowledgements.plist */,
-				F63E94A7AF4C05A3940F2CEC74D52A11 /* Pods-SwiftOTPIntents-dummy.m */,
-				1E21D9BA392F01722EDC8470063C9088 /* Pods-SwiftOTPIntents-resources.sh */,
-				D3D91F0A42BC2F8A0C82485F5E54A46D /* Pods-SwiftOTPIntents-umbrella.h */,
-				E4F9F6479084AEFC805522DF79B72FE2 /* Pods-SwiftOTPIntents.debug.xcconfig */,
-				11F2DC4B645CA76B46150D1C0E24E048 /* Pods-SwiftOTPIntents.release.xcconfig */,
-			);
-			name = "Pods-SwiftOTPIntents";
-			path = "Target Support Files/Pods-SwiftOTPIntents";
-			sourceTree = "<group>";
-		};
-		DE36B0117575D803C724EB5CA96F893D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B0B59A22D6562B33064F48EA9524CFCF /* AcknowList.modulemap */,
-				9BF0CCEF7C9546A66C1B92A370169691 /* AcknowList.xcconfig */,
-				8A75732AEF56BC6468D6A537BBD4ECD9 /* AcknowList-dummy.m */,
-				E3D054DFE259E5C2569826F51899DA1C /* AcknowList-prefix.pch */,
-				B40C26EA3CA60DA2B3C12D42752BD391 /* AcknowList-umbrella.h */,
-				DBF6EB808627D93267CA002461CE556A /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/AcknowList";
-			sourceTree = "<group>";
-		};
-		EACB561BAFC2515F949F191BB01BD509 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A1D6C2A820F511D9731BAF6683354F21 /* Info.plist */,
-				B3F10059EBB9AB244A2C419B551BB45B /* SwiftBase32.modulemap */,
-				0BA6E6A65B9BA793C335CFF2AAB5DBFF /* SwiftBase32.xcconfig */,
-				E7757D0DC9655CC91145EE52FDCA44C0 /* SwiftBase32-dummy.m */,
-				6505CB9A800272E2438DF4685E8659D3 /* SwiftBase32-prefix.pch */,
-				7592FEF0083A92CA786F1A6FEABE977B /* SwiftBase32-umbrella.h */,
+				2B355C576B42EBE3D22C1C6CD9F46D0D /* SwiftBase32.modulemap */,
+				6708DE51ABCACB4A31226A7F577D4070 /* SwiftBase32.xcconfig */,
+				FD1B215DF65EAC4634F0C198624A0280 /* SwiftBase32-dummy.m */,
+				A1FC3406CA71C22EBFEFCF052F5765E3 /* SwiftBase32-Info.plist */,
+				A6D824D8FEC8D1EE66D08BEF963CEF74 /* SwiftBase32-prefix.pch */,
+				9DCE0B0F15822DE17EDF95647C6076B8 /* SwiftBase32-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SwiftBase32";
 			sourceTree = "<group>";
 		};
-		EAD683744E3648E0C73719012DAD97EC /* Pods-SwiftOTP */ = {
+		3C35729F48292DA351E92F4DB091DFCF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				40017EBC080B478F39312E5C3A5A0815 /* Info.plist */,
-				C0F21D0AC99086285174959C22EA34AA /* Pods-SwiftOTP.modulemap */,
-				B82B10AC03CD85D53481EB9C018CFD04 /* Pods-SwiftOTP-acknowledgements.markdown */,
-				943ACE38CC7D8A3D7042C64E3B4DAB42 /* Pods-SwiftOTP-acknowledgements.plist */,
-				A09DE6C67DA3F88179B269B5260CF733 /* Pods-SwiftOTP-dummy.m */,
-				DB27DEB3633C4D3CA4DA573DF4859449 /* Pods-SwiftOTP-frameworks.sh */,
-				CA6A732550E8FD107375669E8383D726 /* Pods-SwiftOTP-resources.sh */,
-				0E19C36D31C76F63B4CFE4BB4A48CF0D /* Pods-SwiftOTP-umbrella.h */,
-				BB4DA385828F08D36B4BB191DCD649CC /* Pods-SwiftOTP.debug.xcconfig */,
-				388FBA3F620D705613E5ADCFC6AB7FBA /* Pods-SwiftOTP.release.xcconfig */,
+				ED495A9E28C54C4EADAA6382DBE5BCB7 /* AcknowList */,
+				DBF4AA843095EC81A5BB0159A6A6C9EF /* QRCodeReader.swift */,
+				E7918EB7D007F7702AB8050B80AA4018 /* SwiftBase32 */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		439F2E2BC2E6399998C0F1B519DCB011 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7C7C67DCDDC1E56F24324E1AD5814407 /* AcknowList.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		4696BAB79BB1726692107B39970BF020 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				3355AC79C39654CFE6FE2BA321037866 /* CallbackURLKit.podspec */,
+				0C809F93C5994701A4E7F4A66D86E145 /* LICENSE */,
+				55B846C902E70980553D119AC8541FA8 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		54A0766504D9305E513340A03F32BE3F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB36FE660DBBD59D8AC5202F4BF371BC /* Pods-OTPCallbackDemo */,
+				D2002C5E8E2016235D369E38899614CA /* Pods-OTPKit */,
+				A81E5C2B9EF76B6784C7F9675B68BF64 /* Pods-OTPKitTests */,
+				ACB6507D67C009DCB8121A9D8FE572FA /* Pods-SwiftOTP */,
+				5FFEC3CC019495406BA4AA8CDC7F31F5 /* Pods-SwiftOTPIntents */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5FFEC3CC019495406BA4AA8CDC7F31F5 /* Pods-SwiftOTPIntents */ = {
+			isa = PBXGroup;
+			children = (
+				AB876ACA3C64DC136EE34E4AA91025C3 /* Pods-SwiftOTPIntents.modulemap */,
+				082EDCC2BEB94C65D021FF2FA086795F /* Pods-SwiftOTPIntents-acknowledgements.markdown */,
+				F666BEDB93D775C24CC91DB7942E4576 /* Pods-SwiftOTPIntents-acknowledgements.plist */,
+				0F2A5CCB416F95F82CCD2C28ED5EE492 /* Pods-SwiftOTPIntents-dummy.m */,
+				8D776A0606113E1EE33F49B47F3FE030 /* Pods-SwiftOTPIntents-Info.plist */,
+				525827FC3BD334D0DD297E43D30263C7 /* Pods-SwiftOTPIntents-umbrella.h */,
+				89128C36EAF25CCD95746D8853904DC5 /* Pods-SwiftOTPIntents.debug.xcconfig */,
+				42ACC70B18299541C213CF1D5D25F125 /* Pods-SwiftOTPIntents.release.xcconfig */,
+			);
+			name = "Pods-SwiftOTPIntents";
+			path = "Target Support Files/Pods-SwiftOTPIntents";
+			sourceTree = "<group>";
+		};
+		648614356E6C857D9DE3C2A88F90258F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9ED2AC5468C74808668E13755FB0F8CB /* AcknowList.modulemap */,
+				59D9233E072321A659F1F25843A98DB5 /* AcknowList.xcconfig */,
+				D290AB905C91E6729CF4A7983CABAFF8 /* AcknowList-dummy.m */,
+				EC7FE5EFA6590D0B888B8A5AE699ECCC /* AcknowList-Info.plist */,
+				84FAF5206AE15E3A8A383E7D123E79D8 /* AcknowList-prefix.pch */,
+				CE6A737D4D3D4F3ECCBD5C000D42F0DD /* AcknowList-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AcknowList";
+			sourceTree = "<group>";
+		};
+		A81E5C2B9EF76B6784C7F9675B68BF64 /* Pods-OTPKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C5ABEB948D29412D269FCA1BEE2C2D5 /* Pods-OTPKitTests.modulemap */,
+				15A3F0A2E4F900BD537888D484EEE6F3 /* Pods-OTPKitTests-acknowledgements.markdown */,
+				E145409036BD0C2B6D136DE2718E4C6A /* Pods-OTPKitTests-acknowledgements.plist */,
+				2DA83E524B1CD75E67906914347A38EB /* Pods-OTPKitTests-dummy.m */,
+				255730EE3B9CDEC2A7700F2166641E4A /* Pods-OTPKitTests-Info.plist */,
+				AC683F3AF04FAC7B77EC84397E3F2099 /* Pods-OTPKitTests-umbrella.h */,
+				215C1BC154DCAC360CA13D3EFEE7B512 /* Pods-OTPKitTests.debug.xcconfig */,
+				8027CB5129E177EA4EB244E183643BF5 /* Pods-OTPKitTests.release.xcconfig */,
+			);
+			name = "Pods-OTPKitTests";
+			path = "Target Support Files/Pods-OTPKitTests";
+			sourceTree = "<group>";
+		};
+		ACB6507D67C009DCB8121A9D8FE572FA /* Pods-SwiftOTP */ = {
+			isa = PBXGroup;
+			children = (
+				B153770389EA28202970FF29B194E733 /* Pods-SwiftOTP.modulemap */,
+				877E6CDA401B323DD0A3DA463A1C433E /* Pods-SwiftOTP-acknowledgements.markdown */,
+				F83F18BC0B948861BA4F954700C4FBCC /* Pods-SwiftOTP-acknowledgements.plist */,
+				ADB9A869A6E76AAD43BC84988CA75C73 /* Pods-SwiftOTP-dummy.m */,
+				5889912C82EE2BE26774C4F4FF050420 /* Pods-SwiftOTP-frameworks.sh */,
+				D6FF3F1A784EDA89C639A8B7C2203315 /* Pods-SwiftOTP-Info.plist */,
+				3C0D3DEA6A590C0BC58BD18405A547B6 /* Pods-SwiftOTP-umbrella.h */,
+				4E503FA3F904BCB2E0E12C4353ECDD89 /* Pods-SwiftOTP.debug.xcconfig */,
+				7BCDF5D3350ED54E86F05685DFD0D049 /* Pods-SwiftOTP.release.xcconfig */,
 			);
 			name = "Pods-SwiftOTP";
 			path = "Target Support Files/Pods-SwiftOTP";
 			sourceTree = "<group>";
 		};
-		F582A0FA97891E5144EFB1EBC9881A96 /* SwiftBase32 */ = {
+		C22BA214BE4642D52CB4744B08DB4096 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				87D3C415A3A55AA30570EC3BBCF608E6 /* Base16.swift */,
-				A0A3115817656DAA66038F4D0B144376 /* Base32.swift */,
-				3ABE5FB3320621D2FD85D73482676F9C /* StringExtension.swift */,
-				EACB561BAFC2515F949F191BB01BD509 /* Support Files */,
+				352732A62D93EE418DE105B996438849 /* CallbackURLKit.modulemap */,
+				3970AA7BABB920B850D00B754A3C5C01 /* CallbackURLKit.xcconfig */,
+				AC957163251032A7B3A6A6F0BE1CED1E /* CallbackURLKit-dummy.m */,
+				F200C1A5CAD3C08BAA4666866D6DA47C /* CallbackURLKit-Info.plist */,
+				341A072B4AADFAA93D0A99565A619262 /* CallbackURLKit-prefix.pch */,
+				64B268DF14ECD9C56AE4FE2579FBCEB3 /* CallbackURLKit-umbrella.h */,
 			);
-			path = SwiftBase32;
+			name = "Support Files";
+			path = "../../Pods/Target Support Files/CallbackURLKit";
 			sourceTree = "<group>";
 		};
-		F8ECCBA166961F92004B8D34BA6ADA52 /* Pods-OTPKit */ = {
+		C8B984C411FBDDCB5F488D947EF9B301 /* CallbackURLKit */ = {
 			isa = PBXGroup;
 			children = (
-				76DCEE91C2207A3D1E980BE4D29FEAA5 /* Info.plist */,
-				B026A2BB8CD6CD227983FE21FB2A9029 /* Pods-OTPKit.modulemap */,
-				4B40BD7426DE3C1E2AADE1D66E6BC287 /* Pods-OTPKit-acknowledgements.markdown */,
-				753894E489367909374EA3E5F0C0A36E /* Pods-OTPKit-acknowledgements.plist */,
-				AE66A923030E92EC4E2D9391504A838E /* Pods-OTPKit-dummy.m */,
-				B22623A05AAF0EC8618D2F12F00F7F15 /* Pods-OTPKit-resources.sh */,
-				7D17ADBB0B473B09D6B07338C13204D9 /* Pods-OTPKit-umbrella.h */,
-				74E42FECF2A9B7259E44AB9AE0D51A5C /* Pods-OTPKit.debug.xcconfig */,
-				E24EBFE18D8AD998CC2183B207E833A4 /* Pods-OTPKit.release.xcconfig */,
+				E4829E54C5C8171905B885F6CE2F66C2 /* Core */,
+				4696BAB79BB1726692107B39970BF020 /* Pod */,
+				C22BA214BE4642D52CB4744B08DB4096 /* Support Files */,
+			);
+			name = CallbackURLKit;
+			path = ../Dependencies/CallbackURLKit;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				CFD8822DE8678E0DF6C72F4052B37C16 /* Development Pods */,
+				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
+				3C35729F48292DA351E92F4DB091DFCF /* Pods */,
+				0B9358A0741597BE1EAD22067452F7AC /* Products */,
+				54A0766504D9305E513340A03F32BE3F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		CFD8822DE8678E0DF6C72F4052B37C16 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8B984C411FBDDCB5F488D947EF9B301 /* CallbackURLKit */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		D2002C5E8E2016235D369E38899614CA /* Pods-OTPKit */ = {
+			isa = PBXGroup;
+			children = (
+				D9B1BCFFEAE160EB007C1B0CD4019251 /* Pods-OTPKit.modulemap */,
+				A2D2752B0DED1E205861E3AC69065F55 /* Pods-OTPKit-acknowledgements.markdown */,
+				F4256C581079411A49033D2F010B9F90 /* Pods-OTPKit-acknowledgements.plist */,
+				9CB8DEECA858250A6380281911F8770D /* Pods-OTPKit-dummy.m */,
+				619D3E9E7274906D66F9501923295FDB /* Pods-OTPKit-Info.plist */,
+				28CF37EF6EEADBB7AD256AFCCDBD4B87 /* Pods-OTPKit-umbrella.h */,
+				583071B153F1D160AB991DE73F350832 /* Pods-OTPKit.debug.xcconfig */,
+				E97849FB45304D583664913F74BE7EDC /* Pods-OTPKit.release.xcconfig */,
 			);
 			name = "Pods-OTPKit";
 			path = "Target Support Files/Pods-OTPKit";
 			sourceTree = "<group>";
 		};
-		FCB2926AEDB04E8072AFFCE77CAE8317 /* Core */ = {
+		DBF4AA843095EC81A5BB0159A6A6C9EF /* QRCodeReader.swift */ = {
 			isa = PBXGroup;
 			children = (
-				0C0CF90C47BCA437176C8C9D33AF5873 /* CallbackClient.swift */,
-				A547320110F877349B88A3CEFCE2CAD1 /* CallbackRequest.swift */,
-				8CE25DE196AF5D4C10F187A215131285 /* CallbackRouter.swift */,
-				9E3867E92D8E68BB76B3108B33940C54 /* CallbackURLKit.swift */,
-				7592E8DADF9A257C71D6948EEF15A8E8 /* Extensions.swift */,
+				6B6A2D79B2636611E1F88FE0A58D0A6E /* QRCodeReader.swift */,
+				405D71736C68CDEF0B52ED6B4959947D /* QRCodeReaderResult.swift */,
+				654EA01E952D8967CD73196ADB92528A /* QRCodeReaderView.swift */,
+				427734B03EF90301CE98DBDA562BBE92 /* QRCodeReaderViewContainer.swift */,
+				EFF607646C1F89F64BCDA6C5FDAC964B /* QRCodeReaderViewController.swift */,
+				BBDB5CB6BB5C63721A18A293AAC7DBD2 /* QRCodeReaderViewControllerBuilder.swift */,
+				666DEFB1F81B6A88CDA3542BC75BCA4B /* QRCodeReaderViewControllerDelegate.swift */,
+				2716FA778A8F7C8FF98A0C02C681F145 /* ReaderOverlayView.swift */,
+				C133F8E717C1D955A8D1BA68449C91A6 /* SwitchCameraButton.swift */,
+				E5CC76D19F1E3CCBC5D30B789EA7005A /* ToggleTorchButton.swift */,
+				F1CFFBE0289F45EB7357262CBD98729F /* Support Files */,
+			);
+			path = QRCodeReader.swift;
+			sourceTree = "<group>";
+		};
+		DF8010B600FC99A0DCA5086146A2B24B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				53B01D02F648FC21D052A90B4A54D5A6 /* AVFoundation.framework */,
+				2C0DC440C4222F19B4AC6A39E66CFCFA /* Foundation.framework */,
+				80ED7A3D19C791675B92A5B47AAE4D58 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E4829E54C5C8171905B885F6CE2F66C2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				758CDFFCC42AFFE80E7736A3C838FF63 /* CallbackClient.swift */,
+				C256CD0444808EFB28535660DFD0796D /* CallbackRequest.swift */,
+				CABF466975360B519EBF37DC2184BC65 /* CallbackRouter.swift */,
+				CCBBAD591B0EF5DC04C412668A8EA8EE /* CallbackURLKit.swift */,
+				665C578D6587EE82EE33E2DF813BCB1B /* Extensions.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
 		};
-		FD23F03C4481FE011CE5F72F56894D76 /* Pods-OTPCallbackDemo */ = {
+		E7918EB7D007F7702AB8050B80AA4018 /* SwiftBase32 */ = {
 			isa = PBXGroup;
 			children = (
-				CD0FC0078FEAFEEB0DCF566AEAEF2605 /* Info.plist */,
-				A3DC142BF55CF192DFF954F476E4713E /* Pods-OTPCallbackDemo.modulemap */,
-				ED75C59DEA13258A7BF6B2F94A019E3D /* Pods-OTPCallbackDemo-acknowledgements.markdown */,
-				1BBF8FE8040B11B2AA1356D8347718E0 /* Pods-OTPCallbackDemo-acknowledgements.plist */,
-				0213A6155816591844B317994A3CEC58 /* Pods-OTPCallbackDemo-dummy.m */,
-				DCF0B6FF2763AC4641E79C999A7ED162 /* Pods-OTPCallbackDemo-frameworks.sh */,
-				EE92795C14AA83D3257F276FC9E421D1 /* Pods-OTPCallbackDemo-resources.sh */,
-				89F1978A0D4AA36AA8B7BC9AAC02201F /* Pods-OTPCallbackDemo-umbrella.h */,
-				95F7AC6F14EA32DD6CBF513BA737FE9A /* Pods-OTPCallbackDemo.debug.xcconfig */,
-				E3693ED2E2F73848E8EDE0043871787A /* Pods-OTPCallbackDemo.release.xcconfig */,
+				5AF235E019EEC382F9ED13087D43BBF3 /* Base16.swift */,
+				415EEB4263B4895F4940E7D837190230 /* Base32.swift */,
+				DB8F423C064B67EA84838DCB894344C3 /* shim.swift */,
+				25A887FFCB1CB40F7A078ACBE339351A /* StringExtension.swift */,
+				3A19EAD53215459FD3DAE778578CAD92 /* Support Files */,
+			);
+			path = SwiftBase32;
+			sourceTree = "<group>";
+		};
+		EB36FE660DBBD59D8AC5202F4BF371BC /* Pods-OTPCallbackDemo */ = {
+			isa = PBXGroup;
+			children = (
+				1F32B08E4EE4F58E374E4321220B25A7 /* Pods-OTPCallbackDemo.modulemap */,
+				4FB43F6741CC21A4AF96C814BE5862FB /* Pods-OTPCallbackDemo-acknowledgements.markdown */,
+				4F05B11324982343A02FFF919B4F7BB0 /* Pods-OTPCallbackDemo-acknowledgements.plist */,
+				C61583E33BC1465E71ADB4D573471891 /* Pods-OTPCallbackDemo-dummy.m */,
+				42412AA62021FFE08D98B90B13E07B79 /* Pods-OTPCallbackDemo-frameworks.sh */,
+				F5FE8C2E9E0EB3B8E7FF92296F3F1C4B /* Pods-OTPCallbackDemo-Info.plist */,
+				90AC7244B29ACAA49B6298D36C1F2080 /* Pods-OTPCallbackDemo-umbrella.h */,
+				791DF5973CD8DF7D09F63F91A3799477 /* Pods-OTPCallbackDemo.debug.xcconfig */,
+				3FD60CC35B1A259878B31D0919656163 /* Pods-OTPCallbackDemo.release.xcconfig */,
 			);
 			name = "Pods-OTPCallbackDemo";
 			path = "Target Support Files/Pods-OTPCallbackDemo";
 			sourceTree = "<group>";
 		};
-		FE1D1F831972DE4F09117A22B06EA9F2 /* AcknowList */ = {
+		ED495A9E28C54C4EADAA6382DBE5BCB7 /* AcknowList */ = {
 			isa = PBXGroup;
 			children = (
-				23C689EE23486C9253A4EE551CDF5CB1 /* Acknow.swift */,
-				4218500FC007D65158508A31B1C15F82 /* AcknowListViewController.swift */,
-				71D27AB836D28B061F04DA69FB364BD5 /* AcknowLocalization.swift */,
-				ABB84201D44C695CF16EE7CBCD3CA9FE /* AcknowParser.swift */,
-				3AE78D1413ED670EBB23935F738A7FEF /* AcknowViewController.swift */,
-				67211F725BFB1CFF33752F5A5C574818 /* Resources */,
-				DE36B0117575D803C724EB5CA96F893D /* Support Files */,
+				BD7E04275E0A5E9D44B55F341D348E55 /* Acknow.swift */,
+				9A4C3E62C46A265FAEB99C9547330767 /* AcknowListViewController.swift */,
+				DC329C7ACB0BCA3755544346B33EE1F7 /* AcknowLocalization.swift */,
+				2AEF422DE851AEF18F18F0EA8A706C8E /* AcknowParser.swift */,
+				D72F434E0BC6F47C11478560EDAAD3EB /* AcknowViewController.swift */,
+				439F2E2BC2E6399998C0F1B519DCB011 /* Resources */,
+				648614356E6C857D9DE3C2A88F90258F /* Support Files */,
 			);
 			path = AcknowList;
+			sourceTree = "<group>";
+		};
+		F1CFFBE0289F45EB7357262CBD98729F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				042919BCDD0E97BACB7289BCC5E47BED /* QRCodeReader.swift.modulemap */,
+				684B0B102F8DB2F9255E0C7A9E2820B0 /* QRCodeReader.swift.xcconfig */,
+				2C023436EE0AA06FEDAF55E64C353759 /* QRCodeReader.swift-dummy.m */,
+				31D907CE7D9F3A368E5577CDA0A10026 /* QRCodeReader.swift-Info.plist */,
+				C57A792D104E5C5CB47A73224280743D /* QRCodeReader.swift-prefix.pch */,
+				2141F1122BC6475B2817669E1FDD2912 /* QRCodeReader.swift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/QRCodeReader.swift";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		095840F3CA6AB028D7B817C7C78E36DA /* Headers */ = {
+		0E5BD8FA9B1A3BFD5F459311ABC25111 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFB995A967F1508D187A1721A51EC459 /* Pods-OTPCallbackDemo-umbrella.h in Headers */,
+				5891C8CEB85D9F31AC9E665D006A0285 /* Pods-OTPKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		67F43EA5E6CF591663CE176A72C4BB2B /* Headers */ = {
+		15A882B0B90CAEA478468D8F426E40C9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41A36336A307F50F5EBB88EF9129C433 /* QRCodeReader.swift-umbrella.h in Headers */,
+				7F39A763FBA50A1F3B447683B741714F /* Pods-OTPCallbackDemo-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		78164B4CF6CCE413D68A71E243F44602 /* Headers */ = {
+		4A7E8517EDCFBC954F2711070D2B8980 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA8F608CEC970C1F417DE0AE26B68185 /* SwiftBase32-umbrella.h in Headers */,
+				7ACEA913995FD8CECB29C2BF47CD3653 /* CallbackURLKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		80F95514EE8E39744512CA3398C0B25E /* Headers */ = {
+		74FF03F2C97BA13CC373B2296954052F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66821A739CEEFA96D65957EE2AE20360 /* Pods-SwiftOTPIntents-umbrella.h in Headers */,
+				3FEC3A8CB58569E07783A364E6B014EC /* AcknowList-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		826544F723E71AE0C51FFB93E97BC008 /* Headers */ = {
+		9271216CEBB67BB4E1DB250ACF74C91E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				567D762D004F16392518F37E9B2CFD87 /* Pods-OTPKit-umbrella.h in Headers */,
+				7F74F071867B13EADBE8A2F3CF13AF06 /* QRCodeReader.swift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8802D23B3D7D1FDE4945C5E5E7084CB9 /* Headers */ = {
+		A3889D6E687089AA4D6938B4E4F2D365 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				500B171A6E6BB1868B58B08111668D98 /* CallbackURLKit-umbrella.h in Headers */,
+				7E58724C5D5CE4C55B15C5AF7DB6A387 /* Pods-SwiftOTP-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8F760E7F9BBE6A9663C67D5B807BE5EB /* Headers */ = {
+		D38E1A881F9AC43BF94A8BDEC0C4AF19 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E8F26084EACF6371CB5817F919661A0 /* AcknowList-umbrella.h in Headers */,
+				E5AF6120522B46348B42B5BF3F2C2627 /* SwiftBase32-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A3127FF5CD29647D6F9CC996BF4235EB /* Headers */ = {
+		DCC618095A8CDCE57DBC6DA1DE88571A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				090CFE730CDA28481EAADBF27A55FEC1 /* Pods-OTPKitTests-umbrella.h in Headers */,
+				3FB50507D52BD27266304C0F85182A5C /* Pods-OTPKitTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1040A7148D5E7AF3C1A45BF67C96B21 /* Headers */ = {
+		E6B7B7551012AB5D9495B222D1A28164 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E05B70ACE72CBD82351724DF36C1DA09 /* Pods-SwiftOTP-umbrella.h in Headers */,
+				C1EEC03178078EF019A09E6B5277CB30 /* Pods-SwiftOTPIntents-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		003CCC7A2C1EB3F905DCFB5C5934F42A /* QRCodeReader.swift */ = {
+		29F475E46142FCD224E52A385AD26DB6 /* QRCodeReader.swift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 134F28B0B63500754D3FCDE1260E4F94 /* Build configuration list for PBXNativeTarget "QRCodeReader.swift" */;
+			buildConfigurationList = 7133331630590FC9166D9AC74D178B16 /* Build configuration list for PBXNativeTarget "QRCodeReader.swift" */;
 			buildPhases = (
-				284147301F58CD90C130D864F2F77E46 /* Sources */,
-				1C9370D8B34FA5665221BA8A71E1C61E /* Frameworks */,
-				67F43EA5E6CF591663CE176A72C4BB2B /* Headers */,
+				9271216CEBB67BB4E1DB250ACF74C91E /* Headers */,
+				44CDE4EC06FF9CF89E59CDCEB6C72700 /* Sources */,
+				0E472E6B58CCE989BF3A4EA11B147843 /* Frameworks */,
+				1251C8C3E80DC124F64D7818201EECA8 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -710,35 +695,17 @@
 			);
 			name = QRCodeReader.swift;
 			productName = QRCodeReader.swift;
-			productReference = D7D6E078623B04B4AA956EE799055232 /* QRCodeReader.framework */;
+			productReference = 3652B113DC334A3FDA0C14F6794A5F69 /* QRCodeReader.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		242EC4A4D0E5CC1B1A3F73471CB9DB4D /* Pods-OTPKit */ = {
+		51691F4311958691BD98F5F26E2D77D4 /* AcknowList */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 75755F0E077D996FC03D10741CCD9F5E /* Build configuration list for PBXNativeTarget "Pods-OTPKit" */;
+			buildConfigurationList = CB362FDE9D9EFB3CBA1E3A5B879C9EDF /* Build configuration list for PBXNativeTarget "AcknowList" */;
 			buildPhases = (
-				879F5B7CC59E86A5BAE01FF019A53399 /* Sources */,
-				C8407DEE9CCDECB1539657E1117E8D43 /* Frameworks */,
-				826544F723E71AE0C51FFB93E97BC008 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6A549E3F12E786B91EB34DE6A712FB18 /* PBXTargetDependency */,
-			);
-			name = "Pods-OTPKit";
-			productName = "Pods-OTPKit";
-			productReference = 492C377AC891EB76E8B641FAE4CA9A68 /* Pods_OTPKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		2C4B25DA191884B406DDFDE48CCFD90A /* AcknowList */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7B7D7D191E488D4D53EB2F8CBEF0E612 /* Build configuration list for PBXNativeTarget "AcknowList" */;
-			buildPhases = (
-				39533EA85AEB651248EC9E34540A67D8 /* Sources */,
-				778EDCD316D15748D24295A67F4FFE1B /* Frameworks */,
-				A8868573F5E1E90F16C44D865A7E987E /* Resources */,
-				8F760E7F9BBE6A9663C67D5B807BE5EB /* Headers */,
+				74FF03F2C97BA13CC373B2296954052F /* Headers */,
+				EE8A18C20764C6834833230D3C656744 /* Sources */,
+				120150D63B95A51EBA4BA736583D9B61 /* Frameworks */,
+				D26DC425550C0862B3CA13D99BF233D5 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -746,74 +713,77 @@
 			);
 			name = AcknowList;
 			productName = AcknowList;
-			productReference = AC8AE1C8E46E583047A4566417606DEF /* AcknowList.framework */;
+			productReference = 1AB292DEC0B08C071C47375988B3366E /* AcknowList.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		411606F8B593CE53E8C7FB09010A47D7 /* Pods-SwiftOTP */ = {
+		5792D4211EBCC0A2C2800AF96C2385BC /* Pods-OTPKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A6DEF98716FB9A6E60DC1085FDB2E10B /* Build configuration list for PBXNativeTarget "Pods-SwiftOTP" */;
+			buildConfigurationList = C137C0CBBFB6A98929EFD475E33A732E /* Build configuration list for PBXNativeTarget "Pods-OTPKit" */;
 			buildPhases = (
-				1153D26AF04EC83124452D4C728530B3 /* Sources */,
-				C588923C2C62C661377510CCC5D6E396 /* Frameworks */,
-				E1040A7148D5E7AF3C1A45BF67C96B21 /* Headers */,
+				0E5BD8FA9B1A3BFD5F459311ABC25111 /* Headers */,
+				22097679F9B32873D91BAA7F3125DF79 /* Sources */,
+				3F7DFA06161937341EA140ED0F247FFA /* Frameworks */,
+				0D07AEAEA63B86B516A680C7B026CE9C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F5A5C27BAFEBAFEFA60E5012385ED684 /* PBXTargetDependency */,
-				7AAE6FABC0B01E14F5CF434169389753 /* PBXTargetDependency */,
-				468FA2BCC4A760C9C444D7EB403F5914 /* PBXTargetDependency */,
-				EE3D0CB103DA605F0A54B72D39C0BE66 /* PBXTargetDependency */,
+				D4FC022EE6B3E6322F3F300163C35A49 /* PBXTargetDependency */,
+			);
+			name = "Pods-OTPKit";
+			productName = "Pods-OTPKit";
+			productReference = 5386F0B89EBB4905B9C6C543D0B2830D /* Pods_OTPKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5A172DE0DFE2A61BD264293286E1B7D4 /* Pods-SwiftOTP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABB92A5A7CC70A90321165A3D8BC3B17 /* Build configuration list for PBXNativeTarget "Pods-SwiftOTP" */;
+			buildPhases = (
+				A3889D6E687089AA4D6938B4E4F2D365 /* Headers */,
+				BDEE45576E88F20F31ECE3F8B5BCB9DF /* Sources */,
+				81B2EF54C7934C5B75D33528784B4DAA /* Frameworks */,
+				79DBF8AEF32F54152E2A7CA341E4A455 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				787F4A40EA02DA1276205F3B5621C378 /* PBXTargetDependency */,
+				83183BBC3E231839021F48CAB877BE8E /* PBXTargetDependency */,
+				CC6FDA32B0025B575162501F9EE5F51E /* PBXTargetDependency */,
+				295F8C9F13AB04E1C476B12B412CEA11 /* PBXTargetDependency */,
 			);
 			name = "Pods-SwiftOTP";
 			productName = "Pods-SwiftOTP";
-			productReference = 5902FD950A6E15424347A230CB7DCF02 /* Pods_SwiftOTP.framework */;
+			productReference = EE7579B2FF55B1E91FBC84749435A733 /* Pods_SwiftOTP.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		77B8F9F3145A66EB11B533DFB75A0096 /* Pods-OTPKitTests */ = {
+		5F57E1F0FCE13E5AEAD76C1A52EAC13E /* Pods-OTPKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DAD5C7526AC84178594412D91DABA8F8 /* Build configuration list for PBXNativeTarget "Pods-OTPKitTests" */;
+			buildConfigurationList = D6BEBA7562B0A2B215F29D18ECAA8F24 /* Build configuration list for PBXNativeTarget "Pods-OTPKitTests" */;
 			buildPhases = (
-				7D43C302A909F9664096406BE30E546E /* Sources */,
-				A7CA41C9102B8968C7D975C905C58FC9 /* Frameworks */,
-				A3127FF5CD29647D6F9CC996BF4235EB /* Headers */,
+				DCC618095A8CDCE57DBC6DA1DE88571A /* Headers */,
+				11CB1C26C2736DCE34B6E1FE0B33FC34 /* Sources */,
+				9083A083BEDA5F6DBDC63114321E55A0 /* Frameworks */,
+				9AB4BC2D425E8991C5CA9C374A445915 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9D63A378650268C3689D131381372BED /* PBXTargetDependency */,
-				65B638343C31434FDF39EFD777FE369A /* PBXTargetDependency */,
+				D070ABBDD5D0CD001EB350C648D5CF99 /* PBXTargetDependency */,
 			);
 			name = "Pods-OTPKitTests";
 			productName = "Pods-OTPKitTests";
-			productReference = 6CB4FDC8D9F440D8C7133EF63B3CFEE8 /* Pods_OTPKitTests.framework */;
+			productReference = 27D44BCAA5EAE601651592C2C06CC4DB /* Pods_OTPKitTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		9B2B914EEEC92ABF673DEDB4A623B7A3 /* Pods-OTPCallbackDemo */ = {
+		749F6954EA7F87BD3F45B066207A3003 /* Pods-SwiftOTPIntents */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7ED9921A030C831E4D341D04B670E379 /* Build configuration list for PBXNativeTarget "Pods-OTPCallbackDemo" */;
+			buildConfigurationList = 7C351C9A195876FC691DD555F2DE9222 /* Build configuration list for PBXNativeTarget "Pods-SwiftOTPIntents" */;
 			buildPhases = (
-				74B2C583DF674CF3A3F0F705FFD85865 /* Sources */,
-				51CE2052C11DC637300660E6665990A5 /* Frameworks */,
-				095840F3CA6AB028D7B817C7C78E36DA /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				037A782D653D1415F54B83D2A8D61918 /* PBXTargetDependency */,
-			);
-			name = "Pods-OTPCallbackDemo";
-			productName = "Pods-OTPCallbackDemo";
-			productReference = C6F786E8EBC5DB6E967BFF7DDE7D205F /* Pods_OTPCallbackDemo.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		B556FCBEB4BF8FE6D364F3E12C9EE75E /* Pods-SwiftOTPIntents */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FC5A3A93034967DBC5A3146CD6E6841F /* Build configuration list for PBXNativeTarget "Pods-SwiftOTPIntents" */;
-			buildPhases = (
-				8894616C73E5C25381F2CEF92C678160 /* Sources */,
-				49D1F66A306D9DA8CFDCA275FA18EABB /* Frameworks */,
-				80F95514EE8E39744512CA3398C0B25E /* Headers */,
+				E6B7B7551012AB5D9495B222D1A28164 /* Headers */,
+				8C17DF10C38A57D1F4CC15330F253282 /* Sources */,
+				A1045C99352DA9EAA8FB11BC05704D98 /* Frameworks */,
+				91A7626B9CFC88F7DEECEAC95B7A7149 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -821,16 +791,36 @@
 			);
 			name = "Pods-SwiftOTPIntents";
 			productName = "Pods-SwiftOTPIntents";
-			productReference = C727B57921CC016FA807F3798F1B7E30 /* Pods_SwiftOTPIntents.framework */;
+			productReference = 69DEF6BBC5D1CFAF0DB0528D9326461C /* Pods_SwiftOTPIntents.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F1C858452D8B87DD2F7C586C87C41554 /* CallbackURLKit */ = {
+		8AC66EFC6EF7940DB97C03B5EB609064 /* Pods-OTPCallbackDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 99869B40E5FF98F4EBC7EBAAFB8CACC6 /* Build configuration list for PBXNativeTarget "CallbackURLKit" */;
+			buildConfigurationList = 4DAD32760C5E1632FA7073D4EA42CEE5 /* Build configuration list for PBXNativeTarget "Pods-OTPCallbackDemo" */;
 			buildPhases = (
-				C5E872F3B8007F8BF9230EE40561913C /* Sources */,
-				88FB0DBFB8E3A1E52B01683C9731DDED /* Frameworks */,
-				8802D23B3D7D1FDE4945C5E5E7084CB9 /* Headers */,
+				15A882B0B90CAEA478468D8F426E40C9 /* Headers */,
+				2DA1738CC027DE59509F2888D5915E47 /* Sources */,
+				6C0FE1F07370C4FF5BB47B75779D65D8 /* Frameworks */,
+				0F3BA1688F01AAA9F0C1C69036350FE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F02522F83634D75EB7AF6475FEE640F /* PBXTargetDependency */,
+			);
+			name = "Pods-OTPCallbackDemo";
+			productName = "Pods-OTPCallbackDemo";
+			productReference = 12FCFA740C3233B3C72208C0BAA8E220 /* Pods_OTPCallbackDemo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C2978C28B3BBFD8F48B305E4057D6EC4 /* CallbackURLKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A72505774ED61C590244BC45E2E0AD09 /* Build configuration list for PBXNativeTarget "CallbackURLKit" */;
+			buildPhases = (
+				4A7E8517EDCFBC954F2711070D2B8980 /* Headers */,
+				9EE5457FF04D5E7B9A9FEA7B9BB2AAA6 /* Sources */,
+				FFBE7314F89446AD5AD8A28B0D8A58BE /* Frameworks */,
+				06D3DB19C81D4965FDE91CD73CF01B4F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -838,16 +828,17 @@
 			);
 			name = CallbackURLKit;
 			productName = CallbackURLKit;
-			productReference = 8BF0A4BEB079891879A4A5A18096AECD /* CallbackURLKit.framework */;
+			productReference = 6983E7040877CDDD17F2103161EBB0D7 /* CallbackURLKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F8EE458532DD01824E6E4E7AD940BBEC /* SwiftBase32 */ = {
+		F6EDFFEF680971B509A9E3F16CC743FC /* SwiftBase32 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 121532AF35A287A5224FBC11FDDABD17 /* Build configuration list for PBXNativeTarget "SwiftBase32" */;
+			buildConfigurationList = 1EEE03B90DD9875B1FC95DFB3778C47D /* Build configuration list for PBXNativeTarget "SwiftBase32" */;
 			buildPhases = (
-				6D4E6A05EDA3DC953302205847EEC2C4 /* Sources */,
-				AD3345ED7E303F5637E98ECFB412087D /* Frameworks */,
-				78164B4CF6CCE413D68A71E243F44602 /* Headers */,
+				D38E1A881F9AC43BF94A8BDEC0C4AF19 /* Headers */,
+				7B3AED346A11A9F3A7045DA0CFBB5EA9 /* Sources */,
+				6B88D9FEC5FEE22924479285783697CB /* Frameworks */,
+				7DBAB42C5399372905884FE41A816651 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -855,217 +846,261 @@
 			);
 			name = SwiftBase32;
 			productName = SwiftBase32;
-			productReference = 13FCB1178EDD83DF8DA81DBBEE3D7942 /* SwiftBase32.framework */;
+			productReference = 901FF3D5D385F931A7407547E220F9C8 /* SwiftBase32.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 1000;
-				TargetAttributes = {
-					003CCC7A2C1EB3F905DCFB5C5934F42A = {
-						LastSwiftMigration = 1000;
-					};
-					2C4B25DA191884B406DDFDE48CCFD90A = {
-						LastSwiftMigration = 1000;
-					};
-				};
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = BC7F75FCB2BAEF6E4EB0CABD7590FB8B /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 0B9358A0741597BE1EAD22067452F7AC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2C4B25DA191884B406DDFDE48CCFD90A /* AcknowList */,
-				F1C858452D8B87DD2F7C586C87C41554 /* CallbackURLKit */,
-				9B2B914EEEC92ABF673DEDB4A623B7A3 /* Pods-OTPCallbackDemo */,
-				242EC4A4D0E5CC1B1A3F73471CB9DB4D /* Pods-OTPKit */,
-				77B8F9F3145A66EB11B533DFB75A0096 /* Pods-OTPKitTests */,
-				411606F8B593CE53E8C7FB09010A47D7 /* Pods-SwiftOTP */,
-				B556FCBEB4BF8FE6D364F3E12C9EE75E /* Pods-SwiftOTPIntents */,
-				003CCC7A2C1EB3F905DCFB5C5934F42A /* QRCodeReader.swift */,
-				F8EE458532DD01824E6E4E7AD940BBEC /* SwiftBase32 */,
+				51691F4311958691BD98F5F26E2D77D4 /* AcknowList */,
+				C2978C28B3BBFD8F48B305E4057D6EC4 /* CallbackURLKit */,
+				8AC66EFC6EF7940DB97C03B5EB609064 /* Pods-OTPCallbackDemo */,
+				5792D4211EBCC0A2C2800AF96C2385BC /* Pods-OTPKit */,
+				5F57E1F0FCE13E5AEAD76C1A52EAC13E /* Pods-OTPKitTests */,
+				5A172DE0DFE2A61BD264293286E1B7D4 /* Pods-SwiftOTP */,
+				749F6954EA7F87BD3F45B066207A3003 /* Pods-SwiftOTPIntents */,
+				29F475E46142FCD224E52A385AD26DB6 /* QRCodeReader.swift */,
+				F6EDFFEF680971B509A9E3F16CC743FC /* SwiftBase32 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A8868573F5E1E90F16C44D865A7E987E /* Resources */ = {
+		06D3DB19C81D4965FDE91CD73CF01B4F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13E854C1957252DA415E6B308ECE6976 /* AcknowList.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D07AEAEA63B86B516A680C7B026CE9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F3BA1688F01AAA9F0C1C69036350FE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1251C8C3E80DC124F64D7818201EECA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79DBF8AEF32F54152E2A7CA341E4A455 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DBAB42C5399372905884FE41A816651 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91A7626B9CFC88F7DEECEAC95B7A7149 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AB4BC2D425E8991C5CA9C374A445915 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D26DC425550C0862B3CA13D99BF233D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F81A2654EBB49955481A98F39E75238 /* AcknowList.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1153D26AF04EC83124452D4C728530B3 /* Sources */ = {
+		11CB1C26C2736DCE34B6E1FE0B33FC34 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E1A7719C66CB84A2B4694B951BB9B06 /* Pods-SwiftOTP-dummy.m in Sources */,
+				AE8B01BA3B1512C98719DAFADF813BAB /* Pods-OTPKitTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		284147301F58CD90C130D864F2F77E46 /* Sources */ = {
+		22097679F9B32873D91BAA7F3125DF79 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F1A745D251F6D074F4B5ED7E0E2267D /* QRCodeReader.swift in Sources */,
-				163423A1DF3A92D9F30E1B666C98465C /* QRCodeReader.swift-dummy.m in Sources */,
-				A53C3A5FC20CF86F7FB2CD2E247781FB /* QRCodeReaderResult.swift in Sources */,
-				FE94098EA9FC4ECFCB87FBF60CDA8BF5 /* QRCodeReaderView.swift in Sources */,
-				40307884C9E14144FB376DCE7AB0C0CA /* QRCodeReaderViewContainer.swift in Sources */,
-				0204620BD5C51070B9FAACB37A43F9D9 /* QRCodeReaderViewController.swift in Sources */,
-				DA582C417B15BA98A9EED3EFD47F7E86 /* QRCodeReaderViewControllerBuilder.swift in Sources */,
-				8413F2800E880888E677DB9ACF74154A /* QRCodeReaderViewControllerDelegate.swift in Sources */,
-				E439E4A6C893AC7FA763F1B2D2F33C3E /* ReaderOverlayView.swift in Sources */,
-				ECF60CF24BBC427B1A6E05EA12075A11 /* SwitchCameraButton.swift in Sources */,
-				1C8EDCC1D266C99D8BACE75B6C73E93B /* ToggleTorchButton.swift in Sources */,
+				8A539AF93B779A4A845A938E1576D48A /* Pods-OTPKit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		39533EA85AEB651248EC9E34540A67D8 /* Sources */ = {
+		2DA1738CC027DE59509F2888D5915E47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75957667828EA89180858396A55763F4 /* Acknow.swift in Sources */,
-				C8D214DB566A9C330FD793E2ED4D6B35 /* AcknowList-dummy.m in Sources */,
-				D716D0C9ADE5E7A0A62AB4EF0FA56675 /* AcknowListViewController.swift in Sources */,
-				E320CB56392BCDB8D11F99B839EF08FB /* AcknowLocalization.swift in Sources */,
-				2AC7119008B685013BA9875358D3D3F3 /* AcknowParser.swift in Sources */,
-				A88EDECB4BA5F48E21E2DC7F3D760382 /* AcknowViewController.swift in Sources */,
+				9897097E946CA5D86F98F844FAF4780F /* Pods-OTPCallbackDemo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6D4E6A05EDA3DC953302205847EEC2C4 /* Sources */ = {
+		44CDE4EC06FF9CF89E59CDCEB6C72700 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				767523DF3B524B899C09230DE021299C /* Base16.swift in Sources */,
-				75979D730852E4276BE2C43A6DB1FA48 /* Base32.swift in Sources */,
-				75CA3B8C02462ABFEF8DA8AD28133FE5 /* StringExtension.swift in Sources */,
-				6BB6930376224E8EB3AC75D4A98F5486 /* SwiftBase32-dummy.m in Sources */,
+				6D0DF8C852F40BD0BA5BA6AF0D517334 /* QRCodeReader.swift in Sources */,
+				6967171BF47D707A9327B3BAB924CA6C /* QRCodeReader.swift-dummy.m in Sources */,
+				A545E12C27AF78537BE170C550D7A77A /* QRCodeReaderResult.swift in Sources */,
+				9C519108851167CFA5CE1542B214D53D /* QRCodeReaderView.swift in Sources */,
+				540817F995B4A3A5966C21DFE34B9C0A /* QRCodeReaderViewContainer.swift in Sources */,
+				34CF3751CCEE78B9D7B4AD2047C4D5AF /* QRCodeReaderViewController.swift in Sources */,
+				97205CB1427D0AF744247CE71F357591 /* QRCodeReaderViewControllerBuilder.swift in Sources */,
+				F47FAF105D05876AE65A43C4ABE1A1EC /* QRCodeReaderViewControllerDelegate.swift in Sources */,
+				1946D09EDE4DE349FA7EDD1FB3D94F90 /* ReaderOverlayView.swift in Sources */,
+				E40CD05AFD50106B17D9A3B953F1A898 /* SwitchCameraButton.swift in Sources */,
+				9949F9F80C4545265A76A0DA6827E7BC /* ToggleTorchButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		74B2C583DF674CF3A3F0F705FFD85865 /* Sources */ = {
+		7B3AED346A11A9F3A7045DA0CFBB5EA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7705AFD783550234AEDA9004393EC723 /* Pods-OTPCallbackDemo-dummy.m in Sources */,
+				87FF6AE20511BA1283B6DD6F1F674679 /* Base16.swift in Sources */,
+				6772409B2ECC388FE11A845D0D9E8016 /* Base32.swift in Sources */,
+				972087FA3866FA8E8B2C417EB3FA06F2 /* shim.swift in Sources */,
+				1F0F9DFBAE817D1B9C28F877FE899F3B /* StringExtension.swift in Sources */,
+				DE3A134CFA8BFD7F85AD712F15C799BF /* SwiftBase32-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7D43C302A909F9664096406BE30E546E /* Sources */ = {
+		8C17DF10C38A57D1F4CC15330F253282 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D05BB269264E32196AA94978ED156317 /* Pods-OTPKitTests-dummy.m in Sources */,
+				3C632D1DAD18E797BB450921E05FBADA /* Pods-SwiftOTPIntents-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		879F5B7CC59E86A5BAE01FF019A53399 /* Sources */ = {
+		9EE5457FF04D5E7B9A9FEA7B9BB2AAA6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95D5866A63C1671C95CB4CEE66796F18 /* Pods-OTPKit-dummy.m in Sources */,
+				06A824EF1070F5551D5CE1EA42384EC6 /* CallbackClient.swift in Sources */,
+				04860BC5B192868D5C4D002433B64DBF /* CallbackRequest.swift in Sources */,
+				0AA0EEA485A522FE504663CB6E9ED494 /* CallbackRouter.swift in Sources */,
+				B2F3D2346A4D646A000699FC4A691475 /* CallbackURLKit-dummy.m in Sources */,
+				5E41E5521B157866003CEBA0A6498EE4 /* CallbackURLKit.swift in Sources */,
+				CEFF70559B83EFC4EA250736625BD2D3 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8894616C73E5C25381F2CEF92C678160 /* Sources */ = {
+		BDEE45576E88F20F31ECE3F8B5BCB9DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0CFE114A6B4568B39556F84139F65B5 /* Pods-SwiftOTPIntents-dummy.m in Sources */,
+				8924C45E7790A36B10372C5310B8B282 /* Pods-SwiftOTP-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C5E872F3B8007F8BF9230EE40561913C /* Sources */ = {
+		EE8A18C20764C6834833230D3C656744 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BCD9FD1E1CD2A6EC28E1CD7D45F9A78 /* CallbackClient.swift in Sources */,
-				95D9AA17C85AEBCD08F472C67D3D3562 /* CallbackRequest.swift in Sources */,
-				2F2BDE9543939929645DAAB55A515144 /* CallbackRouter.swift in Sources */,
-				12E4589D6442703995DAD7177C1E6576 /* CallbackURLKit-dummy.m in Sources */,
-				1A297E80941AC529EEF4833F9CAB5BF2 /* CallbackURLKit.swift in Sources */,
-				FF76EA268E43E88F678B004AB7BAAAC6 /* Extensions.swift in Sources */,
+				EC07FBEFC038A6E5AE8CB833D71739FB /* Acknow.swift in Sources */,
+				8AB9B7BECC24AC69C4A0B68B1FB09CDB /* AcknowList-dummy.m in Sources */,
+				0A1ABF5BA068A0246BE893EB79A5B5C5 /* AcknowListViewController.swift in Sources */,
+				45E36BAA8228D491790A7FC5B886ADF0 /* AcknowLocalization.swift in Sources */,
+				225E9FD95946F5A3FA79EDB4357B9E4A /* AcknowParser.swift in Sources */,
+				C228E56186A268C4728AF5BE996DED33 /* AcknowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		037A782D653D1415F54B83D2A8D61918 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CallbackURLKit;
-			target = F1C858452D8B87DD2F7C586C87C41554 /* CallbackURLKit */;
-			targetProxy = EF4C0EE6D4E7764E69B2CC846833D4E6 /* PBXContainerItemProxy */;
-		};
-		468FA2BCC4A760C9C444D7EB403F5914 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = QRCodeReader.swift;
-			target = 003CCC7A2C1EB3F905DCFB5C5934F42A /* QRCodeReader.swift */;
-			targetProxy = 39D5C7B14BE87AF16B07A53A73950CE9 /* PBXContainerItemProxy */;
-		};
-		65B638343C31434FDF39EFD777FE369A /* PBXTargetDependency */ = {
+		295F8C9F13AB04E1C476B12B412CEA11 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftBase32;
-			target = F8EE458532DD01824E6E4E7AD940BBEC /* SwiftBase32 */;
-			targetProxy = 87FC5DAF06176E0E18F03DEC5DD719F5 /* PBXContainerItemProxy */;
+			target = F6EDFFEF680971B509A9E3F16CC743FC /* SwiftBase32 */;
+			targetProxy = EAAABDA2B1592F0400FFBBD54F31BE64 /* PBXContainerItemProxy */;
 		};
-		6A549E3F12E786B91EB34DE6A712FB18 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftBase32;
-			target = F8EE458532DD01824E6E4E7AD940BBEC /* SwiftBase32 */;
-			targetProxy = F34A10838DE121E752461D5653849AC4 /* PBXContainerItemProxy */;
-		};
-		7AAE6FABC0B01E14F5CF434169389753 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CallbackURLKit;
-			target = F1C858452D8B87DD2F7C586C87C41554 /* CallbackURLKit */;
-			targetProxy = 450387EA80A16BDA2A8D224CDFC31CFB /* PBXContainerItemProxy */;
-		};
-		9D63A378650268C3689D131381372BED /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-OTPKit";
-			target = 242EC4A4D0E5CC1B1A3F73471CB9DB4D /* Pods-OTPKit */;
-			targetProxy = 317DA1D2E01570940C3672E6B78246E5 /* PBXContainerItemProxy */;
-		};
-		EE3D0CB103DA605F0A54B72D39C0BE66 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftBase32;
-			target = F8EE458532DD01824E6E4E7AD940BBEC /* SwiftBase32 */;
-			targetProxy = 9E9BC6F98E0E5848D7C73AEC66005426 /* PBXContainerItemProxy */;
-		};
-		F5A5C27BAFEBAFEFA60E5012385ED684 /* PBXTargetDependency */ = {
+		787F4A40EA02DA1276205F3B5621C378 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AcknowList;
-			target = 2C4B25DA191884B406DDFDE48CCFD90A /* AcknowList */;
-			targetProxy = B64C601E956D9A5F4944759C4A408B01 /* PBXContainerItemProxy */;
+			target = 51691F4311958691BD98F5F26E2D77D4 /* AcknowList */;
+			targetProxy = F61E736B1DA8CDCBD25521E8CA77FB2A /* PBXContainerItemProxy */;
+		};
+		83183BBC3E231839021F48CAB877BE8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CallbackURLKit;
+			target = C2978C28B3BBFD8F48B305E4057D6EC4 /* CallbackURLKit */;
+			targetProxy = EBFFE4B90DAE06E53AD66740CDF970EA /* PBXContainerItemProxy */;
+		};
+		8F02522F83634D75EB7AF6475FEE640F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CallbackURLKit;
+			target = C2978C28B3BBFD8F48B305E4057D6EC4 /* CallbackURLKit */;
+			targetProxy = FA819834B40E071F4C362C5A57CE17B8 /* PBXContainerItemProxy */;
+		};
+		CC6FDA32B0025B575162501F9EE5F51E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QRCodeReader.swift;
+			target = 29F475E46142FCD224E52A385AD26DB6 /* QRCodeReader.swift */;
+			targetProxy = ECEF62B1B5D6E73825887AFBD6D17078 /* PBXContainerItemProxy */;
+		};
+		D070ABBDD5D0CD001EB350C648D5CF99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-OTPKit";
+			target = 5792D4211EBCC0A2C2800AF96C2385BC /* Pods-OTPKit */;
+			targetProxy = 1AB8067882CFD2A7C0852266020B8194 /* PBXContainerItemProxy */;
+		};
+		D4FC022EE6B3E6322F3F300163C35A49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftBase32;
+			target = F6EDFFEF680971B509A9E3F16CC743FC /* SwiftBase32 */;
+			targetProxy = 85FAB5691D39BA40FDC8DED34BFF43C5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		02C75C024FE7395910437B920A3811B8 /* Release */ = {
+		063C8D0020DC2D1BF9862EE2187F3453 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11F2DC4B645CA76B46150D1C0E24E048 /* Pods-SwiftOTPIntents.release.xcconfig */;
+			baseConfigurationReference = 42ACC70B18299541C213CF1D5D25F125 /* Pods-SwiftOTPIntents.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1076,10 +1111,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SwiftOTPIntents/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftOTPIntents/Pods-SwiftOTPIntents-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftOTPIntents/Pods-SwiftOTPIntents.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1096,10 +1135,13 @@
 			};
 			name = Release;
 		};
-		082BC8F9CF16DC05B610B9BBD25C5AEB /* Release */ = {
+		255ECD4C567033273C17E5F95AE8B939 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BA6E6A65B9BA793C335CFF2AAB5DBFF /* SwiftBase32.xcconfig */;
+			baseConfigurationReference = 89128C36EAF25CCD95746D8853904DC5 /* Pods-SwiftOTPIntents.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1109,27 +1151,30 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftBase32/SwiftBase32-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftBase32/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftOTPIntents/Pods-SwiftOTPIntents-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftBase32/SwiftBase32.modulemap";
-				PRODUCT_MODULE_NAME = SwiftBase32;
-				PRODUCT_NAME = SwiftBase32;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftOTPIntents/Pods-SwiftOTPIntents.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		08638A96A528B1EC32DE62F8A728389D /* Release */ = {
+		257497152829C177993B5EC99C1D227A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1161,8 +1206,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1181,50 +1224,19 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		10E583306CCFDB8BD53FC75A90500063 /* Debug */ = {
+		2DB433A2529EEC89A6CEB1B04B8AE054 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4F9F6479084AEFC805522DF79B72FE2 /* Pods-SwiftOTPIntents.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SwiftOTPIntents/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SwiftOTPIntents/Pods-SwiftOTPIntents.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		11C4DE93FD8F4B37FE794B0746DDC91E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CB5FAF8A70B96496AB8ABDFF4DC8DA6 /* CallbackURLKit.xcconfig */;
+			baseConfigurationReference = 6708DE51ABCACB4A31226A7F577D4070 /* SwiftBase32.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1235,54 +1247,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CallbackURLKit/CallbackURLKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CallbackURLKit/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftBase32/SwiftBase32-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftBase32/SwiftBase32-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CallbackURLKit/CallbackURLKit.modulemap";
-				PRODUCT_MODULE_NAME = CallbackURLKit;
-				PRODUCT_NAME = CallbackURLKit;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftBase32/SwiftBase32.modulemap";
+				PRODUCT_MODULE_NAME = SwiftBase32;
+				PRODUCT_NAME = SwiftBase32;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3637394DB81CE64414D67EA55FD7340F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E3693ED2E2F73848E8EDE0043871787A /* Pods-OTPCallbackDemo.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-OTPCallbackDemo/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-OTPCallbackDemo/Pods-OTPCallbackDemo.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1290,41 +1270,9 @@
 			};
 			name = Release;
 		};
-		458EEFF82F730642981DF9B68FF6D0CE /* Debug */ = {
+		5C8A7027153B6276389E74B5DBEA6101 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 947634DCD2F0C92297B3A26FE157C449 /* QRCodeReader.swift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/QRCodeReader.swift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift.modulemap";
-				PRODUCT_MODULE_NAME = QRCodeReader;
-				PRODUCT_NAME = QRCodeReader;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		4D61EE461B4D8AB1881E4242FF9D6745 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BF0CCEF7C9546A66C1B92A370169691 /* AcknowList.xcconfig */;
+			baseConfigurationReference = 59D9233E072321A659F1F25843A98DB5 /* AcknowList.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1336,89 +1284,91 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREFIX_HEADER = "Target Support Files/AcknowList/AcknowList-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AcknowList/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/AcknowList/AcknowList-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/AcknowList/AcknowList.modulemap";
 				PRODUCT_MODULE_NAME = AcknowList;
 				PRODUCT_NAME = AcknowList;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5E899EF0CD59C6EDB41779A50756869D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6708DE51ABCACB4A31226A7F577D4070 /* SwiftBase32.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftBase32/SwiftBase32-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftBase32/SwiftBase32-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftBase32/SwiftBase32.modulemap";
+				PRODUCT_MODULE_NAME = SwiftBase32;
+				PRODUCT_NAME = SwiftBase32;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		60B2D565CE4BDA8067E1DD824CBA7143 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 684B0B102F8DB2F9255E0C7A9E2820B0 /* QRCodeReader.swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift.modulemap";
+				PRODUCT_MODULE_NAME = QRCodeReader;
+				PRODUCT_NAME = QRCodeReader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		710870DB558154EBB02415134CD8568D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95F7AC6F14EA32DD6CBF513BA737FE9A /* Pods-OTPCallbackDemo.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-OTPCallbackDemo/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-OTPCallbackDemo/Pods-OTPCallbackDemo.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		72FE4F40A0AE2461256C0E5634467B57 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FBB7AEC29C7A04F44DE00034322DFAA /* Pods-OTPKitTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-OTPKitTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-OTPKitTests/Pods-OTPKitTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1426,9 +1376,9 @@
 			};
 			name = Release;
 		};
-		733CD74B3C9ADF45D45BB850028830B7 /* Debug */ = {
+		681A3CEA417B7660F87889DAAEB8FA32 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB4DA385828F08D36B4BB191DCD649CC /* Pods-SwiftOTP.debug.xcconfig */;
+			baseConfigurationReference = 583071B153F1D160AB991DE73F350832 /* Pods-OTPKit.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1441,10 +1391,52 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SwiftOTP/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-OTPKit/Pods-OTPKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OTPKit/Pods-OTPKit.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6A9761598A043F73B676D24C1BC327A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BCDF5D3350ED54E86F05685DFD0D049 /* Pods-SwiftOTP.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1454,17 +1446,16 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		85F07346A8978F003D503C4F3D830FBF /* Debug */ = {
+		7A1F2BF3F501A23AC82E3A94E36185BF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FB442960EFB9E680B8B6854D9597F26 /* Pods-OTPKitTests.debug.xcconfig */;
+			baseConfigurationReference = E97849FB45304D583664913F74BE7EDC /* Pods-OTPKit.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1477,10 +1468,88 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-OTPKitTests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-OTPKit/Pods-OTPKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OTPKit/Pods-OTPKit.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8DE1E30535A8558757A40885CDC7917E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 684B0B102F8DB2F9255E0C7A9E2820B0 /* QRCodeReader.swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift.modulemap";
+				PRODUCT_MODULE_NAME = QRCodeReader;
+				PRODUCT_NAME = QRCodeReader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		979ECA1A82E9DE50BC8A113530131697 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 215C1BC154DCAC360CA13D3EFEE7B512 /* Pods-OTPKitTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OTPKitTests/Pods-OTPKitTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-OTPKitTests/Pods-OTPKitTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1490,15 +1559,196 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		9DAE5233986C01ADB6E67169C53A3FD2 /* Debug */ = {
+		9BAEA5C5A2F0249B0A2759B45EE848FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 791DF5973CD8DF7D09F63F91A3799477 /* Pods-OTPCallbackDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-OTPCallbackDemo/Pods-OTPCallbackDemo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-OTPCallbackDemo/Pods-OTPCallbackDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B20450446530F20BB2AC0174B67E7CD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E503FA3F904BCB2E0E12C4353ECDD89 /* Pods-SwiftOTP.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B5B3291721EDFA31F568AA8768D8A945 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3970AA7BABB920B850D00B754A3C5C01 /* CallbackURLKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CallbackURLKit/CallbackURLKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CallbackURLKit/CallbackURLKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CallbackURLKit/CallbackURLKit.modulemap";
+				PRODUCT_MODULE_NAME = CallbackURLKit;
+				PRODUCT_NAME = CallbackURLKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B9D28125B23E2B2EF7ADC2B419BB5147 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3970AA7BABB920B850D00B754A3C5C01 /* CallbackURLKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CallbackURLKit/CallbackURLKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CallbackURLKit/CallbackURLKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CallbackURLKit/CallbackURLKit.modulemap";
+				PRODUCT_MODULE_NAME = CallbackURLKit;
+				PRODUCT_NAME = CallbackURLKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BB72BFB6E4B14DCB08CEE725F7BBAEFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59D9233E072321A659F1F25843A98DB5 /* AcknowList.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AcknowList/AcknowList-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AcknowList/AcknowList-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AcknowList/AcknowList.modulemap";
+				PRODUCT_MODULE_NAME = AcknowList;
+				PRODUCT_NAME = AcknowList;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DD8F832993327D1DD8046C3CBCBD97CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1530,8 +1780,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1552,84 +1800,21 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		B7BA775ACF3A72EDD6AABDC245875669 /* Release */ = {
+		FC01292A55505A167A1B2F96824E5F75 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BF0CCEF7C9546A66C1B92A370169691 /* AcknowList.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/AcknowList/AcknowList-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AcknowList/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AcknowList/AcknowList.modulemap";
-				PRODUCT_MODULE_NAME = AcknowList;
-				PRODUCT_NAME = AcknowList;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C385A8531F7DD4A4DDE7F5A993BBD307 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CB5FAF8A70B96496AB8ABDFF4DC8DA6 /* CallbackURLKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CallbackURLKit/CallbackURLKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CallbackURLKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CallbackURLKit/CallbackURLKit.modulemap";
-				PRODUCT_MODULE_NAME = CallbackURLKit;
-				PRODUCT_NAME = CallbackURLKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E2FE6A47EED4AB04DF7099F24F8F410B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74E42FECF2A9B7259E44AB9AE0D51A5C /* Pods-OTPKit.debug.xcconfig */;
+			baseConfigurationReference = 3FD60CC35B1A259878B31D0919656163 /* Pods-OTPCallbackDemo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1642,12 +1827,16 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-OTPKit/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-OTPCallbackDemo/Pods-OTPCallbackDemo-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-OTPKit/Pods-OTPKit.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-OTPCallbackDemo/Pods-OTPCallbackDemo.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1655,17 +1844,16 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		E792AE02B8B2497C53E0F4F682B252C3 /* Release */ = {
+		FC4989AD4AC0A9C8B895602747E86DC1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E24EBFE18D8AD998CC2183B207E833A4 /* Pods-OTPKit.release.xcconfig */;
+			baseConfigurationReference = 8027CB5129E177EA4EB244E183643BF5 /* Pods-OTPKitTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1678,12 +1866,16 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-OTPKit/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-OTPKitTests/Pods-OTPKitTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-OTPKit/Pods-OTPKit.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-OTPKitTests/Pods-OTPKitTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1691,108 +1883,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		F368B9C055B31EE2C91B02EAF763E6C4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BA6E6A65B9BA793C335CFF2AAB5DBFF /* SwiftBase32.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftBase32/SwiftBase32-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftBase32/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftBase32/SwiftBase32.modulemap";
-				PRODUCT_MODULE_NAME = SwiftBase32;
-				PRODUCT_NAME = SwiftBase32;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F7D61C873B948B3EBAA10EB3CA0224AB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 388FBA3F620D705613E5ADCFC6AB7FBA /* Pods-SwiftOTP.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SwiftOTP/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		FE28CB4B4C0E9CB3BF88301E3F7C76EF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 947634DCD2F0C92297B3A26FE157C449 /* QRCodeReader.swift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/QRCodeReader.swift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift.modulemap";
-				PRODUCT_MODULE_NAME = QRCodeReader;
-				PRODUCT_NAME = QRCodeReader;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1803,97 +1893,97 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		121532AF35A287A5224FBC11FDDABD17 /* Build configuration list for PBXNativeTarget "SwiftBase32" */ = {
+		1EEE03B90DD9875B1FC95DFB3778C47D /* Build configuration list for PBXNativeTarget "SwiftBase32" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F368B9C055B31EE2C91B02EAF763E6C4 /* Debug */,
-				082BC8F9CF16DC05B610B9BBD25C5AEB /* Release */,
+				5E899EF0CD59C6EDB41779A50756869D /* Debug */,
+				2DB433A2529EEC89A6CEB1B04B8AE054 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		134F28B0B63500754D3FCDE1260E4F94 /* Build configuration list for PBXNativeTarget "QRCodeReader.swift" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				458EEFF82F730642981DF9B68FF6D0CE /* Debug */,
-				FE28CB4B4C0E9CB3BF88301E3F7C76EF /* Release */,
+				DD8F832993327D1DD8046C3CBCBD97CD /* Debug */,
+				257497152829C177993B5EC99C1D227A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		4DAD32760C5E1632FA7073D4EA42CEE5 /* Build configuration list for PBXNativeTarget "Pods-OTPCallbackDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9DAE5233986C01ADB6E67169C53A3FD2 /* Debug */,
-				08638A96A528B1EC32DE62F8A728389D /* Release */,
+				9BAEA5C5A2F0249B0A2759B45EE848FE /* Debug */,
+				FC01292A55505A167A1B2F96824E5F75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		75755F0E077D996FC03D10741CCD9F5E /* Build configuration list for PBXNativeTarget "Pods-OTPKit" */ = {
+		7133331630590FC9166D9AC74D178B16 /* Build configuration list for PBXNativeTarget "QRCodeReader.swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E2FE6A47EED4AB04DF7099F24F8F410B /* Debug */,
-				E792AE02B8B2497C53E0F4F682B252C3 /* Release */,
+				8DE1E30535A8558757A40885CDC7917E /* Debug */,
+				60B2D565CE4BDA8067E1DD824CBA7143 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B7D7D191E488D4D53EB2F8CBEF0E612 /* Build configuration list for PBXNativeTarget "AcknowList" */ = {
+		7C351C9A195876FC691DD555F2DE9222 /* Build configuration list for PBXNativeTarget "Pods-SwiftOTPIntents" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4D61EE461B4D8AB1881E4242FF9D6745 /* Debug */,
-				B7BA775ACF3A72EDD6AABDC245875669 /* Release */,
+				255ECD4C567033273C17E5F95AE8B939 /* Debug */,
+				063C8D0020DC2D1BF9862EE2187F3453 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7ED9921A030C831E4D341D04B670E379 /* Build configuration list for PBXNativeTarget "Pods-OTPCallbackDemo" */ = {
+		A72505774ED61C590244BC45E2E0AD09 /* Build configuration list for PBXNativeTarget "CallbackURLKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				710870DB558154EBB02415134CD8568D /* Debug */,
-				3637394DB81CE64414D67EA55FD7340F /* Release */,
+				B5B3291721EDFA31F568AA8768D8A945 /* Debug */,
+				B9D28125B23E2B2EF7ADC2B419BB5147 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		99869B40E5FF98F4EBC7EBAAFB8CACC6 /* Build configuration list for PBXNativeTarget "CallbackURLKit" */ = {
+		ABB92A5A7CC70A90321165A3D8BC3B17 /* Build configuration list for PBXNativeTarget "Pods-SwiftOTP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				11C4DE93FD8F4B37FE794B0746DDC91E /* Debug */,
-				C385A8531F7DD4A4DDE7F5A993BBD307 /* Release */,
+				B20450446530F20BB2AC0174B67E7CD0 /* Debug */,
+				6A9761598A043F73B676D24C1BC327A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A6DEF98716FB9A6E60DC1085FDB2E10B /* Build configuration list for PBXNativeTarget "Pods-SwiftOTP" */ = {
+		C137C0CBBFB6A98929EFD475E33A732E /* Build configuration list for PBXNativeTarget "Pods-OTPKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				733CD74B3C9ADF45D45BB850028830B7 /* Debug */,
-				F7D61C873B948B3EBAA10EB3CA0224AB /* Release */,
+				681A3CEA417B7660F87889DAAEB8FA32 /* Debug */,
+				7A1F2BF3F501A23AC82E3A94E36185BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DAD5C7526AC84178594412D91DABA8F8 /* Build configuration list for PBXNativeTarget "Pods-OTPKitTests" */ = {
+		CB362FDE9D9EFB3CBA1E3A5B879C9EDF /* Build configuration list for PBXNativeTarget "AcknowList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				85F07346A8978F003D503C4F3D830FBF /* Debug */,
-				72FE4F40A0AE2461256C0E5634467B57 /* Release */,
+				5C8A7027153B6276389E74B5DBEA6101 /* Debug */,
+				BB72BFB6E4B14DCB08CEE725F7BBAEFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC5A3A93034967DBC5A3146CD6E6841F /* Build configuration list for PBXNativeTarget "Pods-SwiftOTPIntents" */ = {
+		D6BEBA7562B0A2B215F29D18ECAA8F24 /* Build configuration list for PBXNativeTarget "Pods-OTPKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				10E583306CCFDB8BD53FC75A90500063 /* Debug */,
-				02C75C024FE7395910437B920A3811B8 /* Release */,
+				979ECA1A82E9DE50BC8A113530131697 /* Debug */,
+				FC4989AD4AC0A9C8B895602747E86DC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

@@ -571,7 +571,6 @@
 				1574E7D920F0490D0070B124 /* Sources */,
 				1574E7DA20F0490D0070B124 /* Frameworks */,
 				1574E7DB20F0490D0070B124 /* Resources */,
-				91328E2705D2BA1AC110EB4D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -767,23 +766,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AcknowList/AcknowList.framework",
-				"${BUILT_PRODUCTS_DIR}/CallbackURLKit/CallbackURLKit.framework",
-				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftBase32/SwiftBase32.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AcknowList.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CallbackURLKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftBase32.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8FAEBF00DF0619307A2D4D6E /* [CP] Check Pods Manifest.lock */ = {
@@ -802,24 +794,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		91328E2705D2BA1AC110EB4D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OTPKitTests/Pods-OTPKitTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SwiftBase32/SwiftBase32.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftBase32.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OTPKitTests/Pods-OTPKitTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BA26552CB07B15DDEA4B0669 /* [CP] Check Pods Manifest.lock */ = {
@@ -845,17 +819,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OTPCallbackDemo/Pods-OTPCallbackDemo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CallbackURLKit/CallbackURLKit.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OTPCallbackDemo/Pods-OTPCallbackDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CallbackURLKit.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OTPCallbackDemo/Pods-OTPCallbackDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OTPCallbackDemo/Pods-OTPCallbackDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OTPCallbackDemo/Pods-OTPCallbackDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CC122889190F15A9CE2913DB /* [CP] Check Pods Manifest.lock */ = {

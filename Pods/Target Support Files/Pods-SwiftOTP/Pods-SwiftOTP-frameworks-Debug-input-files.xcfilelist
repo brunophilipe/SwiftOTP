@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AcknowList/AcknowList.framework
+${BUILT_PRODUCTS_DIR}/CallbackURLKit/CallbackURLKit.framework
+${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework
+${BUILT_PRODUCTS_DIR}/SwiftBase32/SwiftBase32.framework

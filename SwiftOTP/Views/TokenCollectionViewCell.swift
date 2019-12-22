@@ -268,6 +268,11 @@ class TokenCollectionViewCell: UICollectionViewCell
 		progressView.isAccessibilityElement = false
 		progressView.isUserInteractionEnabled = false
 		progressView.alpha = 0.0
+		if #available(iOS 13.0, *) {
+			progressView.trackTintColor = .systemFill
+		} else {
+			progressView.trackTintColor = .lightGray
+		}
 		addSubview(progressView)
 
 		NSLayoutConstraint.activate([
@@ -288,6 +293,9 @@ private extension UIProgressView
 	/// Sets up a linear animation between `start` and `end progress values, that lasts for `duration`.
 	func animateProgress(from start: Float, to end: Float, duration: TimeInterval)
 	{
+		let start = max(min(0.99999, start), 0.00001)
+		let end = max(min(0.99999, end), 0.00001)
+
 		progress = start
 
 		// Ensure the progress layer is sized to the correct proportions for the start value.

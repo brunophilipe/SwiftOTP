@@ -1188,6 +1188,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SwiftOTP/Supporting Files/SwiftOTP.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = R85D3K8ATT;
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftOTP/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1209,6 +1210,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SwiftOTP/Supporting Files/SwiftOTP.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = R85D3K8ATT;
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftOTP/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

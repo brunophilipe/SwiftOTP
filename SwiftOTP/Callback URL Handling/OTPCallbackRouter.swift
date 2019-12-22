@@ -213,7 +213,10 @@ private extension Data
 	static func random(length: Int) -> Data?
 	{
 		var keyData = Data(count: length)
-		let result = keyData.withUnsafeMutableBytes { SecRandomCopyBytes(kSecRandomDefault, length, $0) }
+		let result: Int32 = keyData.withUnsafeMutableBytes {
+			guard let baseAddress = $0.baseAddress else { return errSecBadReq }
+			return SecRandomCopyBytes(kSecRandomDefault, length, baseAddress)
+		}
 
 		if result == errSecSuccess
 		{

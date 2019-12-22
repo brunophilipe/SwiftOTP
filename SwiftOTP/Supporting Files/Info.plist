@@ -40,13 +40,15 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>5</string>
+	<string>8</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>The camera is used to read QR codes.</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Authorize token export and sharing using Face ID.</string>
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>ViewCodeIntent</string>
@@ -71,6 +73,28 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.plain-text</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>SwiftOTP Tokens</string>
+			<key>UTTypeIconFiles</key>
+			<array/>
+			<key>UTTypeIdentifier</key>
+			<string>com.brunophilipe.SwiftOTP.tokens</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>tokens</string>
+				</array>
+			</dict>
+		</dict>
 	</array>
 </dict>
 </plist>

@@ -56,6 +56,7 @@
 		1574E7F820F0494F0070B124 /* OTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574E7F420F0494F0070B124 /* OTP.swift */; };
 		1574E7F920F0494F0070B124 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574E7F520F0494F0070B124 /* KeychainStore.swift */; };
 		1574E7FA20F0494F0070B124 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574E7F620F0494F0070B124 /* Token.swift */; };
+		1580EC64215714B80084A182 /* IndexPath+TupleValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1580EC63215714B80084A182 /* IndexPath+TupleValue.swift */; };
 		158DABDF2103EF44000EBE68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158DABDE2103EF44000EBE68 /* AppDelegate.swift */; };
 		158DABE12103EF44000EBE68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158DABE02103EF44000EBE68 /* ViewController.swift */; };
 		158DABE42103EF44000EBE68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 158DABE22103EF44000EBE68 /* Main.storyboard */; };
@@ -186,6 +187,7 @@
 		1574E7F420F0494F0070B124 /* OTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTP.swift; sourceTree = "<group>"; };
 		1574E7F520F0494F0070B124 /* KeychainStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
 		1574E7F620F0494F0070B124 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		1580EC63215714B80084A182 /* IndexPath+TupleValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IndexPath+TupleValue.swift"; sourceTree = "<group>"; };
 		158DABDC2103EF44000EBE68 /* OTPCallbackDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OTPCallbackDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		158DABDE2103EF44000EBE68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		158DABE02103EF44000EBE68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				152EEECF20F2669B006925D8 /* UIViewController+ContextBus.swift */,
 				156EBC8020F6D568000F240B /* UIViewController+LocalAuthentication.swift */,
 				152EEED120F267B9006925D8 /* UIViewController+Segues.swift */,
+				1580EC63215714B80084A182 /* IndexPath+TupleValue.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -905,6 +908,7 @@
 				159CDA0D20FA98F200A9B976 /* OTPCallbackRouter.swift in Sources */,
 				156EBC8120F6D568000F240B /* UIViewController+LocalAuthentication.swift in Sources */,
 				150B4E91210A68D0007D94A8 /* TokensExportViewController.swift in Sources */,
+				1580EC64215714B80084A182 /* IndexPath+TupleValue.swift in Sources */,
 				156EBC7F20F6D4D0000F240B /* ShowTokenQRActivity.swift in Sources */,
 				1554F62920F40B6700C693E8 /* UIView+ShowHide.swift in Sources */,
 				15CA9511210BF61E00F76E5B /* AuthorizationViewController.swift in Sources */,
@@ -1222,6 +1226,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CB30E23875BBA7716C889F53 /* Pods-OTPKit.debug.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -1253,6 +1258,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FCCE11B6F3C1BD6449F1CD99 /* Pods-OTPKit.release.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;

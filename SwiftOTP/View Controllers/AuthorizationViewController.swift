@@ -48,8 +48,31 @@ class AuthorizationViewController: UITableViewController
 
 	private func completeAuthorization(tokenAccount: String)
 	{
-		dismiss(animated: true)
-		authorizationContext?.successHandler(tokenAccount)
+		enterSecurityContext(reason: "Registering app integration requires authentication.")
+		{
+			result in
+
+			self.dismiss(animated: true)
+
+			guard let authorizationContext = self.authorizationContext else
+			{
+				return
+			}
+
+			DispatchQueue.main.asyncAfter(wallDeadline: .now() + 0.5)
+				{
+					[authorizationContext, tokenAccount] in
+
+					switch result
+					{
+					case .success, .disabled:
+						authorizationContext.successHandler(tokenAccount)
+
+					case .error:
+						authorizationContext.failureHandler()
+					}
+				}
+		}
 	}
 
 	struct AuthorizeIntegrationContext

@@ -16,12 +16,16 @@ import QRCodeReader
 
 class TokensViewController: UICollectionViewController
 {
+	public static let didImportTokensNotificationName = Notification.Name("didImportTokensNotification")
+
 	private var tokenStore: TokenStore
 	{
 		return AppDelegate.shared.tokenStore
 	}
     
     private var tutorialViewController: UIViewController? = nil
+
+	private var observations: [AnyObject] = []
 
 	private let reuseIdentifier = "CellToken"
 
@@ -74,6 +78,13 @@ class TokensViewController: UICollectionViewController
         // Do any additional setup after loading the view.
 		collectionView.register(UINib(nibName: "TokenCollectionViewCell", bundle: .main),
 								forCellWithReuseIdentifier: reuseIdentifier)
+
+		let importObservation = NotificationCenter.default.addObserver(forName: TokensViewController.didImportTokensNotificationName, object: nil, queue: nil)
+			{
+				[weak collectionView] _ in collectionView?.reloadData()
+			}
+
+		observations.append(importObservation)
     }
     
     override func viewWillAppear(_ animated: Bool)
@@ -126,12 +137,7 @@ class TokensViewController: UICollectionViewController
 
 	private func showAlertBadScan()
 	{
-		let alertController = UIAlertController(title: "Error",
-												message: "This does not seem to be a valid TOTP/HOTP QR Code. Please try again.",
-												preferredStyle: .alert)
-
-		alertController.addAction(UIAlertAction(title: "OK", style: .cancel))
-		present(alertController, animated: true)
+		presentAlert(message: "This does not seem to be a valid TOTP/HOTP QR Code. Please try again.")
 	}
 
 	override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?)
@@ -372,10 +378,12 @@ extension TokensViewController // Intents
 		INInteraction.delete(with: [tokenAcount], completion: {
 			error in
 
+			#if DEBUG
 			if let error = error
 			{
 				NSLog("Failed deleting interaction: \(error)")
 			}
+			#endif
 		})
 	}
 }

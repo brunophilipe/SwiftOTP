@@ -22,7 +22,7 @@ class IntentHandler: INExtension, ViewCodeIntentHandling
 		guard let tokenAccount = intent.account else
 		{
 			completion(ViewCodeIntentResponse(code: .failure, userActivity: nil))
-			NSLog("Bad intent mising account!")
+			debugLog("Bad intent mising account!")
 			return
 		}
 
@@ -31,7 +31,7 @@ class IntentHandler: INExtension, ViewCodeIntentHandling
 		guard let token = tokenStore.load(tokenAccount) else
 		{
 			completion(ViewCodeIntentResponse(code: .failure, userActivity: nil))
-			NSLog("Bad intent: No token with given account found!")
+			debugLog("Bad intent: No token with given account found!")
 			return
 		}
 
@@ -42,7 +42,7 @@ class IntentHandler: INExtension, ViewCodeIntentHandling
 		guard codes.count >= 2 else
 		{
 			completion(ViewCodeIntentResponse(code: .failure, userActivity: nil))
-			NSLog("Bad token! Not enough codes generated.")
+			debugLog("Bad token! Not enough codes generated.")
 			return
 		}
 
@@ -65,10 +65,10 @@ class IntentHandler: INExtension, ViewCodeIntentHandling
 		debugLog("Did call intent completion handler.")
 	}
     
-    override func handler(for intent: INIntent) -> Any {
+    override func handler(for intent: INIntent) -> Any
+	{
         // This is the default implementation.  If you want different objects to handle different intents,
         // you can override this and return the handler you want for that particular intent.
-        
         return self
     }
 }
@@ -77,9 +77,7 @@ private extension String
 {
 	var intelacingCharactersWithSpaces: String
 	{
-		var intelacedString = ""
-		forEach({ intelacedString.append("\($0) ") })
-		return intelacedString.trimmingCharacters(in: .whitespaces)
+		return map({ String($0) }).joined(separator: " ")
 	}
 }
 

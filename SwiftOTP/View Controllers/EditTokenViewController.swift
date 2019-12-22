@@ -24,13 +24,6 @@ class EditTokenViewController: UITableViewController
 		}
 	}
 
-    override func viewDidLoad()
-	{
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
 	{
 		if indexPath.section == 2, indexPath.row == 0
@@ -89,7 +82,7 @@ class EditTokenViewController: UITableViewController
 
 			guard let context = self.context, let url = context.getTokenUrlAction(context.tokenAccount) else
 			{
-				self.presentError(message: "Could not load token secret.")
+				self.presentAlert(message: "Could not load token secret.")
 				return
 			}
 

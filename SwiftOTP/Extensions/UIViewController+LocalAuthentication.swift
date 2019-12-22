@@ -46,7 +46,7 @@ extension UIViewController
 		let laContext = LAContext()
 		var authError: NSError? = nil
 
-		guard laContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &authError) else
+		guard laContext.canEvaluatePolicy(.deviceOwnerAuthentication, error: &authError) else
 		{
 			DispatchQueue.main.async(execute: { completion(.disabled) })
 			laContext.invalidate()
@@ -60,10 +60,12 @@ extension UIViewController
 				DispatchQueue.main.async(execute: { completion(success ? .success : .error(error as NSError?))})
 				laContext.invalidate()
 
+				#if DEBUG
 				if let error = error
 				{
 					NSLog("Failed authenticating device owner: \(error)")
 				}
+				#endif
 			}
 	}
 
@@ -89,6 +91,6 @@ extension UIViewController
 			message = "Failed authenticating user."
 		}
 
-		self.presentError(message: message)
+		self.presentAlert(message: message)
 	}
 }

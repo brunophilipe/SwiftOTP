@@ -41,7 +41,7 @@ class TokensExportViewController: TokensPickerViewController
 			return
 		}
 
-		enterSecurityContext(reason: "Exporting tokens requires device owner authentication.")
+		enterSecurityContext(reason: "Exporting tokens requires authentication.")
 		{
 			result in
 
@@ -53,20 +53,20 @@ class TokensExportViewController: TokensPickerViewController
 
 			guard let exportData = self.tokenStore.exportData(for: selectedTokenAccounts) else
 			{
-				self.presentError(message: "Could not generate export file.")
+				self.presentAlert(message: "Could not generate export file.")
 				return
 			}
 
 			guard let cachesUrl = FileManager.default.cachesDirectoryUrl else
 			{
-				self.presentError(message: "Could not find temporary files directory.")
+				self.presentAlert(message: "Could not find temporary files directory.")
 				return
 			}
 
 			let formatter = DateFormatter()
-			formatter.dateFormat = "yyyy-MM-dd'T'HHmmssZZZZZ"
+			formatter.dateFormat = "yyyy-MM-dd'T'HHmmss"
 
-			let exportFileName = "SwiftOTP-Tokens-\(formatter.string(from: Date())).txt"
+			let exportFileName = "SwiftOTP-Tokens-\(formatter.string(from: Date())).tokens"
 			let exportFileUrl = cachesUrl.appendingPathComponent(exportFileName)
 
 			do
@@ -75,7 +75,7 @@ class TokensExportViewController: TokensPickerViewController
 			}
 			catch
 			{
-				self.presentError(message: "Could not write the export file.")
+				self.presentAlert(message: "Could not write the export file.")
 				return
 			}
 

@@ -14,6 +14,8 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
+	public static let tokenImportUTIs = ["com.brunophilipe.SwiftOTP.tokens", "document.plain-text"]
+
 	private let callbackRouter = OTPCallbackRouter(callbackURLScheme: "swiftotp-callback")
 
 	public lazy var tokenStore: TokenStore =
@@ -85,10 +87,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 			DispatchQueue.main.async
 			{
 				callbackRouter.registerActionsIfNeeded()
+				#if DEBUG
 				if !callbackRouter.handleOpen(url: url)
 				{
 					NSLog("Error parsing open url request")
 				}
+				#endif
 			}
 			return true
 		}

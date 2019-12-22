@@ -165,6 +165,8 @@ extension IntegrationsTableViewController: NSFetchedResultsControllerDelegate
 		case .move:
 			configureCell(tableView.cellForRow(at: indexPath!)!, withIntegration: anObject as! Integration)
 			tableView.moveRow(at: indexPath!, to: newIndexPath!)
+		@unknown default:
+			break
 		}
 	}
 

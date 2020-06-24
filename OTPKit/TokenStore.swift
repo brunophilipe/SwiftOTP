@@ -112,7 +112,7 @@ open class TokenStore : NSObject
 	/// Add a token to the receiver's storage by parsing the provided `URLComponents` object.
 	@discardableResult open func add(_ urlc: URLComponents) -> Token?
 	{
-		var ord: TokenOrder
+		let ord: TokenOrder
 		if let a = TokenOrder.store.load(accountUUID.uuidString)
 		{
 			ord = a

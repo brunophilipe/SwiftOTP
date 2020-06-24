@@ -5,13 +5,15 @@
 	<key>INEnums</key>
 	<array/>
 	<key>INIntentDefinitionModelVersion</key>
-	<string>1.0</string>
+	<string>1.2</string>
+	<key>INIntentDefinitionNamespace</key>
+	<string>X4v3KA</string>
 	<key>INIntentDefinitionSystemVersion</key>
-	<string>17F77</string>
+	<string>19F101</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>10L201y</string>
+	<string>12A6159</string>
 	<key>INIntentDefinitionToolsVersion</key>
-	<string>10.0</string>
+	<string>12.0</string>
 	<key>INIntents</key>
 	<array>
 		<dict>
@@ -27,6 +29,13 @@
 			<string>ViewCode</string>
 			<key>INIntentParameterCombinations</key>
 			<dict>
+				<key></key>
+				<dict>
+					<key>INIntentParameterCombinationIsLinked</key>
+					<true/>
+					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
+					<true/>
+				</dict>
 				<key>issuer,label,account</key>
 				<dict>
 					<key>INIntentParameterCombinationIsPrimary</key>
@@ -48,10 +57,15 @@
 				<dict>
 					<key>INIntentParameterDisplayPriority</key>
 					<integer>1</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataCapitalization</key>
+						<string>Sentences</string>
+						<key>INIntentParameterMetadataDefaultValueID</key>
+						<string>CtJaVZ</string>
+					</dict>
 					<key>INIntentParameterName</key>
 					<string>account</string>
-					<key>INIntentParameterSupportsMultipleValues</key>
-					<false/>
 					<key>INIntentParameterTag</key>
 					<integer>1</integer>
 					<key>INIntentParameterType</key>
@@ -60,10 +74,15 @@
 				<dict>
 					<key>INIntentParameterDisplayPriority</key>
 					<integer>2</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataCapitalization</key>
+						<string>Sentences</string>
+						<key>INIntentParameterMetadataDefaultValueID</key>
+						<string>2RJDws</string>
+					</dict>
 					<key>INIntentParameterName</key>
 					<string>issuer</string>
-					<key>INIntentParameterSupportsMultipleValues</key>
-					<false/>
 					<key>INIntentParameterTag</key>
 					<integer>2</integer>
 					<key>INIntentParameterType</key>
@@ -72,10 +91,15 @@
 				<dict>
 					<key>INIntentParameterDisplayPriority</key>
 					<integer>3</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataCapitalization</key>
+						<string>Sentences</string>
+						<key>INIntentParameterMetadataDefaultValueID</key>
+						<string>6ffe18</string>
+					</dict>
 					<key>INIntentParameterName</key>
 					<string>label</string>
-					<key>INIntentParameterSupportsMultipleValues</key>
-					<false/>
 					<key>INIntentParameterTag</key>
 					<integer>3</integer>
 					<key>INIntentParameterType</key>
@@ -87,18 +111,12 @@
 				<key>INIntentResponseCodes</key>
 				<array>
 					<dict>
+						<key>INIntentResponseCodeConciseFormatString</key>
+						<string>${otpCode}</string>
+						<key>INIntentResponseCodeConciseFormatStringID</key>
+						<string>jfaxTU</string>
 						<key>INIntentResponseCodeFormatString</key>
-						<string>Could not calculate code</string>
-						<key>INIntentResponseCodeFormatStringID</key>
-						<string>GdZn1d</string>
-						<key>INIntentResponseCodeName</key>
-						<string>failure</string>
-						<key>INIntentResponseCodeSuccess</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>INIntentResponseCodeFormatString</key>
-						<string>The code is ${otpCode}</string>
+						<string>The code is ${otpCodeForSpeech}</string>
 						<key>INIntentResponseCodeFormatStringID</key>
 						<string>nYZL31</string>
 						<key>INIntentResponseCodeName</key>
@@ -106,20 +124,46 @@
 						<key>INIntentResponseCodeSuccess</key>
 						<true/>
 					</dict>
+					<dict>
+						<key>INIntentResponseCodeFormatString</key>
+						<string>Could not calculate code</string>
+						<key>INIntentResponseCodeFormatStringID</key>
+						<string>GdZn1d</string>
+						<key>INIntentResponseCodeName</key>
+						<string>failure</string>
+					</dict>
 				</array>
 				<key>INIntentResponseLastParameterTag</key>
-				<integer>1</integer>
+				<integer>3</integer>
+				<key>INIntentResponseOutput</key>
+				<string>otpCode</string>
 				<key>INIntentResponseParameters</key>
 				<array>
 					<dict>
+						<key>INIntentResponseParameterDisplayName</key>
+						<string>OTP Code</string>
+						<key>INIntentResponseParameterDisplayNameID</key>
+						<string>3zFuS7</string>
 						<key>INIntentResponseParameterDisplayPriority</key>
 						<integer>1</integer>
 						<key>INIntentResponseParameterName</key>
 						<string>otpCode</string>
-						<key>INIntentResponseParameterSupportsMultipleValues</key>
-						<false/>
 						<key>INIntentResponseParameterTag</key>
-						<integer>1</integer>
+						<integer>3</integer>
+						<key>INIntentResponseParameterType</key>
+						<string>Decimal</string>
+					</dict>
+					<dict>
+						<key>INIntentResponseParameterDisplayName</key>
+						<string>OTP Code</string>
+						<key>INIntentResponseParameterDisplayNameID</key>
+						<string>Bas3Kh</string>
+						<key>INIntentResponseParameterDisplayPriority</key>
+						<integer>2</integer>
+						<key>INIntentResponseParameterName</key>
+						<string>otpCodeForSpeech</string>
+						<key>INIntentResponseParameterTag</key>
+						<integer>2</integer>
 						<key>INIntentResponseParameterType</key>
 						<string>String</string>
 					</dict>
@@ -133,11 +177,11 @@
 			<string>w6Ud0W</string>
 			<key>INIntentType</key>
 			<string>Custom</string>
-			<key>INIntentUserConfirmationRequired</key>
-			<false/>
 			<key>INIntentVerb</key>
 			<string>View</string>
 		</dict>
 	</array>
+	<key>INTypes</key>
+	<array/>
 </dict>
 </plist>

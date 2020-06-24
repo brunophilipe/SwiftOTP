@@ -1186,7 +1186,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0B5FBBB7CBFC9E097A981C00 /* Pods-SwiftOTP.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SwiftOTP/Supporting Files/SwiftOTP.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -1208,7 +1207,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DB8D1CE8ACF0F2E0AD2152E1 /* Pods-SwiftOTP.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SwiftOTP/Supporting Files/SwiftOTP.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -1293,7 +1291,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 58EBC5BE904090BC5FFE8732 /* Pods-OTPKitTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R85D3K8ATT;
 				INFOPLIST_FILE = OTPKitTests/Info.plist;
@@ -1314,7 +1311,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 192488C999A10607F1BCD929 /* Pods-OTPKitTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R85D3K8ATT;
 				INFOPLIST_FILE = OTPKitTests/Info.plist;

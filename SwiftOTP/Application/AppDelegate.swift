@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 			switch (oldValue, userInterfaceState)
 			{
 			case (.loading(let pendingContexts), .ready):
-				if let rootViewController = UIApplication.shared.keyWindow?.rootViewController
+				if let rootViewController = window?.rootViewController
 				{
 					pendingContexts.forEach({ rootViewController.broadcast($0) })
 				}

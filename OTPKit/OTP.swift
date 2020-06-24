@@ -156,10 +156,12 @@ public final class OTP : NSObject, KeychainStorable
 
 		// Unparse UInt32
 		let off = Int(buf[buf.count - 1]) & 0x0f;
-		let msk = UnsafePointer<UInt8>(buf).advanced(by: off).withMemoryRebound(to: UInt32.self, capacity: size/4)
-		{
-			$0[0].bigEndian & 0x7fffffff
-		}
+		let msk = buf.withUnsafeMutableBufferPointer({ pointer in
+			return pointer.baseAddress?.advanced(by: off).withMemoryRebound(to: UInt32.self, capacity: size/4)
+			{
+				$0[0].bigEndian & 0x7fffffff
+			}
+		})!
 
 		// Create digits divisor
 		var div: UInt32 = 1

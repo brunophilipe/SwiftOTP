@@ -21,7 +21,7 @@
 import Foundation
 import Security
 
-public protocol KeychainStorable : NSCoding
+public protocol KeychainStorable : NSObject, NSCoding
 {
 	static var store: KeychainStore<Self> { get }
 	var account: String { get }
@@ -105,17 +105,21 @@ open class KeychainStore<T: KeychainStorable>
 
 	@discardableResult open func add(_ storable: T, locked: Bool = false) -> Bool
 	{
-		return add(
-			storable.account,
-			NSKeyedArchiver.archivedData(withRootObject: storable),
-			locked && lockingSupported
-		)
+		guard let data = try? NSKeyedArchiver.archivedData(withRootObject: storable, requiringSecureCoding: true) else {
+			return false
+		}
+
+		return add(storable.account, data, locked && lockingSupported)
 	}
 
 	@discardableResult open func save(_ storable: T) -> Bool
 	{
+		guard let data = try? NSKeyedArchiver.archivedData(withRootObject: storable, requiringSecureCoding: true) else {
+			return false
+		}
+
 		let update: [String: AnyObject] = [
-			kSecValueData as String: NSKeyedArchiver.archivedData(withRootObject: storable) as AnyObject,
+			kSecValueData as String: data as AnyObject,
 			kSecAttrModificationDate as String: Date() as AnyObject,
 		]
 
@@ -130,9 +134,11 @@ open class KeychainStore<T: KeychainStorable>
 		var output: AnyObject?
 		let status = SecItemCopyMatching(dict as CFDictionary, &output)
 		if status == errSecSuccess {
-			if let o = output {
-				let data = o as! Data
-				return NSKeyedUnarchiver.unarchiveObject(with: data) as? T
+
+
+			if let data = output as? Data,
+			   let storable = try? NSKeyedUnarchiver.unarchivedObject(ofClass: T.self, from: data) {
+				return storable
 			}
 		}
 

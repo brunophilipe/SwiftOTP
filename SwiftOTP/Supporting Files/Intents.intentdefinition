@@ -29,13 +29,6 @@
 			<string>ViewCode</string>
 			<key>INIntentParameterCombinations</key>
 			<dict>
-				<key></key>
-				<dict>
-					<key>INIntentParameterCombinationIsLinked</key>
-					<true/>
-					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
-					<true/>
-				</dict>
 				<key>issuer,label,account</key>
 				<dict>
 					<key>INIntentParameterCombinationIsPrimary</key>

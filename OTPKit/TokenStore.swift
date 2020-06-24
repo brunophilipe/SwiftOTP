@@ -25,15 +25,19 @@ open class TokenStore : NSObject
 {
 	private let accountUUID: UUID
 
-	@objc(_TokenOrder) fileprivate final class TokenOrder : NSObject, KeychainStorable
+	@objc(_TokenOrder) fileprivate final class TokenOrder: NSObject, KeychainStorable
 	{
+		static var supportsSecureCoding: Bool {
+			return true
+		}
+
 		static let store = KeychainStore<TokenOrder>()
-		let array: NSMutableArray
+		var array: [String]
 		let account: String
 
 		init(storeUUID: UUID, keychainGroupIdentifier: String? = nil)
 		{
-			array = NSMutableArray()
+			array = [String]()
 			account = storeUUID.uuidString
 
 			super.init()
@@ -41,8 +45,13 @@ open class TokenStore : NSObject
 
 		@objc init?(coder aDecoder: NSCoder)
 		{
-			account = aDecoder.decodeObject(forKey: "account") as! String
-			array = aDecoder.decodeObject(forKey: "array") as! NSMutableArray
+			if let account = aDecoder.decodeString(forKey: "account"),
+			   let array = aDecoder.decodeObject(of: NSArray.self, forKey: "array") as? [String] {
+				self.account = account
+				self.array = array
+			} else {
+				return nil
+			}
 		}
 
 		@objc fileprivate func encode(with aCoder: NSCoder)
@@ -150,9 +159,10 @@ open class TokenStore : NSObject
 	/// If a valid index is provided (`index` < `count`), removes the token at `index` from the receiver's storage.
 	@discardableResult open func erase(index: Int) -> Bool
 	{
-		if let ord = TokenOrder.store.load(accountUUID.uuidString), let account = ord.array.object(at: index) as? String
+		if let ord = TokenOrder.store.load(accountUUID.uuidString), index < ord.array.count
 		{
-			ord.array.removeObject(at: index)
+			let account = ord.array[index]
+			ord.array.remove(at: index)
 
 			if TokenOrder.store.save(ord)
 			{
@@ -168,9 +178,9 @@ open class TokenStore : NSObject
 	/// Erases the provided token from the receiver's storage, if it is present.
 	@discardableResult open func erase(token: Token) -> Bool
 	{
-		if let ord = TokenOrder.store.load(accountUUID.uuidString)
+		if let ord = TokenOrder.store.load(accountUUID.uuidString), let index = ord.array.firstIndex(of: token.account)
 		{
-			return erase(index: ord.array.index(of: token.account))
+			return erase(index: index)
 		}
 
 		return false
@@ -179,9 +189,9 @@ open class TokenStore : NSObject
 	/// It a valid index is provided (index < `count`), loads the token at the provided index.
 	open func load(_ index: Int) -> Token?
 	{
-		if let ord = TokenOrder.store.load(accountUUID.uuidString), let account = ord.array.object(at: index) as? String
+		if let ord = TokenOrder.store.load(accountUUID.uuidString), index < ord.array.count
 		{
-			return Token.store.load(account)
+			return Token.store.load(ord.array[index])
 		}
 
 		return nil
@@ -196,9 +206,9 @@ open class TokenStore : NSObject
 	/// Returns only the account of the token at the provided index.
 	open func loadAccount(at index: Int) -> String?
 	{
-		if let ord = TokenOrder.store.load(accountUUID.uuidString)
+		if let ord = TokenOrder.store.load(accountUUID.uuidString), index < ord.array.count
 		{
-			return ord.array.object(at: index) as? String
+			return ord.array[index]
 		}
 
 		return nil
@@ -213,17 +223,8 @@ open class TokenStore : NSObject
 	/// If a token with the provided token UUID account is present in the receiver storage, returns its index.
 	open func index(of tokenAccount: String) -> Int?
 	{
-		if let ord = TokenOrder.store.load(accountUUID.uuidString)
+		if let ord = TokenOrder.store.load(accountUUID.uuidString), let index = ord.array.firstIndex(of: tokenAccount)
 		{
-			let index = ord.array.indexOfObject(passingTest: { (object, _, _) -> Bool in
-				return (object as? String) == tokenAccount
-			})
-
-			if index == NSNotFound
-			{
-				return nil
-			}
-
 			return index
 		}
 
@@ -233,9 +234,10 @@ open class TokenStore : NSObject
 	/// Repositions the token at index `from` into index `to`, and shifts all other tokens up/down to fill the gap.
 	@discardableResult open func move(_ from: Int, to: Int) -> Bool
 	{
-		if let ord = TokenOrder.store.load(accountUUID.uuidString), let id = ord.array.object(at: from) as? String
+		if let ord = TokenOrder.store.load(accountUUID.uuidString), from < ord.array.count
 		{
-			ord.array.removeObject(at: from)
+			let id = ord.array[from]
+			ord.array.remove(at: from)
 			ord.array.insert(id, at: to)
 
 			return TokenOrder.store.save(ord)

@@ -24,6 +24,10 @@ import Foundation
 
 public final class OTP : NSObject, KeychainStorable
 {
+	public static var supportsSecureCoding: Bool {
+		return true
+	}
+
 	public static let store = KeychainStore<OTP>()
 	public let account: String
 
@@ -105,8 +109,13 @@ public final class OTP : NSObject, KeychainStorable
 
 	@objc required public init?(coder aDecoder: NSCoder)
 	{
-		account = aDecoder.decodeObject(forKey: "account") as! String
-		secret = aDecoder.decodeObject(forKey: "secret") as! Data
+		if let account = aDecoder.decodeString(forKey: "account"),
+		   let secret = aDecoder.decodeObject(of: NSData.self, forKey: "secret") as Data? {
+			self.account = account
+			self.secret = secret
+		} else {
+			return nil
+		}
 		algo = aDecoder.decodeInteger(forKey: "algo")
 		size = aDecoder.decodeInteger(forKey: "size")
 		digits = aDecoder.decodeInteger(forKey: "digits")

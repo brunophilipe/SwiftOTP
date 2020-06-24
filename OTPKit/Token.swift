@@ -22,6 +22,10 @@ import Foundation
 
 public final class Token : NSObject, KeychainStorable
 {
+	public static var supportsSecureCoding: Bool {
+		return true
+	}
+
 	public static let store = KeychainStore<Token>()
 	public let account: String
 
@@ -316,16 +320,26 @@ public final class Token : NSObject, KeychainStorable
 
 	@objc required public init?(coder aDecoder: NSCoder)
 	{
+		if let account = aDecoder.decodeString(forKey: "account"),
+		   let issuer = aDecoder.decodeString(forKey: "issuer"),
+		   let issuerOrig = aDecoder.decodeString(forKey: "issuerOrig"),
+		   let kind = Kind(rawValue: aDecoder.decodeInteger(forKey: "kind")),
+		   let label = aDecoder.decodeString(forKey: "label"),
+		   let labelOrig = aDecoder.decodeString(forKey: "labelOrig") {
+			self.account = account
+			self.issuer = issuer
+			self.issuerOrig = issuerOrig
+			self.kind = kind
+			self.label = label
+			self.labelOrig = labelOrig
+		} else {
+			return nil
+		}
+
+		image = aDecoder.decodeString(forKey: "image")
+		imageOrig = aDecoder.decodeString(forKey: "imageOrig")
 		locked = aDecoder.decodeBool(forKey: "locked")
-		account = aDecoder.decodeObject(forKey: "account") as! String
 		counter = aDecoder.decodeInt64(forKey: "counter")
-		image = aDecoder.decodeObject(forKey: "image") as? String
-		imageOrig = aDecoder.decodeObject(forKey: "imageOrig") as? String
-		issuer = (aDecoder.decodeObject(forKey: "issuer")! as! String)
-		issuerOrig = aDecoder.decodeObject(forKey: "issuerOrig")! as! String
-		kind = Kind(rawValue: aDecoder.decodeInteger(forKey: "kind"))!
-		label = (aDecoder.decodeObject(forKey: "label")! as! String)
-		labelOrig = aDecoder.decodeObject(forKey: "labelOrig") as! String
 		period = aDecoder.decodeInt64(forKey: "period")
 
 		super.init()

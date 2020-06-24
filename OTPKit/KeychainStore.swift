@@ -21,7 +21,7 @@
 import Foundation
 import Security
 
-public protocol KeychainStorable : NSObject, NSCoding
+public protocol KeychainStorable : NSObject, NSSecureCoding
 {
 	static var store: KeychainStore<Self> { get }
 	var account: String { get }
@@ -134,11 +134,10 @@ open class KeychainStore<T: KeychainStorable>
 		var output: AnyObject?
 		let status = SecItemCopyMatching(dict as CFDictionary, &output)
 		if status == errSecSuccess {
-
-
-			if let data = output as? Data,
-			   let storable = try? NSKeyedUnarchiver.unarchivedObject(ofClass: T.self, from: data) {
-				return storable
+			if let data = output as? Data {
+				if let storable = try? NSKeyedUnarchiver.unarchivedObject(ofClass: T.self, from: data) {
+					return storable
+				}
 			}
 		}
 

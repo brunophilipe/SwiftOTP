@@ -186,6 +186,13 @@ open class TokenStore : NSObject
 		return false
 	}
 
+	/// Erases **all** stored tokens.
+	open func eraseAll() {
+		for _ in 0..<count {
+			erase(index: 0)
+		}
+	}
+
 	/// It a valid index is provided (index < `count`), loads the token at the provided index.
 	open func load(_ index: Int) -> Token?
 	{

@@ -11,18 +11,26 @@ import OTPKit
 
 class PreferencesViewController: UITableViewController
 {
+	public static let didImportTokensNotificationName = Notification.Name("didImportTokensNotification")
+	public static let didDeleteAllTokensNotificationName = Notification.Name("didDeleteAllTokensNotification")
+
 	@IBOutlet var appVersionLabel: UILabel!
+
+	private var tokenStore: TokenStore
+	{
+		return AppDelegate.shared.tokenStore
+	}
 
 	override func viewDidLoad()
 	{
-        super.viewDidLoad()
+		super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+		// Do any additional setup after loading the view.
 		if let bundleHumanVersion = Bundle.main.bundleHumanVersion, let bundleVersion = Bundle.main.bundleVersion
 		{
 			appVersionLabel.text = "\(bundleHumanVersion) (\(bundleVersion))"
 		}
-    }
+	}
 
 	override func viewWillAppear(_ animated: Bool)
 	{
@@ -38,6 +46,10 @@ class PreferencesViewController: UITableViewController
 	{
 		switch indexPath.tableRowTupleValue
 		{
+		case (0, 2):
+			deleteAll(tableView)
+			tableView.deselectRow(at: indexPath, animated: true)
+
 		case (1, 0):
 			showFileImportPicker(sender: tableView.cellForRow(at: indexPath))
 
@@ -58,20 +70,22 @@ class PreferencesViewController: UITableViewController
 
 		present(filePicker, animated: true)
 	}
-    
+
 	@IBAction func done(_ sender: Any?)
 	{
 		dismiss(animated: true)
+	}
+
+	@IBAction func deleteAll(_ sender: Any?)
+	{
+		tokenStore.eraseAll()
+
+		NotificationCenter.default.post(name: PreferencesViewController.didDeleteAllTokensNotificationName, object: self)
 	}
 }
 
 extension PreferencesViewController: UIDocumentPickerDelegate
 {
-	private var tokenStore: TokenStore
-	{
-		return AppDelegate.shared.tokenStore
-	}
-
 	public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL])
 	{
 		guard let fileUrl = urls.first else
@@ -109,6 +123,6 @@ extension PreferencesViewController: UIDocumentPickerDelegate
 
 		presentAlert(title: "Success", message: "Imported tokens file successfully!", dismissButtonTitle: "Dismiss")
 
-		NotificationCenter.default.post(name: TokensViewController.didImportTokensNotificationName, object: self)
+		NotificationCenter.default.post(name: PreferencesViewController.didImportTokensNotificationName, object: self)
 	}
 }

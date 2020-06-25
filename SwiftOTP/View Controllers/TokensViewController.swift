@@ -16,14 +16,12 @@ import QRCodeReader
 
 class TokensViewController: UICollectionViewController
 {
-	public static let didImportTokensNotificationName = Notification.Name("didImportTokensNotification")
-
 	private var tokenStore: TokenStore
 	{
 		return AppDelegate.shared.tokenStore
 	}
-    
-    private var tutorialViewController: UIViewController? = nil
+
+	private var tutorialViewController: UIViewController? = nil
 
 	private var observations: [AnyObject] = []
 
@@ -44,55 +42,60 @@ class TokensViewController: UICollectionViewController
 		return QRCodeReaderViewController(builder: builder)
 	}()
 	#endif
-    
-    private var tokenTutorialViewVisible: Bool = false
-    {
-        didSet
-        {
-            guard tokenTutorialViewVisible != oldValue else { return }
-            
-            if tokenTutorialViewVisible
-            {
-                tutorialViewController = TokensTutorialViewController()
-                
-                guard let tutorialView = tutorialViewController?.view else { return }
-                
-                tutorialView.frame = CGRect(origin: .zero, size: view.frame.size)
-                view.addSubview(tutorialView)
-            }
-            else if let tutorialView = tutorialViewController?.view
-            {
-                tutorialView.removeFromSuperview()
-                tutorialViewController = nil
-            }
-        }
-    }
 
-    override func viewDidLoad()
+	private var tokenTutorialViewVisible: Bool = false
 	{
-        super.viewDidLoad()
+		didSet
+		{
+			guard tokenTutorialViewVisible != oldValue else { return }
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+			if tokenTutorialViewVisible
+			{
+				tutorialViewController = TokensTutorialViewController()
 
-        // Do any additional setup after loading the view.
+				guard let tutorialView = tutorialViewController?.view else { return }
+
+				tutorialView.frame = CGRect(origin: .zero, size: view.frame.size)
+				view.addSubview(tutorialView)
+			}
+			else if let tutorialView = tutorialViewController?.view
+			{
+				tutorialView.removeFromSuperview()
+				tutorialViewController = nil
+			}
+		}
+	}
+
+	override func viewDidLoad()
+	{
+		super.viewDidLoad()
+
+		// Uncomment the following line to preserve selection between presentations
+		// self.clearsSelectionOnViewWillAppear = false
+
+		// Do any additional setup after loading the view.
 		collectionView.register(UINib(nibName: "TokenCollectionViewCell", bundle: .main),
 								forCellWithReuseIdentifier: reuseIdentifier)
 
-		let importObservation = NotificationCenter.default.addObserver(forName: TokensViewController.didImportTokensNotificationName, object: nil, queue: nil)
-			{
-				[weak collectionView] _ in collectionView?.reloadData()
+		for name in [PreferencesViewController.didDeleteAllTokensNotificationName,
+					 PreferencesViewController.didImportTokensNotificationName] {
+
+			let importObservation = NotificationCenter.default.addObserver(forName: name, object: nil, queue: nil) {
+				[weak self] _ in DispatchQueue.main.async {
+					self?.reloadTokens()
+				}
 			}
 
-		observations.append(importObservation)
-    }
-    
-    override func viewWillAppear(_ animated: Bool)
-    {
-        super.viewWillAppear(animated)
-        
-        updateTutorialViewVisibility()
-    }
+			observations.append(importObservation)
+		}
+	}
+
+	override func viewWillAppear(_ animated: Bool)
+	{
+		super.viewWillAppear(animated)
+
+		updateTutorialViewVisibility()
+	}
 
 	override func viewDidAppear(_ animated: Bool)
 	{
@@ -109,15 +112,15 @@ class TokensViewController: UICollectionViewController
 		alertController.addTextField()
 		alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
 		alertController.addAction(UIAlertAction(title: "OK", style: .default, handler:
-			{
-				_ in
+													{
+														_ in
 
-				if let text = alertController.textFields?.first?.text,
-					let urlComponents = URLComponents(string: text)
-				{
-					self.importToken(with: urlComponents)
-				}
-			}))
+														if let text = alertController.textFields?.first?.text,
+														   let urlComponents = URLComponents(string: text)
+														{
+															self.importToken(with: urlComponents)
+														}
+													}))
 
 		present(alertController, animated: true)
 
@@ -133,6 +136,10 @@ class TokensViewController: UICollectionViewController
 		}
 
 		#endif
+	}
+
+	private func reloadTokens() {
+		collectionView.reloadData()
 	}
 
 	private func showAlertBadScan()
@@ -175,11 +182,11 @@ class TokensViewController: UICollectionViewController
 			return 200
 		}
 	}
-    
-    private func updateTutorialViewVisibility()
-    {
-        tokenTutorialViewVisible = tokenStore.count == 0
-    }
+
+	private func updateTutorialViewVisibility()
+	{
+		tokenTutorialViewVisible = tokenStore.count == 0
+	}
 
 	// MARK: - Navigation
 
@@ -252,23 +259,23 @@ class TokensViewController: UICollectionViewController
 		}
 	}
 
-    // MARK: UICollectionViewDataSource
+	// MARK: UICollectionViewDataSource
 
-    override func numberOfSections(in collectionView: UICollectionView) -> Int
+	override func numberOfSections(in collectionView: UICollectionView) -> Int
 	{
-        return 1
-    }
+		return 1
+	}
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+	override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
 	{
-        return tokenStore.count
-    }
+		return tokenStore.count
+	}
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+	override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
 	{
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+
+		// Configure the cell
 		if let token = tokenStore.load(indexPath.row), let tokenCell = cell as? TokenCollectionViewCell
 		{
 			tokenCell.setToken(issuer: token.resolvedIssuer, account: token.resolvedLabel)
@@ -279,9 +286,9 @@ class TokensViewController: UICollectionViewController
 			tokenCell.showHookAction = { [weak self] in self?.donateIntent(for: tokenAccount) }
 			tokenCell.copyCodeAction = { [weak self] in return self?.copyCode(for: tokenAccount) ?? false }
 		}
-    
-        return cell
-    }
+
+		return cell
+	}
 }
 
 private extension TokensViewController
@@ -294,8 +301,8 @@ private extension TokensViewController
 			return
 		}
 
-        updateTutorialViewVisibility()
-        
+		updateTutorialViewVisibility()
+
 		let newIndexPath = IndexPath(item: 0, section: 0)
 		collectionView.insertItems(at: [newIndexPath])
 
@@ -313,8 +320,8 @@ private extension TokensViewController
 		{
 			collectionView.deleteItems(at: [IndexPath(item: index, section: 0)])
 		}
-        
-        updateTutorialViewVisibility()
+
+		updateTutorialViewVisibility()
 	}
 
 	func copyCode(for tokenAccount: String) -> Bool
@@ -397,7 +404,7 @@ extension TokensViewController // Context Bus
 		if let intentContext = context as? ShowCodeFromIntentContext
 		{
 			if let index = tokenStore.index(of: intentContext.tokenAccount),
-				let tokenCell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as? TokenCollectionViewCell
+			   let tokenCell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as? TokenCollectionViewCell
 			{
 				tokenCell.showSecret(intentContext)
 			}
@@ -430,18 +437,18 @@ extension TokensViewController: QRCodeReaderViewControllerDelegate
 	{
 		reader.stopScanning()
 		reader.dismiss(animated: true)
-			{
-				[weak self] in
+		{
+			[weak self] in
 
-				if let resultUrlComponents = URLComponents(string: result.value)
-				{
-					self?.importToken(with: resultUrlComponents)
-				}
-				else
-				{
-					self?.showAlertBadScan()
-				}
+			if let resultUrlComponents = URLComponents(string: result.value)
+			{
+				self?.importToken(with: resultUrlComponents)
 			}
+			else
+			{
+				self?.showAlertBadScan()
+			}
+		}
 	}
 
 	func readerDidCancel(_ reader: QRCodeReaderViewController)

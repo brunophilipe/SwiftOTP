@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+@available(iOS 14.0, *)
 struct TokensListView: View {
 	let dataSource: TokensViewDataSource
 	let delegate: TokensViewDelegate
@@ -68,6 +69,7 @@ private struct TokenView: View {
 	}
 }
 
+@available(iOS 14.0, *)
 struct TokensListView_Previews: PreviewProvider, TokensViewDataSource, TokensViewDelegate {
 
 	private let fakeAccounts: [TokenViewModel] = [

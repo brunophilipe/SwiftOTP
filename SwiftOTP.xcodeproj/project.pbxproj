@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		05747BF8CED2958349CB32C3 /* Pods_SwiftOTPIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350846FED42A69CBAF7FF5AC /* Pods_SwiftOTPIntents.framework */; };
 		150B4E91210A68D0007D94A8 /* TokensExportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150B4E90210A68D0007D94A8 /* TokensExportViewController.swift */; };
+		1525DB6724A54C5E0095C3D2 /* TokensListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525DB6624A54C5E0095C3D2 /* TokensListView.swift */; };
 		152EEEC320F10A99006925D8 /* TokensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEC220F10A99006925D8 /* TokensViewController.swift */; };
 		152EEECA20F13EA4006925D8 /* TokenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEC820F13EA4006925D8 /* TokenCollectionViewCell.swift */; };
 		152EEECB20F13EA4006925D8 /* TokenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 152EEEC920F13EA4006925D8 /* TokenCollectionViewCell.xib */; };
@@ -64,6 +65,8 @@
 		158DABE62103EF45000EBE68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 158DABE52103EF45000EBE68 /* Assets.xcassets */; };
 		158DABE92103EF45000EBE68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 158DABE72103EF45000EBE68 /* LaunchScreen.storyboard */; };
 		159CDA0D20FA98F200A9B976 /* OTPCallbackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159CDA0C20FA98F200A9B976 /* OTPCallbackRouter.swift */; };
+		15A3CB1324A78A5D00BEBF08 /* TokenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A3CB1224A78A5D00BEBF08 /* TokenViewModel.swift */; };
+		15A3CB1524A78B5800BEBF08 /* TokensViewDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A3CB1424A78B5800BEBF08 /* TokensViewDelegateDataSource.swift */; };
 		15CA9508210A6AD600F76E5B /* AcknowledgementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA9507210A6AD600F76E5B /* AcknowledgementsViewController.swift */; };
 		15CA950B210BCDC100F76E5B /* SwiftOTP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15CA9509210BCDC100F76E5B /* SwiftOTP.xcdatamodeld */; };
 		15CA950D210BD11D00F76E5B /* Integration+FetchRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA950C210BD11D00F76E5B /* Integration+FetchRequests.swift */; };
@@ -141,6 +144,7 @@
 /* Begin PBXFileReference section */
 		0B5FBBB7CBFC9E097A981C00 /* Pods-SwiftOTP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP.debug.xcconfig"; sourceTree = "<group>"; };
 		150B4E90210A68D0007D94A8 /* TokensExportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensExportViewController.swift; sourceTree = "<group>"; };
+		1525DB6624A54C5E0095C3D2 /* TokensListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensListView.swift; sourceTree = "<group>"; };
 		152EEEC220F10A99006925D8 /* TokensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensViewController.swift; sourceTree = "<group>"; };
 		152EEEC820F13EA4006925D8 /* TokenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenCollectionViewCell.swift; sourceTree = "<group>"; };
 		152EEEC920F13EA4006925D8 /* TokenCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TokenCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 		158DABE82103EF45000EBE68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		158DABEA2103EF45000EBE68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		159CDA0C20FA98F200A9B976 /* OTPCallbackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCallbackRouter.swift; sourceTree = "<group>"; };
+		15A3CB1224A78A5D00BEBF08 /* TokenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenViewModel.swift; sourceTree = "<group>"; };
+		15A3CB1424A78B5800BEBF08 /* TokensViewDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensViewDelegateDataSource.swift; sourceTree = "<group>"; };
 		15CA9507210A6AD600F76E5B /* AcknowledgementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsViewController.swift; sourceTree = "<group>"; };
 		15CA950A210BCDC100F76E5B /* SwiftOTP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftOTP.xcdatamodel; sourceTree = "<group>"; };
 		15CA950C210BD11D00F76E5B /* Integration+FetchRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Integration+FetchRequests.swift"; sourceTree = "<group>"; };
@@ -296,10 +302,8 @@
 		152EEEC520F12A95006925D8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1554F61E20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift */,
-				152EEEC820F13EA4006925D8 /* TokenCollectionViewCell.swift */,
-				152EEEC920F13EA4006925D8 /* TokenCollectionViewCell.xib */,
-				156EBC8620F9A79C000F240B /* ThemedTableViewCell.swift */,
+				15A7045C24A8B5C500F145A2 /* SwiftUI */,
+				15A7045B24A8B5BC00F145A2 /* UIKit */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -415,6 +419,7 @@
 				1554F62620F3DEE100C693E8 /* Storyboards */,
 				152EEEC520F12A95006925D8 /* Views */,
 				152EEEC120F10A5E006925D8 /* View Controllers */,
+				15A3CB1124A78A1200BEBF08 /* View Models */,
 				152EEECE20F26678006925D8 /* Extensions */,
 			);
 			path = SwiftOTP;
@@ -463,6 +468,34 @@
 				159CDA0C20FA98F200A9B976 /* OTPCallbackRouter.swift */,
 			);
 			path = "Callback URL Handling";
+			sourceTree = "<group>";
+		};
+		15A3CB1124A78A1200BEBF08 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				15A3CB1224A78A5D00BEBF08 /* TokenViewModel.swift */,
+				15A3CB1424A78B5800BEBF08 /* TokensViewDelegateDataSource.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		15A7045B24A8B5BC00F145A2 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				1554F61E20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift */,
+				152EEEC820F13EA4006925D8 /* TokenCollectionViewCell.swift */,
+				152EEEC920F13EA4006925D8 /* TokenCollectionViewCell.xib */,
+				156EBC8620F9A79C000F240B /* ThemedTableViewCell.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		15A7045C24A8B5C500F145A2 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				1525DB6624A54C5E0095C3D2 /* TokensListView.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 		7337BBAF6AF56D1CB1774AC3 /* Frameworks */ = {
@@ -900,6 +933,7 @@
 				152EEED620F2C48B006925D8 /* Intents.intentdefinition in Sources */,
 				1554F61F20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift in Sources */,
 				152EEEC320F10A99006925D8 /* TokensViewController.swift in Sources */,
+				1525DB6724A54C5E0095C3D2 /* TokensListView.swift in Sources */,
 				156EBC8720F9A79C000F240B /* ThemedTableViewCell.swift in Sources */,
 				1574E7BF20F03A970070B124 /* AppDelegate.swift in Sources */,
 				152EEED220F267B9006925D8 /* UIViewController+Segues.swift in Sources */,
@@ -913,10 +947,12 @@
 				150B4E91210A68D0007D94A8 /* TokensExportViewController.swift in Sources */,
 				1580EC64215714B80084A182 /* IndexPath+TupleValue.swift in Sources */,
 				156EBC7F20F6D4D0000F240B /* ShowTokenQRActivity.swift in Sources */,
+				15A3CB1324A78A5D00BEBF08 /* TokenViewModel.swift in Sources */,
 				1554F62920F40B6700C693E8 /* UIView+ShowHide.swift in Sources */,
 				15CA9511210BF61E00F76E5B /* AuthorizationViewController.swift in Sources */,
 				156EBC8520F9A6E4000F240B /* PreferencesViewController.swift in Sources */,
 				15CA950D210BD11D00F76E5B /* Integration+FetchRequests.swift in Sources */,
+				15A3CB1524A78B5800BEBF08 /* TokensViewDelegateDataSource.swift in Sources */,
 				1554F62320F3DE7500C693E8 /* Preferences.swift in Sources */,
 				156EBC7B20F6C08C000F240B /* ImageViewController.swift in Sources */,
 				15CA950F210BF4BD00F76E5B /* IntegrationTokenViewController.swift in Sources */,
@@ -1120,7 +1156,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1177,7 +1213,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

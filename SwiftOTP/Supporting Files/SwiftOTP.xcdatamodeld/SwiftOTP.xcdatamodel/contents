@@ -1,16 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14296.2" systemVersion="18A336e" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Integration" representedClassName="Integration" syncable="YES" codeGenerationType="class">
-        <attribute name="appName" attributeType="String" syncable="YES"/>
-        <attribute name="authorized" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="lastUsed" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="secret" attributeType="String" syncable="YES"/>
-        <attribute name="successScheme" attributeType="String" syncable="YES"/>
-        <attribute name="tokenAccount" attributeType="String" syncable="YES"/>
-        <attribute name="uuid" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
-    </entity>
-    <elements>
-        <element name="Integration" positionX="-63" positionY="-18" width="128" height="165"/>
-    </elements>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17162" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <elements/>
 </model>

@@ -29,7 +29,7 @@ class TokensViewController: UICollectionViewController
 
 	private enum Segues: String, Segue
 	{
-		case editToken, authorizeIntegration
+		case editToken
 	}
 
 	#if !targetEnvironment(simulator)
@@ -250,12 +250,6 @@ class TokensViewController: UICollectionViewController
 
 				storyboardSegue.destination.broadcast(context)
 			}
-
-		case .authorizeIntegration:
-			if let authorizationContext = sender as? AuthorizationViewController.AuthorizeIntegrationContext
-			{
-				storyboardSegue.destination.broadcast(authorizationContext)
-			}
 		}
 	}
 
@@ -412,10 +406,6 @@ extension TokensViewController // Context Bus
 		else if let tokenUrlContext = context as? LoadTokenUrlContext
 		{
 			importToken(with: tokenUrlContext.urlComponents)
-		}
-		else if context is AuthorizationViewController.AuthorizeIntegrationContext
-		{
-			performSegue(Segues.authorizeIntegration, sender: context)
 		}
 	}
 

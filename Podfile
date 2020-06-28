@@ -22,7 +22,6 @@ target 'SwiftOTP' do
   # Pods for SwiftOTP
   pod 'QRCodeReader.swift', '~> 10.1.0'
   pod 'AcknowList'
-  pod 'CallbackURLKit', :path => 'Dependencies/CallbackURLKit'
 end
 
 target 'SwiftOTPIntents' do
@@ -33,10 +32,10 @@ target 'SwiftOTPIntents' do
 
 end
 
-target 'OTPCallbackDemo' do
+target 'SwiftOTPUIIntents' do
 	# Comment the next line if you're not using Swift and don't want to use dynamic frameworks
 	use_frameworks!
 
 	# Pods for SwiftOTPIntents
-	pod 'CallbackURLKit', :path => 'Dependencies/CallbackURLKit'
+
 end

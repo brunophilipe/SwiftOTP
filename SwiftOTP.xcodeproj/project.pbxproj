@@ -24,7 +24,6 @@
 		152EEEEC20F2CCB8006925D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEEA20F2CCB8006925D8 /* Constants.swift */; };
 		152EEEED20F2CCE6006925D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEEA20F2CCB8006925D8 /* Constants.swift */; };
 		152EEEEE20F2CE57006925D8 /* OTPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1574E7D520F0490D0070B124 /* OTPKit.framework */; };
-		15445ED6210C9DA7001A0961 /* IntegrationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15445ED5210C9DA7001A0961 /* IntegrationsTableViewController.swift */; };
 		15445ED8210C9FD1001A0961 /* NSManagedObject+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15445ED7210C9FD1001A0961 /* NSManagedObject+Helpers.swift */; };
 		15445EDA210CA185001A0961 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15445ED9210CA185001A0961 /* Colors.xcassets */; };
 		1554F61F20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1554F61E20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift */; };
@@ -58,12 +57,6 @@
 		1574E7FA20F0494F0070B124 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574E7F620F0494F0070B124 /* Token.swift */; };
 		1578D22124A410D100E8D55B /* NSCoding+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1578D22024A410D100E8D55B /* NSCoding+Helpers.swift */; };
 		1580EC64215714B80084A182 /* IndexPath+TupleValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1580EC63215714B80084A182 /* IndexPath+TupleValue.swift */; };
-		158DABDF2103EF44000EBE68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158DABDE2103EF44000EBE68 /* AppDelegate.swift */; };
-		158DABE12103EF44000EBE68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158DABE02103EF44000EBE68 /* ViewController.swift */; };
-		158DABE42103EF44000EBE68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 158DABE22103EF44000EBE68 /* Main.storyboard */; };
-		158DABE62103EF45000EBE68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 158DABE52103EF45000EBE68 /* Assets.xcassets */; };
-		158DABE92103EF45000EBE68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 158DABE72103EF45000EBE68 /* LaunchScreen.storyboard */; };
-		159CDA0D20FA98F200A9B976 /* OTPCallbackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159CDA0C20FA98F200A9B976 /* OTPCallbackRouter.swift */; };
 		15A3CB1324A78A5D00BEBF08 /* TokenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A3CB1224A78A5D00BEBF08 /* TokenViewModel.swift */; };
 		15A3CB1524A78B5800BEBF08 /* TokensViewDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A3CB1424A78B5800BEBF08 /* TokensViewDelegateDataSource.swift */; };
 		15A7045D24A8B75600F145A2 /* TokenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEC820F13EA4006925D8 /* TokenCollectionViewCell.swift */; };
@@ -75,18 +68,11 @@
 		15A7047324A8D75F00F145A2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEEA20F2CCB8006925D8 /* Constants.swift */; };
 		15A7047624A8DB4500F145A2 /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7047524A8DB4500F145A2 /* String+Helpers.swift */; };
 		15CA9508210A6AD600F76E5B /* AcknowledgementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA9507210A6AD600F76E5B /* AcknowledgementsViewController.swift */; };
-		15CA950B210BCDC100F76E5B /* SwiftOTP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15CA9509210BCDC100F76E5B /* SwiftOTP.xcdatamodeld */; };
-		15CA950D210BD11D00F76E5B /* Integration+FetchRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA950C210BD11D00F76E5B /* Integration+FetchRequests.swift */; };
-		15CA950F210BF4BD00F76E5B /* IntegrationTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA950E210BF4BD00F76E5B /* IntegrationTokenViewController.swift */; };
-		15CA9511210BF61E00F76E5B /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA9510210BF61E00F76E5B /* AuthorizationViewController.swift */; };
 		15D3634B20FA29EA00284137 /* TokensPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634A20FA29EA00284137 /* TokensPickerViewController.swift */; };
 		15D3634D20FA482800284137 /* TokenStore+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634C20FA482800284137 /* TokenStore+Export.swift */; };
 		15D3634F20FA4B9C00284137 /* FileManager+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634E20FA4B9C00284137 /* FileManager+Helpers.swift */; };
 		15D3635120FA723000284137 /* Bundle+InfoAccessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3635020FA723000284137 /* Bundle+InfoAccessors.swift */; };
 		15D3635520FA814300284137 /* Pods-SwiftOTP-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15D3635420FA814300284137 /* Pods-SwiftOTP-acknowledgements.plist */; };
-		15FC70972115E925001C4C1A /* SwiftOTP.html in Resources */ = {isa = PBXBuildFile; fileRef = 15FC70962115E925001C4C1A /* SwiftOTP.html */; };
-		15FC70992115EAF1001C4C1A /* DocsWrapper.html in Resources */ = {isa = PBXBuildFile; fileRef = 15FC70982115EAF0001C4C1A /* DocsWrapper.html */; };
-		5CECF274D5DD17FC5DBA687F /* Pods_OTPCallbackDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8772F63A71F7A0E89406A0E /* Pods_OTPCallbackDemo.framework */; };
 		6E0FB1EC182917628879D22E /* Pods_SwiftOTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2CDEC4586380293BB7ED89 /* Pods_SwiftOTP.framework */; };
 		86F782CB14A25740C61B7727 /* Pods_OTPKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC8F6B397214EED847A83F3 /* Pods_OTPKitTests.framework */; };
 		D7D9D04A47A396FB46CBBBD0 /* Pods_OTPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED336A811AC2DA0B53FFC09F /* Pods_OTPKit.framework */; };
@@ -173,7 +159,6 @@
 		152EEEE020F2CBA2006925D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		152EEEE920F2CC0A006925D8 /* SwiftOTPIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftOTPIntents.entitlements; sourceTree = "<group>"; };
 		152EEEEA20F2CCB8006925D8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		15445ED5210C9DA7001A0961 /* IntegrationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationsTableViewController.swift; sourceTree = "<group>"; };
 		15445ED7210C9FD1001A0961 /* NSManagedObject+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Helpers.swift"; sourceTree = "<group>"; };
 		15445ED9210CA185001A0961 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		1554F61E20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColoredPlaceholderTextField.swift; sourceTree = "<group>"; };
@@ -209,14 +194,6 @@
 		1574E7F620F0494F0070B124 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		1578D22024A410D100E8D55B /* NSCoding+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCoding+Helpers.swift"; sourceTree = "<group>"; };
 		1580EC63215714B80084A182 /* IndexPath+TupleValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IndexPath+TupleValue.swift"; sourceTree = "<group>"; };
-		158DABDC2103EF44000EBE68 /* OTPCallbackDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OTPCallbackDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		158DABDE2103EF44000EBE68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		158DABE02103EF44000EBE68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		158DABE32103EF44000EBE68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		158DABE52103EF45000EBE68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		158DABE82103EF45000EBE68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		158DABEA2103EF45000EBE68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		159CDA0C20FA98F200A9B976 /* OTPCallbackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCallbackRouter.swift; sourceTree = "<group>"; };
 		15A3CB1224A78A5D00BEBF08 /* TokenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenViewModel.swift; sourceTree = "<group>"; };
 		15A3CB1424A78B5800BEBF08 /* TokensViewDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensViewDelegateDataSource.swift; sourceTree = "<group>"; };
 		15A7046224A8D0F600F145A2 /* SwiftOTPUIIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SwiftOTPUIIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,18 +204,11 @@
 		15A7047424A8DAF900F145A2 /* SwiftOTPUIIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftOTPUIIntents.entitlements; sourceTree = "<group>"; };
 		15A7047524A8DB4500F145A2 /* String+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
 		15CA9507210A6AD600F76E5B /* AcknowledgementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsViewController.swift; sourceTree = "<group>"; };
-		15CA950A210BCDC100F76E5B /* SwiftOTP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftOTP.xcdatamodel; sourceTree = "<group>"; };
-		15CA950C210BD11D00F76E5B /* Integration+FetchRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Integration+FetchRequests.swift"; sourceTree = "<group>"; };
-		15CA950E210BF4BD00F76E5B /* IntegrationTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationTokenViewController.swift; sourceTree = "<group>"; };
-		15CA9510210BF61E00F76E5B /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		15D3634A20FA29EA00284137 /* TokensPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensPickerViewController.swift; sourceTree = "<group>"; };
 		15D3634C20FA482800284137 /* TokenStore+Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TokenStore+Export.swift"; sourceTree = "<group>"; };
 		15D3634E20FA4B9C00284137 /* FileManager+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Helpers.swift"; sourceTree = "<group>"; };
 		15D3635020FA723000284137 /* Bundle+InfoAccessors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+InfoAccessors.swift"; sourceTree = "<group>"; };
 		15D3635420FA814300284137 /* Pods-SwiftOTP-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-SwiftOTP-acknowledgements.plist"; path = "Pods/Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
-		15FC70942115E616001C4C1A /* SwiftOTP.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SwiftOTP.md; sourceTree = "<group>"; };
-		15FC70962115E925001C4C1A /* SwiftOTP.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = SwiftOTP.html; sourceTree = "<group>"; };
-		15FC70982115EAF0001C4C1A /* DocsWrapper.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = DocsWrapper.html; sourceTree = "<group>"; };
 		192488C999A10607F1BCD929 /* Pods-OTPKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OTPKitTests/Pods-OTPKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		350846FED42A69CBAF7FF5AC /* Pods_SwiftOTPIntents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOTPIntents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58EBC5BE904090BC5FFE8732 /* Pods-OTPKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OTPKitTests/Pods-OTPKitTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -291,14 +261,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		158DABD92103EF44000EBE68 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5CECF274D5DD17FC5DBA687F /* Pods_OTPCallbackDemo.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		15A7045F24A8D0F600F145A2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -322,9 +284,6 @@
 				15D3634A20FA29EA00284137 /* TokensPickerViewController.swift */,
 				150B4E90210A68D0007D94A8 /* TokensExportViewController.swift */,
 				15CA9507210A6AD600F76E5B /* AcknowledgementsViewController.swift */,
-				15CA9510210BF61E00F76E5B /* AuthorizationViewController.swift */,
-				15CA950E210BF4BD00F76E5B /* IntegrationTokenViewController.swift */,
-				15445ED5210C9DA7001A0961 /* IntegrationsTableViewController.swift */,
 				156C530F21CB09D500ADE424 /* Tutorials */,
 			);
 			path = "View Controllers";
@@ -344,7 +303,6 @@
 			children = (
 				15D3635020FA723000284137 /* Bundle+InfoAccessors.swift */,
 				15D3634E20FA4B9C00284137 /* FileManager+Helpers.swift */,
-				15CA950C210BD11D00F76E5B /* Integration+FetchRequests.swift */,
 				15445ED7210C9FD1001A0961 /* NSManagedObject+Helpers.swift */,
 				1554F62A20F42DC700C693E8 /* Token+Accessibility.swift */,
 				15D3634C20FA482800284137 /* TokenStore+Export.swift */,
@@ -388,10 +346,6 @@
 				152EEED320F2BDA2006925D8 /* Intents.intentdefinition */,
 				1574E7C520F03A980070B124 /* Assets.xcassets */,
 				15445ED9210CA185001A0961 /* Colors.xcassets */,
-				15CA9509210BCDC100F76E5B /* SwiftOTP.xcdatamodeld */,
-				15FC70942115E616001C4C1A /* SwiftOTP.md */,
-				15FC70962115E925001C4C1A /* SwiftOTP.html */,
-				15FC70982115EAF0001C4C1A /* DocsWrapper.html */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -422,7 +376,6 @@
 				1574E7D620F0490D0070B124 /* OTPKit */,
 				1574E7E320F0490D0070B124 /* OTPKitTests */,
 				152EEEDD20F2CBA2006925D8 /* SwiftOTPIntents */,
-				158DABDD2103EF44000EBE68 /* OTPCallbackDemo */,
 				15A7046524A8D0F600F145A2 /* SwiftOTPUIIntents */,
 				1574E7BC20F03A970070B124 /* Products */,
 				CBE616A24E63CFB0CD90411F /* Pods */,
@@ -437,7 +390,6 @@
 				1574E7D520F0490D0070B124 /* OTPKit.framework */,
 				1574E7DD20F0490D0070B124 /* OTPKitTests.xctest */,
 				152EEEDC20F2CBA2006925D8 /* SwiftOTPIntents.appex */,
-				158DABDC2103EF44000EBE68 /* OTPCallbackDemo.app */,
 				15A7046224A8D0F600F145A2 /* SwiftOTPUIIntents.appex */,
 			);
 			name = Products;
@@ -447,7 +399,6 @@
 			isa = PBXGroup;
 			children = (
 				1554F62420F3DE8900C693E8 /* Application */,
-				159CDA0E20FA9DEB00A9B976 /* Callback URL Handling */,
 				1554F62520F3DED100C693E8 /* Supporting Files */,
 				1554F62620F3DEE100C693E8 /* Storyboards */,
 				152EEEC520F12A95006925D8 /* Views */,
@@ -481,27 +432,6 @@
 				1574E7E620F0490D0070B124 /* Info.plist */,
 			);
 			path = OTPKitTests;
-			sourceTree = "<group>";
-		};
-		158DABDD2103EF44000EBE68 /* OTPCallbackDemo */ = {
-			isa = PBXGroup;
-			children = (
-				158DABDE2103EF44000EBE68 /* AppDelegate.swift */,
-				158DABE02103EF44000EBE68 /* ViewController.swift */,
-				158DABE22103EF44000EBE68 /* Main.storyboard */,
-				158DABE52103EF45000EBE68 /* Assets.xcassets */,
-				158DABE72103EF45000EBE68 /* LaunchScreen.storyboard */,
-				158DABEA2103EF45000EBE68 /* Info.plist */,
-			);
-			path = OTPCallbackDemo;
-			sourceTree = "<group>";
-		};
-		159CDA0E20FA9DEB00A9B976 /* Callback URL Handling */ = {
-			isa = PBXGroup;
-			children = (
-				159CDA0C20FA98F200A9B976 /* OTPCallbackRouter.swift */,
-			);
-			path = "Callback URL Handling";
 			sourceTree = "<group>";
 		};
 		15A3CB1124A78A1200BEBF08 /* View Models */ = {
@@ -612,7 +542,6 @@
 				CC122889190F15A9CE2913DB /* [CP] Check Pods Manifest.lock */,
 				1574E7B720F03A970070B124 /* Sources */,
 				1574E7B820F03A970070B124 /* Frameworks */,
-				15FC70952115E708001C4C1A /* Compile Markdown Docs */,
 				1574E7B920F03A970070B124 /* Resources */,
 				1574E7EF20F0490D0070B124 /* Embed Frameworks */,
 				663D8CECCD30128E19156EBE /* [CP] Embed Pods Frameworks */,
@@ -668,25 +597,6 @@
 			productName = OTPKitTests;
 			productReference = 1574E7DD20F0490D0070B124 /* OTPKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		158DABDB2103EF44000EBE68 /* OTPCallbackDemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 158DABED2103EF45000EBE68 /* Build configuration list for PBXNativeTarget "OTPCallbackDemo" */;
-			buildPhases = (
-				52A46D93F040C742FA4BE162 /* [CP] Check Pods Manifest.lock */,
-				158DABD82103EF44000EBE68 /* Sources */,
-				158DABD92103EF44000EBE68 /* Frameworks */,
-				158DABDA2103EF44000EBE68 /* Resources */,
-				C55D5F11A35E2FB4FB32F354 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = OTPCallbackDemo;
-			productName = OTPCallbackDemo;
-			productReference = 158DABDC2103EF44000EBE68 /* OTPCallbackDemo.app */;
-			productType = "com.apple.product-type.application";
 		};
 		15A7046124A8D0F600F145A2 /* SwiftOTPUIIntents */ = {
 			isa = PBXNativeTarget;
@@ -751,9 +661,6 @@
 						LastSwiftMigration = 1100;
 						TestTargetID = 1574E7BA20F03A970070B124;
 					};
-					158DABDB2103EF44000EBE68 = {
-						CreatedOnToolsVersion = 10.0;
-					};
 					15A7046124A8D0F600F145A2 = {
 						CreatedOnToolsVersion = 12.0;
 					};
@@ -777,7 +684,6 @@
 				1574E7DC20F0490D0070B124 /* OTPKitTests */,
 				152EEEDB20F2CBA2006925D8 /* SwiftOTPIntents */,
 				15A7046124A8D0F600F145A2 /* SwiftOTPUIIntents */,
-				158DABDB2103EF44000EBE68 /* OTPCallbackDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -794,8 +700,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15FC70992115EAF1001C4C1A /* DocsWrapper.html in Resources */,
-				15FC70972115E925001C4C1A /* SwiftOTP.html in Resources */,
 				152EEECB20F13EA4006925D8 /* TokenCollectionViewCell.xib in Resources */,
 				156EBC7920F6C07C000F240B /* ImageViewer.storyboard in Resources */,
 				156C530E21CB09D200ADE424 /* TokensTutorialViewController.xib in Resources */,
@@ -821,16 +725,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		158DABDA2103EF44000EBE68 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				158DABE92103EF45000EBE68 /* LaunchScreen.storyboard in Resources */,
-				158DABE62103EF45000EBE68 /* Assets.xcassets in Resources */,
-				158DABE42103EF44000EBE68 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		15A7046024A8D0F600F145A2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -842,43 +736,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		15FC70952115E708001C4C1A /* Compile Markdown Docs */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Compile Markdown Docs";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(SRCROOT)/SwiftOTP/Supporting Files/SwiftOTP.html",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if ! [ -x \"$(command -v markdown)\" ]; then\n    echo 'Error: markdown is not installed. If you made changes to the SwiftOTP.md file, please compile it to SwiftOTP.html manually, or install markdown.' >&2\n    exit 0\nfi\n\necho \"<!-- This is an auto-generated file. Please edit SwiftOTP.md instead. -->\\n\" > \"SwiftOTP/Supporting Files/SwiftOTP.html\"\n\nmarkdown \"SwiftOTP/Supporting Files/SwiftOTP.md\" >> \"SwiftOTP/Supporting Files/SwiftOTP.html\"\n";
-		};
-		52A46D93F040C742FA4BE162 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OTPCallbackDemo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		663D8CECCD30128E19156EBE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -930,23 +787,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C55D5F11A35E2FB4FB32F354 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OTPCallbackDemo/Pods-OTPCallbackDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OTPCallbackDemo/Pods-OTPCallbackDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OTPCallbackDemo/Pods-OTPCallbackDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CC122889190F15A9CE2913DB /* [CP] Check Pods Manifest.lock */ = {
@@ -1004,7 +844,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				15D3634D20FA482800284137 /* TokenStore+Export.swift in Sources */,
-				15CA950B210BCDC100F76E5B /* SwiftOTP.xcdatamodeld in Sources */,
 				1554F62B20F42DC700C693E8 /* Token+Accessibility.swift in Sources */,
 				152EEED620F2C48B006925D8 /* Intents.intentdefinition in Sources */,
 				1554F61F20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift in Sources */,
@@ -1015,24 +854,19 @@
 				152EEED220F267B9006925D8 /* UIViewController+Segues.swift in Sources */,
 				1554F62120F3DE2700C693E8 /* SecurityPreferencesViewController.swift in Sources */,
 				15D3634B20FA29EA00284137 /* TokensPickerViewController.swift in Sources */,
-				15445ED6210C9DA7001A0961 /* IntegrationsTableViewController.swift in Sources */,
 				152EEECD20F2662F006925D8 /* EditTokenViewController.swift in Sources */,
 				15CA9508210A6AD600F76E5B /* AcknowledgementsViewController.swift in Sources */,
-				159CDA0D20FA98F200A9B976 /* OTPCallbackRouter.swift in Sources */,
 				156EBC8120F6D568000F240B /* UIViewController+LocalAuthentication.swift in Sources */,
 				150B4E91210A68D0007D94A8 /* TokensExportViewController.swift in Sources */,
 				1580EC64215714B80084A182 /* IndexPath+TupleValue.swift in Sources */,
 				156EBC7F20F6D4D0000F240B /* ShowTokenQRActivity.swift in Sources */,
 				15A3CB1324A78A5D00BEBF08 /* TokenViewModel.swift in Sources */,
 				1554F62920F40B6700C693E8 /* UIView+ShowHide.swift in Sources */,
-				15CA9511210BF61E00F76E5B /* AuthorizationViewController.swift in Sources */,
 				156EBC8520F9A6E4000F240B /* PreferencesViewController.swift in Sources */,
-				15CA950D210BD11D00F76E5B /* Integration+FetchRequests.swift in Sources */,
 				15A7045D24A8B75600F145A2 /* TokenCollectionViewCell.swift in Sources */,
 				15A3CB1524A78B5800BEBF08 /* TokensViewDelegateDataSource.swift in Sources */,
 				1554F62320F3DE7500C693E8 /* Preferences.swift in Sources */,
 				156EBC7B20F6C08C000F240B /* ImageViewController.swift in Sources */,
-				15CA950F210BF4BD00F76E5B /* IntegrationTokenViewController.swift in Sources */,
 				15D3634F20FA4B9C00284137 /* FileManager+Helpers.swift in Sources */,
 				156EBC8320F6E25C000F240B /* UIViewController+Alerts.swift in Sources */,
 				15445ED8210C9FD1001A0961 /* NSManagedObject+Helpers.swift in Sources */,
@@ -1064,15 +898,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1574E7E520F0490D0070B124 /* OTPKitTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		158DABD82103EF44000EBE68 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				158DABE12103EF44000EBE68 /* ViewController.swift in Sources */,
-				158DABDF2103EF44000EBE68 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1128,22 +953,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				1574E7C820F03A980070B124 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		158DABE22103EF44000EBE68 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				158DABE32103EF44000EBE68 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		158DABE72103EF45000EBE68 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				158DABE82103EF45000EBE68 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1470,44 +1279,6 @@
 			};
 			name = Release;
 		};
-		158DABEB2103EF45000EBE68 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6510F0EEC50AAF5BE781285D /* Pods-OTPCallbackDemo.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R85D3K8ATT;
-				INFOPLIST_FILE = OTPCallbackDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.brunophilipe.OTPCallbackDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		158DABEC2103EF45000EBE68 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9123560051A5F5BA38D068EE /* Pods-OTPCallbackDemo.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R85D3K8ATT;
-				INFOPLIST_FILE = OTPCallbackDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.brunophilipe.OTPCallbackDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		15A7047024A8D0F600F145A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1596,15 +1367,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		158DABED2103EF45000EBE68 /* Build configuration list for PBXNativeTarget "OTPCallbackDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				158DABEB2103EF45000EBE68 /* Debug */,
-				158DABEC2103EF45000EBE68 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		15A7046F24A8D0F600F145A2 /* Build configuration list for PBXNativeTarget "SwiftOTPUIIntents" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1615,19 +1377,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		15CA9509210BCDC100F76E5B /* SwiftOTP.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				15CA950A210BCDC100F76E5B /* SwiftOTP.xcdatamodel */,
-			);
-			currentVersion = 15CA950A210BCDC100F76E5B /* SwiftOTP.xcdatamodel */;
-			path = SwiftOTP.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 1574E7B320F03A970070B124 /* Project object */;
 }

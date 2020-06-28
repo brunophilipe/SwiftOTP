@@ -199,7 +199,7 @@
 					</dict>
 				</array>
 				<key>INIntentResponseLastParameterTag</key>
-				<integer>4</integer>
+				<integer>5</integer>
 				<key>INIntentResponseOutput</key>
 				<string>otpCode</string>
 				<key>INIntentResponseParameters</key>
@@ -229,6 +229,20 @@
 						<string>otpCodeForSpeech</string>
 						<key>INIntentResponseParameterTag</key>
 						<integer>2</integer>
+						<key>INIntentResponseParameterType</key>
+						<string>String</string>
+					</dict>
+					<dict>
+						<key>INIntentResponseParameterDisplayName</key>
+						<string>Account</string>
+						<key>INIntentResponseParameterDisplayNameID</key>
+						<string>xfgVWz</string>
+						<key>INIntentResponseParameterDisplayPriority</key>
+						<integer>3</integer>
+						<key>INIntentResponseParameterName</key>
+						<string>account</string>
+						<key>INIntentResponseParameterTag</key>
+						<integer>5</integer>
 						<key>INIntentResponseParameterType</key>
 						<string>String</string>
 					</dict>

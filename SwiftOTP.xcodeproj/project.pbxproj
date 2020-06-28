@@ -67,6 +67,13 @@
 		15A3CB1324A78A5D00BEBF08 /* TokenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A3CB1224A78A5D00BEBF08 /* TokenViewModel.swift */; };
 		15A3CB1524A78B5800BEBF08 /* TokensViewDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A3CB1424A78B5800BEBF08 /* TokensViewDelegateDataSource.swift */; };
 		15A7045D24A8B75600F145A2 /* TokenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEC820F13EA4006925D8 /* TokenCollectionViewCell.swift */; };
+		15A7046424A8D0F600F145A2 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A7046324A8D0F600F145A2 /* IntentsUI.framework */; };
+		15A7046724A8D0F600F145A2 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7046624A8D0F600F145A2 /* IntentViewController.swift */; };
+		15A7046A24A8D0F600F145A2 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A7046824A8D0F600F145A2 /* MainInterface.storyboard */; };
+		15A7046E24A8D0F600F145A2 /* SwiftOTPUIIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 15A7046224A8D0F600F145A2 /* SwiftOTPUIIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		15A7047224A8D4D300F145A2 /* OTPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1574E7D520F0490D0070B124 /* OTPKit.framework */; };
+		15A7047324A8D75F00F145A2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEEA20F2CCB8006925D8 /* Constants.swift */; };
+		15A7047624A8DB4500F145A2 /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7047524A8DB4500F145A2 /* String+Helpers.swift */; };
 		15CA9508210A6AD600F76E5B /* AcknowledgementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA9507210A6AD600F76E5B /* AcknowledgementsViewController.swift */; };
 		15CA950B210BCDC100F76E5B /* SwiftOTP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15CA9509210BCDC100F76E5B /* SwiftOTP.xcdatamodeld */; };
 		15CA950D210BD11D00F76E5B /* Integration+FetchRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA950C210BD11D00F76E5B /* Integration+FetchRequests.swift */; };
@@ -114,6 +121,13 @@
 			remoteGlobalIDString = 1574E7D420F0490D0070B124;
 			remoteInfo = OTPKit;
 		};
+		15A7046C24A8D0F600F145A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1574E7B320F03A970070B124 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15A7046124A8D0F600F145A2;
+			remoteInfo = SwiftOTPUIIntents;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -123,6 +137,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				15A7046E24A8D0F600F145A2 /* SwiftOTPUIIntents.appex in Embed App Extensions */,
 				152EEEE320F2CBA2006925D8 /* SwiftOTPIntents.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -204,6 +219,13 @@
 		159CDA0C20FA98F200A9B976 /* OTPCallbackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCallbackRouter.swift; sourceTree = "<group>"; };
 		15A3CB1224A78A5D00BEBF08 /* TokenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenViewModel.swift; sourceTree = "<group>"; };
 		15A3CB1424A78B5800BEBF08 /* TokensViewDelegateDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensViewDelegateDataSource.swift; sourceTree = "<group>"; };
+		15A7046224A8D0F600F145A2 /* SwiftOTPUIIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SwiftOTPUIIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		15A7046324A8D0F600F145A2 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		15A7046624A8D0F600F145A2 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
+		15A7046924A8D0F600F145A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		15A7046B24A8D0F600F145A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15A7047424A8DAF900F145A2 /* SwiftOTPUIIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftOTPUIIntents.entitlements; sourceTree = "<group>"; };
+		15A7047524A8DB4500F145A2 /* String+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
 		15CA9507210A6AD600F76E5B /* AcknowledgementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsViewController.swift; sourceTree = "<group>"; };
 		15CA950A210BCDC100F76E5B /* SwiftOTP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftOTP.xcdatamodel; sourceTree = "<group>"; };
 		15CA950C210BD11D00F76E5B /* Integration+FetchRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Integration+FetchRequests.swift"; sourceTree = "<group>"; };
@@ -274,6 +296,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CECF274D5DD17FC5DBA687F /* Pods_OTPCallbackDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15A7045F24A8D0F600F145A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A7047224A8D4D300F145A2 /* OTPKit.framework in Frameworks */,
+				15A7046424A8D0F600F145A2 /* IntentsUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +423,7 @@
 				1574E7E320F0490D0070B124 /* OTPKitTests */,
 				152EEEDD20F2CBA2006925D8 /* SwiftOTPIntents */,
 				158DABDD2103EF44000EBE68 /* OTPCallbackDemo */,
+				15A7046524A8D0F600F145A2 /* SwiftOTPUIIntents */,
 				1574E7BC20F03A970070B124 /* Products */,
 				CBE616A24E63CFB0CD90411F /* Pods */,
 				7337BBAF6AF56D1CB1774AC3 /* Frameworks */,
@@ -406,6 +438,7 @@
 				1574E7DD20F0490D0070B124 /* OTPKitTests.xctest */,
 				152EEEDC20F2CBA2006925D8 /* SwiftOTPIntents.appex */,
 				158DABDC2103EF44000EBE68 /* OTPCallbackDemo.app */,
+				15A7046224A8D0F600F145A2 /* SwiftOTPUIIntents.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -436,6 +469,7 @@
 				1574E7F320F0494F0070B124 /* TokenStore.swift */,
 				156EBC7C20F6C2A1000F240B /* UIImage+QRCode.swift */,
 				1578D22024A410D100E8D55B /* NSCoding+Helpers.swift */,
+				15A7047524A8DB4500F145A2 /* String+Helpers.swift */,
 			);
 			path = OTPKit;
 			sourceTree = "<group>";
@@ -498,6 +532,17 @@
 			path = SwiftUI;
 			sourceTree = "<group>";
 		};
+		15A7046524A8D0F600F145A2 /* SwiftOTPUIIntents */ = {
+			isa = PBXGroup;
+			children = (
+				15A7047424A8DAF900F145A2 /* SwiftOTPUIIntents.entitlements */,
+				15A7046624A8D0F600F145A2 /* IntentViewController.swift */,
+				15A7046824A8D0F600F145A2 /* MainInterface.storyboard */,
+				15A7046B24A8D0F600F145A2 /* Info.plist */,
+			);
+			path = SwiftOTPUIIntents;
+			sourceTree = "<group>";
+		};
 		7337BBAF6AF56D1CB1774AC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -506,6 +551,7 @@
 				CA2CDEC4586380293BB7ED89 /* Pods_SwiftOTP.framework */,
 				350846FED42A69CBAF7FF5AC /* Pods_SwiftOTPIntents.framework */,
 				F8772F63A71F7A0E89406A0E /* Pods_OTPCallbackDemo.framework */,
+				15A7046324A8D0F600F145A2 /* IntentsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -577,6 +623,7 @@
 			dependencies = (
 				1574E7E920F0490D0070B124 /* PBXTargetDependency */,
 				152EEEE220F2CBA2006925D8 /* PBXTargetDependency */,
+				15A7046D24A8D0F600F145A2 /* PBXTargetDependency */,
 			);
 			name = SwiftOTP;
 			productName = SwiftOTP;
@@ -641,13 +688,30 @@
 			productReference = 158DABDC2103EF44000EBE68 /* OTPCallbackDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		15A7046124A8D0F600F145A2 /* SwiftOTPUIIntents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15A7046F24A8D0F600F145A2 /* Build configuration list for PBXNativeTarget "SwiftOTPUIIntents" */;
+			buildPhases = (
+				15A7045E24A8D0F600F145A2 /* Sources */,
+				15A7045F24A8D0F600F145A2 /* Frameworks */,
+				15A7046024A8D0F600F145A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftOTPUIIntents;
+			productName = SwiftOTPUIIntents;
+			productReference = 15A7046224A8D0F600F145A2 /* SwiftOTPUIIntents.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		1574E7B320F03A970070B124 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Bruno Philipe";
 				TargetAttributes = {
@@ -690,6 +754,9 @@
 					158DABDB2103EF44000EBE68 = {
 						CreatedOnToolsVersion = 10.0;
 					};
+					15A7046124A8D0F600F145A2 = {
+						CreatedOnToolsVersion = 12.0;
+					};
 				};
 			};
 			buildConfigurationList = 1574E7B620F03A970070B124 /* Build configuration list for PBXProject "SwiftOTP" */;
@@ -709,6 +776,7 @@
 				1574E7D420F0490D0070B124 /* OTPKit */,
 				1574E7DC20F0490D0070B124 /* OTPKitTests */,
 				152EEEDB20F2CBA2006925D8 /* SwiftOTPIntents */,
+				15A7046124A8D0F600F145A2 /* SwiftOTPUIIntents */,
 				158DABDB2103EF44000EBE68 /* OTPCallbackDemo */,
 			);
 		};
@@ -760,6 +828,14 @@
 				158DABE92103EF45000EBE68 /* LaunchScreen.storyboard in Resources */,
 				158DABE62103EF45000EBE68 /* Assets.xcassets in Resources */,
 				158DABE42103EF44000EBE68 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15A7046024A8D0F600F145A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A7046A24A8D0F600F145A2 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -976,6 +1052,7 @@
 				1578D22124A410D100E8D55B /* NSCoding+Helpers.swift in Sources */,
 				1574E7F720F0494F0070B124 /* TokenStore.swift in Sources */,
 				1574E7F820F0494F0070B124 /* OTP.swift in Sources */,
+				15A7047624A8DB4500F145A2 /* String+Helpers.swift in Sources */,
 				152EEED520F2BDA2006925D8 /* Intents.intentdefinition in Sources */,
 				1574E7FA20F0494F0070B124 /* Token.swift in Sources */,
 				152EEEEC20F2CCB8006925D8 /* Constants.swift in Sources */,
@@ -996,6 +1073,15 @@
 			files = (
 				158DABE12103EF44000EBE68 /* ViewController.swift in Sources */,
 				158DABDF2103EF44000EBE68 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15A7045E24A8D0F600F145A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A7046724A8D0F600F145A2 /* IntentViewController.swift in Sources */,
+				15A7047324A8D75F00F145A2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1021,6 +1107,11 @@
 			isa = PBXTargetDependency;
 			target = 1574E7D420F0490D0070B124 /* OTPKit */;
 			targetProxy = 1574E7E820F0490D0070B124 /* PBXContainerItemProxy */;
+		};
+		15A7046D24A8D0F600F145A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15A7046124A8D0F600F145A2 /* SwiftOTPUIIntents */;
+			targetProxy = 15A7046C24A8D0F600F145A2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1055,6 +1146,14 @@
 				158DABE82103EF45000EBE68 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		15A7046824A8D0F600F145A2 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15A7046924A8D0F600F145A2 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1228,6 +1327,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0B5FBBB7CBFC9E097A981C00 /* Pods-SwiftOTP.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SwiftOTP/Supporting Files/SwiftOTP.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -1249,6 +1349,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DB8D1CE8ACF0F2E0AD2152E1 /* Pods-SwiftOTP.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SwiftOTP/Supporting Files/SwiftOTP.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -1407,6 +1508,46 @@
 			};
 			name = Release;
 		};
+		15A7047024A8D0F600F145A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SwiftOTPUIIntents/SwiftOTPUIIntents.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R85D3K8ATT;
+				INFOPLIST_FILE = SwiftOTPUIIntents/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brunophilipe.SwiftOTP.SwiftOTPUIIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15A7047124A8D0F600F145A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SwiftOTPUIIntents/SwiftOTPUIIntents.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R85D3K8ATT;
+				INFOPLIST_FILE = SwiftOTPUIIntents/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brunophilipe.SwiftOTP.SwiftOTPUIIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1460,6 +1601,15 @@
 			buildConfigurations = (
 				158DABEB2103EF45000EBE68 /* Debug */,
 				158DABEC2103EF45000EBE68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15A7046F24A8D0F600F145A2 /* Build configuration list for PBXNativeTarget "SwiftOTPUIIntents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15A7047024A8D0F600F145A2 /* Debug */,
+				15A7047124A8D0F600F145A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

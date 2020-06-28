@@ -65,8 +65,12 @@ class IntentHandler: INExtension, ViewCodeIntentHandling
 			debugLog("Code first digit: \(bestCode.prefix(1)) - Did NOT put code in clipboard.")
 		}
 
-		completion(ViewCodeIntentResponse.success(otpCodeForSpeech: bestCode.intelacingCharactersWithSpaces,
-												  otpCode: bestCode))
+		let response = ViewCodeIntentResponse.success(otpCodeForSpeech: bestCode.dividedIntoClusters(forSpeech: true),
+													  otpCode: bestCode)
+
+		response.account = token.account
+
+		completion(response)
 
 		debugLog("Did call intent completion handler.")
 	}
@@ -142,14 +146,6 @@ class IntentHandler: INExtension, ViewCodeIntentHandling
 				return "No matches found."
 			}
 		}
-	}
-}
-
-private extension String
-{
-	var intelacingCharactersWithSpaces: String
-	{
-		return map({ String($0) }).joined(separator: " ")
 	}
 }
 

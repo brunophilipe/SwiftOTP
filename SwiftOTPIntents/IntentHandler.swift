@@ -113,7 +113,18 @@ class IntentHandler: INExtension, ViewCodeIntentHandling
 		completion(.disambiguation(with: resolveTokens(fromIssuer: "").compactMap({ $0.issuer })))
 	}
 
+	@available(iOS 14.0, *)
 	func provideIssuerOptionsCollection(for intent: ViewCodeIntent, with completion: @escaping (INObjectCollection<NSString>?, Error?) -> Void) {
+		provideIssuerOptions(for: intent) { (matches, error) in
+			if let matches = matches {
+				completion(.init(items: matches.map({ $0 as NSString })), nil)
+			} else if let error = error {
+				completion(nil, error)
+			}
+		}
+	}
+
+	func provideIssuerOptions(for intent: ViewCodeIntent, with completion: @escaping ([String]?, Error?) -> Void) {
 		let matches = resolveTokens(fromIssuer: intent.issuer ?? "")
 
 		if matches.isEmpty {
@@ -121,7 +132,7 @@ class IntentHandler: INExtension, ViewCodeIntentHandling
 			completion(nil, IssuerProviderError.noneFound)
 		} else {
 			// Many found. Ask user to pick one
-			completion(.init(items: matches.map({ $0.issuer as NSString })), nil)
+			completion(matches.map({ $0.issuer }), nil)
 		}
 	}
 

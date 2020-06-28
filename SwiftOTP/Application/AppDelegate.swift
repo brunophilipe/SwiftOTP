@@ -14,7 +14,7 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
-	public static let tokenImportUTIs = ["com.brunophilipe.SwiftOTP.tokens", "document.plain-text"]
+	public static let tokenImportUTIs = ["com.brunophilipe.SwiftOTP.tokens", "public.plain-text"]
 
 	private let callbackRouter = OTPCallbackRouter(callbackURLScheme: "swiftotp-callback")
 

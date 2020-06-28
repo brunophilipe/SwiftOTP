@@ -11,7 +11,6 @@
 		150B4E91210A68D0007D94A8 /* TokensExportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150B4E90210A68D0007D94A8 /* TokensExportViewController.swift */; };
 		1525DB6724A54C5E0095C3D2 /* TokensListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525DB6624A54C5E0095C3D2 /* TokensListView.swift */; };
 		152EEEC320F10A99006925D8 /* TokensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEC220F10A99006925D8 /* TokensViewController.swift */; };
-		152EEECA20F13EA4006925D8 /* TokenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEC820F13EA4006925D8 /* TokenCollectionViewCell.swift */; };
 		152EEECB20F13EA4006925D8 /* TokenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 152EEEC920F13EA4006925D8 /* TokenCollectionViewCell.xib */; };
 		152EEECD20F2662F006925D8 /* EditTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEECC20F2662F006925D8 /* EditTokenViewController.swift */; };
 		152EEED020F2669B006925D8 /* UIViewController+ContextBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEECF20F2669B006925D8 /* UIViewController+ContextBus.swift */; };
@@ -67,6 +66,7 @@
 		159CDA0D20FA98F200A9B976 /* OTPCallbackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159CDA0C20FA98F200A9B976 /* OTPCallbackRouter.swift */; };
 		15A3CB1324A78A5D00BEBF08 /* TokenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A3CB1224A78A5D00BEBF08 /* TokenViewModel.swift */; };
 		15A3CB1524A78B5800BEBF08 /* TokensViewDelegateDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A3CB1424A78B5800BEBF08 /* TokensViewDelegateDataSource.swift */; };
+		15A7045D24A8B75600F145A2 /* TokenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEC820F13EA4006925D8 /* TokenCollectionViewCell.swift */; };
 		15CA9508210A6AD600F76E5B /* AcknowledgementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA9507210A6AD600F76E5B /* AcknowledgementsViewController.swift */; };
 		15CA950B210BCDC100F76E5B /* SwiftOTP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15CA9509210BCDC100F76E5B /* SwiftOTP.xcdatamodeld */; };
 		15CA950D210BD11D00F76E5B /* Integration+FetchRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA950C210BD11D00F76E5B /* Integration+FetchRequests.swift */; };
@@ -952,6 +952,7 @@
 				15CA9511210BF61E00F76E5B /* AuthorizationViewController.swift in Sources */,
 				156EBC8520F9A6E4000F240B /* PreferencesViewController.swift in Sources */,
 				15CA950D210BD11D00F76E5B /* Integration+FetchRequests.swift in Sources */,
+				15A7045D24A8B75600F145A2 /* TokenCollectionViewCell.swift in Sources */,
 				15A3CB1524A78B5800BEBF08 /* TokensViewDelegateDataSource.swift in Sources */,
 				1554F62320F3DE7500C693E8 /* Preferences.swift in Sources */,
 				156EBC7B20F6C08C000F240B /* ImageViewController.swift in Sources */,
@@ -960,7 +961,6 @@
 				156EBC8320F6E25C000F240B /* UIViewController+Alerts.swift in Sources */,
 				15445ED8210C9FD1001A0961 /* NSManagedObject+Helpers.swift in Sources */,
 				152EEED020F2669B006925D8 /* UIViewController+ContextBus.swift in Sources */,
-				152EEECA20F13EA4006925D8 /* TokenCollectionViewCell.swift in Sources */,
 				152EEEEB20F2CCB8006925D8 /* Constants.swift in Sources */,
 				156C530D21CB09D200ADE424 /* TokensTutorialViewController.swift in Sources */,
 				15D3635120FA723000284137 /* Bundle+InfoAccessors.swift in Sources */,

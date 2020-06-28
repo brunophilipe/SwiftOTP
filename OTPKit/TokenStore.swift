@@ -252,4 +252,11 @@ open class TokenStore : NSObject
 
 		return false
 	}
+
+	open func enumerateTokens(using block: (Int, Token) -> Void) {
+		for index in 0..<count {
+			guard let token = load(index) else { continue }
+			block(index, token)
+		}
+	}
 }

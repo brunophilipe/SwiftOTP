@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17132" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cMP-fT-1cp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cMP-fT-1cp">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17105"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,7 +12,7 @@
             <objects>
                 <collectionViewController id="x21-WJ-NYw" customClass="TokensViewController" customModule="SwiftOTP" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" prefetchingEnabled="NO" id="YHX-0k-uAO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.050000000000000003" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="RaU-dt-Ttm">
@@ -28,16 +28,24 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Tokens" largeTitleDisplayMode="always" id="oEW-YX-BA3">
-                        <barButtonItem key="leftBarButtonItem" image="preferences" id="IRe-qX-x8k">
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityLabel" value="Show Preferences" localized="YES"/>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="isAccessibilityElement" value="YES"/>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <segue destination="UqC-sl-dxx" kind="presentation" id="bGO-sM-qRa"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="QR" id="0JT-im-voj">
+                        <leftBarButtonItems>
+                            <barButtonItem image="gear" catalog="system" id="IRe-qX-x8k">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityLabel" value="Show Preferences" localized="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAccessibilityElement" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="UqC-sl-dxx" kind="presentation" id="bGO-sM-qRa"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="ellipsis.circle" catalog="system" id="dOq-Pv-47T">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityLabel" value="Show Preferences" localized="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isAccessibilityElement" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" image="qrcode.viewfinder" catalog="system" id="0JT-im-voj">
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="accessibilityLabel" value="Show QR Code Reader" localized="YES"/>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isAccessibilityElement" value="YES"/>
@@ -588,14 +596,14 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="SwiftOTP Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UEV-g5-Aql">
-                                                    <rect key="frame" x="16" y="11.999999999999998" width="132.33333333333334" height="20.333333333333332"/>
+                                                    <rect key="frame" x="16" y="11.999999999999998" width="133" height="20.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="0.0 (0)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aQg-Zp-8tr">
-                                                    <rect key="frame" x="308.33333333333331" y="11.999999999999998" width="50.666666666666664" height="20.333333333333332"/>
+                                                    <rect key="frame" x="308" y="11.999999999999998" width="51" height="20.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -697,7 +705,7 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Security" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e1A-91-b7Q">
-                                            <rect key="frame" x="15.999999999999996" y="8.9999999999999982" width="62.666666666666664" height="20.333333333333332"/>
+                                            <rect key="frame" x="16" y="8.9999999999999982" width="63" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -816,22 +824,15 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
             <point key="canvasLocation" x="2599" y="1886"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="Drf-oz-BH6">
-            <size key="intrinsicContentSize" width="158.66666666666666" height="22"/>
-        </designable>
-        <designable name="bwj-t9-Sdc">
-            <size key="intrinsicContentSize" width="95" height="22"/>
-        </designable>
-    </designables>
     <color key="tintColor" red="0.94342577459999999" green="0.60512000320000003" blue="0.219585374" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
-        <image name="QR" width="26" height="20"/>
+        <image name="ellipsis.circle" catalog="system" width="128" height="121"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
         <image name="pref_comm" width="29" height="29"/>
         <image name="pref_export" width="29" height="29"/>
         <image name="pref_import" width="29" height="29"/>
         <image name="pref_security" width="29" height="29"/>
-        <image name="preferences" width="26" height="20"/>
+        <image name="qrcode.viewfinder" catalog="system" width="128" height="114"/>
         <namedColor name="tableCellBackground">
             <color red="0.10999999940395355" green="0.10999999940395355" blue="0.11400000005960464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

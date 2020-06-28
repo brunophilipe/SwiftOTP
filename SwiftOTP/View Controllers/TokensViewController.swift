@@ -32,16 +32,16 @@ class TokensViewController: UICollectionViewController
 		case editToken
 	}
 
-	#if !targetEnvironment(simulator)
 	// Good practice: create the reader lazily to avoid cpu overload during the
 	// initialization and each time we need to scan a QRCode
 	lazy var readerVC: QRCodeReaderViewController = {
 		let builder = QRCodeReaderViewControllerBuilder {
+			$0.cancelButtonTitle = ""
 			$0.reader = QRCodeReader(metadataObjectTypes: [.qr], captureDevicePosition: .back)
+			$0.readerView = QRCodeReaderContainer(displayable: QRReaderView.make())
 		}
 		return QRCodeReaderViewController(builder: builder)
 	}()
-	#endif
 
 	private var tokenTutorialViewVisible: Bool = false
 	{
@@ -136,6 +136,11 @@ class TokensViewController: UICollectionViewController
 		}
 
 		#endif
+	}
+
+	@IBAction func showOptionsMenu(_ sender: Any)
+	{
+
 	}
 
 	private func reloadTokens() {
@@ -282,6 +287,12 @@ class TokensViewController: UICollectionViewController
 		}
 
 		return cell
+	}
+
+	override func collectionView(_ collectionView: UICollectionView,
+								 moveItemAt sourceIndexPath: IndexPath,
+								 to destinationIndexPath: IndexPath) {
+		tokenStore.move(sourceIndexPath.item, to: destinationIndexPath.item)
 	}
 }
 

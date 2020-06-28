@@ -68,6 +68,8 @@
 		15A7047324A8D75F00F145A2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEEA20F2CCB8006925D8 /* Constants.swift */; };
 		15A7047624A8DB4500F145A2 /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7047524A8DB4500F145A2 /* String+Helpers.swift */; };
 		15AB160924A908B10044AB25 /* TokenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AB160824A908B10044AB25 /* TokenView.swift */; };
+		15C2A22D24A9103B00793AE4 /* QRReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C2A22C24A9103B00793AE4 /* QRReaderView.swift */; };
+		15C2A22F24A912BE00793AE4 /* QRReaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15C2A22E24A912BE00793AE4 /* QRReaderView.xib */; };
 		15CA9508210A6AD600F76E5B /* AcknowledgementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA9507210A6AD600F76E5B /* AcknowledgementsViewController.swift */; };
 		15D3634B20FA29EA00284137 /* TokensPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634A20FA29EA00284137 /* TokensPickerViewController.swift */; };
 		15D3634D20FA482800284137 /* TokenStore+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634C20FA482800284137 /* TokenStore+Export.swift */; };
@@ -206,6 +208,8 @@
 		15A7047424A8DAF900F145A2 /* SwiftOTPUIIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftOTPUIIntents.entitlements; sourceTree = "<group>"; };
 		15A7047524A8DB4500F145A2 /* String+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
 		15AB160824A908B10044AB25 /* TokenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenView.swift; sourceTree = "<group>"; };
+		15C2A22C24A9103B00793AE4 /* QRReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderView.swift; sourceTree = "<group>"; };
+		15C2A22E24A912BE00793AE4 /* QRReaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRReaderView.xib; sourceTree = "<group>"; };
 		15CA9507210A6AD600F76E5B /* AcknowledgementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsViewController.swift; sourceTree = "<group>"; };
 		15D3634A20FA29EA00284137 /* TokensPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensPickerViewController.swift; sourceTree = "<group>"; };
 		15D3634C20FA482800284137 /* TokenStore+Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TokenStore+Export.swift"; sourceTree = "<group>"; };
@@ -457,6 +461,8 @@
 				152EEEC820F13EA4006925D8 /* TokenCollectionViewCell.swift */,
 				152EEEC920F13EA4006925D8 /* TokenCollectionViewCell.xib */,
 				156EBC8620F9A79C000F240B /* ThemedTableViewCell.swift */,
+				15C2A22C24A9103B00793AE4 /* QRReaderView.swift */,
+				15C2A22E24A912BE00793AE4 /* QRReaderView.xib */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -714,6 +720,7 @@
 			files = (
 				152EEECB20F13EA4006925D8 /* TokenCollectionViewCell.xib in Resources */,
 				156EBC7920F6C07C000F240B /* ImageViewer.storyboard in Resources */,
+				15C2A22F24A912BE00793AE4 /* QRReaderView.xib in Resources */,
 				156C530E21CB09D200ADE424 /* TokensTutorialViewController.xib in Resources */,
 				1574E7C920F03A980070B124 /* LaunchScreen.storyboard in Resources */,
 				1574E7C620F03A980070B124 /* Assets.xcassets in Resources */,
@@ -883,6 +890,7 @@
 				1554F61F20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift in Sources */,
 				152EEEC320F10A99006925D8 /* TokensViewController.swift in Sources */,
 				1525DB6724A54C5E0095C3D2 /* TokensGridView.swift in Sources */,
+				15C2A22D24A9103B00793AE4 /* QRReaderView.swift in Sources */,
 				15AB160924A908B10044AB25 /* TokenView.swift in Sources */,
 				156EBC8720F9A79C000F240B /* ThemedTableViewCell.swift in Sources */,
 				1574E7BF20F03A970070B124 /* AppDelegate.swift in Sources */,

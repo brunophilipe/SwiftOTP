@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		05747BF8CED2958349CB32C3 /* Pods_SwiftOTPIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350846FED42A69CBAF7FF5AC /* Pods_SwiftOTPIntents.framework */; };
 		150B4E91210A68D0007D94A8 /* TokensExportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150B4E90210A68D0007D94A8 /* TokensExportViewController.swift */; };
-		1525DB6724A54C5E0095C3D2 /* TokensListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525DB6624A54C5E0095C3D2 /* TokensListView.swift */; };
+		1525DB6724A54C5E0095C3D2 /* TokensGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525DB6624A54C5E0095C3D2 /* TokensGridView.swift */; };
 		152EEEC320F10A99006925D8 /* TokensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEC220F10A99006925D8 /* TokensViewController.swift */; };
 		152EEECB20F13EA4006925D8 /* TokenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 152EEEC920F13EA4006925D8 /* TokenCollectionViewCell.xib */; };
 		152EEECD20F2662F006925D8 /* EditTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEECC20F2662F006925D8 /* EditTokenViewController.swift */; };
@@ -67,6 +67,7 @@
 		15A7047224A8D4D300F145A2 /* OTPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1574E7D520F0490D0070B124 /* OTPKit.framework */; };
 		15A7047324A8D75F00F145A2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152EEEEA20F2CCB8006925D8 /* Constants.swift */; };
 		15A7047624A8DB4500F145A2 /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A7047524A8DB4500F145A2 /* String+Helpers.swift */; };
+		15AB160924A908B10044AB25 /* TokenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AB160824A908B10044AB25 /* TokenView.swift */; };
 		15CA9508210A6AD600F76E5B /* AcknowledgementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CA9507210A6AD600F76E5B /* AcknowledgementsViewController.swift */; };
 		15D3634B20FA29EA00284137 /* TokensPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634A20FA29EA00284137 /* TokensPickerViewController.swift */; };
 		15D3634D20FA482800284137 /* TokenStore+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3634C20FA482800284137 /* TokenStore+Export.swift */; };
@@ -146,7 +147,7 @@
 /* Begin PBXFileReference section */
 		0B5FBBB7CBFC9E097A981C00 /* Pods-SwiftOTP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP.debug.xcconfig"; sourceTree = "<group>"; };
 		150B4E90210A68D0007D94A8 /* TokensExportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensExportViewController.swift; sourceTree = "<group>"; };
-		1525DB6624A54C5E0095C3D2 /* TokensListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensListView.swift; sourceTree = "<group>"; };
+		1525DB6624A54C5E0095C3D2 /* TokensGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensGridView.swift; sourceTree = "<group>"; };
 		152EEEC220F10A99006925D8 /* TokensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensViewController.swift; sourceTree = "<group>"; };
 		152EEEC820F13EA4006925D8 /* TokenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenCollectionViewCell.swift; sourceTree = "<group>"; };
 		152EEEC920F13EA4006925D8 /* TokenCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TokenCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -204,6 +205,7 @@
 		15A7046B24A8D0F600F145A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15A7047424A8DAF900F145A2 /* SwiftOTPUIIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftOTPUIIntents.entitlements; sourceTree = "<group>"; };
 		15A7047524A8DB4500F145A2 /* String+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
+		15AB160824A908B10044AB25 /* TokenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenView.swift; sourceTree = "<group>"; };
 		15CA9507210A6AD600F76E5B /* AcknowledgementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementsViewController.swift; sourceTree = "<group>"; };
 		15D3634A20FA29EA00284137 /* TokensPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensPickerViewController.swift; sourceTree = "<group>"; };
 		15D3634C20FA482800284137 /* TokenStore+Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TokenStore+Export.swift"; sourceTree = "<group>"; };
@@ -462,7 +464,8 @@
 		15A7045C24A8B5C500F145A2 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				1525DB6624A54C5E0095C3D2 /* TokensListView.swift */,
+				1525DB6624A54C5E0095C3D2 /* TokensGridView.swift */,
+				15AB160824A908B10044AB25 /* TokenView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -879,7 +882,8 @@
 				152EEED620F2C48B006925D8 /* Intents.intentdefinition in Sources */,
 				1554F61F20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift in Sources */,
 				152EEEC320F10A99006925D8 /* TokensViewController.swift in Sources */,
-				1525DB6724A54C5E0095C3D2 /* TokensListView.swift in Sources */,
+				1525DB6724A54C5E0095C3D2 /* TokensGridView.swift in Sources */,
+				15AB160924A908B10044AB25 /* TokenView.swift in Sources */,
 				156EBC8720F9A79C000F240B /* ThemedTableViewCell.swift in Sources */,
 				1574E7BF20F03A970070B124 /* AppDelegate.swift in Sources */,
 				152EEED220F267B9006925D8 /* UIViewController+Segues.swift in Sources */,

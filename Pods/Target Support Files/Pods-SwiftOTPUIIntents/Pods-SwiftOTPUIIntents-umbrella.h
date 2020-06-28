@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_OTPCallbackDemoVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_OTPCallbackDemoVersionString[];
+FOUNDATION_EXPORT double Pods_SwiftOTPUIIntentsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_SwiftOTPUIIntentsVersionString[];
 

@@ -74,6 +74,7 @@
 		15D3635120FA723000284137 /* Bundle+InfoAccessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3635020FA723000284137 /* Bundle+InfoAccessors.swift */; };
 		15D3635520FA814300284137 /* Pods-SwiftOTP-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15D3635420FA814300284137 /* Pods-SwiftOTP-acknowledgements.plist */; };
 		6E0FB1EC182917628879D22E /* Pods_SwiftOTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2CDEC4586380293BB7ED89 /* Pods_SwiftOTP.framework */; };
+		757FCC63C796CF7BAD29F993 /* Pods_SwiftOTPUIIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF3B3B453C99CFA557575DB /* Pods_SwiftOTPUIIntents.framework */; };
 		86F782CB14A25740C61B7727 /* Pods_OTPKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC8F6B397214EED847A83F3 /* Pods_OTPKitTests.framework */; };
 		D7D9D04A47A396FB46CBBBD0 /* Pods_OTPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED336A811AC2DA0B53FFC09F /* Pods_OTPKit.framework */; };
 /* End PBXBuildFile section */
@@ -209,11 +210,14 @@
 		15D3634E20FA4B9C00284137 /* FileManager+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Helpers.swift"; sourceTree = "<group>"; };
 		15D3635020FA723000284137 /* Bundle+InfoAccessors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+InfoAccessors.swift"; sourceTree = "<group>"; };
 		15D3635420FA814300284137 /* Pods-SwiftOTP-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-SwiftOTP-acknowledgements.plist"; path = "Pods/Target Support Files/Pods-SwiftOTP/Pods-SwiftOTP-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
+		17EDD51B37DEA88D750126B3 /* Pods-SwiftOTPUIIntents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTPUIIntents.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTPUIIntents/Pods-SwiftOTPUIIntents.release.xcconfig"; sourceTree = "<group>"; };
 		192488C999A10607F1BCD929 /* Pods-OTPKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OTPKitTests/Pods-OTPKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		350846FED42A69CBAF7FF5AC /* Pods_SwiftOTPIntents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOTPIntents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58EBC5BE904090BC5FFE8732 /* Pods-OTPKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OTPKitTests/Pods-OTPKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6510F0EEC50AAF5BE781285D /* Pods-OTPCallbackDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPCallbackDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OTPCallbackDemo/Pods-OTPCallbackDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		700E8BFF24E24F368C97800C /* Pods-SwiftOTPUIIntents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTPUIIntents.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTPUIIntents/Pods-SwiftOTPUIIntents.debug.xcconfig"; sourceTree = "<group>"; };
 		9123560051A5F5BA38D068EE /* Pods-OTPCallbackDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTPCallbackDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-OTPCallbackDemo/Pods-OTPCallbackDemo.release.xcconfig"; sourceTree = "<group>"; };
+		BCF3B3B453C99CFA557575DB /* Pods_SwiftOTPUIIntents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOTPUIIntents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC8F6B397214EED847A83F3 /* Pods_OTPKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTPKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54282D5E3FBD188B47F2DE6 /* Pods-SwiftOTPIntents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOTPIntents.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOTPIntents/Pods-SwiftOTPIntents.debug.xcconfig"; sourceTree = "<group>"; };
 		CA2CDEC4586380293BB7ED89 /* Pods_SwiftOTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftOTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -267,6 +271,7 @@
 			files = (
 				15A7047224A8D4D300F145A2 /* OTPKit.framework in Frameworks */,
 				15A7046424A8D0F600F145A2 /* IntentsUI.framework in Frameworks */,
+				757FCC63C796CF7BAD29F993 /* Pods_SwiftOTPUIIntents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +487,7 @@
 				350846FED42A69CBAF7FF5AC /* Pods_SwiftOTPIntents.framework */,
 				F8772F63A71F7A0E89406A0E /* Pods_OTPCallbackDemo.framework */,
 				15A7046324A8D0F600F145A2 /* IntentsUI.framework */,
+				BCF3B3B453C99CFA557575DB /* Pods_SwiftOTPUIIntents.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -499,6 +505,8 @@
 				F7477C48063C255AFA22D502 /* Pods-SwiftOTPIntents.release.xcconfig */,
 				6510F0EEC50AAF5BE781285D /* Pods-OTPCallbackDemo.debug.xcconfig */,
 				9123560051A5F5BA38D068EE /* Pods-OTPCallbackDemo.release.xcconfig */,
+				700E8BFF24E24F368C97800C /* Pods-SwiftOTPUIIntents.debug.xcconfig */,
+				17EDD51B37DEA88D750126B3 /* Pods-SwiftOTPUIIntents.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -602,6 +610,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15A7046F24A8D0F600F145A2 /* Build configuration list for PBXNativeTarget "SwiftOTPUIIntents" */;
 			buildPhases = (
+				46AF435B11069B6978A06D11 /* [CP] Check Pods Manifest.lock */,
 				15A7045E24A8D0F600F145A2 /* Sources */,
 				15A7045F24A8D0F600F145A2 /* Frameworks */,
 				15A7046024A8D0F600F145A2 /* Resources */,
@@ -736,6 +745,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		46AF435B11069B6978A06D11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftOTPUIIntents-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		663D8CECCD30128E19156EBE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1281,6 +1312,7 @@
 		};
 		15A7047024A8D0F600F145A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 700E8BFF24E24F368C97800C /* Pods-SwiftOTPUIIntents.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = SwiftOTPUIIntents/SwiftOTPUIIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -1301,6 +1333,7 @@
 		};
 		15A7047124A8D0F600F145A2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17EDD51B37DEA88D750126B3 /* Pods-SwiftOTPUIIntents.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = SwiftOTPUIIntents/SwiftOTPUIIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;

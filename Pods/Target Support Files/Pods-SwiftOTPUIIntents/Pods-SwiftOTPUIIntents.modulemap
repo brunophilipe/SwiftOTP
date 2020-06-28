@@ -1,0 +1,6 @@
+framework module Pods_SwiftOTPUIIntents {
+  umbrella header "Pods-SwiftOTPUIIntents-umbrella.h"
+
+  export *
+  module * { export * }
+}

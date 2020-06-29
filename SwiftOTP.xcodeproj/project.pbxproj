@@ -26,6 +26,7 @@
 		152EEEEE20F2CE57006925D8 /* OTPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1574E7D520F0490D0070B124 /* OTPKit.framework */; };
 		15445ED8210C9FD1001A0961 /* NSManagedObject+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15445ED7210C9FD1001A0961 /* NSManagedObject+Helpers.swift */; };
 		15445EDA210CA185001A0961 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15445ED9210CA185001A0961 /* Colors.xcassets */; };
+		15521D9E24AA99C600460030 /* UIViewController+Menus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15521D9D24AA99C600460030 /* UIViewController+Menus.swift */; };
 		1554F61F20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1554F61E20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift */; };
 		1554F62120F3DE2700C693E8 /* SecurityPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1554F62020F3DE2700C693E8 /* SecurityPreferencesViewController.swift */; };
 		1554F62320F3DE7500C693E8 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1554F62220F3DE7500C693E8 /* Preferences.swift */; };
@@ -165,6 +166,7 @@
 		152EEEEA20F2CCB8006925D8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		15445ED7210C9FD1001A0961 /* NSManagedObject+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Helpers.swift"; sourceTree = "<group>"; };
 		15445ED9210CA185001A0961 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		15521D9D24AA99C600460030 /* UIViewController+Menus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Menus.swift"; sourceTree = "<group>"; };
 		1554F61E20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColoredPlaceholderTextField.swift; sourceTree = "<group>"; };
 		1554F62020F3DE2700C693E8 /* SecurityPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityPreferencesViewController.swift; sourceTree = "<group>"; };
 		1554F62220F3DE7500C693E8 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 				156EBC8220F6E25C000F240B /* UIViewController+Alerts.swift */,
 				152EEECF20F2669B006925D8 /* UIViewController+ContextBus.swift */,
 				156EBC8020F6D568000F240B /* UIViewController+LocalAuthentication.swift */,
+				15521D9D24AA99C600460030 /* UIViewController+Menus.swift */,
 				152EEED120F267B9006925D8 /* UIViewController+Segues.swift */,
 				1580EC63215714B80084A182 /* IndexPath+TupleValue.swift */,
 			);
@@ -887,6 +890,7 @@
 				15D3634D20FA482800284137 /* TokenStore+Export.swift in Sources */,
 				1554F62B20F42DC700C693E8 /* Token+Accessibility.swift in Sources */,
 				152EEED620F2C48B006925D8 /* Intents.intentdefinition in Sources */,
+				15521D9E24AA99C600460030 /* UIViewController+Menus.swift in Sources */,
 				1554F61F20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift in Sources */,
 				152EEEC320F10A99006925D8 /* TokensViewController.swift in Sources */,
 				1525DB6724A54C5E0095C3D2 /* TokensGridView.swift in Sources */,

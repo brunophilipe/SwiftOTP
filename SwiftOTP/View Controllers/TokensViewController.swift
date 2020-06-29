@@ -16,6 +16,8 @@ import QRCodeReader
 
 class TokensViewController: UICollectionViewController
 {
+	@IBOutlet unowned var actionsBarButtonItem: UIBarButtonItem!
+
 	private var tokenStore: TokenStore
 	{
 		return AppDelegate.shared.tokenStore
@@ -88,6 +90,11 @@ class TokensViewController: UICollectionViewController
 
 			observations.append(importObservation)
 		}
+
+		setUpMenu(for: actionsBarButtonItem, actions: [
+			.init(title: "Sort Tokens by Issuer", handler: { [unowned self] in self.sortTokens(by: \.issuer) }),
+			.init(title: "Sort Tokens by Account", handler: { [unowned self] in self.sortTokens(by: \.label) })
+		])
 	}
 
 	override func viewWillAppear(_ animated: Bool)
@@ -138,13 +145,27 @@ class TokensViewController: UICollectionViewController
 		#endif
 	}
 
-	@IBAction func showOptionsMenu(_ sender: Any)
-	{
-
-	}
-
 	private func reloadTokens() {
 		collectionView.reloadData()
+	}
+
+	private func sortTokens<C: Comparable & Hashable>(by keyPath: KeyPath<Token, C?>) {
+		guard let diff = tokenStore.sortTokens(by: keyPath)?.inferringMoves(),
+			  diff.removals.count == diff.insertions.count
+		else {
+			reloadTokens()
+			return
+		}
+
+		collectionView.performBatchUpdates {
+			for removal in diff.removals {
+				if case let .remove(oldIndex, _, .some(newIndex)) = removal {
+					collectionView.moveItem(at: IndexPath(item: oldIndex, section: 0),
+											to: IndexPath(item: newIndex, section: 0))
+				}
+			}
+
+		} completion: { _ in }
 	}
 
 	private func showAlertBadScan()

@@ -253,6 +253,66 @@ open class TokenStore : NSObject
 		return false
 	}
 
+	public func sortTokens<C: Comparable & Hashable>(by keyPath: KeyPath<Token, C?>) -> CollectionDifference<Int>? {
+		return sortTokens(by: keyPath, ascending: true)
+	}
+
+	private func sortTokens<C: Comparable & Hashable>(by keyPath: KeyPath<Token, C?>, ascending: Bool) -> CollectionDifference<Int>? {
+
+		guard let order = TokenOrder.store.load(accountUUID.uuidString) else {
+			return nil
+		}
+
+		var tokensMap: [String: Token] = [:]
+
+		enumerateTokens { (_, token) in
+			tokensMap[token.account] = token
+		}
+
+		func tieBreaker(token1: Token, token2: Token) -> Bool {
+			if token1[keyPath: keyPath] as? String == token1.issuer {
+				return token1.account < token2.account
+			} else {
+				return token1.issuer < token2.issuer
+			}
+		}
+
+		let unsortedAccounts = order.array
+		var sortedAccounts = unsortedAccounts.sorted(by: {
+			switch (tokensMap[$0]?[keyPath: keyPath], tokensMap[$1]?[keyPath: keyPath]) {
+			case let (.some(value1), .some(value2)) where value1 == value2:
+				return tieBreaker(token1: tokensMap[$0]!, token2: tokensMap[$1]!)
+			case let (.some(value1), .some(value2)):
+				return value1 < value2
+			case (.some, .none):
+				return false
+			case (.none, .some), (.none, .none):
+				return true
+			}
+		})
+
+		if ascending == false {
+			sortedAccounts.reverse()
+		}
+
+		if sortedAccounts == unsortedAccounts, ascending {
+			return sortTokens(by: keyPath, ascending: false)
+		}
+
+		order.array = sortedAccounts
+
+		guard TokenOrder.store.save(order) else {
+			return nil
+		}
+
+		let unsortedIndices = Array(0..<unsortedAccounts.count)
+		let sortedIndices = sortedAccounts.compactMap({ unsortedAccounts.firstIndex(of: $0) })
+
+		assert(unsortedIndices.count == sortedIndices.count)
+
+		return sortedIndices.difference(from: unsortedIndices)
+	}
+
 	open func enumerateTokens(using block: (Int, Token) -> Void) {
 		for index in 0..<count {
 			guard let token = load(index) else { continue }

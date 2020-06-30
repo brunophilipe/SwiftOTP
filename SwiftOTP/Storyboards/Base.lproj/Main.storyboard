@@ -3,7 +3,6 @@
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,9 +11,9 @@
             <objects>
                 <collectionViewController id="x21-WJ-NYw" customClass="TokensViewController" customModule="SwiftOTP" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" prefetchingEnabled="NO" id="YHX-0k-uAO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.050000000000000003" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="RaU-dt-Ttm">
                             <size key="itemSize" width="210" height="100"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -71,10 +70,9 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="hbI-7H-pkA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="702"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="tableViewBackground"/>
-                        <color key="separatorColor" name="tableSeparator"/>
-                        <color key="sectionIndexColor" red="0.42760539050000002" green="0.42704725269999999" blue="0.44890797139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="sectionIndexBackgroundColor" white="0.059999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="separatorColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                         <sections>
                             <tableViewSection headerTitle="Issuer" footerTitle="Leave empty to reset to the default issuer." id="T39-cr-rRG">
                                 <cells>
@@ -91,12 +89,11 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" priority="999" constant="43.5" id="bPn-e4-zSx"/>
                                                     </constraints>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert" returnKeyType="next" textContentType="organization"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                            <color key="value" white="0.25181749131944442" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="value" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
@@ -111,7 +108,7 @@
                                                 <constraint firstItem="bwj-t9-Sdc" firstAttribute="top" secondItem="XAa-0m-Zoq" secondAttribute="top" id="rq7-0J-w8g"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="tableCellBackground"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -130,12 +127,11 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" priority="999" constant="43.5" id="sIg-Ke-9rC"/>
                                                     </constraints>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" textContentType="username"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                            <color key="value" white="0.25181749131944442" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="value" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
@@ -150,7 +146,7 @@
                                                 <constraint firstItem="Drf-oz-BH6" firstAttribute="leading" secondItem="5RR-6c-Lqs" secondAttribute="leadingMargin" id="qyo-DL-fgm"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="tableCellBackground"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -186,7 +182,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Editing Token" id="58y-xL-gHS">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="eEx-Km-7OK">
+                        <barButtonItem key="leftBarButtonItem" image="xmark" catalog="system" id="eEx-Km-7OK">
                             <connections>
                                 <action selector="cancelEditor:" destination="GN1-EN-rW1" id="0YK-OU-aV2"/>
                             </connections>
@@ -218,8 +214,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cMP-fT-1cp" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="ibk-YG-nVJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ibk-YG-nVJ">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -237,8 +232,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="formSheet" id="HgW-QS-aF3" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="Hve-D4-1dQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Hve-D4-1dQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -258,14 +252,14 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="vNv-Fx-2Ww">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="702"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="tableViewBackground"/>
-                        <color key="separatorColor" name="tableSeparator"/>
-                        <color key="sectionIndexColor" red="0.42760539050000002" green="0.42704725269999999" blue="0.44890797139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="sectionIndexBackgroundColor" white="0.059999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="separatorColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="Clipboard Expiration" footerTitle="How long the code should be left in the clipboard after &quot;Copy to Clipboard&quot; is tapped on a token." id="TUA-sZ-PNn">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="lPb-Q0-CV2" style="IBUITableViewCellStyleDefault" id="JHN-lr-VYp" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="lPb-Q0-CV2" style="IBUITableViewCellStyleDefault" id="JHN-lr-VYp">
                                         <rect key="frame" x="0.0" y="55.333332061767578" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JHN-lr-VYp" id="uXa-Hm-Gq0">
@@ -276,17 +270,16 @@
                                                     <rect key="frame" x="16" y="0.0" width="343" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="tableCellBackground"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to ten seconds.">
                                             <accessibilityTraits key="traits" button="YES"/>
                                         </accessibility>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="lOT-pc-6N4" style="IBUITableViewCellStyleDefault" id="cxt-BZ-zvL" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="lOT-pc-6N4" style="IBUITableViewCellStyleDefault" id="cxt-BZ-zvL">
                                         <rect key="frame" x="0.0" y="99.333332061767578" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cxt-BZ-zvL" id="s8F-Vh-dq8">
@@ -297,17 +290,16 @@
                                                     <rect key="frame" x="16" y="0.0" width="343" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="tableCellBackground"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to thirty seconds.">
                                             <accessibilityTraits key="traits" button="YES"/>
                                         </accessibility>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="OSo-P8-hhQ" style="IBUITableViewCellStyleDefault" id="aKA-DF-yOe" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="OSo-P8-hhQ" style="IBUITableViewCellStyleDefault" id="aKA-DF-yOe">
                                         <rect key="frame" x="0.0" y="143.33333206176758" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aKA-DF-yOe" id="CXF-to-Ljr">
@@ -318,17 +310,16 @@
                                                     <rect key="frame" x="16" y="0.0" width="343" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="tableCellBackground"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to one minute.">
                                             <accessibilityTraits key="traits" button="YES"/>
                                         </accessibility>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="aZh-v9-JKI" style="IBUITableViewCellStyleDefault" id="ZB3-4n-M1y" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="aZh-v9-JKI" style="IBUITableViewCellStyleDefault" id="ZB3-4n-M1y">
                                         <rect key="frame" x="0.0" y="187.33333206176758" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZB3-4n-M1y" id="prL-xN-3Sz">
@@ -339,12 +330,11 @@
                                                     <rect key="frame" x="16" y="0.0" width="343" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="tableCellBackground"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to five minutes.">
                                             <accessibilityTraits key="traits" button="YES"/>
                                         </accessibility>
@@ -354,7 +344,7 @@
                             <tableViewSection headerTitle="Handoff" id="ksF-EZ-5j9">
                                 <string key="footerTitle">Whether the code can be transfered to the clipboard of other devices connected to your iCloud account when "Copy to Clipboard" is tapped on a token.</string>
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="5wV-TO-wn5" style="IBUITableViewCellStyleDefault" id="Pgl-Tr-7jA" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="5wV-TO-wn5" style="IBUITableViewCellStyleDefault" id="Pgl-Tr-7jA">
                                         <rect key="frame" x="0.0" y="322.66666412353516" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pgl-Tr-7jA" id="mTr-p7-jre">
@@ -365,7 +355,6 @@
                                                     <rect key="frame" x="16" y="0.0" width="343" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="C7g-Gz-bse">
@@ -378,7 +367,7 @@
                                                 </switch>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="tableCellBackground"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <connections>
                                             <outlet property="accessoryView" destination="C7g-Gz-bse" id="jVv-Wp-3Kk"/>
                                         </connections>
@@ -390,7 +379,7 @@
 
 Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string>
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="J1I-Dr-wO9" style="IBUITableViewCellStyleDefault" id="HW7-XW-mmp" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="J1I-Dr-wO9" style="IBUITableViewCellStyleDefault" id="HW7-XW-mmp">
                                         <rect key="frame" x="0.0" y="473.99999618530273" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HW7-XW-mmp" id="E4k-Gw-IzK">
@@ -401,7 +390,6 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                                                     <rect key="frame" x="16" y="0.0" width="343" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q7r-Bc-K38">
@@ -414,7 +402,7 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                                                 </switch>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="tableCellBackground"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <connections>
                                             <outlet property="accessoryView" destination="q7r-Bc-K38" id="tah-NW-GRR"/>
                                         </connections>
@@ -442,9 +430,7 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="formSheet" toolbarHidden="NO" id="UqC-sl-dxx" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="joB-yz-Fab">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="joB-yz-Fab">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -468,14 +454,14 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="NO1-Q1-XXp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="702"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="tableViewBackground"/>
-                        <color key="separatorColor" name="tableSeparator"/>
-                        <color key="sectionIndexColor" red="0.42760539050000002" green="0.42704725269999999" blue="0.44890797139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="sectionIndexBackgroundColor" white="0.059999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="separatorColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection id="N5U-xb-hYc">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="RlQ-14-LJ5" imageView="w15-8g-EdP" style="IBUITableViewCellStyleDefault" id="rvn-Q1-i95" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="RlQ-14-LJ5" imageView="w15-8g-EdP" style="IBUITableViewCellStyleDefault" id="rvn-Q1-i95">
                                         <rect key="frame" x="0.0" y="18" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rvn-Q1-i95" id="xcT-t4-jBy">
@@ -486,7 +472,6 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                                                     <rect key="frame" x="60" y="0.0" width="280" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="pref_security" id="w15-8g-EdP">
@@ -495,7 +480,7 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="tableCellBackground"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to ten seconds.">
                                             <accessibilityTraits key="traits" button="YES"/>
                                         </accessibility>
@@ -503,7 +488,7 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                                             <segue destination="GdQ-7w-RRP" kind="show" id="OJA-Kb-Rsj"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="iNH-gE-tji" imageView="y6n-cB-Tf1" style="IBUITableViewCellStyleDefault" id="bAh-vy-MGM" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="iNH-gE-tji" imageView="y6n-cB-Tf1" style="IBUITableViewCellStyleDefault" id="bAh-vy-MGM">
                                         <rect key="frame" x="0.0" y="62" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bAh-vy-MGM" id="MS4-ja-tnR">
@@ -514,7 +499,6 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                                                     <rect key="frame" x="60" y="0.0" width="280" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="pref_comm" id="y6n-cB-Tf1">
@@ -523,7 +507,7 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="tableCellBackground"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to ten seconds.">
                                             <accessibilityTraits key="traits" button="YES"/>
                                         </accessibility>
@@ -532,7 +516,7 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                             </tableViewSection>
                             <tableViewSection headerTitle="Import/Export" id="Mzx-9Z-XhG">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="N24-mG-dYD" imageView="awN-VU-R4Z" style="IBUITableViewCellStyleDefault" id="Ui6-zV-B6M" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="N24-mG-dYD" imageView="awN-VU-R4Z" style="IBUITableViewCellStyleDefault" id="Ui6-zV-B6M">
                                         <rect key="frame" x="0.0" y="162" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ui6-zV-B6M" id="fzw-9b-z3F">
@@ -543,7 +527,6 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                                                     <rect key="frame" x="60" y="0.0" width="280" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="pref_import" id="awN-VU-R4Z">
@@ -552,12 +535,12 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="tableCellBackground"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to thirty seconds.">
                                             <accessibilityTraits key="traits" button="YES"/>
                                         </accessibility>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="8dJ-1P-JNi" imageView="wav-Xz-V66" style="IBUITableViewCellStyleDefault" id="VVe-I2-pfq" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="8dJ-1P-JNi" imageView="wav-Xz-V66" style="IBUITableViewCellStyleDefault" id="VVe-I2-pfq">
                                         <rect key="frame" x="0.0" y="206" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VVe-I2-pfq" id="Xx1-XX-H09">
@@ -568,7 +551,6 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                                                     <rect key="frame" x="60" y="0.0" width="280" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="pref_export" id="wav-Xz-V66">
@@ -577,7 +559,7 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="tableCellBackground"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to thirty seconds.">
                                             <accessibilityTraits key="traits" button="YES"/>
                                         </accessibility>
@@ -589,7 +571,7 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                             </tableViewSection>
                             <tableViewSection headerTitle="About" footerTitle="SwiftOTP by Bruno Philipe © 2018 – All Rights Reserved Released under the Apache License, Version 2.0." id="JrK-he-7O2">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="UEV-g5-Aql" detailTextLabel="aQg-Zp-8tr" style="IBUITableViewCellStyleValue1" id="uDj-y0-GFY" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" textLabel="UEV-g5-Aql" detailTextLabel="aQg-Zp-8tr" style="IBUITableViewCellStyleValue1" id="uDj-y0-GFY">
                                         <rect key="frame" x="0.0" y="313.33333206176758" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uDj-y0-GFY" id="Wbl-dF-u81">
@@ -600,24 +582,23 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                                                     <rect key="frame" x="16" y="11.999999999999998" width="133" height="20.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="0.0 (0)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aQg-Zp-8tr">
                                                     <rect key="frame" x="308" y="11.999999999999998" width="51" height="20.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="tableCellBackground"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to thirty seconds.">
                                             <accessibilityTraits key="traits" button="YES"/>
                                         </accessibility>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="6Sp-xK-3fc" style="IBUITableViewCellStyleDefault" id="naP-Qg-JRP" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="6Sp-xK-3fc" style="IBUITableViewCellStyleDefault" id="naP-Qg-JRP">
                                         <rect key="frame" x="0.0" y="357.33333206176758" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="naP-Qg-JRP" id="bxO-FA-mBn">
@@ -628,17 +609,16 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                                                     <rect key="frame" x="16" y="0.0" width="324" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="tableCellBackground"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to thirty seconds.">
                                             <accessibilityTraits key="traits" button="YES"/>
                                         </accessibility>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Etd-mk-7pc" style="IBUITableViewCellStyleDefault" id="X82-9l-nDk" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Etd-mk-7pc" style="IBUITableViewCellStyleDefault" id="X82-9l-nDk">
                                         <rect key="frame" x="0.0" y="401.33333206176758" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X82-9l-nDk" id="TmQ-R9-8aP">
@@ -649,12 +629,11 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                                                     <rect key="frame" x="16" y="0.0" width="324" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="tableCellBackground"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to one minute.">
                                             <accessibilityTraits key="traits" button="YES"/>
                                         </accessibility>
@@ -691,14 +670,14 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
             <objects>
                 <tableViewController id="J1L-cR-vvc" customClass="TokensExportViewController" customModule="SwiftOTP" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="HG3-yZ-wSo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="619"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="702"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="tableViewBackground"/>
-                        <color key="separatorColor" name="tableSeparator"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="separatorColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexColor" red="0.42760539050000002" green="0.42704725269999999" blue="0.44890797139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexBackgroundColor" white="0.059999999999999998" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellToken" textLabel="e1A-91-b7Q" detailTextLabel="OgX-Wl-FND" style="IBUITableViewCellStyleSubtitle" id="NgN-id-MHM" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellToken" textLabel="e1A-91-b7Q" detailTextLabel="OgX-Wl-FND" style="IBUITableViewCellStyleSubtitle" id="NgN-id-MHM">
                                 <rect key="frame" x="0.0" y="55.333332061767578" width="375" height="55.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NgN-id-MHM" id="NVP-rY-LI5">
@@ -709,19 +688,17 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                                             <rect key="frame" x="16" y="8.9999999999999982" width="63" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OgX-Wl-FND">
                                             <rect key="frame" x="15.999999999999996" y="31.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" name="tableCellBackground"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to ten seconds.">
                                     <accessibilityTraits key="traits" button="YES"/>
                                 </accessibility>
@@ -766,7 +743,7 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="exportButton" destination="5av-Im-IwB" id="NMF-Nb-QJD"/>
                     </connections>
@@ -782,17 +759,17 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="7mO-oM-v3D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="702"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="tableViewBackground"/>
-                        <color key="separatorColor" name="tableSeparator"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="separatorColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexColor" red="0.42760539050000002" green="0.42704725269999999" blue="0.44890797139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexBackgroundColor" white="0.059999999999999998" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection id="WZp-CS-kww">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="fvS-hd-EdD" style="IBUITableViewCellStyleDefault" id="CCi-PM-OJY" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="fvS-hd-EdD" style="IBUITableViewCellStyleDefault" id="CCi-PM-OJY">
                                         <rect key="frame" x="0.0" y="18" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CCi-PM-OJY" id="Y2Z-QM-qUH" customClass="ThemedTableViewCell" customModule="SwiftOTP" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CCi-PM-OJY" id="Y2Z-QM-qUH">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -800,12 +777,11 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                                                     <rect key="frame" x="16" y="0.0" width="343" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="tableCellBackground"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <accessibility key="accessibilityConfiguration" hint="Tap to set clipboard expiration to ten seconds.">
                                             <accessibilityTraits key="traits" button="YES"/>
                                         </accessibility>
@@ -834,14 +810,6 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
         <image name="pref_import" width="29" height="29"/>
         <image name="pref_security" width="29" height="29"/>
         <image name="qrcode.viewfinder" catalog="system" width="128" height="114"/>
-        <namedColor name="tableCellBackground">
-            <color red="0.10999999940395355" green="0.10999999940395355" blue="0.11400000005960464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="tableSeparator">
-            <color red="0.19200000166893005" green="0.19200000166893005" blue="0.19200000166893005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="tableViewBackground">
-            <color white="0.072999998927116394" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </namedColor>
+        <image name="xmark" catalog="system" width="128" height="113"/>
     </resources>
 </document>

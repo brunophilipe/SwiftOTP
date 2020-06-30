@@ -109,10 +109,10 @@ class TokenCollectionViewCell: UICollectionViewCell
 	func setToken(issuer: String, account: String)
 	{
 		issuerLabel.text = issuer
-		issuerLabel.textColor = issuer.count > 0 ? .darkText : .gray
+		issuerLabel.textColor = issuer.isEmpty ? .tertiaryLabel : .label
 
 		accountLabel.text = account
-		accountLabel.textColor = account.count > 0 ? .darkText : .gray
+		accountLabel.textColor = account.isEmpty ? .tertiaryLabel : .label
 
 		let tokenHint = "\(account) at \(issuer)"
 		editTokenButton.accessibilityHint = tokenHint

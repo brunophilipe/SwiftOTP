@@ -42,7 +42,6 @@
 		156EBC8120F6D568000F240B /* UIViewController+LocalAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EBC8020F6D568000F240B /* UIViewController+LocalAuthentication.swift */; };
 		156EBC8320F6E25C000F240B /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EBC8220F6E25C000F240B /* UIViewController+Alerts.swift */; };
 		156EBC8520F9A6E4000F240B /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EBC8420F9A6E4000F240B /* PreferencesViewController.swift */; };
-		156EBC8720F9A79C000F240B /* ThemedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EBC8620F9A79C000F240B /* ThemedTableViewCell.swift */; };
 		1574E7BF20F03A970070B124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1574E7BE20F03A970070B124 /* AppDelegate.swift */; };
 		1574E7C420F03A970070B124 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1574E7C220F03A970070B124 /* Main.storyboard */; };
 		1574E7C620F03A980070B124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1574E7C520F03A980070B124 /* Assets.xcassets */; };
@@ -181,7 +180,6 @@
 		156EBC8020F6D568000F240B /* UIViewController+LocalAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LocalAuthentication.swift"; sourceTree = "<group>"; };
 		156EBC8220F6E25C000F240B /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		156EBC8420F9A6E4000F240B /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
-		156EBC8620F9A79C000F240B /* ThemedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemedTableViewCell.swift; sourceTree = "<group>"; };
 		1574E7BB20F03A970070B124 /* SwiftOTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftOTP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1574E7BE20F03A970070B124 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1574E7C320F03A970070B124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -463,7 +461,6 @@
 				1554F61E20F3D6AB00C693E8 /* ColoredPlaceholderTextField.swift */,
 				152EEEC820F13EA4006925D8 /* TokenCollectionViewCell.swift */,
 				152EEEC920F13EA4006925D8 /* TokenCollectionViewCell.xib */,
-				156EBC8620F9A79C000F240B /* ThemedTableViewCell.swift */,
 				15C2A22C24A9103B00793AE4 /* QRReaderView.swift */,
 				15C2A22E24A912BE00793AE4 /* QRReaderView.xib */,
 			);
@@ -896,7 +893,6 @@
 				1525DB6724A54C5E0095C3D2 /* TokensGridView.swift in Sources */,
 				15C2A22D24A9103B00793AE4 /* QRReaderView.swift in Sources */,
 				15AB160924A908B10044AB25 /* TokenView.swift in Sources */,
-				156EBC8720F9A79C000F240B /* ThemedTableViewCell.swift in Sources */,
 				1574E7BF20F03A970070B124 /* AppDelegate.swift in Sources */,
 				152EEED220F267B9006925D8 /* UIViewController+Segues.swift in Sources */,
 				1554F62120F3DE2700C693E8 /* SecurityPreferencesViewController.swift in Sources */,

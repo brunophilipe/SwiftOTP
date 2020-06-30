@@ -582,7 +582,7 @@ Enable this if you wish to use SwiftOTP intentions in the Shortcuts app.</string
                                             <accessibilityTraits key="traits" button="YES"/>
                                         </accessibility>
                                         <connections>
-                                            <segue destination="J1L-cR-vvc" kind="show" id="0tG-MV-SrS"/>
+                                            <segue destination="J1L-cR-vvc" kind="show" identifier="ExportTokens" id="0tG-MV-SrS"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>

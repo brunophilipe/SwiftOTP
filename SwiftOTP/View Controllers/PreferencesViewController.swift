@@ -46,8 +46,8 @@ class PreferencesViewController: UITableViewController
 	{
 		switch indexPath.tableRowTupleValue
 		{
-		case (0, 2):
-			deleteAll(tableView)
+		case (0, 1):
+			deleteAll()
 			tableView.deselectRow(at: indexPath, animated: true)
 
 		case (1, 0):
@@ -76,11 +76,28 @@ class PreferencesViewController: UITableViewController
 		dismiss(animated: true)
 	}
 
-	@IBAction func deleteAll(_ sender: Any?)
+	private func deleteAll()
 	{
-		tokenStore.eraseAll()
+		presentDialog(title: "Delete All Tokens?", message: "This will remove all tokens from your keychain. This action can not be undone. Do you wish to procceed?", continueActionTitle: "Delete ALL My Tokens", continueActionIsDestructive: true, dismissActionTitle: "Don't Delete My Tokens") { [weak self] result1 in
 
-		NotificationCenter.default.post(name: PreferencesViewController.didDeleteAllTokensNotificationName, object: self)
+			guard result1 == .continue else {
+				return
+			}
+
+			self?.presentDialog(title: "Are You Sure?", message: "If you don't have a backup of your Tokens, you will not be able to use them to access services and products they're associated with. You will lose all your OTP codes and this can NOT be undone. THIS IS THE LAST CONFIRMATION.", continueActionTitle: "DELETE ALL MY TOKENS", continueActionIsDestructive: true, reventActionTitle: "Create a Backup of my Tokens", dismissActionTitle: "Don't Delete My Tokens") { result in
+
+				switch result {
+				case .dismiss: return
+				case .revert:
+					self?.performSegue(withIdentifier: "ExportTokens", sender: nil)
+
+				case .continue:
+					self?.tokenStore.eraseAll()
+					NotificationCenter.default.post(name: PreferencesViewController.didDeleteAllTokensNotificationName,
+													object: self)
+				}
+			}
+		}
 	}
 }
 
